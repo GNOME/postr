@@ -448,12 +448,11 @@ class Uploader(threading.Thread):
     def run(self):
         uploading.set()
         for t in self.queue:
-            # TODO: Should iterate really
             self.postr.update_progress(t, self.queue.index(t) + 1, len(self.queue))
 
             # TODO: construct a set of args and pass that to avoid duplication
             if t.filename:
-                ret = fapi.upload(api_key=flickrAPIKey, auth_token=self.token,
+                ret = fapi.upload(api_key=flickrAPIKey, auth_token=self.postr.token,
                                   filename=t.filename,
                                   title=t.title, description=t.description,
                                   tags=t.tags)
@@ -461,7 +460,7 @@ class Uploader(threading.Thread):
                 # This isn't very nice, but might be the best way
                 data = []
                 t.pixbuf.save_to_callback(lambda d: data.append(d), "png", {})
-                ret = fapi.upload(api_key=flickrAPIKey, auth_token=self.token,
+                ret = fapi.upload(api_key=flickrAPIKey, auth_token=self.postr.token,
                                   imageData=''.join(data),
                                   title=t.title, description=t.description,
                                   tags=t.tags)
