@@ -1,15 +1,5 @@
-Grand Architecture Changes
-==
-
-Truly asynchronous Flickr calls using FlickREST.
-
-Callback-based authentication so the calling application can handle the user interaction.
-
-
 Missing Features
 ==
-
-Add an loading progress bar
 
 Upload progress bar needs work:
 - Cancel
@@ -28,4 +18,6 @@ Nice interface for tagging
 
 CLI interface: postr -tags foobar -description blaa -title fooo img.jpg
 
-Nautilus extension/file manager hook.  Maybe Open With->Postr?
+Resize before uploading
+
+Add option to clear authentication cookies
