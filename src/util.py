@@ -1,6 +1,6 @@
 # Postr, a Flickr Uploader
 #
-# Copyright (C) 2006 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -39,3 +39,12 @@ def get_glade_widgets (glade, object, widget_names):
         widget = glade.get_widget(name)
         setattr(object, name, widget)
 
+
+def get_thumb_size(srcw, srch, dstw, dsth):
+    """Scale scrw x srch to an dimensions with the same ratio that fits as
+    closely as possible to dstw x dsth."""
+    ratio = srcw/float(srch)
+    if srcw > srch:
+        return (dstw, int(dstw/ratio))
+    else:
+        return (int(dsth*ratio), dsth)

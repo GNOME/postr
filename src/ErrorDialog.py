@@ -1,3 +1,20 @@
+# Postr, a Flickr Uploader
+#
+# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 2, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+# St, Fifth Floor, Boston, MA 02110-1301 USA
+
 import gtk
 
 class ErrorDialog(gtk.MessageDialog):
@@ -13,10 +30,6 @@ class ErrorDialog(gtk.MessageDialog):
         # TODO: format nicer
         self.format_secondary_text (str (failure.value))
 
-
-def twisted_error (failure, parent=None):
-    # TODO: find out why parent is passed as a GtkWindow but appears here as a
-    # GtkVBox.
-    dialog = ErrorDialog (parent)
-    dialog.set_from_failure (failure)
-    dialog.show_all ()
+    def set_from_exception (self, exception):
+        # TODO: format nicer
+        self.format_secondary_text (str (exception))

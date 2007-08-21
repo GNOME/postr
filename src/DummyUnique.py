@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 # Postr, a Flickr Uploader
 #
 # Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
@@ -17,28 +15,11 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gettext
-gettext.install('postr')
-
-import sys
-from twisted.internet import gtk2reactor
-reactor = gtk2reactor.install()
-
-# Import from src first so that we can run directly from the source tree for
-# development.
-try:
-    from src import postr
-except ImportError, e:
-    from postr import postr
-
-p = postr.Postr()
-if p.is_running():
-    for url in sys.argv[1:]:
-        p.open_uri(url)
-    sys.exit(0)
-else:
-    p.window.show()
-    p.add_window(p.window)
-    for url in sys.argv[1:]:
-        p.add_image_filename(url)
-    reactor.run()
+class UniqueApp:
+    """A dummy UniqueApp for when gtkunique isn't installed."""
+    def __init__(self, name):
+        pass
+    def add_window(self, window):
+        pass
+    def is_running(self):
+        return False

@@ -1,6 +1,6 @@
 # Postr, a Flickr Uploader
 #
-# Copyright (C) 2006 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -15,7 +15,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gettext, logging, os, urllib
+import logging, os, urllib
 from urlparse import urlparse
 from os.path import basename
 
@@ -24,7 +24,9 @@ import gobject, gtk, gtk.glade
 
 from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
-import ErrorDialog, ImageStore, ImageList
+from ProgressDialog import ProgressDialog
+from ErrorDialog import ErrorDialog
+import ImageStore, ImageList, StatusBar
 
 from flickrest import Flickr
 from twisted.web.client import getPage
@@ -34,19 +36,11 @@ from util import *
 
 
 try:
-    import gtkunique
-    UniqueApp = gtkunique.UniqueApp
+    from gtkunique import UniqueApp
 except ImportError:
-    class UniqueApp:
-        """A dummy UniqueApp for when gtkunique isn't installed."""
-        def __init__(self, name):
-            pass
-        def add_window(self, window):
-            pass
-        def is_running(self):
-            return False
+    from DummyUnique import UniqueApp
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 
 # Exif information about image orientation
 (ROTATED_0,
@@ -82,11 +76,7 @@ class Postr (UniqueApp):
                             "desc_entry",
                             "tags_entry",
                             "set_combo",
-                            "thumbview",
-                            "progress_dialog",
-                            "progressbar",
-                            "progress_filename",
-                            "progress_thumbnail")
+                            "thumbview")
                            )
         
         # Just for you, Daniel.
@@ -104,10 +94,9 @@ class Postr (UniqueApp):
         selection.connect("changed", self.on_selection_changed)
 
         self.current_it = None
-        
-        # last opened folder
         self.last_folder = None
-
+        self.upload_quota = None
+        
         self.change_signals = []
         self.change_signals.append((self.title_entry, self.title_entry.connect('changed', self.on_field_changed, ImageStore.COL_TITLE)))
         self.change_signals.append((self.desc_entry, self.desc_entry.connect('changed', self.on_field_changed, ImageStore.COL_DESCRIPTION)))
@@ -132,12 +121,22 @@ class Postr (UniqueApp):
         
         # The upload progress dialog
         self.uploading = False
+        self.current_upload_it = None
+        self.cancel_upload = False
+        def cancel():
+            self.cancel_upload = True
+        self.progress_dialog = ProgressDialog(cancel)
         self.progress_dialog.set_transient_for(self.window)
         # Disable the Upload menu until the user has authenticated
         self.upload_menu.set_sensitive(False)
         
         # Connect to flickr, go go go
-        self.token = self.flickr.authenticate_1().addCallbacks(self.auth_open_url, ErrorDialog.twisted_error)
+        self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
+
+    def twisted_error(self, failure):
+        dialog = ErrorDialog(self.window)
+        dialog.set_from_failure(failure)
+        dialog.show()
     
     def get_custom_handler(self, glade, function_name, widget_name, str1, str2, int1, int2):
         """libglade callback to create custom widgets."""
@@ -149,6 +148,11 @@ class Postr (UniqueApp):
         view = ImageList.ImageList ()
         view.show()
         return view
+
+    def status_bar_new (self, *args):
+        bar = StatusBar.StatusBar(self.flickr)
+        bar.show()
+        return bar
     
     def on_message(self, app, command, command_data, startup_id, screen, workspace):
         """Callback from UniqueApp, when a message arrives."""
@@ -167,25 +171,23 @@ class Postr (UniqueApp):
         else:
             dialog = AuthenticationDialog(self.window, state['url'])
             if dialog.run() == gtk.RESPONSE_ACCEPT:
-                self.flickr.authenticate_2(state).addCallbacks(self.connected, ErrorDialog.twisted_error)
+                self.flickr.authenticate_2(state).addCallbacks(self.connected, self.twisted_error)
             dialog.destroy()
     
     def connected(self, connected):
         """Callback when the Flickr authentication completes."""
         if connected:
             self.upload_menu.set_sensitive(True)
-            self.flickr.people_getUploadStatus().addCallbacks(self.got_quota, ErrorDialog.twisted_error)
-            self.flickr.photosets_getList().addCallbacks(self.got_photosets, ErrorDialog.twisted_error)
+            self.statusbar.update_quota()
+            self.flickr.photosets_getList().addCallbacks(self.got_photosets, self.twisted_error)
 
-    def got_quota(self, rsp):
-        """Callback for the getUploadStatus call, which updates the remaining
-        quota in the status bar."""
-        bandwidth = rsp.find("user/bandwidth").get("remainingbytes")
-        context = self.statusbar.get_context_id("quota")
-        self.statusbar.pop(context)
-        self.statusbar.push(context, _("You have %s remaining this month") %
-                            greek(int(bandwidth)))
-
+    def update_statusbar(self):
+        """Recalculate how much is to be uploaded, and update the status bar."""
+        size = 0
+        for row in self.model:
+            size += row[ImageStore.COL_SIZE]
+        self.statusbar.set_upload(size)
+    
     def got_set_thumb(self, page, it):
         loader = gtk.gdk.PixbufLoader()
         loader.set_size (32, 32)
@@ -202,7 +204,7 @@ class Postr (UniqueApp):
                            1, photoset.find("title").text)
 
             url = "http://static.flickr.com/%s/%s_%s%s.jpg" % (photoset.get("server"), photoset.get("primary"), photoset.get("secret"), "_s")
-            getPage (url).addCallback (self.got_set_thumb, it)
+            getPage (url).addCallback (self.got_set_thumb, it).addErrback(self.twisted_error)
     
     def on_field_changed(self, entry, column):
         """Callback when the entry fields are changed."""
@@ -241,9 +243,7 @@ class Postr (UniqueApp):
         # Add filters for all reasonable image types
         filters = gtk.FileFilter()
         filters.set_name(_("Images"))
-        filters.add_mime_type("image/png")
-        filters.add_mime_type("image/jpeg")
-        filters.add_mime_type("image/gif")
+        filters.add_mime_type("image/*")
         dialog.add_filter(filters)
         filters = gtk.FileFilter()
         filters.set_name(_("All Files"))
@@ -266,11 +266,9 @@ class Postr (UniqueApp):
         
         if dialog.run() == gtk.RESPONSE_OK:
             dialog.hide()
+            self.last_folder = dialog.get_current_folder()
             for f in dialog.get_filenames():
                 self.add_image_filename(f)
-            
-            self.last_folder = dialog.get_current_folder()
-
         dialog.destroy()
             
     def on_quit_activate(self, widget, *args):
@@ -290,13 +288,28 @@ class Postr (UniqueApp):
         import twisted.internet.reactor
         twisted.internet.reactor.stop()
     
-    def on_delete_activate(self, menuitem):
-        """Callback from Edit->Delete."""
+    def on_remove_activate(self, menuitem):
+        """Callback from File->Remove."""
         selection = self.thumbview.get_selection()
         (model, items) = selection.get_selected_rows()
+        
+        # Remove the items
         for path in items:
             self.model.remove(self.model.get_iter(path))
-    
+
+        # Select a new row
+        try:
+            self.thumbview.set_cursor(self.model[items[0]].path)
+        except IndexError:
+            # TODO: It appears that the ability to simply do
+            # gtk_tree_path_previous() is missing in PyGTK.
+            path = list(items[-1])
+            if path[0]:
+                path[0] -= 1
+                self.thumbview.set_cursor(self.model[tuple(path)].path)
+        
+        self.update_statusbar()
+        
     def on_select_all_activate(self, menuitem):
         """Callback from Edit->Select All."""
         selection = self.thumbview.get_selection()
@@ -310,13 +323,12 @@ class Postr (UniqueApp):
     def on_invert_selection_activate(self, menuitem):
         """Callback from Edit->Invert Selection."""
         selection = self.thumbview.get_selection()
-        def inverter(model, path, iter, selection):
-            (model, selected) = selection.get_selected_rows()
-            if path in selected:
-                selection.unselect_iter(iter)
+        selected = selection.get_selected_rows()[1]
+        for row in self.model:
+            if row.path in selected:
+                selection.unselect_iter(row.iter)
             else:
-                selection.select_iter(iter)
-        self.model.foreach(inverter, selection)
+                selection.select_iter(row.iter)
 
     def on_upload_activate(self, menuitem):
         """Callback from File->Upload."""
@@ -340,7 +352,8 @@ class Postr (UniqueApp):
         
     def on_about_activate(self, menuitem):
         """Callback from Help->About."""
-        dialog = AboutDialog(self.window)
+        dialog = AboutDialog()
+        dialog.set_transient_for(self.window)
         dialog.run()
         dialog.destroy()
 
@@ -373,7 +386,7 @@ class Postr (UniqueApp):
             # Clamp the size to 512
             if tw > 512: tw = 512
             if th > 512: th = 512
-            (tw, th) = self.get_thumb_size(simage.get_width(),
+            (tw, th) = get_thumb_size(simage.get_width(),
                                            simage.get_height(),
                                            tw, th)
 
@@ -424,17 +437,8 @@ class Postr (UniqueApp):
 
         [obj.handler_unblock(i) for obj,i in self.change_signals]
 
-    @staticmethod
-    def get_thumb_size(srcw, srch, dstw, dsth):
-        """Scale scrw x srch to an dimensions with the same ratio that fits as
-        closely as possible to dstw x dsth."""
-        ratio = srcw/float(srch)
-        if srcw > srch:
-            return (dstw, int(dstw/ratio))
-        else:
-            return (int(dsth*ratio), dsth)
-
     def get_image_info(self, title, description, tags):
+        from xml.sax.saxutils import escape
         if title:
             info_title = title
         else:
@@ -445,10 +449,10 @@ class Postr (UniqueApp):
         else:
             info_desc = _("No description")
 
-        s = "<b><big>%s</big></b>\n%s\n" % (info_title, info_desc)
+        s = "<b><big>%s</big></b>\n%s\n" % (escape (info_title), escape (info_desc))
         if tags:
             colour = self.window.style.text[gtk.STATE_INSENSITIVE].pixel
-            s = s + "<span color='#%X'>%s</span>" % (colour, tags)
+            s = s + "<span color='#%X'>%s</span>" % (colour, escape (tags))
         return s
     
     def add_image_filename(self, filename):
@@ -461,7 +465,13 @@ class Postr (UniqueApp):
         # and IPTC parsers that are incremental.
         
         # First we load the image scaled to 512x512 for the preview.
-        preview = gtk.gdk.pixbuf_new_from_file_at_size(filename, 512, 512)
+        try:
+            preview = gtk.gdk.pixbuf_new_from_file_at_size(filename, 512, 512)
+        except Exception, e:
+            d = ErrorDialog(self.window)
+            d.set_from_exception(e)
+            d.show_all()
+            return
         
         # On a file that doesn't contain EXIF, like a PNG, this just returns an
         # empty set.
@@ -486,7 +496,7 @@ class Postr (UniqueApp):
                 preview = preview.rotate_simple(gtk.gdk.PIXBUF_ROTATE_COUNTERCLOCKWISE)
         
         # Now scale the preview to a thumbnail
-        sizes = self.get_thumb_size(preview.get_width(), preview.get_height(), 64, 64)
+        sizes = get_thumb_size(preview.get_width(), preview.get_height(), 64, 64)
         thumb = preview.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
 
         # Slurp data from the EXIF and IPTC tags
@@ -516,6 +526,7 @@ class Postr (UniqueApp):
         
         self.model.set(self.model.append(),
                        ImageStore.COL_FILENAME, filename,
+                       ImageStore.COL_SIZE, os.path.getsize(filename),
                        ImageStore.COL_IMAGE, None,
                        ImageStore.COL_PREVIEW, preview,
                        ImageStore.COL_THUMBNAIL, thumb,
@@ -523,6 +534,8 @@ class Postr (UniqueApp):
                        ImageStore.COL_DESCRIPTION, desc,
                        ImageStore.COL_TAGS, tags,
                        ImageStore.COL_INFO, self.get_image_info(title, desc, tags))
+
+        self.update_statusbar()
     
     def on_drag_data_received(self, widget, context, x, y, selection, targetType, timestamp):
         """Drag and drop callback when data is received."""
@@ -532,14 +545,20 @@ class Postr (UniqueApp):
             # TODO: don't scale up if the image is smaller than 512/512
             
             # Scale the pixbuf to a preview
-            sizes = self.get_thumb_size (pixbuf.get_width(), pixbuf.get_height(), 512, 512)
+            sizes = get_thumb_size (pixbuf.get_width(), pixbuf.get_height(), 512, 512)
             preview = pixbuf.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
             # Now scale to a thumbnail
-            sizes = self.get_thumb_size (pixbuf.get_width(), pixbuf.get_height(), 64, 64)
+            sizes = get_thumb_size (pixbuf.get_width(), pixbuf.get_height(), 64, 64)
             thumb = pixbuf.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
+
+            # TODO: Either this or the matching code in add_image_filename() is
+            # wrong. Does the Flickr quota work on compressed image size, or raw
+            # image data size?
+            size = pixbuf.get_width() * pixbuf.get_height() * pixbuf.get_n_channels()
             
             self.model.set(self.model.append(),
                            ImageStore.COL_IMAGE, pixbuf,
+                           ImageStore.COL_SIZE, size,
                            ImageStore.COL_FILENAME, None,
                            ImageStore.COL_PREVIEW, preview,
                            ImageStore.COL_THUMBNAIL, thumb,
@@ -565,49 +584,71 @@ class Postr (UniqueApp):
                     
         else:
             print "Unhandled target type %d" % targetType
-        
+
+        self.update_statusbar()
         context.finish(True, True, timestamp)
 
     def update_progress(self, title, filename, thumb):
         """Update the progress bar whilst uploading."""
         label = '<b>%s</b>\n<i>%s</i>' % (title, basename(filename))
-        self.progress_filename.set_label(label)
+        self.progress_dialog.label.set_label(label)
 
         try:
-            self.progress_thumbnail.set_from_pixbuf(thumb)
-            self.progress_thumbnail.show()
+            self.progress_dialog.thumbnail.set_from_pixbuf(thumb)
+            self.progress_dialog.thumbnail.show()
         except:
-            self.progress_thumbnail.set_from_pixbuf(None)
-            self.progress_thumbnail.hide()
+            self.progress_dialog.thumbnail.set_from_pixbuf(None)
+            self.progress_dialog.thumbnail.hide()
 
-        self.progressbar.set_fraction(float(self.upload_index) / float(self.upload_count))
+        self.progress_dialog.progress.set_fraction(float(self.upload_index) / float(self.upload_count))
+
         # Use named args for i18n
-        progress_label = _('Uploading %(index)d of %(count)d') % {
+        data = {
             "index": self.upload_index+1,
             "count": self.upload_count
             }
-        self.progressbar.set_text(progress_label)
+        progress_label = _('Uploading %(index)d of %(count)d') % data
+        self.progress_dialog.label.set_text(progress_label)
+
+        self.window.set_title(_('Flickr Uploader (%(index)d/%(count)d)') % data)
 
     def add_to_set(self, rsp, set):
         """Callback from the upload method to add the picture to a set."""
-        if set:
-            self.flickr.photosets_addPhoto(photoset_id=set,
-                                           photo_id=rsp.find("photoid").text)
-            return rsp
-    
+        self.flickr.photosets_addPhoto(photoset_id=set,
+                                       photo_id=rsp.find("photoid").text)
+        return rsp
+
+    def upload_error(self, failure):
+        self.twisted_error(failure)
+        # TODO: nasty duplicate of the code in upload()
+        self.cancel_upload = False
+        self.window.set_title(_("Flickr Uploader"))
+        self.upload_menu.set_sensitive(True)
+        self.uploading = False
+        self.progress_dialog.hide()
+        self.thumbview.set_sensitive(True)
+        self.statusbar.update_quota()
+
     def upload(self, response=None):
         """Upload worker function, called by the File->Upload callback.  As this
         calls itself in the deferred callback, it takes a response argument."""
-        if self.upload_index >= self.upload_count:
+
+        # Remove the uploaded image from the store
+        if self.current_upload_it:
+            self.model.remove(self.current_upload_it)
+            self.current_upload_it = None
+        
+        it = self.model.get_iter_first()
+        if self.cancel_upload or it is None:
+            self.cancel_upload = False
+            self.window.set_title(_("Flickr Uploader"))
             self.upload_menu.set_sensitive(True)
             self.uploading = False
             self.progress_dialog.hide()
-            self.model.clear()
             self.thumbview.set_sensitive(True)
-            self.flickr.people_getUploadStatus().addCallbacks(self.got_quota, ErrorDialog.twisted_error)
+            self.statusbar.update_quota()
             return
 
-        it = self.model.get_iter_from_string(str(self.upload_index))
         (filename, thumb, pixbuf, title, desc, tags, set_it) = self.model.get(it,
                                                                               ImageStore.COL_FILENAME,
                                                                               ImageStore.COL_THUMBNAIL,
@@ -616,6 +657,7 @@ class Postr (UniqueApp):
                                                                               ImageStore.COL_DESCRIPTION,
                                                                               ImageStore.COL_TAGS,
                                                                               ImageStore.COL_SET)
+        # Lookup the set ID from the iterator
         if set_it:
             (set_id,) = self.sets.get (set_it, 0)
         else:
@@ -623,13 +665,15 @@ class Postr (UniqueApp):
         
         self.update_progress(filename, title, thumb)
         self.upload_index += 1
-
+        self.current_upload_it = it
+        
         if filename:
             d = self.flickr.upload(filename=filename,
                                title=title, desc=desc,
                                tags=tags)
-            d.addCallback(self.add_to_set, set_id)
-            d.addCallbacks(self.upload, ErrorDialog.twisted_error)
+            if set_id:
+                d.addCallback(self.add_to_set, set_id)
+            d.addCallbacks(self.upload, self.upload_error)
         elif pixbuf:
             # This isn't very nice, but might be the best way
             data = []
@@ -637,7 +681,8 @@ class Postr (UniqueApp):
             d = self.flickr.upload(imageData=''.join(data),
                                 title=title, desc=desc,
                                 tags=tags)
-            d.addCallback(self.add_to_set, set_id)
-            d.addCallbacks(self.upload, ErrorDialog.twisted_error)
+            if set_id:
+                d.addCallback(self.add_to_set, set_id)
+            d.addCallbacks(self.upload, self.upload_error)
         else:
             print "No filename or pixbuf stored"
