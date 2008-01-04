@@ -20,7 +20,7 @@ from urlparse import urlparse
 from os.path import basename
 
 import pygtk; pygtk.require ("2.0")
-import gobject, gtk, gtk.glade
+import gobject, gtk, gtk.glade, gconf
 
 from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
@@ -70,6 +70,7 @@ class Postr (UniqueApp):
         get_glade_widgets (glade, self,
                            ("window",
                             "upload_menu",
+                            "upload_button",
                             "statusbar",
                             "thumbnail_image",
                             "title_entry",
@@ -129,6 +130,13 @@ class Postr (UniqueApp):
         self.progress_dialog.set_transient_for(self.window)
         # Disable the Upload menu until the user has authenticated
         self.upload_menu.set_sensitive(False)
+        self.upload_button.set_sensitive(False)
+
+        # Update the proxy configuration
+        client = gconf.client_get_default()
+        client.add_dir("/system/http_proxy", gconf.CLIENT_PRELOAD_RECURSIVE)
+        client.notify_add("/system/http_proxy", self.proxy_changed)
+        self.proxy_changed(client, 0, None, None)
         
         # Connect to flickr, go go go
         self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
@@ -136,7 +144,29 @@ class Postr (UniqueApp):
     def twisted_error(self, failure):
         dialog = ErrorDialog(self.window)
         dialog.set_from_failure(failure)
-        dialog.show()
+        dialog.show_all()
+
+    def proxy_changed(self, client, cnxn_id, entry, something):
+        if client.get_bool("/system/http_proxy/use_http_proxy"):
+            host = client.get_string("/system/http_proxy/host")
+            port = client.get_int("/system/http_proxy/port")
+            if host is None or host == "" or port == 0:
+                self.flickr.set_proxy(None)
+                return
+            
+            if client.get_bool("/system/http_proxy/use_authentication"):
+                user = client.get_string("/system/http_proxy/authentication_user")
+                password = client.get_string("/system/http_proxy/authentication_password")
+                if user and user != "":
+                    url = "http://%s:%s@%s:%d" % (user, password, host, port)
+                else:
+                    url = "http://%s:%d" % (host, port)
+            else:
+                url = "http://%s:%d" % (host, port)
+
+            self.flickr.set_proxy(url)
+        else:
+            self.flickr.set_proxy(None)
     
     def get_custom_handler(self, glade, function_name, widget_name, str1, str2, int1, int2):
         """libglade callback to create custom widgets."""
@@ -177,7 +207,9 @@ class Postr (UniqueApp):
     def connected(self, connected):
         """Callback when the Flickr authentication completes."""
         if connected:
+            # TODO: only set sensitive if there are images to upload
             self.upload_menu.set_sensitive(True)
+            self.upload_button.set_sensitive(True)
             self.statusbar.update_quota()
             self.flickr.photosets_getList().addCallbacks(self.got_photosets, self.twisted_error)
 
@@ -341,7 +373,8 @@ class Postr (UniqueApp):
             print "Upload should be disabled, no photos"
             return
 
-        menuitem.set_sensitive(False)
+        self.upload_menu.set_sensitive(False)
+        self.upload_button.set_sensitive(False)
         self.uploading = True
         self.thumbview.set_sensitive(False)
         self.progress_dialog.show()
@@ -460,6 +493,14 @@ class Postr (UniqueApp):
         and drop callbacks."""
         # TODO: MIME type check
 
+        # Check the file size
+        filesize = os.path.getsize(filename)
+        if filesize > 10 * 1024 * 1024:
+            d = ErrorDialog(self.window)
+            d.set_from_string("Image %s is too large, images must be no larger than 10MB in size." % filename)
+            d.show_all()
+            return
+        
         # TODO: we open the file three times now, which is madness, especially
         # if gnome-vfs is used to read remote files.  Need to find/write EXIF
         # and IPTC parsers that are incremental.
@@ -529,7 +570,7 @@ class Postr (UniqueApp):
         
         self.model.set(self.model.append(),
                        ImageStore.COL_FILENAME, filename,
-                       ImageStore.COL_SIZE, os.path.getsize(filename),
+                       ImageStore.COL_SIZE, filesize,
                        ImageStore.COL_IMAGE, None,
                        ImageStore.COL_PREVIEW, preview,
                        ImageStore.COL_THUMBNAIL, thumb,
@@ -627,6 +668,7 @@ class Postr (UniqueApp):
         self.cancel_upload = False
         self.window.set_title(_("Flickr Uploader"))
         self.upload_menu.set_sensitive(True)
+        self.upload_button.set_sensitive(True)
         self.uploading = False
         self.progress_dialog.hide()
         self.thumbview.set_sensitive(True)
@@ -646,6 +688,7 @@ class Postr (UniqueApp):
             self.cancel_upload = False
             self.window.set_title(_("Flickr Uploader"))
             self.upload_menu.set_sensitive(True)
+            self.upload_button.set_sensitive(True)
             self.uploading = False
             self.progress_dialog.hide()
             self.thumbview.set_sensitive(True)
