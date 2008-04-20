@@ -1,6 +1,6 @@
 # Postr, a Flickr Uploader
 #
-# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -26,9 +26,12 @@ import gobject, gtk
  COL_TITLE, # The image title
  COL_DESCRIPTION, # The image description
  COL_TAGS, # A space deliminated list of tags for the image
- COL_INFO, # Markup text with complete image info 
- COL_SET # An iterator point to the set to put the photo in
- ) = range (0, 10)
+ COL_SET, # An iterator point to the set to put the photo in
+ COL_GROUPS, # Pyton list of group IDs
+ COL_PRIVACY, # Iterator containing privacy rules
+ COL_SAFETY, # Iterator containing safety
+ COL_VISIBLE # If the image is searchable
+ ) = range (0, 13)
 
 class ImageStore (gtk.ListStore):
     def __init__(self):
@@ -40,5 +43,8 @@ class ImageStore (gtk.ListStore):
                                gobject.TYPE_STRING, # COL_TITLE
                                gobject.TYPE_STRING, # COL_DESCRIPTION
                                gobject.TYPE_STRING, # COL_TAGS
-                               gobject.TYPE_STRING, # COL_INFO
-                               gtk.TreeIter) # COL_SET
+                               gtk.TreeIter, # COL_SET
+                               object, # COL_GROUPS
+                               gtk.TreeIter, # COL_PRIVACY
+                               gtk.TreeIter, # COL_SAFETY
+                               gobject.TYPE_BOOLEAN) # COL_VISIBLE

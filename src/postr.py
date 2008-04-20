@@ -1,6 +1,6 @@
 # Postr, a Flickr Uploader
 #
-# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -26,7 +26,7 @@ from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
 from ProgressDialog import ProgressDialog
 from ErrorDialog import ErrorDialog
-import ImageStore, ImageList, StatusBar
+import ImageStore, ImageList, StatusBar, PrivacyCombo, SafetyCombo, GroupSelector
 
 from flickrest import Flickr
 from twisted.web.client import getPage
@@ -57,6 +57,8 @@ class Postr (UniqueApp):
             self.connect("message", self.on_message)
         except AttributeError:
             pass
+
+        self.is_connected = False
         
         self.flickr = Flickr(api_key="c53cebd15ed936073134cec858036f1d",
                              secret="7db1b8ef68979779",
@@ -74,11 +76,16 @@ class Postr (UniqueApp):
                             "statusbar",
                             "thumbnail_image",
                             "title_entry",
-                            "desc_entry",
+                            "desc_view",
                             "tags_entry",
                             "set_combo",
+                            "group_selector",
+                            "privacy_combo",
+                            "safety_combo",
+                            "visible_check",
                             "thumbview")
                            )
+        align_labels(glade, ("title_label", "desc_label", "tags_label", "set_label", "privacy_label", "safety_label"))
         
         # Just for you, Daniel.
         try:
@@ -88,23 +95,35 @@ class Postr (UniqueApp):
             pass
         
         self.model = ImageStore.ImageStore ()
+        self.model.connect("row-inserted", self.on_model_changed)
+        self.model.connect("row-deleted", self.on_model_changed)
+        
         self.thumbview.set_model(self.model)
         self.thumbview.connect("drag_data_received", self.on_drag_data_received)
 
         selection = self.thumbview.get_selection()
         selection.connect("changed", self.on_selection_changed)
 
+        # TODO: remove this
         self.current_it = None
         self.last_folder = None
         self.upload_quota = None
+
+        self.thumbnail_image.clear()
+        self.thumbnail_image.set_size_request(128, 128)
         
-        self.change_signals = []
+        self.change_signals = [] # List of (widget, signal ID) tuples
         self.change_signals.append((self.title_entry, self.title_entry.connect('changed', self.on_field_changed, ImageStore.COL_TITLE)))
-        self.change_signals.append((self.desc_entry, self.desc_entry.connect('changed', self.on_field_changed, ImageStore.COL_DESCRIPTION)))
+        self.change_signals.append((self.desc_view.get_buffer(), self.desc_view.get_buffer().connect('changed', self.on_field_changed, ImageStore.COL_DESCRIPTION)))
         self.change_signals.append((self.tags_entry, self.tags_entry.connect('changed', self.on_field_changed, ImageStore.COL_TAGS)))
+        self.change_signals.append((self.group_selector, self.group_selector.connect('changed', self.on_field_changed, ImageStore.COL_GROUPS)))
+        self.change_signals.append((self.privacy_combo, self.privacy_combo.connect('changed', self.on_field_changed, ImageStore.COL_PRIVACY)))
+        self.change_signals.append((self.safety_combo, self.safety_combo.connect('changed', self.on_field_changed, ImageStore.COL_SAFETY)))
+        self.change_signals.append((self.visible_check, self.visible_check.connect('toggled', self.on_field_changed, ImageStore.COL_VISIBLE)))
+        
         self.thumbnail_image.connect('size-allocate', self.update_thumbnail)
         self.old_thumb_allocation = None
-    
+
         # The set selector combo
         self.sets = gtk.ListStore (gobject.TYPE_STRING, # ID
                                    gobject.TYPE_STRING, # Name
@@ -112,7 +131,9 @@ class Postr (UniqueApp):
         self.sets.set (self.sets.append(), 0, None, 1, "None")
         self.set_combo.set_model (self.sets)
         self.set_combo.set_active (-1)
-        
+
+        self.on_selection_changed(selection)
+
         renderer = gtk.CellRendererPixbuf()
         self.set_combo.pack_start (renderer, expand=False)
         self.set_combo.set_attributes(renderer, pixbuf=2)
@@ -129,8 +150,7 @@ class Postr (UniqueApp):
         self.progress_dialog = ProgressDialog(cancel)
         self.progress_dialog.set_transient_for(self.window)
         # Disable the Upload menu until the user has authenticated
-        self.upload_menu.set_sensitive(False)
-        self.upload_button.set_sensitive(False)
+        self.update_upload()
 
         # Update the proxy configuration
         client = gconf.client_get_default()
@@ -140,8 +160,10 @@ class Postr (UniqueApp):
         
         # Connect to flickr, go go go
         self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
-
+    
     def twisted_error(self, failure):
+        self.update_upload()
+        
         dialog = ErrorDialog(self.window)
         dialog.set_from_failure(failure)
         dialog.show_all()
@@ -170,8 +192,18 @@ class Postr (UniqueApp):
     
     def get_custom_handler(self, glade, function_name, widget_name, str1, str2, int1, int2):
         """libglade callback to create custom widgets."""
-        handler = getattr(self, function_name)
-        return handler(str1, str2, int1, int2)
+        handler = getattr(self, function_name, None)
+        if handler:
+            return handler(str1, str2, int1, int2)
+        else:
+            widget = eval(function_name)
+            widget.show()
+            return widget
+
+    def group_selector_new (self, *args):
+        w = GroupSelector.GroupSelector(self.flickr)
+        w.show()
+        return w
     
     def image_list_new (self, *args):
         """Custom widget creation function to make the image list."""
@@ -192,6 +224,11 @@ class Postr (UniqueApp):
         else:
             return gtkunique.RESPONSE_ABORT
 
+    def on_model_changed(self, *args):
+        # We don't care about the arguments, because we just want to know when
+        # the model was changed, not what was changed.
+        self.update_upload()
+    
     def auth_open_url(self, state):
         """Callback from midway through Flickr authentication.  At this point we
         either have cached tokens so can carry on, or need to open a web browser
@@ -206,12 +243,17 @@ class Postr (UniqueApp):
     
     def connected(self, connected):
         """Callback when the Flickr authentication completes."""
+        self.is_connected = connected
         if connected:
-            # TODO: only set sensitive if there are images to upload
-            self.upload_menu.set_sensitive(True)
-            self.upload_button.set_sensitive(True)
+            self.update_upload()
             self.statusbar.update_quota()
+            self.group_selector.update()
             self.flickr.photosets_getList().addCallbacks(self.got_photosets, self.twisted_error)
+
+    def update_upload(self):
+        connected = self.is_connected and self.model.iter_n_children(None) > 0
+        self.upload_menu.set_sensitive(connected)
+        self.upload_button.set_sensitive(connected)
 
     def update_statusbar(self):
         """Recalculate how much is to be uploaded, and update the status bar."""
@@ -238,19 +280,26 @@ class Postr (UniqueApp):
             url = "http://static.flickr.com/%s/%s_%s%s.jpg" % (photoset.get("server"), photoset.get("primary"), photoset.get("secret"), "_s")
             getPage (url).addCallback (self.got_set_thumb, it).addErrback(self.twisted_error)
     
-    def on_field_changed(self, entry, column):
+    def on_field_changed(self, widget, column):
         """Callback when the entry fields are changed."""
+        if isinstance(widget, gtk.Entry) or isinstance(widget, gtk.TextBuffer):
+            value = widget.get_property("text")
+        elif isinstance(widget, gtk.ToggleButton):
+            value = widget.get_active()
+        elif isinstance(widget, gtk.ComboBox):
+            value = widget.get_active_iter()
+        elif isinstance(widget, GroupSelector.GroupSelector):
+            value = widget.get_selected_groups()
+        else:
+            raise "Unhandled widget type %s" % widget
+        
         selection = self.thumbview.get_selection()
         (model, items) = selection.get_selected_rows()
         for path in items:
             it = self.model.get_iter(path)
-            self.model.set_value (it, column, entry.get_text())
-            (title, desc, tags) = self.model.get(it,
-                                                 ImageStore.COL_TITLE,
-                                                 ImageStore.COL_DESCRIPTION,
-                                                 ImageStore.COL_TAGS)
-            self.model.set_value (it, ImageStore.COL_INFO, self.get_image_info(title, desc, tags))
+            self.model.set_value (it, column, value)
 
+    # TODO: remove this and use the field-changed logic
     def on_set_combo_changed(self, combo):
         """Callback when the set combo is changed."""
         set_it = self.set_combo.get_active_iter()
@@ -409,11 +458,8 @@ class Postr (UniqueApp):
 
             self.old_thumb_allocation = allocation
 
-            (image, simage, filename) = self.model.get(self.current_it,
-                                                       ImageStore.COL_IMAGE,
-                                                       ImageStore.COL_PREVIEW,
-                                                       ImageStore.COL_FILENAME)
-
+            (simage,) = self.model.get(self.current_it, ImageStore.COL_PREVIEW)
+            
             tw = allocation.width
             th = allocation.height
             # Clamp the size to 512
@@ -431,63 +477,79 @@ class Postr (UniqueApp):
         preview."""
         [obj.handler_block(i) for obj,i in self.change_signals]
         
-        def enable_field(field, text):
+        def enable_field(field, value):
             field.set_sensitive(True)
-            field.set_text(text)
+            if isinstance(field, gtk.Entry):
+                field.set_text(value)
+            elif isinstance(field, gtk.TextView):
+                field.get_buffer().set_text (value)
+            elif isinstance(field, gtk.ToggleButton):
+                field.set_active(value)
+            elif isinstance(field, gtk.ComboBox):
+                if value:
+                    field.set_active_iter(value)
+                else:
+                    # This means the default value is always the first
+                    field.set_active(0)
+            elif isinstance(field, GroupSelector.GroupSelector):
+                field.set_selected_groups(value)
+            else:
+                raise "Unhandled widget type %s" % field
         def disable_field(field):
             field.set_sensitive(False)
-            field.set_text("")
+            if isinstance(field, gtk.Entry):
+                field.set_text("")
+            elif isinstance(field, gtk.TextView):
+                field.get_buffer().set_text ("")
+            elif isinstance(field, gtk.ToggleButton):
+                field.set_active(True)
+            elif isinstance(field, gtk.ComboBox):
+                field.set_active(-1)
+            elif isinstance(field, GroupSelector.GroupSelector):
+                field.set_selected_groups(())
+            else:
+                raise "Unhandled widget type %s" % field
 
         (model, items) = selection.get_selected_rows()
         
         if items:
             # TODO: do something clever with multiple selections
             self.current_it = self.model.get_iter(items[0])
-            (title, desc, tags, set_it) = self.model.get(self.current_it,
-                                                      ImageStore.COL_TITLE,
-                                                      ImageStore.COL_DESCRIPTION,
-                                                      ImageStore.COL_TAGS,
-                                                      ImageStore.COL_SET)
-
+            (title, desc, tags, set_it, groups, privacy_it, safety_it, visible) = self.model.get(self.current_it,
+                                                                                                 ImageStore.COL_TITLE,
+                                                                                                 ImageStore.COL_DESCRIPTION,
+                                                                                                 ImageStore.COL_TAGS,
+                                                                                                 ImageStore.COL_SET,
+                                                                                                 ImageStore.COL_GROUPS,
+                                                                                                 ImageStore.COL_PRIVACY,
+                                                                                                 ImageStore.COL_SAFETY,
+                                                                                                 ImageStore.COL_VISIBLE)
+            
             enable_field(self.title_entry, title)
-            enable_field(self.desc_entry, desc)
+            enable_field(self.desc_view, desc)
             enable_field(self.tags_entry, tags)
-            self.set_combo.set_sensitive(True)
-            if (set_it):
-                self.set_combo.set_active_iter(set_it)
-            else:
-                self.set_combo.set_active(0)
+            enable_field(self.set_combo, set_it)
+            enable_field(self.group_selector, groups)
+            enable_field(self.privacy_combo, privacy_it)
+            enable_field(self.safety_combo, safety_it)
+            enable_field(self.visible_check, visible)
+            
             self.update_thumbnail(self.thumbnail_image)
         else:
             self.current_it = None
             disable_field(self.title_entry)
-            disable_field(self.desc_entry)
+            disable_field(self.desc_view)
             disable_field(self.tags_entry)
-            self.set_combo.set_sensitive(False)
-            self.set_combo.set_active(-1)
+            disable_field(self.set_combo)
+            disable_field(self.group_selector)
+            disable_field(self.privacy_combo)
+            disable_field(self.safety_combo)
+            disable_field(self.visible_check)
 
             self.thumbnail_image.set_from_pixbuf(None)
 
         [obj.handler_unblock(i) for obj,i in self.change_signals]
 
-    def get_image_info(self, title, description, tags):
-        from xml.sax.saxutils import escape
-        if title:
-            info_title = title
-        else:
-            info_title = _("No title")
-
-        if description:
-            info_desc = description
-        else:
-            info_desc = _("No description")
-
-        s = "<b><big>%s</big></b>\n%s\n" % (escape (info_title), escape (info_desc))
-        if tags:
-            colour = self.window.style.text[gtk.STATE_INSENSITIVE].pixel
-            s = s + "<span color='#%X'>%s</span>" % (colour, escape (tags))
-        return s
-    
     def add_image_filename(self, filename):
         """Add a file to the image list.  Called by the File->Add Photo and drag
         and drop callbacks."""
@@ -577,9 +639,10 @@ class Postr (UniqueApp):
                        ImageStore.COL_TITLE, title,
                        ImageStore.COL_DESCRIPTION, desc,
                        ImageStore.COL_TAGS, tags,
-                       ImageStore.COL_INFO, self.get_image_info(title, desc, tags))
+                       ImageStore.COL_VISIBLE, True)
 
         self.update_statusbar()
+        self.update_upload()
     
     def on_drag_data_received(self, widget, context, x, y, selection, targetType, timestamp):
         """Drag and drop callback when data is received."""
@@ -595,9 +658,8 @@ class Postr (UniqueApp):
             sizes = get_thumb_size (pixbuf.get_width(), pixbuf.get_height(), 64, 64)
             thumb = pixbuf.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
 
-            # TODO: Either this or the matching code in add_image_filename() is
-            # wrong. Does the Flickr quota work on compressed image size, or raw
-            # image data size?
+            # TODO: This is wrong, and should generate a PNG here and use the
+            # size of the PNG
             size = pixbuf.get_width() * pixbuf.get_height() * pixbuf.get_n_channels()
             
             self.model.set(self.model.append(),
@@ -609,7 +671,8 @@ class Postr (UniqueApp):
                            ImageStore.COL_TITLE, "",
                            ImageStore.COL_DESCRIPTION, "",
                            ImageStore.COL_TAGS, "",
-                           ImageStore.COL_INFO, self.get_image_info(None, None, None))
+                           ImageStore.COL_VISIBLE, True)
+
         
         elif targetType == ImageList.DRAG_URI:
             for uri in selection.get_uris():
@@ -658,13 +721,18 @@ class Postr (UniqueApp):
 
     def add_to_set(self, rsp, set):
         """Callback from the upload method to add the picture to a set."""
-        self.flickr.photosets_addPhoto(photoset_id=set,
-                                       photo_id=rsp.find("photoid").text)
+        photo_id=rsp.find("photoid").text
+        self.flickr.photosets_addPhoto(photo_id=photo_id, photoset_id=set).addErrback(self.twisted_error)
         return rsp
 
-    def upload_error(self, failure):
-        self.twisted_error(failure)
-        # TODO: nasty duplicate of the code in upload()
+    def add_to_groups(self, rsp, groups):
+        """Callback from the upload method to add the picture to a groups."""
+        photo_id=rsp.find("photoid").text
+        for group in groups:
+            self.flickr.groups_pools_add(photo_id=photo_id, group_id=group).addErrback(self.twisted_error)
+        return rsp
+
+    def upload_done(self):
         self.cancel_upload = False
         self.window.set_title(_("Flickr Uploader"))
         self.upload_menu.set_sensitive(True)
@@ -674,6 +742,10 @@ class Postr (UniqueApp):
         self.thumbview.set_sensitive(True)
         self.statusbar.update_quota()
 
+    def upload_error(self, failure):
+        self.twisted_error(failure)
+        self.upload_done()
+        
     def upload(self, response=None):
         """Upload worker function, called by the File->Upload callback.  As this
         calls itself in the deferred callback, it takes a response argument."""
@@ -685,50 +757,59 @@ class Postr (UniqueApp):
         
         it = self.model.get_iter_first()
         if self.cancel_upload or it is None:
-            self.cancel_upload = False
-            self.window.set_title(_("Flickr Uploader"))
-            self.upload_menu.set_sensitive(True)
-            self.upload_button.set_sensitive(True)
-            self.uploading = False
-            self.progress_dialog.hide()
-            self.thumbview.set_sensitive(True)
-            self.statusbar.update_quota()
+            self.upload_done()
             return
 
-        (filename, thumb, pixbuf, title, desc, tags, set_it) = self.model.get(it,
-                                                                              ImageStore.COL_FILENAME,
-                                                                              ImageStore.COL_THUMBNAIL,
-                                                                              ImageStore.COL_IMAGE,
-                                                                              ImageStore.COL_TITLE,
-                                                                              ImageStore.COL_DESCRIPTION,
-                                                                              ImageStore.COL_TAGS,
-                                                                              ImageStore.COL_SET)
+        (filename, thumb, pixbuf, title, desc, tags, set_it, groups, privacy_it, safety_it, visible) = self.model.get(it,
+                                                                                                                      ImageStore.COL_FILENAME,
+                                                                                                                      ImageStore.COL_THUMBNAIL,
+                                                                                                                      ImageStore.COL_IMAGE,
+                                                                                                                      ImageStore.COL_TITLE,
+                                                                                                                      ImageStore.COL_DESCRIPTION,
+                                                                                                                      ImageStore.COL_TAGS,
+                                                                                                                      ImageStore.COL_SET,
+                                                                                                                      ImageStore.COL_GROUPS,
+                                                                                                                      ImageStore.COL_PRIVACY,
+                                                                                                                      ImageStore.COL_SAFETY,
+                                                                                                                      ImageStore.COL_VISIBLE)
         # Lookup the set ID from the iterator
         if set_it:
             (set_id,) = self.sets.get (set_it, 0)
         else:
             set_id = 0
-        
+
+        if privacy_it:
+            (is_public, is_family, is_friend) = self.privacy_combo.get_acls_for_iter(privacy_it)
+        else:
+            is_public = is_family = is_friend = None
+
+        if safety_it:
+            safety = self.safety_combo.get_safety_for_iter(safety_it)
+        else:
+            safety = None
+
         self.update_progress(filename, title, thumb)
         self.upload_index += 1
         self.current_upload_it = it
         
         if filename:
             d = self.flickr.upload(filename=filename,
-                               title=title, desc=desc,
-                               tags=tags)
-            if set_id:
-                d.addCallback(self.add_to_set, set_id)
-            d.addCallbacks(self.upload, self.upload_error)
+                                   title=title, desc=desc,
+                                   tags=tags, search_hidden=not visible, safety=safety,
+                                   is_public=is_public, is_family=is_family, is_friend=is_friend)
         elif pixbuf:
             # This isn't very nice, but might be the best way
             data = []
             pixbuf.save_to_callback(lambda d: data.append(d), "png", {})
             d = self.flickr.upload(imageData=''.join(data),
-                                title=title, desc=desc,
-                                tags=tags)
-            if set_id:
-                d.addCallback(self.add_to_set, set_id)
-            d.addCallbacks(self.upload, self.upload_error)
+                                   title=title, desc=desc, tags=tags,
+                                   search_hidden=not visible, safety=safety,
+                                   is_public=is_public, is_family=is_family, is_friend=is_friend)
         else:
             print "No filename or pixbuf stored"
+
+        if set_id:
+            d.addCallback(self.add_to_set, set_id)
+        if groups:
+            d.addCallback(self.add_to_groups, groups)
+        d.addCallbacks(self.upload, self.upload_error)

@@ -51,7 +51,19 @@ class Flickr:
         self.token = None
         self.logger = logging.getLogger('flickrest')
         self.set_proxy(os.environ.get("http_proxy", None))
-    
+        self.fullname = None
+        self.username = None
+        self.nsid = None
+
+    def get_fullname(self):
+        return self.fullname
+
+    def get_username(self):
+        return self.username
+
+    def get_nsid(self):
+        return self.nsid
+
     def set_proxy(self, proxy):
         # Handle proxies which are not URLs
         if proxy and "://" not in proxy:
@@ -67,9 +79,13 @@ class Flickr:
 
     def clear_cached(self):
         """Remove any cached information on disk."""
+        self.fullname = None
+        self.username = None
+        self.nsid = None
         token = self.__getTokenFile()
         if os.path.exists(token):
             os.remove(token)
+        self.token = None
     
     def __sign(self, kwargs):
         kwargs['api_key'] = self.api_key
@@ -136,13 +152,15 @@ class Flickr:
             # Otherwise just hope it is string-like and encode it to
             # UTF-8. TODO: this breaks when val is binary data.
             else:
-                lines.append(val.encode('utf-8'))
+                lines.append(str(val).encode('utf-8'))
         # Add final boundary.
         lines.append("--" + boundary.encode("utf-8"))
         return (boundary, '\r\n'.join(lines))
     
-    # TODO: add is_public, is_family, is_friends arguments
-    def upload(self, filename=None, imageData=None, title=None, desc=None, tags=None):
+    def upload(self, filename=None, imageData=None,
+               title=None, desc=None, tags=None,
+               is_public=None, is_family=None, is_friend=None,
+               safety=None, search_hidden=None):
         # Sanity check the arguments
         if filename is None and imageData is None:
             raise ValueError("Need to pass either filename or imageData")
@@ -156,7 +174,18 @@ class Flickr:
             kwargs['description'] = desc
         if tags:
             kwargs['tags'] = tags
+        if is_public is not None:
+            kwargs['is_public'] = is_public and 1 or 0
+        if is_family is not None:
+            kwargs['is_family'] = is_family and 1 or 0
+        if is_friend is not None:
+            kwargs['is_friend'] = is_friend and 1 or 0
+        if safety:
+            kwargs['safety_level'] = safety
+        if search_hidden is not None:
+            kwargs['hidden'] = search_hidden and 2 or 1 # Why Flickr, why?
         self.__sign(kwargs)
+        self.logger.info("Upload args %s" % kwargs)
         
         if imageData:
             kwargs['photo'] = imageData
@@ -178,6 +207,14 @@ class Flickr:
         def gotToken(e):
             # Set the token
             self.token = e.find("auth/token").text
+
+            # Pulling out the user information
+            user = e.find("auth/user")
+            # Setting the user variables
+            self.fullname = user.get("fullname")
+            self.username = user.get("username")
+            self.nsid = user.get("nsid")
+
             # Cache the authentication
             filename = self.__getTokenFile()
             path = os.path.dirname(filename)
@@ -186,9 +223,21 @@ class Flickr:
             f = file(filename, "w")
             f.write(ElementTree.tostring(e))
             f.close()
+
             # Callback to the user
             return True
         return self.auth_getToken(frob=state['frob']).addCallback(gotToken)
+
+    def __get_frob(self):
+        """Make the getFrob() call."""
+        def gotFrob(xml):
+            frob = xml.find("frob").text
+            keys = { 'perms': self.perms,
+                     'frob': frob }
+            self.__sign(keys)
+            url = "http://flickr.com/services/auth/?api_key=%(api_key)s&perms=%(perms)s&frob=%(frob)s&api_sig=%(api_sig)s" % keys
+            return {'url': url, 'frob': frob}
+        return self.auth_getFrob().addCallback(gotFrob)
 
     def authenticate_1(self):
         """Attempts to log in to Flickr. The return value is a Twisted Deferred
@@ -205,20 +254,25 @@ class Flickr:
             try:
                 e = ElementTree.parse(filename).getroot()
                 self.token = e.find("auth/token").text
-                return defer.succeed(None)
+                
+                user = e.find("auth/user")
+                self.fullname = user.get("fullname")
+                self.username = user.get("username")
+                self.nsid = user.get("nsid")
+
+                def reply(xml):
+                    return defer.succeed(None)
+                def failed(failure):
+                    # If checkToken() failed, we need to re-authenticate
+                    self.clear_cached()
+                    return self.__get_frob()
+                return self.auth_checkToken().addCallbacks(reply, failed)
             except:
                 # TODO: print the exception to stderr?
                 pass
-        
-        def gotFrob(xml):
-            frob = xml.find("frob").text
-            keys = { 'perms': self.perms,
-                     'frob': frob }
-            self.__sign(keys)
-            url = "http://flickr.com/services/auth/?api_key=%(api_key)s&perms=%(perms)s&frob=%(frob)s&api_sig=%(api_sig)s" % keys
-            return {'url': url, 'frob': frob}
-        return self.auth_getFrob().addCallback(gotFrob)
-
+            
+        return self.__get_frob()
+    
     @staticmethod
     def get_photo_url(photo, size=SIZE_MEDIUM):
         if photo is None:

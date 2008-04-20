@@ -15,22 +15,27 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
-from version import __version__
+import gobject, gtk
 
-class AboutDialog(gtk.AboutDialog):
+class SafetyCombo(gtk.ComboBox):
     def __init__(self):
-        gtk.AboutDialog.__init__(self)
-        self.set_name(_('Flickr Uploader'))
-        self.set_copyright(u'Copyright \u00A9 2006-2008 Ross Burton')
-        self.set_authors(('Ross Burton <ross@burtonini.com>',))
-        self.set_website('http://burtonini.com/')
-        self.set_logo_icon_name('postr')
-        self.set_version (__version__)
+        gtk.ComboBox.__init__(self)
+        # Name, is_public, is_family, is_friend
+        model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_INT)
+        model.set(model.append(), 0, "Safe", 1, 1)
+        model.set(model.append(), 0, "Moderate", 1, 2)
+        model.set(model.append(), 0, "Restricted", 1, 3)
+        self.model = model
+        self.set_model(model)
+        self.set_active(0)
 
+        cell = gtk.CellRendererText()
+        self.pack_start(cell)
+        self.add_attribute(cell, "text", 0)
 
-if __name__ == "__main__":
-    import gettext; gettext.install('postr')
-    
-    AboutDialog().show()
-    gtk.main()
+    def get_safety_for_iter(self, it):
+        if it is None: return None
+        return self.model.get_value(it, 1)
+
+    def get_active_safety(self):
+        return self.get_safety_for_iter(self.get_active_iter())

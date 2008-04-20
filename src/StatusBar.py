@@ -1,6 +1,6 @@
 # Postr, a Flickr Uploader
 #
-# Copyright (C) 2006-2007 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -37,6 +37,10 @@ class StatusBar(gtk.Statusbar):
             message = _("%(to_upload)s to upload") % self.__dict__
         else:
             message = ""
+
+        if self.flickr.get_username():
+            message = message + " - logged in as " + self.flickr.get_fullname() or self.flickr.get_username()
+        
         self.push(self.context, message)
     
     def update_quota(self):
