@@ -309,8 +309,8 @@ class Postr (UniqueApp):
             it = self.model.get_iter(path)
             self.model.set_value (it, ImageStore.COL_SET, set_it)
     
-    def on_add_photos_activate(self, menuitem):
-        """Callback from the File->Add Photos menu item."""
+    def on_add_photos_activate(self, widget):
+        """Callback from the File->Add Photos menu item or Add button."""
         dialog = gtk.FileChooserDialog(title=_("Add Photos"), parent=self.window,
                                        action=gtk.FILE_CHOOSER_ACTION_OPEN,
                                        buttons=(gtk.STOCK_CANCEL,
@@ -365,12 +365,24 @@ class Postr (UniqueApp):
             dialog.destroy()
             if response == gtk.RESPONSE_CANCEL:
                 return True
-        
+        elif self.is_connected and self.model.iter_n_children(None) > 0:
+            dialog = gtk.MessageDialog(type=gtk.MESSAGE_WARNING, parent=self.window)
+            dialog.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
+                               gtk.STOCK_QUIT, gtk.RESPONSE_OK)
+            dialog.set_markup(_('<b>Photos to be uploaded</b>'))
+            dialog.format_secondary_text(_('There are photos pending to '
+                                         'be uploaded. '
+                                         'Are you sure you want to quit?'))
+            response = dialog.run()
+            dialog.destroy()
+            if response == gtk.RESPONSE_CANCEL:
+                return True
+
         import twisted.internet.reactor
         twisted.internet.reactor.stop()
     
-    def on_remove_activate(self, menuitem):
-        """Callback from File->Remove."""
+    def on_remove_activate(self, widget):
+        """Callback from File->Remove or Remove button."""
         selection = self.thumbview.get_selection()
         (model, items) = selection.get_selected_rows()
         
@@ -411,6 +423,11 @@ class Postr (UniqueApp):
             else:
                 selection.select_iter(row.iter)
 
+    def on_switch_activate(self, menuitem):
+        """Callback from File->Switch User."""
+        self.flickr.clear_cached()
+        self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
+    
     def on_upload_activate(self, menuitem):
         """Callback from File->Upload."""
         if self.uploading:
@@ -729,7 +746,11 @@ class Postr (UniqueApp):
         """Callback from the upload method to add the picture to a groups."""
         photo_id=rsp.find("photoid").text
         for group in groups:
-            self.flickr.groups_pools_add(photo_id=photo_id, group_id=group).addErrback(self.twisted_error)
+            def error(failure):
+                # Code 6 means "moderated", which isn't an error
+                if failure.value.code != 6:
+                    twisted_error(self, failure)
+            self.flickr.groups_pools_add(photo_id=photo_id, group_id=group).addErrback(error)
         return rsp
 
     def upload_done(self):
@@ -740,6 +761,7 @@ class Postr (UniqueApp):
         self.uploading = False
         self.progress_dialog.hide()
         self.thumbview.set_sensitive(True)
+        self.update_statusbar()
         self.statusbar.update_quota()
 
     def upload_error(self, failure):
