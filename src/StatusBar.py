@@ -39,10 +39,11 @@ class StatusBar(gtk.Statusbar):
             message = ""
 
         if self.flickr.get_username():
-            message = message + " - logged in as " + self.flickr.get_fullname() or self.flickr.get_username()
-        
+            name = self.flickr.get_fullname() or self.flickr.get_username()
+            message = message + " - logged in as " + name
+
         self.push(self.context, message)
-    
+
     def update_quota(self):
         """Call Flickr to get the current upload quota, and update the status bar."""
         def got_quota(rsp):
