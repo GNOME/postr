@@ -25,6 +25,7 @@ class ErrorDialog(gtk.MessageDialog):
                                    parent=parent,
                                    message_format=_("An error occurred"))
         self.connect("response", lambda dialog, response: dialog.destroy())
+        self.expander = None
 
     def set_from_failure (self, failure):
         print failure
@@ -39,3 +40,25 @@ class ErrorDialog(gtk.MessageDialog):
     def set_from_string(self, message):
         # TODO: format nicer
         self.format_secondary_text (message)
+
+    def add_details(self, message):
+        # TODO: format nicer
+        if not self.expander:
+            self.expander = gtk.Expander(_('Details'))
+            self.view = gtk.TextView();
+            self.buffer = self.view.get_buffer()
+
+            sw = gtk.ScrolledWindow()
+            sw.set_shadow_type(gtk.SHADOW_ETCHED_IN)
+            sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+
+            sw.add(self.view)
+
+            self.expander.add(sw)
+            self.expander.show_all()
+            self.vbox.pack_start(self.expander)
+
+
+        iter = self.buffer.get_end_iter()
+        self.buffer.insert(iter, message+'\n')
+

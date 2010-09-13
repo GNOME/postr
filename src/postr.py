@@ -603,6 +603,7 @@ class Postr(UniqueApp):
 
         self.upload_count = self.model.iter_n_children(None)
         self.upload_index = 0
+        self.list_failed_it = []
         self.upload()
         
     def on_about_activate(self, menuitem):
@@ -985,6 +986,17 @@ class Postr(UniqueApp):
         self.update_statusbar()
         self.statusbar.update_quota()
         self.current_upload_it = None
+        # Add a emblem to each image that couldn't complete the upload process
+        for iter in self.list_failed_it:
+            self._add_emblem_in_failed_image(iter)
+        # if at least one image have fail, raise a error dialog
+        if len(self.list_failed_it) > 0:
+            d = ErrorDialog(self.window)
+            d.set_from_string(_('Some Files does not exist or are currently inaccessible.'))
+            for it in self.list_failed_it:
+                title = self.model.get(it, ImageStore.COL_TITLE)[0]
+                d.add_details(title)
+            d.show_all()
 
     def upload_error(self, failure):
         self.twisted_error(failure)
@@ -999,7 +1011,11 @@ class Postr(UniqueApp):
             self.model.remove(self.current_upload_it)
             self.current_upload_it = None
 
-        it = self.model.get_iter_first()
+        if len(self.list_failed_it):
+            it = self.model.iter_next(self.list_failed_it[-1])
+        else:
+            it = self.model.get_iter_first()
+
         if self.cancel_upload or it is None:
             self.upload_done()
             return
@@ -1056,23 +1072,30 @@ class Postr(UniqueApp):
         self.upload_index += 1
         self.current_upload_it = it
 
-        if uri:
-            d = self.flickr.upload(uri=uri,
-                                   title=title, desc=desc,
-                                   tags=tags, search_hidden=not visible, safety=safety,
-                                   is_public=is_public, is_family=is_family, is_friend=is_friend,
-                                   content_type=content_type, progress_tracker=self.upload_progress_tracker)
-        elif pixbuf:
-            # This isn't very nice, but might be the best way
-            data = []
-            pixbuf.save_to_callback(lambda d: data.append(d), "png", {})
-            d = self.flickr.upload(imageData=''.join(data),
-                                   title=title, desc=desc, tags=tags,
-                                   search_hidden=not visible, safety=safety,
-                                   is_public=is_public, is_family=is_family, is_friend=is_friend,
-                                   content_type=content_type, progress_tracker=self.upload_progress_tracker)
-        else:
-            print "No filename or pixbuf stored"
+        try:
+            if uri:
+                d = self.flickr.upload(uri=uri,
+                                       title=title, desc=desc,
+                                       tags=tags, search_hidden=not visible, safety=safety,
+                                       is_public=is_public, is_family=is_family, is_friend=is_friend,
+                                       content_type=content_type)
+            elif pixbuf:
+                # This isn't very nice, but might be the best way
+                data = []
+                pixbuf.save_to_callback(lambda d: data.append(d), "png", {})
+                d = self.flickr.upload(imageData=''.join(data),
+                                       title=title, desc=desc, tags=tags,
+                                       search_hidden=not visible, safety=safety,
+                                       is_public=is_public, is_family=is_family, is_friend=is_friend,
+                                       content_type=content_type)
+            else:
+                print "No filename or pixbuf stored"
+        except gio.Error, (error):
+            # save the iterator and continue uploading process
+            self.list_failed_it.append(it)
+            self.current_upload_it = None
+            self.upload()
+            return
 
         if set_id:
             d.addCallback(self.add_to_set, set_id)
@@ -1107,6 +1130,54 @@ class Postr(UniqueApp):
         self.set_combo.set_recently_created_photoset(photoset_name, id)
         self.upload(create_rsp)
         return create_rsp
+
+    def _add_emblem_in_failed_image(self, iter):
+        """ Add a Error emblem in the thumbnail"""
+        HALF_SIZE = 0.5
+
+        thumbnail = self.model.get_value(iter, ImageStore.COL_THUMBNAIL)
+        #Use a pixmap to create a new image
+        drawable = gtk.gdk.Pixmap(self.window.window, # gtk.gdk.Drawable
+                                    thumbnail.get_width(),
+                                    thumbnail.get_height())
+
+        # The thumbnail image is draw
+        drawable.draw_pixbuf(self.window.get_style().white_gc, #graphics context
+                                thumbnail, #the pixbuf
+                                0, 0, #Source X, Y coordinate
+                                0, 0) #Destination X, Y coordinate
+
+        error_icon = self.window.render_icon(
+                                stock_id=gtk.STOCK_DIALOG_ERROR,
+                                size=gtk.ICON_SIZE_DIALOG)
+
+        # It chose a size for the error icon proportional to the thumbnail image
+        size = min(int(thumbnail.get_width() * HALF_SIZE),
+                    int(thumbnail.get_height() * HALF_SIZE))
+
+        error_icon = error_icon.scale_simple(size, size,
+                                    gtk.gdk.INTERP_BILINEAR)
+
+        # The error icon is drawed in the bottom right edge of the image
+        drawable.draw_pixbuf(self.window.get_style().white_gc, #graphics context
+                            error_icon, #the pixbuf
+                            0, 0, #Source X,Y coordinate
+                            thumbnail.get_width()-size, #Destination X coordinate
+                            thumbnail.get_height()-size) #Destination Y coordinate
+
+        new_thumbnail = gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, #color mode
+                                True, #has alpha
+                                8, #bits
+                                thumbnail.get_width(), #width
+                                thumbnail.get_height()) #height
+
+        new_thumbnail.get_from_drawable(drawable, #the new image
+                                        drawable.get_colormap(),
+                                        0, 0, #Source X, Y coordinate
+                                        0, 0, #Destination X, Y coordinate
+                                        -1, -1) #The full width, height
+
+        self.model.set_value(iter, ImageStore.COL_THUMBNAIL, new_thumbnail)
 
     def on_row_activated(self, treeview, iter, path, entry):
         """This callback is used to focus the entry title after
