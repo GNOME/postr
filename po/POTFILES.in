@@ -1,3 +1,4 @@
+nautilus/postrExtension.py
 src/AboutDialog.py
 src/AuthenticationDialog.py
 src/ContentTypeCombo.py
