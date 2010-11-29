@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+  <resource>
+    <subject category="Applications|Internet" />
+    <type>
+	manual
+    </type>
+	<relation seriesid="00c51781-72a6-d2a6-cd36-3447e7fe989a50"/>
+    	<rights type="Creative Commons" license.version="3.O" holder="Germán Póo-Caamaño"/>
+  </resource>
+</omf>
