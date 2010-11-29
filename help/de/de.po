@@ -1,0 +1,202 @@
+# German translation of the postr documentation.
+# Mario Blättermann <mariobl@gnome.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"POT-Creation-Date: 2010-11-29 20:33+0100\n"
+"PO-Revision-Date: 2010-11-29 20:44+0100\n"
+"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: uploading.page:6(desc) uploading.page:14(title)
+msgid "Uploading photographs on Flickr"
+msgstr "Hochladen von Fotos zu Flickr"
+
+#: uploading.page:9(name) tags.page:9(name) sets.page:9(name)
+#: permissions.page:9(name) offline.page:9(name) login.page:9(name)
+#: introduction.page:10(name) index.page:9(name) groups.page:9(name)
+msgid "Germán Póo-Caamaño"
+msgstr "Germán Póo-Caamaño"
+
+#: uploading.page:10(email) tags.page:10(email) sets.page:10(email)
+#: permissions.page:10(email) offline.page:10(email) login.page:10(email)
+#: introduction.page:11(email) index.page:10(email) groups.page:10(email)
+msgid "gpoo@gnome.org"
+msgstr "gpoo@gnome.org"
+
+#: uploading.page:16(p)
+msgid "This page must be written first."
+msgstr ""
+
+#: tags.page:6(desc) tags.page:14(title)
+msgid "Adding tags to your pictures."
+msgstr ""
+
+#: tags.page:18(title) tags.page:20(title)
+msgid "What is a tag?"
+msgstr ""
+
+#: tags.page:25(title) tags.page:27(title)
+msgid "Creating a tag"
+msgstr ""
+
+#: sets.page:6(desc) sets.page:14(title)
+msgid "Grouping pictures by set."
+msgstr ""
+
+#: sets.page:18(title) sets.page:20(title)
+msgid "What is a set?"
+msgstr ""
+
+#: sets.page:25(title) sets.page:27(title)
+msgid "Creating a set"
+msgstr ""
+
+#: sets.page:32(title) sets.page:34(title)
+msgid "Choosing a set"
+msgstr ""
+
+#: permissions.page:6(desc)
+msgid "Setting permissions to your photographs."
+msgstr ""
+
+#: permissions.page:14(title)
+msgid "Privacy, safety and license."
+msgstr ""
+
+#: permissions.page:18(title)
+msgid "Privacy"
+msgstr ""
+
+#: permissions.page:20(title)
+msgid "Privacy of your photographs"
+msgstr ""
+
+#: permissions.page:25(title)
+msgid "Safety"
+msgstr ""
+
+#: permissions.page:27(title)
+msgid "Defining the safety of your content"
+msgstr ""
+
+#: permissions.page:32(title)
+msgid "License"
+msgstr "Lizenz"
+
+#: permissions.page:34(title)
+msgid "Choosing a license for your photographs"
+msgstr ""
+
+#: offline.page:6(desc)
+msgid "How to continue your work later."
+msgstr ""
+
+#: offline.page:14(title)
+msgid "Continue the uploading later"
+msgstr ""
+
+#: offline.page:19(p)
+msgid "Save session."
+msgstr ""
+
+#: offline.page:20(p)
+msgid "Choose a name."
+msgstr ""
+
+#: offline.page:21(p)
+msgid "The next time, you can load a session previously save."
+msgstr ""
+
+#: offline.page:25(p)
+msgid ""
+"If you load a session when you are off-line, the properties that relies on "
+"your connection will be lost. These properties are: sets, groups and privacy."
+msgstr ""
+
+#: login.page:6(desc) login.page:13(title)
+msgid "Log in on Flickr"
+msgstr "Anmeldung bei Flickr"
+
+#: login.page:15(p)
+msgid ""
+"Flickr must authorize to <app>Postr</app> the access to your information "
+"before doing anything else."
+msgstr ""
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: introduction.page:25(None)
+msgid "@@image: 'figures/postr-main-window.png'; md5=THIS FILE DOESN'T EXIST"
+msgstr ""
+
+#: introduction.page:7(desc)
+msgid "Introduction to the <app>Postr</app> flickr uploader."
+msgstr ""
+
+#: introduction.page:15(title)
+msgid "Introduction"
+msgstr "Einführung"
+
+#: introduction.page:17(p)
+msgid ""
+"<app>Postr</app> is a tool for uploading pictures to Flickr for the GNOME "
+"Desktop."
+msgstr ""
+"<app>Postr</app> ist ein Werkzeug für die GNOME-Arbeitsumgebung zum "
+"Übertragen von Bildern zu Flickr."
+
+#: introduction.page:23(title)
+msgid "<app>Postr</app> window"
+msgstr "<app>Postr</app>-Fenster"
+
+#: introduction.page:24(desc)
+msgid "<app>Postr</app> main window"
+msgstr "<app>Postr</app>-Hauptfenster"
+
+#: introduction.page:26(p)
+msgid "<app>Postr</app> main window."
+msgstr "<app>Postr</app>-Hauptfenster."
+
+#: index.page:6(desc)
+msgid "Flickr Uploader."
+msgstr "Flickr Uploader."
+
+#: index.page:14(title)
+msgid "Postr"
+msgstr "Postr"
+
+#: index.page:15(p)
+msgid "Getting started with Postr"
+msgstr "Erste Schritte mit Postr"
+
+#: index.page:19(title) index.page:21(title)
+msgid "Getting Started"
+msgstr "Erste Schritte"
+
+#: index.page:26(title) index.page:28(title)
+msgid "Setting photograph's properties"
+msgstr ""
+
+#: index.page:33(title) index.page:35(title)
+msgid "Advanced actions"
+msgstr ""
+
+#: groups.page:6(desc)
+msgid "Sharing your photographs with other people."
+msgstr ""
+
+#: groups.page:14(title)
+msgid "Send your photographs to groups of your interest."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: groups.page:0(None)
+msgid "translator-credits"
+msgstr "Mario Blättermann <mariobl@gnome.org, 2010."
