@@ -138,9 +138,9 @@ class SetCombo(gtk.ComboBox):
         dialog.show_all()
 
         response = dialog.run()
+        text = entry.get_text()
         dialog.destroy()
         if response == gtk.RESPONSE_OK:
-            text = entry.get_text()
             self.update_new_photoset(text.strip())
         return self.new_photoset_name
 
