@@ -1075,19 +1075,25 @@ class Postr(UniqueApp):
         try:
             if uri:
                 d = self.flickr.upload(uri=uri,
-                                       title=title, desc=desc,
-                                       tags=tags, search_hidden=not visible, safety=safety,
-                                       is_public=is_public, is_family=is_family, is_friend=is_friend,
-                                       content_type=content_type)
+                                       title=title, desc=desc, tags=tags,
+                                       search_hidden=not visible,
+                                       safety=safety, is_public=is_public,
+                                       is_family=is_family,
+                                       is_friend=is_friend,
+                                       content_type=content_type,
+                                       progress_tracker=self.upload_progress_tracker)
             elif pixbuf:
                 # This isn't very nice, but might be the best way
                 data = []
                 pixbuf.save_to_callback(lambda d: data.append(d), "png", {})
                 d = self.flickr.upload(imageData=''.join(data),
                                        title=title, desc=desc, tags=tags,
-                                       search_hidden=not visible, safety=safety,
-                                       is_public=is_public, is_family=is_family, is_friend=is_friend,
-                                       content_type=content_type)
+                                       search_hidden=not visible,
+                                       safety=safety, is_public=is_public,
+                                       is_family=is_family,
+                                       is_friend=is_friend,
+                                       content_type=content_type,
+                                       progress_tracker=self.upload_progress_tracker)
             else:
                 print "No filename or pixbuf stored"
         except gio.Error, (error):
