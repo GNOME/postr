@@ -3,19 +3,23 @@
       id="introduction">
 
 <info>
-  <link type="guide" xref="index"/>
-  <desc>Introduction to the <app>Postr</app> flickr uploader.</desc>
-  <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <link type="guide" xref="index"/>
+    <desc>Introduction to the <app>Postr</app> flickr uploader.</desc>
+    <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
+    <credit type="author">
+        <name>Germán Póo-Caamaño</name>
+        <email>gpoo@gnome.org</email>
+    </credit>
+    <credit type="author">
+        <name>Sergio Infante</name>
+        <email>raulsergio9@gmail.com</email>
+    </credit>
 </info>
 
 <title>Introduction</title>
 
   <p>
-    <app>Postr</app> is a tool for uploading pictures to Flickr for the
+    <app>Postr</app> is simple and useful tool for uploading pictures to Flickr.com for the
     GNOME Desktop.
   </p>
 

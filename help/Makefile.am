@@ -3,7 +3,9 @@ include $(top_srcdir)/gnome-doc-utils.make
 dist-hook: doc-dist-hook
 
 DOC_ID = postr
-DOC_FIGURES = 
+DOC_FIGURES = \
+		figures/postr-login-flickr.png \
+		figures/postr-main-window.png
 
 DOC_PAGES = \
 		groups.page		\

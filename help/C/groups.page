@@ -1,16 +1,28 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic" stlye="task"
       id="groups">
-<info>
-  <link type="guide" xref="index#properties"/>
-  <desc>Sharing your photographs with other people.</desc>
-  <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <info>
+        <link type="guide" xref="index#properties"/>
+        <desc>Sharing your photographs with other people.</desc>
+        <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
+        <credit type="author">
+            <name>Germán Póo-Caamaño</name>
+            <email>gpoo@gnome.org</email>
+        </credit>
+        <credit type="author">
+            <name>Sergio Infante Montero</name>
+            <email>raulsergio9@gmail.com</email>
+        </credit>
 </info>
-
-<title>Send your photographs to groups of your interest.</title>
-
+    <title>Send your photographs to groups of your interest.</title>
+    <steps>
+        <item><p>Choose an image to upload</p></item>
+        <item><p>Click on Send to Groups option. A list of your groups must be shown</p></item>
+        <item><p>Choose in what group or groups will be send the image</p></item>
+    </steps>
+    <note style="warning">
+    <p>
+      Before you can use the Send to Groups option, at least you must have one.
+    </p>
+    </note>Before you can use Groups. At least you must have one.
 </page>

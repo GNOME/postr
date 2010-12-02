@@ -1,23 +1,34 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" stlye="task"
+      type="topic" style="task"
       id="permissions">
 <info>
   <link type="guide" xref="index#properties"/>
   <desc>Setting permissions to your photographs.</desc>
   <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <credit type="author">
+        <name>Germán Póo-Caamaño</name>
+        <email>gpoo@gnome.org</email>
+    </credit>
+    <credit type="author">
+        <name>Sergio Infante</name>
+        <email>raulsergio9@gmail.com</email>
+    </credit>
 </info>
 
 <title>Privacy, safety and license.</title>
 
-  <section id="Privacy">
+  <section id="privacy">
     <info>
       <title type="link">Privacy</title>
     </info>
     <title>Privacy of your photographs</title>
+    <p>You can choose between:</p>
+        <list>
+            <item><p>Public</p></item>
+            <item><p>Family Only</p></item>
+            <item><p>Friends and Family Only</p></item>
+            <item><p>Private</p></item>
+        </list>
   </section>
 
   <section id="safety">
@@ -25,13 +36,45 @@
       <title type="link">Safety</title>
     </info>
     <title>Defining the safety of your content</title>
+    <p>You can choose between: </p>
+        <list>
+            <item><p>Safe</p></item>
+            <item><p>Moderate</p></item>
+            <item><p>Restricted</p></item>
+        </list>
   </section>
-
+  
+  <section id="content-type">
+    <info>
+      <title type="link">Content Type</title>
+    </info>
+    <title>Content Type of your content</title>
+    <p>You can choose between: </p>
+        <list>
+            <item><p>Photo</p></item>
+            <item><p>Screenshot</p></item>
+            <item><p>Other</p></item>
+        </list>
+  </section>
+  
   <section id="license">
     <info>
       <title type="link">License</title>
     </info>
     <title>Choosing a license for your photographs</title>
+    <p>You can choose between: </p>
+        <list>
+            <item><p>Default</p></item>
+            <item><p>All Rights Reserved</p></item>
+            <item><p>Attribution License</p></item>
+            <item><p>Attribution-NoDerivs License</p></item>
+            <item><p>Attribution-NonCommercial-NoDerivs License</p></item>
+            <item><p>Attribution-NonCommercial License</p></item>
+            <item><p>Attribution-NonCommercial-ShareAlike License</p></item>
+            <item><p>Attribution-ShareAlike License</p></item>
+            <item><p>No known copyright restrictions</p></item>
+            <item><p>United States Government Work</p></item>
+        </list>
   </section>
 
 </page>

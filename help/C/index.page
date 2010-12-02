@@ -1,14 +1,24 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:e="http://projectmallard.org/experimental/"
       type="guide"
       id="index">
 
-<info>
-  <desc>Flickr Uploader.</desc>
-  <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <info>
+        <title type="link">Postr</title>
+        <title type="text">Postr</title>
+        <desc>Flickr Uploader.</desc>
+        <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
+        <credit type="author">
+            <name>Germán Póo-Caamaño</name>
+            <email>gpoo@gnome.org</email>
+        </credit>
+        <credit type="author">
+            <name>Sergio Infante</name>
+            <email>raulsergio9@gmail.com</email>
+        </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
 </info>
 
 <title>Postr</title>

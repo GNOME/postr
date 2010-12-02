@@ -5,14 +5,28 @@
   <link type="guide" xref="index#getting-started"/>
   <desc>Log in on Flickr</desc>
   <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <credit type="author">
+        <name>Germán Póo-Caamaño</name>
+        <email>gpoo@gnome.org</email>
+    </credit>
+    <credit type="author">
+        <name>Sergio Infante</name>
+        <email>raulsergio9@gmail.com</email>
+    </credit>
 </info>
 <title>Log in on Flickr</title>
 
-  <p>Flickr must authorize to <app>Postr</app> the access to your 
+  <p>Flickr must authorize to <app>Postr</app> the access to your
   information before doing anything else.</p>
 
+    <figure>
+        <title><app>Postr</app> Login to Flickr window</title>
+        <desc><app>Postr</app> Switch account and Login to Flickr window</desc>
+        <media type="image" src="figures/postr-login-flickr.png" mime="image/png" style="right"></media>
+    </figure>
+    <steps>
+        <item><p>Click on Login to Flickr. This action will open the Flickr authentication page on your default web browser.</p></item>
+        <item><p>Follow the instructions on Flickr website to authorize <app>Postr</app></p></item>
+        <item><p>Back to Login to Flickr window on <app>Postr</app> and click on Continue</p></item>
+    </steps>
 </page>

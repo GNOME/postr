@@ -5,14 +5,21 @@
   <link type="guide" xref="index#getting-started"/>
   <desc>Uploading photographs on Flickr</desc>
   <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
-  <credit type="author">
-    <name>Germán Póo-Caamaño</name>
-    <email>gpoo@gnome.org</email>
-  </credit>
+    <credit type="author">
+        <name>Germán Póo-Caamaño</name>
+        <email>gpoo@gnome.org</email>
+    </credit>
+    <credit type="author">
+        <name>Sergio Infante</name>
+        <email>raulsergio9@gmail.com</email>
+    </credit>
 </info>
 
 <title>Uploading photographs on Flickr</title>
-
-  <p>This page must be written first.</p>
-
+    <steps>
+        <item><p>Click on Add Photos...</p></item>
+        <item><p>Choose the photographs that you want to upload on Flickr</p></item>
+        <item><p>Choose an image and edit the title, description, tags, privacy, safety, type, license and other data of image</p></item>
+        <item><p>When you finish add aditional description, click on Upload button</p></item>
+    </steps>
 </page>
