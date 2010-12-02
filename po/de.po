@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-28 11:52+0200\n"
-"PO-Revision-Date: 2010-09-28 15:47+0100\n"
+"POT-Creation-Date: 2010-12-02 17:09+0100\n"
+"PO-Revision-Date: 2010-12-02 17:13+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -17,10 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../src/AboutDialog.py:25
-#: ../src/AuthenticationDialog.py:39
-#: ../src/postr.glade.h:4
-#: ../src/postr.py:978
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Bei Flickr hochladen..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Lade die ausgewählten Datein zu Flickr"
+
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.glade.h:4 ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr "Flickr Uploader"
 
@@ -29,17 +35,24 @@ msgid "Continue"
 msgstr "Fortsetzen"
 
 #: ../src/AuthenticationDialog.py:46
-msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
-msgstr "Postr muss bei Flickr eingeloggt sein um deine Fotos hochladen zu können. Bitte klicke auf den Link unten um die bei Flickr einzuloggen."
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr muss bei Flickr eingeloggt sein um deine Fotos hochladen zu können. "
+"Bitte klicke auf den Link unten um die bei Flickr einzuloggen."
 
-#: ../src/AuthenticationDialog.py:55
-#: ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Bei Flickr anmelden"
 
 #: ../src/ErrorDialog.py:26
 msgid "An error occurred"
 msgstr "Ein Fehler ist aufgetreten"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Details"
 
 #: ../src/ImageList.py:72
 msgid "No title"
@@ -63,7 +76,7 @@ msgstr "Alle a_bwählen"
 
 #: ../src/postr.glade.h:5
 msgid "Privacy, Safety, Type and License"
-msgstr ""
+msgstr "Privatsphäre, Sicherheit, Typ und Lizenz"
 
 #: ../src/postr.glade.h:6
 msgid "Remove Photos"
@@ -79,7 +92,7 @@ msgstr "Auswahl"
 
 #: ../src/postr.glade.h:9
 msgid "Send to Groups"
-msgstr ""
+msgstr "An Gruppen senden"
 
 #: ../src/postr.glade.h:10
 msgid "Ta_gs:"
@@ -166,50 +179,71 @@ msgid "<b>Currently Uploading</b>"
 msgstr "<b>Gegenwärtig hochgeladen</b>"
 
 #: ../src/postr.py:494
-msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Es werden noch Fotos übertragen. Sind Sie sicher, dass Sie beenden wollen? Sie können die noch zu übertragenden Fotos für später speichern."
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Es werden noch Fotos übertragen. Sind Sie sicher, dass Sie beenden wollen? "
+"Sie können die noch zu übertragenden Fotos für später speichern."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Zu übertragende Fotos</b>"
 
 #: ../src/postr.py:510
-msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Es sind Fotos für die Übertragung vorgesehen. Sind Sie sicher, dass Sie beenden wollen? Sie können die noch zu übertragenden Fotos für später speichern."
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Es sind Fotos für die Übertragung vorgesehen. Sind Sie sicher, dass Sie "
+"beenden wollen? Sie können die noch zu übertragenden Fotos für später "
+"speichern."
 
-#: ../src/postr.py:776
+#: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Das Bild %s ist zu groß. Bilder dürfen nicht größer als %d MB sein."
 
-#: ../src/postr.py:944
+#: ../src/postr.py:945
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "%(index)d von %(count)d wird hochgeladen"
 
-#: ../src/postr.py:947
+#: ../src/postr.py:948
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flickr Uploader (%(index)d/%(count)d)"
 
-#: ../src/postr.py:1275
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
+"Einige Dateien existieren nicht oder der Zugriff ist derzeit nicht möglich."
+
+#: ../src/postr.py:1352
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
 "an upload set for %s"
 msgstr ""
+"Sie sind als %s angemeldet, aber\n"
+"übertragen einen Upload für %s"
 
-#: ../src/postr.py:1279
-#: ../src/postr.py:1296
-msgid "Do you want to continue with the load?  You will not import photoset information."
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
 msgstr ""
+"Wollen Sie die Übertragung fortsetzen? Es werden keine Albeninformationen "
+"importiert."
 
-#: ../src/postr.py:1292
+#: ../src/postr.py:1369
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
 "an upload set for %s"
 msgstr ""
+"Sie sind nicht angemeldet, aber\n"
+"übertragen einen Upload für %s"
 
 #: ../src/ProgressDialog.py:56
 msgid "Uploading"
@@ -241,6 +275,8 @@ msgstr "Angemeldet als <b>%s</b>.  "
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
+"Sie können diesen Monat %(quota)s übertragen und haben %(to_upload)s "
+"hochzuladen."
 
 #: ../src/StatusBar.py:43
 #, python-format
@@ -250,20 +286,19 @@ msgstr "Sie können diesen Monat %(quota)s hochladen."
 #: ../src/StatusBar.py:45
 #, python-format
 msgid "%(to_upload)s to upload."
-msgstr ""
+msgstr "%(to_upload)s hochzuladen."
 
 #~ msgid "You have %s remaining this month"
 #~ msgstr "Du hast diesen Monat noch %s übrig"
-#~ msgid "Upload to Flickr..."
-#~ msgstr "Bei Flickr hochladen..."
-#~ msgid "Upload the selected files into Flickr"
-#~ msgstr "Lade die ausgewählten Datein zu Flickr"
+
 #~ msgid "_Delete"
 #~ msgstr "_Löschen"
+
 #~ msgid "_Select All"
 #~ msgstr "_Alle auswählen"
+
 #~ msgid "_About"
 #~ msgstr "_Über"
+
 #~ msgid "..."
 #~ msgstr "..."
-
