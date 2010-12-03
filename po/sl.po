@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: postr master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&component=General\n"
 "POT-Creation-Date: 2010-12-03 10:35+0000\n"
-"PO-Revision-Date: 2010-12-03 19:51+0100\n"
+"PO-Revision-Date: 2010-12-03 20:01+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Prenesi na Flickr ..."
 
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
-msgstr ""
+msgstr "Prenesi izbrane datoteke na Flickr"
 
 #: ../src/AboutDialog.py:25
 #: ../src/AuthenticationDialog.py:39
@@ -79,7 +79,7 @@ msgstr "_Počisti izbor"
 
 #: ../src/postr.glade.h:5
 msgid "Privacy, Safety, Type and License"
-msgstr ""
+msgstr "Zasebnost, varnost, vrste in dovoljenje"
 
 #: ../src/postr.glade.h:6
 msgid "Remove Photos"
@@ -265,7 +265,7 @@ msgstr ""
 #: ../src/StatusBar.py:43
 #, python-format
 msgid "You can upload %(quota)s this month."
-msgstr ""
+msgstr "Ta mesec je mogoče prenesti %(quota)s."
 
 #: ../src/StatusBar.py:45
 #, python-format
