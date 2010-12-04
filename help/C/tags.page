@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" stlye="task"
-      id="tags">
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="task" id="tags">
+
 <info>
   <link type="guide" xref="index#properties"/>
   <desc>Adding tags to your pictures.</desc>

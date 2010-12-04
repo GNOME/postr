@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" stlye="task"
-      id="groups">
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="task" id="groups">
+
     <info>
         <link type="guide" xref="index#properties"/>
         <desc>Sharing your photographs with other people.</desc>
@@ -13,7 +15,7 @@
             <name>Sergio Infante Montero</name>
             <email>raulsergio9@gmail.com</email>
         </credit>
-</info>
+    </info>
     <title>Send your photographs to groups of your interest.</title>
     <steps>
         <item><p>Choose an image to upload</p></item>
@@ -24,5 +26,5 @@
     <p>
       Before you can use the Send to Groups option, at least you must have one.
     </p>
-    </note>Before you can use Groups. At least you must have one.
+    </note>
 </page>

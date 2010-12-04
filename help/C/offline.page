@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" stlye="task"
-      id="offline">
+      xmlns:e="http://projectmallard.org/experimental/"
+      type="topic" style="task" id="offline">
 <info>
   <link type="guide" xref="index#advanced"/>
   <desc>How to continue your work later.</desc>
