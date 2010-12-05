@@ -6,15 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-04 21:36-0800\n"
-"PO-Revision-Date: 2010-12-02 17:13+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&component=General\n"
+"POT-Creation-Date: 2010-12-05 05:57+0000\n"
+"PO-Revision-Date: 2010-12-05 19:23+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
@@ -24,17 +25,16 @@ msgid "Flickr Uploader"
 msgstr "Flickr Uploader"
 
 #: ../data/postr.desktop.in.in.h:2
-#, fuzzy
 msgid "Upload photos to Flickr"
-msgstr "Bei Flickr hochladen..."
+msgstr "Fotos zu Flickr hochladen …"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
-msgstr "Bei Flickr hochladen..."
+msgstr "Zu Flickr hochladen …"
 
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
-msgstr "Lade die ausgewählten Datein zu Flickr"
+msgstr "Die ausgewählten Dateien zu Flickr hochladen"
 
 #: ../src/postr.glade.h:1
 msgid "Add Photos..."
@@ -145,8 +145,8 @@ msgid ""
 "Postr needs to login to Flickr to upload your photos. Please click on the "
 "link below to login to Flickr."
 msgstr ""
-"Postr muss bei Flickr eingeloggt sein um deine Fotos hochladen zu können. "
-"Bitte klicke auf den Link unten um die bei Flickr einzuloggen."
+"Postr muss bei Flickr angemeldet sein, um Ihre Fotos hochladen zu können. "
+"Bitte klicken Sie auf den Link unten, um sich bei Flickr anzumelden."
 
 #: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
@@ -293,18 +293,3 @@ msgstr "Sie können diesen Monat %(quota)s hochladen."
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s hochzuladen."
-
-#~ msgid "You have %s remaining this month"
-#~ msgstr "Du hast diesen Monat noch %s übrig"
-
-#~ msgid "_Delete"
-#~ msgstr "_Löschen"
-
-#~ msgid "_Select All"
-#~ msgstr "_Alle auswählen"
-
-#~ msgid "_About"
-#~ msgstr "_Über"
-
-#~ msgid "..."
-#~ msgstr "..."
