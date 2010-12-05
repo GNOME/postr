@@ -8,15 +8,16 @@ DOC_FIGURES = \
 		figures/postr-main-window.png
 
 DOC_PAGES = \
-		groups.page		\
-		introduction.page	\
-		offline.page		\
-		sets.page		\
-		uploading.page		\
-		index.page		\
-		login.page		\
-		permissions.page	\
+		groups.page \
+		introduction.page \
+		offline.page \
+		sets.page \
+		uploading.page \
+		index.page \
+		login.page \
+		permissions.page \
 		tags.page
 
+MAINTAINERCLEANFILES = Makefile.in
 
 DOC_LINGUAS = de
