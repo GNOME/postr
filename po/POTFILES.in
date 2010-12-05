@@ -1,4 +1,6 @@
+data/postr.desktop.in.in
 nautilus/postrExtension.py
+[type: gettext/glade]src/postr.glade
 src/AboutDialog.py
 src/AuthenticationDialog.py
 src/ContentTypeCombo.py

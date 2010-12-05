@@ -7,126 +7,295 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-10 10:04+0000\n"
+"POT-Creation-Date: 2010-12-04 21:36-0800\n"
 "PO-Revision-Date: 2010-11-11 17:20-0300\n"
 "Last-Translator: Antonio Fernandes C. Neto <fernandes@pelivre.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-br-l10n@gnome.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: Brazil\n"
 
-#: src/AboutDialog.py:7
-#: src/AuthenticationDialog.py:16
-#: src/postr.glade:8
-#: src/postr.glade:486
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr "Ferramenta de envio do Flickr"
 
-#: src/AuthenticationDialog.py:19
+#: ../data/postr.desktop.in.in.h:2
+#, fuzzy
+msgid "Upload photos to Flickr"
+msgstr "Enviar para o Flickr..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Enviar para o Flickr..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Enviar os arquivos selecionados para o Flickr"
+
+#: ../src/postr.glade.h:1
+#, fuzzy
+msgid "Add Photos..."
+msgstr "_Adicionar fotos..."
+
+#: ../src/postr.glade.h:2
+msgid "Add to _Set:"
+msgstr ""
+
+#: ../src/postr.glade.h:3
+msgid "Dese_lect All"
+msgstr "D_esmarcar todos"
+
+#: ../src/postr.glade.h:5
+msgid "Privacy, Safety, Type and License"
+msgstr ""
+
+#: ../src/postr.glade.h:6
+#, fuzzy
+msgid "Remove Photos"
+msgstr "Adicionar fotos"
+
+#: ../src/postr.glade.h:7
+msgid "Rename"
+msgstr ""
+
+#: ../src/postr.glade.h:8
+msgid "Select"
+msgstr "Selecionar"
+
+#: ../src/postr.glade.h:9
+msgid "Send to Groups"
+msgstr ""
+
+#: ../src/postr.glade.h:10
+msgid "Ta_gs:"
+msgstr "E_tiquetas:"
+
+#: ../src/postr.glade.h:11
+msgid "_Add Photos..."
+msgstr "_Adicionar fotos..."
+
+#: ../src/postr.glade.h:12
+msgid "_Content type:"
+msgstr ""
+
+#: ../src/postr.glade.h:13
+msgid "_Description:"
+msgstr "_Descrição:"
+
+#: ../src/postr.glade.h:14
+msgid "_File"
+msgstr "_Arquivo"
+
+#: ../src/postr.glade.h:15
+msgid "_Help"
+msgstr "_Ajuda"
+
+#: ../src/postr.glade.h:16
+msgid "_Invert Selection"
+msgstr "_Inverter seleção"
+
+#: ../src/postr.glade.h:17
+msgid "_License:"
+msgstr ""
+
+#: ../src/postr.glade.h:18
+msgid "_Load session"
+msgstr ""
+
+#: ../src/postr.glade.h:19
+msgid "_Privacy:"
+msgstr ""
+
+#: ../src/postr.glade.h:20
+msgid "_Remove Photos"
+msgstr ""
+
+#: ../src/postr.glade.h:21
+msgid "_Safety:"
+msgstr ""
+
+#: ../src/postr.glade.h:22
+msgid "_Save session"
+msgstr ""
+
+#: ../src/postr.glade.h:23
+msgid "_Switch user..."
+msgstr ""
+
+#: ../src/postr.glade.h:24
+msgid "_Title:"
+msgstr "_Título:"
+
+#: ../src/postr.glade.h:25
+msgid "_Upload"
+msgstr "_Enviar"
+
+#: ../src/postr.glade.h:26
+msgid "_Visible in search results"
+msgstr ""
+
+#: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Continuar"
 
-#: src/AuthenticationDialog.py:23
-msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
-msgstr "Postr precisa se autenticar para enviar suas fotos, Por favor, clique no link abaixo para se autenticar no Flickr."
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr precisa se autenticar para enviar suas fotos, Por favor, clique no "
+"link abaixo para se autenticar no Flickr."
 
-#: src/AuthenticationDialog.py:32
-#: src/AuthenticationDialog.py:34
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Autenticar no Flickr"
 
-#: src/postr.py:182
-#, python-format
-msgid "You have %s remaining this month"
-msgstr "Você tem %s remanescente para esse mês"
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr ""
 
-#: src/postr.py:194
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr ""
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr ""
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr ""
+
+#: ../src/postr.py:412
 msgid "Add Photos"
 msgstr "Adicionar fotos"
 
-#: src/postr.py:206
+#: ../src/postr.py:424
 msgid "Images"
 msgstr "Imagens"
 
-#: src/postr.py:212
+#: ../src/postr.py:428
 msgid "All Files"
 msgstr "Todos arquivos"
 
-#: src/postr.py:245
+#: ../src/postr.py:493
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Enviando atualmente</b>"
 
-#: src/postr.py:246
-msgid "Photos are still being uploaded. Are you sure you want to quit?"
+#: ../src/postr.py:494
+#, fuzzy
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
 msgstr "As fotos ainda estão sendo enviadas. Você tem certeza que quer sair?"
 
-#: src/postr.py:509
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr ""
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+
+#: ../src/postr.py:777
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+
+#: ../src/postr.py:945
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Enviando %(index)d de %(count)d"
 
-#: nautilus/postrExtension.py:82
-msgid "Upload to Flickr..."
-msgstr "Enviar para o Flickr..."
+#: ../src/postr.py:948
+#, fuzzy, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Enviando %(index)d de %(count)d"
 
-#: nautilus/postrExtension.py:83
-msgid "Upload the selected files into Flickr"
-msgstr "Enviar os arquivos selecionados para o Flickr"
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
 
-#: src/postr.glade:40
-msgid "_File"
-msgstr "_Arquivo"
+#: ../src/postr.py:1352
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
 
-#: src/postr.glade:49
-msgid "_Add Photos..."
-msgstr "_Adicionar fotos..."
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
 
-#: src/postr.glade:77
-msgid "_Upload"
+#: ../src/postr.py:1369
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/ProgressDialog.py:56
+#, fuzzy
+msgid "Uploading"
 msgstr "_Enviar"
 
-#: src/postr.glade:117
-msgid "Select"
-msgstr "Selecionar"
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr ""
 
-#: src/postr.glade:127
-msgid "_Delete"
-msgstr "_Excluir"
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr ""
 
-#: src/postr.glade:155
-msgid "_Select All"
-msgstr "S_elecionar todos"
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr ""
 
-#: src/postr.glade:177
-msgid "Dese_lect All"
-msgstr "D_esmarcar todos"
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr ""
 
-#: src/postr.glade:187
-msgid "_Invert Selection"
-msgstr "_Inverter seleção"
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr ""
 
-#: src/postr.glade:200
-msgid "_Help"
-msgstr "_Ajuda"
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
 
-#: src/postr.glade:209
-msgid "_About"
-msgstr "_Sobre"
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr ""
 
-#: src/postr.glade:272
-msgid "_Title:"
-msgstr "_Título:"
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr ""
 
-#: src/postr.glade:301
-msgid "_Description:"
-msgstr "_Descrição:"
+#~ msgid "You have %s remaining this month"
+#~ msgstr "Você tem %s remanescente para esse mês"
 
-#: src/postr.glade:330
-msgid "Ta_gs:"
-msgstr "E_tiquetas:"
+#~ msgid "_Delete"
+#~ msgstr "_Excluir"
 
-#: src/postr.glade:442
-msgid "..."
-msgstr "..."
+#~ msgid "_Select All"
+#~ msgstr "S_elecionar todos"
+
+#~ msgid "_About"
+#~ msgstr "_Sobre"
+
+#~ msgid "..."
+#~ msgstr "..."

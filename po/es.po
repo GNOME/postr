@@ -7,16 +7,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=postr&component=General\n"
-"POT-Creation-Date: 2010-12-02 18:06+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-04 21:36-0800\n"
 "PO-Revision-Date: 2010-12-02 19:26+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
+msgid "Flickr Uploader"
+msgstr "Cargador para Flickr"
+
+#: ../data/postr.desktop.in.in.h:2
+#, fuzzy
+msgid "Upload photos to Flickr"
+msgstr "Subir a Flickr..."
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -25,43 +36,6 @@ msgstr "Subir a Flickr..."
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
 msgstr "Enviar las fotos seleccionadas a Flickr"
-
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.glade.h:4 ../src/postr.py:979
-msgid "Flickr Uploader"
-msgstr "Cargador para Flickr"
-
-#: ../src/AuthenticationDialog.py:42
-msgid "Continue"
-msgstr "Continuar"
-
-#: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Postr necesita registrarse en Flickr para subir sus fotos. Por favor, pulse "
-"en el link de abajo para registrase en Flickr."
-
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
-msgid "Login to Flickr"
-msgstr "Registrarse en Flickr"
-
-#: ../src/ErrorDialog.py:26
-msgid "An error occurred"
-msgstr "Ocurrió un error"
-
-#: ../src/ErrorDialog.py:47
-msgid "Details"
-msgstr "Detalles"
-
-#: ../src/ImageList.py:72
-msgid "No title"
-msgstr "Sin título"
-
-#: ../src/LicenseCombo.py:26
-msgid "Default"
-msgstr "Predeterminado"
 
 #: ../src/postr.glade.h:1
 msgid "Add Photos..."
@@ -162,6 +136,38 @@ msgstr "_Subir"
 #: ../src/postr.glade.h:26
 msgid "_Visible in search results"
 msgstr "_Visible en los resultados de búsqueda"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Continuar"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr necesita registrarse en Flickr para subir sus fotos. Por favor, pulse "
+"en el link de abajo para registrase en Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Registrarse en Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "Ocurrió un error"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Detalles"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "Sin título"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Predeterminado"
 
 #: ../src/postr.py:412
 msgid "Add Photos"

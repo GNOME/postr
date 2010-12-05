@@ -7,15 +7,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr master fr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=postr&component=General\n"
-"POT-Creation-Date: 2010-11-29 20:15+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-04 21:36-0800\n"
 "PO-Revision-Date: 2010-11-30 09:36+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French team <gnomefr@traduc.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
+msgid "Flickr Uploader"
+msgstr "Téléverseur Flickr"
+
+#: ../data/postr.desktop.in.in.h:2
+#, fuzzy
+msgid "Upload photos to Flickr"
+msgstr "Envoyer à Flickr..."
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -24,39 +35,6 @@ msgstr "Envoyer à Flickr..."
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
 msgstr "Envoyer les fichiers sélectionnés à Flickr"
-
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.glade.h:4 ../src/postr.py:978
-msgid "Flickr Uploader"
-msgstr "Téléverseur Flickr"
-
-#: ../src/AuthenticationDialog.py:42
-msgid "Continue"
-msgstr "Continuer"
-
-#: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Postr doit se connecter à Flickr pour envoyer vos photos. Veuillez "
-"cliquer sur le lien ci-dessous pour vous connecter à Flickr."
-
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
-msgid "Login to Flickr"
-msgstr "Se connecter à Flickr"
-
-#: ../src/ErrorDialog.py:26
-msgid "An error occurred"
-msgstr "Une erreur s'est produite"
-
-#: ../src/ImageList.py:72
-msgid "No title"
-msgstr "Sans titre"
-
-#: ../src/LicenseCombo.py:26
-msgid "Default"
-msgstr "Par défaut"
 
 #: ../src/postr.glade.h:1
 msgid "Add Photos..."
@@ -158,6 +136,38 @@ msgstr "_Envoyer"
 msgid "_Visible in search results"
 msgstr "_Visible dans les résultats de recherche"
 
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Continuer"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr doit se connecter à Flickr pour envoyer vos photos. Veuillez cliquer "
+"sur le lien ci-dessous pour vous connecter à Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Se connecter à Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "Une erreur s'est produite"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr ""
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "Sans titre"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Par défaut"
+
 #: ../src/postr.py:412
 msgid "Add Photos"
 msgstr "Ajouter des photos"
@@ -191,25 +201,29 @@ msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
 msgstr ""
-"Des photos sont en attente d'envoi. Voulez-vous vraiment quitter ? Vous pouvez "
-"aussi enregistrer l'album en attente d'envoi pour plus tard."
+"Des photos sont en attente d'envoi. Voulez-vous vraiment quitter ? Vous "
+"pouvez aussi enregistrer l'album en attente d'envoi pour plus tard."
 
-#: ../src/postr.py:776
+#: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "L'image %s est trop grande, sa taille dépasse les %d Mio autorisés."
 
-#: ../src/postr.py:944
+#: ../src/postr.py:945
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Envoi %(index)d sur %(count)d"
 
-#: ../src/postr.py:947
+#: ../src/postr.py:948
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Téléverseur Flickr (%(index)d sur %(count)d)"
 
-#: ../src/postr.py:1275
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
+
+#: ../src/postr.py:1352
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -218,7 +232,7 @@ msgstr ""
 "Vous êtes connecté en tant que %s, mais vous\n"
 "chargez un album envoyé pour %s"
 
-#: ../src/postr.py:1279 ../src/postr.py:1296
+#: ../src/postr.py:1356 ../src/postr.py:1373
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -226,7 +240,7 @@ msgstr ""
 "Voulez-vous poursuivre le chargement ? Vous n'importerez pas les "
 "informations de l'album."
 
-#: ../src/postr.py:1292
+#: ../src/postr.py:1369
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -264,7 +278,8 @@ msgstr "Connecté en tant que <b>%s</b>. "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "Vous pouvez envoyer %(quota)s ce mois, et vous avez %(to_upload)s à envoyer."
+msgstr ""
+"Vous pouvez envoyer %(quota)s ce mois, et vous avez %(to_upload)s à envoyer."
 
 #: ../src/StatusBar.py:43
 #, python-format

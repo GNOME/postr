@@ -1,0 +1,14 @@
+[Desktop Entry]
+_Name=Flickr Uploader
+_Comment=Upload photos to Flickr
+Icon=postr
+TryExec=postr
+Exec=postr %F
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Graphics;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=postr
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=@VERSION@
