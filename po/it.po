@@ -7,20 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-04 21:36-0800\n"
+"POT-Creation-Date: 2010-12-06 11:34-0800\n"
 "PO-Revision-Date: 2010-12-06 12:24+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <ll@ll.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/postr.desktop.in.in.h:1
-#: ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25
-#: ../src/AuthenticationDialog.py:39
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
 #: ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr ""
@@ -142,11 +140,14 @@ msgid "Continue"
 msgstr "Continua"
 
 #: ../src/AuthenticationDialog.py:46
-msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
-msgstr "Postr deve registrarsi su flickr per inviare le proprie foto. Fare clic sul collegamento sottostante per autenticarsi su flickr."
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr deve registrarsi su flickr per inviare le proprie foto. Fare clic sul "
+"collegamento sottostante per autenticarsi su flickr."
 
-#: ../src/AuthenticationDialog.py:55
-#: ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Accesso a flickr"
 
@@ -183,21 +184,32 @@ msgid "<b>Currently Uploading</b>"
 msgstr "<b>Invio corrente</b>"
 
 #: ../src/postr.py:494
-msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Le foto sono ancora in fase di invio. Uscire comunque? È anche possibile salvare i set ancora in attesa per riprendere successivamente l'invio."
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Le foto sono ancora in fase di invio. Uscire comunque? È anche possibile "
+"salvare i set ancora in attesa per riprendere successivamente l'invio."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotografie da inviare</b>"
 
 #: ../src/postr.py:510
-msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Sono presenti delle foto in attesa di essere inviate. Uscire comunque? È anche possibile salvare i file ancora in attesa per riprendere successivamente l'invio."
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Sono presenti delle foto in attesa di essere inviate. Uscire comunque? È "
+"anche possibile salvare i file ancora in attesa per riprendere "
+"successivamente l'invio."
 
 #: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
-msgstr "L'immagine \"%s\" è troppo grande. La dimensione delle immagini non deve superare i %dMB."
+msgstr ""
+"L'immagine \"%s\" è troppo grande. La dimensione delle immagini non deve "
+"superare i %dMB."
 
 #: ../src/postr.py:945
 #, python-format
@@ -222,10 +234,13 @@ msgstr ""
 "Non si è autenticati come \"%s\" ma si sta\n"
 "caricando un set di invio per \"%s\""
 
-#: ../src/postr.py:1356
-#: ../src/postr.py:1373
-msgid "Do you want to continue with the load?  You will not import photoset information."
-msgstr "Continuare con l'invio? Non verranno importate le informazioni del set di foto."
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Continuare con l'invio? Non verranno importate le informazioni del set di "
+"foto."
 
 #: ../src/postr.py:1369
 #, python-format
@@ -265,7 +280,9 @@ msgstr "COnnesso come <b>%s</b>.  "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "È possibile inviare %(quota)s questo mese; rimangono %(to_upload)s da inviare."
+msgstr ""
+"È possibile inviare %(quota)s questo mese; rimangono %(to_upload)s da "
+"inviare."
 
 #: ../src/StatusBar.py:43
 #, python-format
@@ -279,12 +296,15 @@ msgstr "%(to_upload)s da inviare."
 
 #~ msgid "You have %s remaining this month"
 #~ msgstr "Du hast diesen Monat noch %s übrig"
+
 #~ msgid "_Delete"
 #~ msgstr "_Löschen"
+
 #~ msgid "_Select All"
 #~ msgstr "_Alle auswählen"
+
 #~ msgid "_About"
 #~ msgstr "_Über"
+
 #~ msgid "..."
 #~ msgstr "..."
-
