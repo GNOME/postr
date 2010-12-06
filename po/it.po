@@ -1,49 +1,49 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Italian translation for postr.
+# This file is distributed under the same license as the postr package.
+# Emmanuele Bassi <ebassi@gmail.com>, 2007.
+# Cristian Marchi <cri.penta@gmail.com>, 2010.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-12-04 21:36-0800\n"
-"PO-Revision-Date: 2007-01-10 10:10+0000\n"
-"Last-Translator: Emmanuele Bassi <ebassi@gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2010-12-06 12:24+0100\n"
+"Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
+"Language-Team: Italian <ll@ll.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../data/postr.desktop.in.in.h:1
+#: ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25
+#: ../src/AuthenticationDialog.py:39
 #: ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr ""
 
 #: ../data/postr.desktop.in.in.h:2
-#, fuzzy
 msgid "Upload photos to Flickr"
-msgstr "Invio su Flickr..."
+msgstr "Carica le foto su flickr"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
-msgstr "Invio su Flickr..."
+msgstr "Caricamento su flickr..."
 
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
-msgstr "Invia i file selezionati su Flickr"
+msgstr "Carica le foto i file selezionati su flickr"
 
 #: ../src/postr.glade.h:1
-#, fuzzy
 msgid "Add Photos..."
-msgstr "_Aggiungi Foto"
+msgstr "Aggiungi foto..."
 
 #: ../src/postr.glade.h:2
 msgid "Add to _Set:"
-msgstr ""
+msgstr "Aggiungi al _set:"
 
 #: ../src/postr.glade.h:3
 msgid "Dese_lect All"
@@ -51,16 +51,15 @@ msgstr "De_seleziona Tutti"
 
 #: ../src/postr.glade.h:5
 msgid "Privacy, Safety, Type and License"
-msgstr ""
+msgstr "Privacy, sicurezza, tipo e licenza"
 
 #: ../src/postr.glade.h:6
-#, fuzzy
 msgid "Remove Photos"
-msgstr "Aggiungi foto"
+msgstr "Rimuovi fotografia"
 
 #: ../src/postr.glade.h:7
 msgid "Rename"
-msgstr ""
+msgstr "Rinomina"
 
 #: ../src/postr.glade.h:8
 msgid "Select"
@@ -68,7 +67,7 @@ msgstr "Seleziona"
 
 #: ../src/postr.glade.h:9
 msgid "Send to Groups"
-msgstr ""
+msgstr "Invia al gruppo"
 
 #: ../src/postr.glade.h:10
 msgid "Ta_gs:"
@@ -80,7 +79,7 @@ msgstr "_Aggiungi Foto"
 
 #: ../src/postr.glade.h:12
 msgid "_Content type:"
-msgstr ""
+msgstr "_Tipo di contenuto:"
 
 #: ../src/postr.glade.h:13
 msgid "_Description:"
@@ -100,31 +99,31 @@ msgstr "_Inverti Selezione"
 
 #: ../src/postr.glade.h:17
 msgid "_License:"
-msgstr ""
+msgstr "_Licenza:"
 
 #: ../src/postr.glade.h:18
 msgid "_Load session"
-msgstr ""
+msgstr "_Carica sessione"
 
 #: ../src/postr.glade.h:19
 msgid "_Privacy:"
-msgstr ""
+msgstr "_Privacy:"
 
 #: ../src/postr.glade.h:20
 msgid "_Remove Photos"
-msgstr ""
+msgstr "_Rimuovi foto"
 
 #: ../src/postr.glade.h:21
 msgid "_Safety:"
-msgstr ""
+msgstr "_Sicurezza"
 
 #: ../src/postr.glade.h:22
 msgid "_Save session"
-msgstr ""
+msgstr "_Salva sessione"
 
 #: ../src/postr.glade.h:23
 msgid "_Switch user..."
-msgstr ""
+msgstr "_Cambia utente..."
 
 #: ../src/postr.glade.h:24
 msgid "_Title:"
@@ -136,39 +135,36 @@ msgstr "_Invia"
 
 #: ../src/postr.glade.h:26
 msgid "_Visible in search results"
-msgstr ""
+msgstr "_Visibile nelle ricerche"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Continua"
 
 #: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Postr deve poter registrarsi su Flickr per inviare le tue foto. Premi il "
-"link sottostante per registrarti su Flickr"
+msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
+msgstr "Postr deve registrarsi su flickr per inviare le proprie foto. Fare clic sul collegamento sottostante per autenticarsi su flickr."
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55
+#: ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
-msgstr "Login in Flickr"
+msgstr "Accesso a flickr"
 
 #: ../src/ErrorDialog.py:26
 msgid "An error occurred"
-msgstr ""
+msgstr "Si è verificato un errore"
 
 #: ../src/ErrorDialog.py:47
 msgid "Details"
-msgstr ""
+msgstr "Dettagli"
 
 #: ../src/ImageList.py:72
 msgid "No title"
-msgstr ""
+msgstr "Nessun titolo"
 
 #: ../src/LicenseCombo.py:26
 msgid "Default"
-msgstr ""
+msgstr "Predefinito"
 
 #: ../src/postr.py:412
 msgid "Add Photos"
@@ -187,26 +183,21 @@ msgid "<b>Currently Uploading</b>"
 msgstr "<b>Invio corrente</b>"
 
 #: ../src/postr.py:494
-#, fuzzy
-msgid ""
-"Photos are still being uploaded. Are you sure you want to quit? You can also "
-"save your pending upload set for later."
-msgstr "Le foto sono in fase di caricamento. Sei sicuro di voler uscire?"
+msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Le foto sono ancora in fase di invio. Uscire comunque? È anche possibile salvare i set ancora in attesa per riprendere successivamente l'invio."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
-msgstr ""
+msgstr "<b>Fotografie da inviare</b>"
 
 #: ../src/postr.py:510
-msgid ""
-"There are photos pending to be uploaded. Are you sure you want to quit? You "
-"can also save your pending upload set for later."
-msgstr ""
+msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Sono presenti delle foto in attesa di essere inviate. Uscire comunque? È anche possibile salvare i file ancora in attesa per riprendere successivamente l'invio."
 
 #: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
-msgstr ""
+msgstr "L'immagine \"%s\" è troppo grande. La dimensione delle immagini non deve superare i %dMB."
 
 #: ../src/postr.py:945
 #, python-format
@@ -214,13 +205,13 @@ msgid "Uploading %(index)d of %(count)d"
 msgstr "Invio %(index)d di %(count)d"
 
 #: ../src/postr.py:948
-#, fuzzy, python-format
+#, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
-msgstr "Invio %(index)d di %(count)d"
+msgstr ""
 
 #: ../src/postr.py:995
 msgid "Some Files does not exist or are currently inaccessible."
-msgstr ""
+msgstr "Alcuni file non esistono o sono al momento non accessibili."
 
 #: ../src/postr.py:1352
 #, python-format
@@ -228,12 +219,13 @@ msgid ""
 "You are logged in as %s but loading\n"
 "an upload set for %s"
 msgstr ""
+"Non si è autenticati come \"%s\" ma si sta\n"
+"caricando un set di invio per \"%s\""
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
-msgid ""
-"Do you want to continue with the load?  You will not import photoset "
-"information."
-msgstr ""
+#: ../src/postr.py:1356
+#: ../src/postr.py:1373
+msgid "Do you want to continue with the load?  You will not import photoset information."
+msgstr "Continuare con l'invio? Non verranno importate le informazioni del set di foto."
 
 #: ../src/postr.py:1369
 #, python-format
@@ -241,60 +233,58 @@ msgid ""
 "You are not logged in but loading\n"
 "an upload set for %s"
 msgstr ""
+"Non si è autenticati ma si sta\n"
+"caricando un set di invio per \"%s\""
 
 #: ../src/ProgressDialog.py:56
-#, fuzzy
 msgid "Uploading"
-msgstr "_Invia"
+msgstr "Invio in corso..."
 
 #: ../src/SetCombo.py:23
 msgid "None"
-msgstr ""
+msgstr "Nessuno"
 
 #: ../src/SetCombo.py:24
 #, python-format
 msgid "Create Photoset \"%s\""
-msgstr ""
+msgstr "Crea set di foto \"%s\""
 
 #: ../src/SetCombo.py:26
 msgid "new photoset (%m-%d-%y)"
-msgstr ""
+msgstr "nuovo set di foto (%d-%m-%y)"
 
 #: ../src/SetCombo.py:132
 msgid "Name for the new photoset:"
-msgstr ""
+msgstr "Nome del nuovo set di foto:"
 
 #: ../src/StatusBar.py:38
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
-msgstr ""
+msgstr "COnnesso come <b>%s</b>.  "
 
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr ""
+msgstr "È possibile inviare %(quota)s questo mese; rimangono %(to_upload)s da inviare."
 
 #: ../src/StatusBar.py:43
 #, python-format
 msgid "You can upload %(quota)s this month."
-msgstr ""
+msgstr "È possibile inviare %(quota)s questo mese."
 
 #: ../src/StatusBar.py:45
 #, python-format
 msgid "%(to_upload)s to upload."
-msgstr ""
+msgstr "%(to_upload)s da inviare."
 
 #~ msgid "You have %s remaining this month"
-#~ msgstr "Hai %s rimanenti questo mese"
-
+#~ msgstr "Du hast diesen Monat noch %s übrig"
 #~ msgid "_Delete"
-#~ msgstr "_Cancella"
-
+#~ msgstr "_Löschen"
 #~ msgid "_Select All"
-#~ msgstr "Seleziona _Tutti"
-
+#~ msgstr "_Alle auswählen"
 #~ msgid "_About"
-#~ msgstr "_Informazioni su"
-
+#~ msgstr "_Über"
 #~ msgid "..."
 #~ msgstr "..."
+
