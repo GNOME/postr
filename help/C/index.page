@@ -22,7 +22,11 @@
     </license>
 </info>
 
-<title>Postr</title>
+
+<title>
+    <media type="image" mime="image/png" src="figures/postr-logo.png" ></media>
+    Postr: Photo Uploader for Flickr
+</title>
 <p>Getting started with Postr</p>
 
   <section id="getting-started" style="2column">
