@@ -5,7 +5,7 @@
       id="login">
 <info>
   <link type="guide" xref="index#getting-started"/>
-  <desc>Log in on Flickr</desc>
+  <desc>Connecting <app>Postr</app> to your Flickr account</desc>
   <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
     <credit type="author">
         <name>Germán Póo-Caamaño</name>
@@ -18,17 +18,34 @@
 </info>
 <title>Log in on Flickr</title>
 
-  <p>Flickr must authorize to <app>Postr</app> the access to your
-  information before doing anything else.</p>
+  <p>
+    <app>Postr</app> requires authorization from your Flickr account to
+    upload your photos.  In order to connect <app>Postr</app> with your
+    Flickr account, the first time you run <app>Postr</app>, you will be
+    asked to login to Flickr with the following dialog:
+  </p>
 
-    <figure>
-        <title><app>Postr</app> Login to Flickr window</title>
-        <desc><app>Postr</app> Switch account and Login to Flickr window</desc>
-        <media type="image" src="figures/postr-login-flickr.png" mime="image/png" style="right"></media>
-    </figure>
-    <steps>
-        <item><p>Click on Login to Flickr. This action will open the Flickr authentication page on your default web browser.</p></item>
-        <item><p>Follow the instructions on Flickr website to authorize <app>Postr</app></p></item>
-        <item><p>Back to Login to Flickr window on <app>Postr</app> and click on Continue</p></item>
-    </steps>
+  <figure>
+    <title><app>Postr</app> Login to Flickr window</title>
+    <desc><app>Postr</app> Switch account and Login to Flickr window</desc>
+    <media type="image" src="figures/postr-login-flickr.png" mime="image/png" style="right"></media>
+  </figure>
+  <steps>
+    <item><p>Click on <gui>Login to Flickr</gui>. This action will
+    open the Flickr authentication page on your default web
+    browser.</p></item>
+    <item><p>Follow the instructions on Flickr website to authorize
+    <app>Postr</app>.  The permissions requested are for read and write,
+    but not delete.</p></item>
+    <item><p>Go back to <gui>Login to Flickr</gui> window on
+    <app>Postr</app> and click on <gui>Continue</gui>.</p></item>
+  </steps>
+
+  <note style="tip">
+    <p>
+      To use <app>Postr</app> with another Flickr account, you have to
+      to select <guiseq><gui>File</gui><gui>Switch user...</gui></guiseq>
+      and repeat the procedure.
+    </p>
+  </note>
 </page>

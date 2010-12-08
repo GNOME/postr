@@ -21,8 +21,16 @@
 <title>Introduction</title>
 
   <p>
-    <app>Postr</app> is simple and useful tool for uploading pictures to Flickr.com for the
-    GNOME Desktop.
+    <app>Postr</app> is a tool for uploading pictures to <link href="http://flickr.com/"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps you to share your pictures with your family, friends, contacts or everyone.
+  </p>
+  <p>
+    <app>Postr</app> supports the most common properties of a picture in Flickr, such as title, description and tags.  It also supports groups, where you can share your pictures to the groups you are already subscribed in Flickr.
+  </p>
+  <p>
+    Using <app>Postr</app> you can define a set for your pictures, either new or existent, where you can keep them organized.
+  </p>
+  <p>
+    In order to use <app>Postr</app> you need an account on <link href="http://flickr.com/">Flickr</link>.
   </p>
 
   <figure>
