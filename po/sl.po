@@ -7,33 +7,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-06 11:34-0800\n"
-"PO-Revision-Date: 2010-12-03 20:01+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&component=General\n"
+"POT-Creation-Date: 2010-12-11 10:43+0000\n"
+"PO-Revision-Date: 2010-12-11 20:20+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 or n"
-"%100==4 ? 3 : 0) ;\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 or n%100==4 ? 3 : 0) ;\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../data/postr.desktop.in.in.h:1
+#: ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25
+#: ../src/AuthenticationDialog.py:39
 #: ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr "Program za prenos datotek na Flickr"
 
 #: ../data/postr.desktop.in.in.h:2
-#, fuzzy
 msgid "Upload photos to Flickr"
-msgstr "Prenesi na Flickr ..."
+msgstr "Prenos slik na portal Flickr"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -148,12 +147,11 @@ msgid "Continue"
 msgstr "Nadaljuj"
 
 #: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
+msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
+msgstr "Program zahteva prijavo na Flickr za pošiljanje slik. S klikom na spodnji naslov je mogoče vzpostaviti povezavo."
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55
+#: ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Prijava v Flickr"
 
@@ -190,25 +188,21 @@ msgid "<b>Currently Uploading</b>"
 msgstr "<b>Trenutno v prenosu</b>"
 
 #: ../src/postr.py:494
-msgid ""
-"Photos are still being uploaded. Are you sure you want to quit? You can also "
-"save your pending upload set for later."
-msgstr ""
+msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Slike se še vedno pošiljajo.  Ali zares želite program končati? Pripravljene slike je mogoče tudi shraniti za kasnejše pošiljanje."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotografije za prenos</b>"
 
 #: ../src/postr.py:510
-msgid ""
-"There are photos pending to be uploaded. Are you sure you want to quit? You "
-"can also save your pending upload set for later."
-msgstr ""
+msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Pripravljene so slike za prenos. Ali zares želite program končati? Pripravljene slike je mogoče tudi shraniti za kasnejše pošiljanje."
 
 #: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
-msgstr ""
+msgstr "Slika %s je prevelika; velikost slike je omejena na velikost %dMB."
 
 #: ../src/postr.py:945
 #, python-format
@@ -218,11 +212,11 @@ msgstr "Prenašanje predmeta %(index)d od %(count)d"
 #: ../src/postr.py:948
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
-msgstr ""
+msgstr "Program za prenos datotek na Flickr (%(index)d/%(count)d)"
 
 #: ../src/postr.py:995
 msgid "Some Files does not exist or are currently inaccessible."
-msgstr ""
+msgstr "Nekatere datoteke ne obstajajo ali pa trenutno niso na dostopne."
 
 #: ../src/postr.py:1352
 #, python-format
@@ -230,12 +224,13 @@ msgid ""
 "You are logged in as %s but loading\n"
 "an upload set for %s"
 msgstr ""
+"Vzpostavljena je prijava %s, pošiljanje pa je\n"
+"pripravljeno za %s"
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
-msgid ""
-"Do you want to continue with the load?  You will not import photoset "
-"information."
-msgstr ""
+#: ../src/postr.py:1356
+#: ../src/postr.py:1373
+msgid "Do you want to continue with the load?  You will not import photoset information."
+msgstr "Ali želite nadaljevati z nalaganjem? Podatki o fotografijah ne bodo uvoženi."
 
 #: ../src/postr.py:1369
 #, python-format
@@ -243,6 +238,8 @@ msgid ""
 "You are not logged in but loading\n"
 "an upload set for %s"
 msgstr ""
+"Prijava ni vzpostavljena, pošiljanje pa je\n"
+"pripravljeno za %s"
 
 #: ../src/ProgressDialog.py:56
 msgid "Uploading"
@@ -273,7 +270,7 @@ msgstr "Dejavna je prijava <b>%s</b>.  "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr ""
+msgstr "Ta mesec je mogoče poslati %(quota)s, za prenos pa je pripravljeno %(to_upload)s."
 
 #: ../src/StatusBar.py:43
 #, python-format
@@ -284,3 +281,4 @@ msgstr "Ta mesec je mogoče prenesti %(quota)s."
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s za prenos."
+
