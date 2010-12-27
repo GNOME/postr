@@ -1,0 +1,277 @@
+# Chinese (China) translation for postr.
+# Copyright (C) 2010 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Mike Akiba <mike2718@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&component=General\n"
+"POT-Creation-Date: 2010-12-15 18:03+0000\n"
+"PO-Revision-Date: 2010-12-27 16:29+0800\n"
+"Last-Translator: mike2718 <mike2718@gmail.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
+msgid "Flickr Uploader"
+msgstr "Flickr 上传工具"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "上传照片到 Flickr"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "上传到 Flickr..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "上传选定文件到 Flickr"
+
+#: ../src/postr.glade.h:1
+msgid "Add Photos..."
+msgstr "添加照片..."
+
+#: ../src/postr.glade.h:2
+msgid "Add to _Set:"
+msgstr ""
+
+#: ../src/postr.glade.h:3
+msgid "Dese_lect All"
+msgstr "取消选择(_L)"
+
+#: ../src/postr.glade.h:5
+msgid "Privacy, Safety, Type and License"
+msgstr "隐私，安全，类型和许可"
+
+#: ../src/postr.glade.h:6
+msgid "Remove Photos"
+msgstr "删除照片"
+
+#: ../src/postr.glade.h:7
+msgid "Rename"
+msgstr "重命名"
+
+#: ../src/postr.glade.h:8
+msgid "Select"
+msgstr "选择"
+
+#: ../src/postr.glade.h:9
+msgid "Send to Groups"
+msgstr "发送到小组"
+
+#: ../src/postr.glade.h:10
+msgid "Ta_gs:"
+msgstr "标签：(_T)"
+
+#: ../src/postr.glade.h:11
+msgid "_Add Photos..."
+msgstr "添加照片...(_A)"
+
+#: ../src/postr.glade.h:12
+msgid "_Content type:"
+msgstr "类型(_C)"
+
+#: ../src/postr.glade.h:13
+msgid "_Description:"
+msgstr "描述：(_D)"
+
+#: ../src/postr.glade.h:14
+msgid "_File"
+msgstr "文件(_F)"
+
+#: ../src/postr.glade.h:15
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../src/postr.glade.h:16
+msgid "_Invert Selection"
+msgstr "反选(_I)"
+
+#: ../src/postr.glade.h:17
+msgid "_License:"
+msgstr "许可(_L)："
+
+#: ../src/postr.glade.h:18
+msgid "_Load session"
+msgstr "载入会话(_L)"
+
+#: ../src/postr.glade.h:19
+msgid "_Privacy:"
+msgstr "隐私(_P)："
+
+#: ../src/postr.glade.h:20
+msgid "_Remove Photos"
+msgstr "删除照片(_P)："
+
+#: ../src/postr.glade.h:21
+msgid "_Safety:"
+msgstr "安全(_S)："
+
+#: ../src/postr.glade.h:22
+msgid "_Save session"
+msgstr "保存会话(_S)"
+
+#: ../src/postr.glade.h:23
+msgid "_Switch user..."
+msgstr "切换用户(_S)..."
+
+#: ../src/postr.glade.h:24
+msgid "_Title:"
+msgstr "标题(_T)："
+
+#: ../src/postr.glade.h:25
+msgid "_Upload"
+msgstr "上传(_U)"
+
+#: ../src/postr.glade.h:26
+msgid "_Visible in search results"
+msgstr "在搜索结果中可见(_V)"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "继续"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "登录到 Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "出错"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "详情"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "无标题"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "默认"
+
+#: ../src/postr.py:412
+msgid "Add Photos"
+msgstr "添加图片"
+
+#: ../src/postr.py:424
+msgid "Images"
+msgstr "图片"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr "所有文件"
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>当前上传</b>"
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>要上传的照片</b>"
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+
+#: ../src/postr.py:777
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+
+#: ../src/postr.py:945
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr ""
+
+#: ../src/postr.py:948
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr ""
+
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
+
+#: ../src/postr.py:1352
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+
+#: ../src/postr.py:1369
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/ProgressDialog.py:56
+msgid "Uploading"
+msgstr "正在上传"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr "无"
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr ""
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr ""
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr ""
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "登录为 <b>%s</b>。  "
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr ""
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr ""
