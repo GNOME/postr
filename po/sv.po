@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-06 11:34-0800\n"
-"PO-Revision-Date: 2010-02-27 15:25+0100\n"
+"POT-Creation-Date: 2010-12-29 18:36+0100\n"
+"PO-Revision-Date: 2010-12-29 18:38+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,16 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../data/postr.desktop.in.in.h:1
+#: ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25
+#: ../src/AuthenticationDialog.py:39
 #: ../src/postr.py:979
 msgid "Flickr Uploader"
 msgstr "Skicka upp till Flickr"
 
 #: ../data/postr.desktop.in.in.h:2
-#, fuzzy
 msgid "Upload photos to Flickr"
-msgstr "Skicka upp till Flickr..."
+msgstr "Skicka upp foton till Flickr"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -41,7 +42,7 @@ msgstr "Lägg till foton..."
 
 #: ../src/postr.glade.h:2
 msgid "Add to _Set:"
-msgstr "Lägg till till _uppsättning:"
+msgstr "Lägg till i _uppsättning:"
 
 #: ../src/postr.glade.h:3
 msgid "Dese_lect All"
@@ -140,24 +141,21 @@ msgid "Continue"
 msgstr "Fortsätt"
 
 #: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Postr behöver logga in på Flickr för att skicka upp dina foton. Klicka på "
-"nedanstående länk för att logga in på Flickr."
+msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
+msgstr "Postr behöver logga in på Flickr för att skicka upp dina foton. Klicka på nedanstående länk för att logga in på Flickr."
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55
+#: ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Logga in på Flickr"
 
 #: ../src/ErrorDialog.py:26
 msgid "An error occurred"
-msgstr ""
+msgstr "Ett fel inträffade"
 
 #: ../src/ErrorDialog.py:47
 msgid "Details"
-msgstr ""
+msgstr "Detaljer"
 
 #: ../src/ImageList.py:72
 msgid "No title"
@@ -165,7 +163,7 @@ msgstr "Ingen titel"
 
 #: ../src/LicenseCombo.py:26
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: ../src/postr.py:412
 msgid "Add Photos"
@@ -184,24 +182,16 @@ msgid "<b>Currently Uploading</b>"
 msgstr "<b>Skickar upp</b>"
 
 #: ../src/postr.py:494
-msgid ""
-"Photos are still being uploaded. Are you sure you want to quit? You can also "
-"save your pending upload set for later."
-msgstr ""
-"Foton håller på att skickas. Är du säker på att du vill avsluta? Du kan även "
-"spara din väntande sändning till senare."
+msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Foton håller på att skickas. Är du säker på att du vill avsluta? Du kan även spara din väntande sändning till senare."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Foton att skickas upp</b>"
 
 #: ../src/postr.py:510
-msgid ""
-"There are photos pending to be uploaded. Are you sure you want to quit? You "
-"can also save your pending upload set for later."
-msgstr ""
-"Det finns foton som väntar på att skickas upp. Är du säker på att du vill "
-"avsluta? Du kan även spara din väntande sändning till senare."
+msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
+msgstr "Det finns foton som väntar på att skickas upp. Är du säker på att du vill avsluta? Du kan även spara din väntande sändning till senare."
 
 #: ../src/postr.py:777
 #, python-format
@@ -220,7 +210,7 @@ msgstr "Skicka upp till Flickr (%(index)d/%(count)d)"
 
 #: ../src/postr.py:995
 msgid "Some Files does not exist or are currently inaccessible."
-msgstr ""
+msgstr "Några filer finns inte eller är inte åtkomliga för närvarande."
 
 #: ../src/postr.py:1352
 #, python-format
@@ -231,13 +221,10 @@ msgstr ""
 "Du är inloggad som %s men läser\n"
 "in en sändning för %s"
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
-msgid ""
-"Do you want to continue with the load?  You will not import photoset "
-"information."
-msgstr ""
-"Vill du fortsätta med inläsningen?  Du kommer inte importera information om "
-"fotouppsättningen."
+#: ../src/postr.py:1356
+#: ../src/postr.py:1373
+msgid "Do you want to continue with the load?  You will not import photoset information."
+msgstr "Vill du fortsätta med inläsningen?  Du kommer inte importera information om fotouppsättningen."
 
 #: ../src/postr.py:1369
 #, python-format
@@ -249,26 +236,25 @@ msgstr ""
 "en sändning för %s"
 
 #: ../src/ProgressDialog.py:56
-#, fuzzy
 msgid "Uploading"
-msgstr "Skicka _upp"
+msgstr "Skickar upp"
 
 #: ../src/SetCombo.py:23
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ../src/SetCombo.py:24
 #, python-format
 msgid "Create Photoset \"%s\""
-msgstr ""
+msgstr "Skapa fotouppsättning \"%s\""
 
 #: ../src/SetCombo.py:26
 msgid "new photoset (%m-%d-%y)"
-msgstr ""
+msgstr "ny fotouppsättning (%y-%m-%d)"
 
 #: ../src/SetCombo.py:132
 msgid "Name for the new photoset:"
-msgstr ""
+msgstr "Namn för den nya fotouppsättningen:"
 
 #: ../src/StatusBar.py:38
 #, python-format
@@ -278,8 +264,7 @@ msgstr "Inloggad som <b>%s</b>.  "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr ""
-"Du kan skicka upp %(quota)s denna månad och har %(to_upload)s att skicka upp."
+msgstr "Du kan skicka upp %(quota)s denna månad och har %(to_upload)s att skicka upp."
 
 #: ../src/StatusBar.py:43
 #, python-format
@@ -293,21 +278,16 @@ msgstr "%(to_upload)s att skicka upp."
 
 #~ msgid "_Select All"
 #~ msgstr "_Markera allt"
-
 #~ msgid "gtk-about"
 #~ msgstr "Om"
-
 #~ msgid "..."
 #~ msgstr "..."
-
 #~ msgid "Privacy and Safety"
 #~ msgstr "Integritet och säkerhet"
-
 #~ msgid "You have %s remaining this month"
 #~ msgstr "Du har %s återstående denna månad"
-
 #~ msgid "_Delete"
 #~ msgstr "_Ta bort"
-
 #~ msgid "_About"
 #~ msgstr "_Om"
+
