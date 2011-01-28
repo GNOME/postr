@@ -1,13 +1,13 @@
 # Spanish translation for postr.
 # Copyright (C) 2010 postr's COPYRIGHT HOLDER
 # This file is distributed under the same license as the postr package.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2010-12-15 18:03+0000\n"
-"PO-Revision-Date: 2010-12-21 13:53+0100\n"
+"POT-Creation-Date: 2010-12-22 18:53+0000\n"
+"PO-Revision-Date: 2011-01-28 09:45+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: C/tags.page:8(desc) C/tags.page:20(title)
 msgid "Adding tags to your pictures."
-msgstr ""
+msgstr "Añadir etiquetas a sus fotos."
 
 #: C/tags.page:11(name) C/permissions.page:11(name) C/login.page:11(name)
 #: C/index.page:13(name) C/uploading.page:11(name) C/sets.page:11(name)
@@ -71,7 +71,7 @@ msgstr ""
 
 #: C/permissions.page:20(title)
 msgid "Privacy, safety and license."
-msgstr ""
+msgstr "Privacidad, seguridad y licencia."
 
 #: C/permissions.page:24(title)
 msgid "Privacy"
@@ -79,12 +79,12 @@ msgstr "Privacidad"
 
 #: C/permissions.page:26(title)
 msgid "Privacy of your photographs"
-msgstr ""
+msgstr "Privacidad de sus fotografías"
 
 #: C/permissions.page:27(p) C/permissions.page:41(p) C/permissions.page:54(p)
 #: C/permissions.page:67(p)
 msgid "You can choose between:"
-msgstr ""
+msgstr "Puede elegir entre:"
 
 #: C/permissions.page:29(p)
 msgid "Public"
@@ -128,7 +128,7 @@ msgstr "Tipo de contenido"
 
 #: C/permissions.page:53(title)
 msgid "Content Type of your content"
-msgstr ""
+msgstr "Tipo de contenido de sus contenidos"
 
 #: C/permissions.page:56(p)
 msgid "Photo"
@@ -160,7 +160,7 @@ msgstr "Todos los derechos reservados"
 
 #: C/permissions.page:71(p)
 msgid "Attribution License"
-msgstr ""
+msgstr "Licencia de Atribución"
 
 #: C/permissions.page:72(p)
 msgid "Attribution-NoDerivs License"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: C/permissions.page:74(p)
 msgid "Attribution-NonCommercial License"
-msgstr ""
+msgstr "Licencia de Atribución-No Comercial"
 
 #: C/permissions.page:75(p)
 msgid "Attribution-NonCommercial-ShareAlike License"
@@ -180,7 +180,7 @@ msgstr ""
 
 #: C/permissions.page:76(p)
 msgid "Attribution-ShareAlike License"
-msgstr ""
+msgstr "Licencia de Atribución-Compartir Igual"
 
 #: C/permissions.page:77(p)
 msgid "No known copyright restrictions"
@@ -188,7 +188,7 @@ msgstr ""
 
 #: C/permissions.page:78(p)
 msgid "United States Government Work"
-msgstr ""
+msgstr "Trabajo del gobierno de Estados Unidos"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -202,7 +202,7 @@ msgstr ""
 
 #: C/login.page:8(desc)
 msgid "Connecting <app>Postr</app> to your Flickr account"
-msgstr ""
+msgstr "Conectar <app>Postr</app> a su cuenta de Flickr"
 
 #: C/login.page:19(title)
 msgid "Log in on Flickr"
@@ -286,7 +286,7 @@ msgstr "Primeros pasos"
 
 #: C/index.page:41(title) C/index.page:43(title)
 msgid "Setting photograph's properties"
-msgstr ""
+msgstr "Configurar las propiedades de la foto"
 
 #: C/index.page:48(title) C/index.page:50(title)
 msgid "Advanced actions"
@@ -294,7 +294,7 @@ msgstr "Acciones avanzadas"
 
 #: C/uploading.page:8(desc) C/uploading.page:20(title)
 msgid "Uploading photographs on Flickr"
-msgstr ""
+msgstr "Subir fotografías a Flickr"
 
 #: C/uploading.page:22(p)
 msgid "Click on Add Photos..."
@@ -316,27 +316,27 @@ msgstr ""
 
 #: C/sets.page:8(desc) C/sets.page:16(title)
 msgid "Grouping pictures by set."
-msgstr ""
+msgstr "Agrupar fotografías por álbumes."
 
 #: C/sets.page:20(title) C/sets.page:22(title)
 msgid "What is a set?"
-msgstr ""
+msgstr "¿Qué es un álbum?"
 
 #: C/sets.page:27(title) C/sets.page:29(title)
 msgid "Creating a set"
-msgstr ""
+msgstr "Crear un álbum"
 
 #: C/sets.page:34(title) C/sets.page:36(title)
 msgid "Choosing a set"
-msgstr ""
+msgstr "Elegir un álbum"
 
 #: C/offline.page:7(desc)
 msgid "How to continue your work later."
-msgstr ""
+msgstr "Cómo continuar con su trabajo más tarde."
 
 #: C/offline.page:15(title)
 msgid "Continue the uploading later"
-msgstr ""
+msgstr "Continuar subiendo más tarde"
 
 #: C/offline.page:20(p)
 msgid "Save session."
@@ -414,7 +414,7 @@ msgstr "Ventana principal de <app>Postr</app>."
 
 #: C/groups.page:8(desc)
 msgid "Sharing your photographs with other people."
-msgstr ""
+msgstr "Compartir sus fotografías con otras personas."
 
 #: C/groups.page:15(name)
 msgid "Sergio Infante Montero"
@@ -426,7 +426,7 @@ msgstr ""
 
 #: C/groups.page:21(p)
 msgid "Choose an image to upload"
-msgstr ""
+msgstr "Seleccionar una imagen para subir"
 
 #: C/groups.page:22(p)
 msgid "Click on Send to Groups option. A list of your groups must be shown"
@@ -444,4 +444,4 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/index.page:0(None)
 msgid "translator-credits"
-msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2010"
+msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011"
