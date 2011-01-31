@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2010-12-22 18:53+0000\n"
-"PO-Revision-Date: 2011-01-28 09:45+0100\n"
+"POT-Creation-Date: 2011-01-28 19:00+0000\n"
+"PO-Revision-Date: 2011-01-31 13:39+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,10 @@ msgid ""
 "term helps describe an item and allows it to be found again by browsing or "
 "searching. Tags are generally chosen informally and personally by the user."
 msgstr ""
+"Una etiqueta es un término no jerárquico asignado a un fragmento de "
+"información. Este término ayuda a describir un elemento, y le permite "
+"encontrarlo explorando o buscando. Generalmente, las etiquetas se eligen de "
+"manera informal, personalmente por el usuario."
 
 #: C/tags.page:32(title) C/tags.page:34(title)
 msgid "Creating a tag"
@@ -67,7 +71,7 @@ msgstr ""
 
 #: C/permissions.page:8(desc)
 msgid "Setting permissions to your photographs."
-msgstr ""
+msgstr "Configurar los permisos de sus fotografías."
 
 #: C/permissions.page:20(title)
 msgid "Privacy, safety and license."
@@ -108,7 +112,7 @@ msgstr "Seguridad"
 
 #: C/permissions.page:40(title)
 msgid "Defining the safety of your content"
-msgstr ""
+msgstr "Definir la seguridad de sus contenidos"
 
 #: C/permissions.page:43(p)
 msgid "Safe"
@@ -148,7 +152,7 @@ msgstr "Licencia"
 
 #: C/permissions.page:66(title)
 msgid "Choosing a license for your photographs"
-msgstr ""
+msgstr "Seleccionar una licencia para sus fotografías."
 
 #: C/permissions.page:69(p)
 msgid "Default"
@@ -164,11 +168,11 @@ msgstr "Licencia de Atribución"
 
 #: C/permissions.page:72(p)
 msgid "Attribution-NoDerivs License"
-msgstr ""
+msgstr "Licencia de Atribución-No derivada"
 
 #: C/permissions.page:73(p)
 msgid "Attribution-NonCommercial-NoDerivs License"
-msgstr ""
+msgstr "Licencia de Atribución-Compartir Igual-No derivada"
 
 #: C/permissions.page:74(p)
 msgid "Attribution-NonCommercial License"
@@ -176,7 +180,7 @@ msgstr "Licencia de Atribución-No Comercial"
 
 #: C/permissions.page:75(p)
 msgid "Attribution-NonCommercial-ShareAlike License"
-msgstr ""
+msgstr "Licencia de Atribución-Compartir Igual-No comercial"
 
 #: C/permissions.page:76(p)
 msgid "Attribution-ShareAlike License"
@@ -184,7 +188,7 @@ msgstr "Licencia de Atribución-Compartir Igual"
 
 #: C/permissions.page:77(p)
 msgid "No known copyright restrictions"
-msgstr ""
+msgstr "No hay restricciones de copyright"
 
 #: C/permissions.page:78(p)
 msgid "United States Government Work"
@@ -218,7 +222,7 @@ msgstr ""
 
 #: C/login.page:29(title)
 msgid "<app>Postr</app> Login to Flickr window"
-msgstr ""
+msgstr "Ventana de <app>Postr</app> para iniciar sesión en Flickr"
 
 #: C/login.page:30(desc)
 msgid "<app>Postr</app> Switch account and Login to Flickr window"
@@ -248,6 +252,9 @@ msgid ""
 "<guiseq><gui>File</gui><gui>Switch user...</gui></guiseq> and repeat the "
 "procedure."
 msgstr ""
+"Para usar <app>Postr</app> con otra cuenta de Flickr, debe seleccionar "
+"<guiseq><gui>Archivo</gui><gui>Cambiar de usuario...</gui></guiseq> y "
+"repetir el procedimiento."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -348,7 +355,7 @@ msgstr "Elegir un nombre."
 
 #: C/offline.page:22(p)
 msgid "The next time, you can load a session previously save."
-msgstr ""
+msgstr "La próxima vez, puede cargar una sesión guardada previamente."
 
 #: C/offline.page:26(p)
 msgid ""
@@ -368,7 +375,7 @@ msgstr ""
 
 #: C/introduction.page:9(desc)
 msgid "Introduction to the <app>Postr</app> flickr uploader."
-msgstr ""
+msgstr "Introducción al cargador para Flickr de <app>Postr</app>."
 
 #: C/introduction.page:21(title)
 msgid "Introduction"
@@ -380,6 +387,10 @@ msgid ""
 "flickr.com/\"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps "
 "you to share your pictures with your family, friends, contacts or everyone."
 msgstr ""
+"<app>Postr</app> es una herramienta para subir fotos a <link href=\"http://"
+"flickr.com/\"> Flickr</link> para el escritorio GNOME. <app>Postr</app> le "
+"ayuda a compartir fotos con su familia, amigos, contactos o con todo el "
+"mundo."
 
 #: C/introduction.page:26(p)
 msgid ""
@@ -399,6 +410,8 @@ msgid ""
 "In order to use <app>Postr</app> you need an account on <link href=\"http://"
 "flickr.com/\">Flickr</link>."
 msgstr ""
+"Para usar <app>Postr</app> necesita tener una cuenta en <link href=\"http://"
+"flickr.com/\">Flickr</link>."
 
 #: C/introduction.page:37(title)
 msgid "<app>Postr</app> window"
@@ -422,7 +435,7 @@ msgstr "Sergio Infante Montero"
 
 #: C/groups.page:19(title)
 msgid "Send your photographs to groups of your interest."
-msgstr ""
+msgstr "Enviar sus fotografías a grupos de su interés."
 
 #: C/groups.page:21(p)
 msgid "Choose an image to upload"
