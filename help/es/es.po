@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2011-01-28 19:00+0000\n"
-"PO-Revision-Date: 2011-01-31 13:39+0100\n"
+"POT-Creation-Date: 2011-01-31 18:35+0000\n"
+"PO-Revision-Date: 2011-02-01 13:42+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -68,6 +68,8 @@ msgid ""
 "Tags are created by typing the term on Tags field on <app>Postr</app> main "
 "window"
 msgstr ""
+"Las etiquetas se crean escribiendo el término en el campo «Etiquetas» en la "
+"ventana principal de <app>Postr</app>"
 
 #: C/permissions.page:8(desc)
 msgid "Setting permissions to your photographs."
@@ -219,6 +221,10 @@ msgid ""
 "the first time you run <app>Postr</app>, you will be asked to login to "
 "Flickr with the following dialog:"
 msgstr ""
+"<app>Postr</app> requiere autorización de su cuenta de Flickr para subir sus "
+"fotos. Para conectar <app>Postr</app> con su cuenta de Flickr, la primera "
+"vez que ejecute <app>Postr</app> se le pedirá que inicie sesión en Flickr "
+"con el siguiente diálogo:"
 
 #: C/login.page:29(title)
 msgid "<app>Postr</app> Login to Flickr window"
@@ -227,24 +233,32 @@ msgstr "Ventana de <app>Postr</app> para iniciar sesión en Flickr"
 #: C/login.page:30(desc)
 msgid "<app>Postr</app> Switch account and Login to Flickr window"
 msgstr ""
+"Ventana de <app>Postr</app> para cambiar de cuenta e iniciar sesión en Flickr"
 
 #: C/login.page:34(p)
 msgid ""
 "Click on <gui>Login to Flickr</gui>. This action will open the Flickr "
 "authentication page on your default web browser."
 msgstr ""
+"Pulse en <gui>Iniciar sesión en Flickr</gui>. Esta acción abrirá la página "
+"de autenticación de Flickr en su navegador web predeterminado."
 
 #: C/login.page:37(p)
 msgid ""
 "Follow the instructions on Flickr website to authorize <app>Postr</app>. The "
 "permissions requested are for read and write, but not delete."
 msgstr ""
+"Siga las instrucciones en la página web de Flickr para autorizar a "
+"<app>Postr</app>. Los permisos requeridos son de lectura y de escritura, "
+"pero no de eliminado."
 
 #: C/login.page:40(p)
 msgid ""
 "Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click "
 "on <gui>Continue</gui>."
 msgstr ""
+"Regrese a la ventana <gui>Iniciar sesión en Flickr</gui> en <app>Postr</app> "
+"y pulse <gui>Continuar</gui>."
 
 #: C/login.page:45(p)
 msgid ""
@@ -309,17 +323,21 @@ msgstr "Pulse en Añadir fotos..."
 
 #: C/uploading.page:23(p)
 msgid "Choose the photographs that you want to upload on Flickr"
-msgstr ""
+msgstr "Seleccione las fotografías que quiere subir a Flickr"
 
 #: C/uploading.page:24(p)
 msgid ""
 "Choose an image and edit the title, description, tags, privacy, safety, "
 "type, license and other data of image"
 msgstr ""
+"Seleccione la imagen y edite el título, la descripción, las etiquetas, la "
+"privacidad, la seguridad, el tipo, la licencia y otros datos de la imagen"
 
 #: C/uploading.page:25(p)
 msgid "When you finish add aditional description, click on Upload button"
 msgstr ""
+"Cuando haya terminado de añadir la descripción adicionar, pulse el botón "
+"«Subir»"
 
 #: C/sets.page:8(desc) C/sets.page:16(title)
 msgid "Grouping pictures by set."
@@ -362,6 +380,8 @@ msgid ""
 "If you load a session when you are off-line, the properties that relies on "
 "your connection will be lost. These properties are: sets, groups and privacy."
 msgstr ""
+"Si carga una sesión cuando no está conectado, las propiedades de su conexión "
+"se perderán. Estas propiedades son: álbumes, grupos y privacidad."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -398,12 +418,18 @@ msgid ""
 "such as title, description and tags. It also supports groups, where you can "
 "share your pictures to the groups you are already subscribed in Flickr."
 msgstr ""
+"<app>Postr</app> soporta la mayoría de las propiedades comunes de una imagen "
+"en Flickr, como el título, la descripción y las etiquetas. También soporta "
+"grupos, donde puede compartir sus imágenes con los grupos a los que ya está "
+"suscrito en Flickr."
 
 #: C/introduction.page:29(p)
 msgid ""
 "Using <app>Postr</app> you can define a set for your pictures, either new or "
 "existent, where you can keep them organized."
 msgstr ""
+"Usando <app>Postr</app> puede definir un álbum para sus imágenes, nuevo o "
+"que ya exista, donde puede tenerlas organizadas."
 
 #: C/introduction.page:32(p)
 msgid ""
@@ -444,15 +470,17 @@ msgstr "Seleccionar una imagen para subir"
 #: C/groups.page:22(p)
 msgid "Click on Send to Groups option. A list of your groups must be shown"
 msgstr ""
+"Pulse en la opción «Enviar a grupos». Se debe mostrar una lista de sus grupos"
 
 #: C/groups.page:23(p)
 msgid "Choose in what group or groups will be send the image"
-msgstr ""
+msgstr "Seleccione a qué grupo o grupos se enviará la imagen"
 
 #: C/groups.page:26(p)
 msgid ""
 "Before you can use the Send to Groups option, at least you must have one."
 msgstr ""
+"Antes de que pueda usar la opción «Enviar a grupos», debe tener al menos uno."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/index.page:0(None)
