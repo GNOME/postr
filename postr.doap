@@ -15,7 +15,7 @@
   <programming-language>Python</programming-language>
   <os>Linux</os>
   <license rdf:resource="http://usefulinc.com/doap/licenses/gpl"/>
-  <download-page rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/"/>
+  <download-page rdf:resource="http://download.gnome.org/sources/postr/"/>
   
   <maintainer>
     <foaf:Person>
