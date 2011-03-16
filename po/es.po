@@ -2,19 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2010.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr.master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-06 11:34-0800\n"
-"PO-Revision-Date: 2010-12-05 18:57+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&component=General\n"
+"POT-Creation-Date: 2010-12-06 19:36+0000\n"
+"PO-Revision-Date: 2011-02-01 12:49+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
@@ -29,7 +31,7 @@ msgstr "Subir fotos a Flickr"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
-msgstr "Subir a Flickr..."
+msgstr "Subir a Flickr…"
 
 #: ../nautilus/postrExtension.py:83
 msgid "Upload the selected files into Flickr"
@@ -37,7 +39,7 @@ msgstr "Enviar las fotos seleccionadas a Flickr"
 
 #: ../src/postr.glade.h:1
 msgid "Add Photos..."
-msgstr "Añadir fotos..."
+msgstr "Añadir fotos…"
 
 #: ../src/postr.glade.h:2
 msgid "Add to _Set:"
@@ -45,7 +47,7 @@ msgstr "Añadir al ál_bum"
 
 #: ../src/postr.glade.h:3
 msgid "Dese_lect All"
-msgstr "Elimiar la selección"
+msgstr "_Deseleccionar todo"
 
 #: ../src/postr.glade.h:5
 msgid "Privacy, Safety, Type and License"
@@ -144,12 +146,12 @@ msgid ""
 "Postr needs to login to Flickr to upload your photos. Please click on the "
 "link below to login to Flickr."
 msgstr ""
-"Postr necesita registrarse en Flickr para subir sus fotos. Por favor, pulse "
-"en el link de abajo para registrase en Flickr."
+"Postr necesita iniciar sesión en Flickr para subir sus fotos. Por favor, "
+"pulse en el enlace de abajo para registrarse en Flickr."
 
 #: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
-msgstr "Registrarse en Flickr"
+msgstr "Iniciar sesión en Flickr"
 
 #: ../src/ErrorDialog.py:26
 msgid "An error occurred"
@@ -189,26 +191,26 @@ msgid ""
 "save your pending upload set for later."
 msgstr ""
 "Aún hay fotos que se están subiendo en este momento. ¿Seguro que quiere "
-"salir? También puede guardar sus cargas para más tarde."
+"salir? También puede guardar sus subidas pendientes para más tarde."
 
 #: ../src/postr.py:509
 msgid "<b>Photos to be uploaded</b>"
-msgstr "<b>Fotos para cargar</b>"
+msgstr "<b>Fotos que subir</b>"
 
 #: ../src/postr.py:510
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
 msgstr ""
-"Aún hay fotos por cargar. ¿Está seguro de que quiere salir? También puede "
-"guardar sus cargas pendientes para más tarde."
+"Aún hay fotos por subir. ¿Está seguro de que quiere salir? También puede "
+"guardar sus subidas pendientes para más tarde."
 
 #: ../src/postr.py:777
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr ""
-"La imagen %s es demasiado grande, las imágenes no puede ser más grandes de "
-"%dMB en tamaño."
+"La imagen %s es demasiado grande, las imágenes no puede ser más grandes de %"
+"dMB en tamaño."
 
 #: ../src/postr.py:945
 #, python-format
@@ -252,7 +254,7 @@ msgstr ""
 
 #: ../src/ProgressDialog.py:56
 msgid "Uploading"
-msgstr "Cargando"
+msgstr "Subiendo"
 
 #: ../src/SetCombo.py:23
 msgid "None"
@@ -269,7 +271,7 @@ msgstr "álbum nuevo (%d-%m-%y)"
 
 #: ../src/SetCombo.py:132
 msgid "Name for the new photoset:"
-msgstr "Nombre del nuevo álbum:"
+msgstr "Nombre del álbum nuevo:"
 
 #: ../src/StatusBar.py:38
 #, python-format
@@ -279,17 +281,17 @@ msgstr "Registrado como <b>%s</b>.  "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "Este mes puede cargar %(quota)s, y tiene %(to_upload)s para cargar."
+msgstr "Este mes puede subir %(quota)s, y tiene %(to_upload)s para subir."
 
 #: ../src/StatusBar.py:43
 #, python-format
 msgid "You can upload %(quota)s this month."
-msgstr "Este mes puede cargar %(quota)s."
+msgstr "Este mes puede subir %(quota)s."
 
 #: ../src/StatusBar.py:45
 #, python-format
 msgid "%(to_upload)s to upload."
-msgstr "%(to_upload)s para cargar."
+msgstr "%(to_upload)s para subir."
 
 #~ msgid "You have %s remaining this month"
 #~ msgstr "Le quedan %s este mes."
