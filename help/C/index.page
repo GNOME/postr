@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <page xmlns="http://projectmallard.org/1.0/"
-      xmlns:e="http://projectmallard.org/experimental/"
       type="guide"
       id="index">
 
@@ -27,8 +26,6 @@
     <media type="image" mime="image/png" src="figures/postr-logo.png" ></media>
     Postr: Photo Uploader for Flickr
 </title>
-<p>Getting started with Postr</p>
-
   <section id="getting-started" style="2column">
     <info>
       <title type="link">Getting Started</title>
