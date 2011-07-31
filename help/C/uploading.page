@@ -5,7 +5,7 @@
       id="uploading">
 <info>
   <link type="guide" xref="index#getting-started"/>
-  <desc>Uploading photographs on Flickr.</desc>
+  <desc>Share your photos with your family, friends or everyone</desc>
   <revision pkgversion="0.13" version="0.1" date="2009-11-13" status="incomplete"/>
     <credit type="author">
         <name>Germán Póo-Caamaño</name>
@@ -19,9 +19,17 @@
 
 <title>Uploading photographs on Flickr</title>
     <steps>
-        <item><p>Click on Add Photos...</p></item>
-        <item><p>Choose the photographs that you want to upload on Flickr</p></item>
+        <item><p>Click on <gui>Add Photos...</gui></p></item>
+        <item><p>From the <gui>Add Photos</gui> window, choose the
+        photographs that you would like to upload on Flickr. You can
+        select one or multiple photographs at once.</p></item>
         <item><p>Choose an image and edit the title, description, tags, privacy, safety, type, license and other data of image</p></item>
         <item><p>When you finish add aditional description, click on Upload button</p></item>
     </steps>
+    <note style="tip">
+      <p>
+        You also can add drag photos from the file manager
+        (<gui>Nautilus</gui>) and drop them on the left pane.
+      </p>
+    </note>
 </page>
