@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2011-03-22 03:55+0000\n"
-"PO-Revision-Date: 2011-03-22 11:48+0100\n"
+"POT-Creation-Date: 2011-08-02 01:47+0000\n"
+"PO-Revision-Date: 2011-08-04 11:20+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,6 @@ msgid "raulsergio9@gmail.com"
 msgstr "raulsergio9@gmail.com"
 
 #: C/tags.page:20(title)
-#| msgid "Adding tags to your pictures."
 msgid "Adding tags to your pictures"
 msgstr "Añadir etiquetas a sus fotos"
 
@@ -81,7 +80,6 @@ msgid "Setting permissions to your photographs."
 msgstr "Configurar los permisos de sus fotografías."
 
 #: C/permissions.page:20(title)
-#| msgid "Privacy, safety and license."
 msgid "Privacy, safety and license"
 msgstr "Privacidad, seguridad y licencia"
 
@@ -213,7 +211,6 @@ msgstr ""
 "md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
 
 #: C/login.page:8(desc)
-#| msgid "Connecting <app>Postr</app> to your Flickr account"
 msgid "Connecting <app>Postr</app> to your Flickr account."
 msgstr "Conectar <app>Postr</app> a su cuenta de Flickr."
 
@@ -317,23 +314,27 @@ msgid "Advanced actions"
 msgstr "Acciones avanzadas"
 
 #: C/uploading.page:8(desc)
-#| msgid "Uploading photographs on Flickr"
-msgid "Uploading photographs on Flickr."
-msgstr "Subir fotografías a Flickr."
+msgid "Share your photos with your family, friends or everyone"
+msgstr "Compartir sus fotos con su familia, amigos o con todo el mundo"
 
 #: C/uploading.page:20(title)
 msgid "Uploading photographs on Flickr"
 msgstr "Subir fotografías a Flickr"
 
 #: C/uploading.page:22(p)
-msgid "Click on Add Photos..."
-msgstr "Pulse en Añadir fotos..."
+#| msgid "Click on Add Photos..."
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Pulse en <gui>Añadir fotos...</gui>"
 
 #: C/uploading.page:23(p)
-msgid "Choose the photographs that you want to upload on Flickr"
-msgstr "Seleccione las fotografías que quiere subir a Flickr"
+msgid ""
+"From the <gui>Add Photos</gui> window, choose the photographs that you would "
+"like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr ""
+"En la ventana <gui>Añadir fotos</gui>, elija las fotos que quiere subir a "
+"Flickr. Puede seleccionar una o varias fotos a la vez."
 
-#: C/uploading.page:24(p)
+#: C/uploading.page:26(p)
 msgid ""
 "Choose an image and edit the title, description, tags, privacy, safety, "
 "type, license and other data of image"
@@ -341,18 +342,25 @@ msgstr ""
 "Seleccione la imagen y edite el título, la descripción, las etiquetas, la "
 "privacidad, la seguridad, el tipo, la licencia y otros datos de la imagen"
 
-#: C/uploading.page:25(p)
+#: C/uploading.page:27(p)
 msgid "When you finish add aditional description, click on Upload button"
 msgstr ""
 "Cuando haya terminado de añadir la descripción adicionar, pulse el botón "
 "«Subir»"
+
+#: C/uploading.page:30(p)
+msgid ""
+"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
+"drop them on the left pane."
+msgstr ""
+"También puede arrastrar archivos desde el gestor de archivos (<gui>Nautilus</"
+"gui>) y soltarlos en el panel izquierdo."
 
 #: C/sets.page:8(desc)
 msgid "Grouping pictures by set."
 msgstr "Agrupar fotografías por álbumes."
 
 #: C/sets.page:16(title)
-#| msgid "Grouping pictures by set."
 msgid "Grouping pictures by set"
 msgstr "Agrupar fotografías por álbumes"
 
@@ -473,7 +481,6 @@ msgid "Sergio Infante Montero"
 msgstr "Sergio Infante Montero"
 
 #: C/groups.page:19(title)
-#| msgid "Send your photographs to groups of your interest."
 msgid "Send your photographs to groups of your interest"
 msgstr "Enviar sus fotografías a grupos de su interés"
 
@@ -500,6 +507,13 @@ msgstr ""
 #: C/index.page:0(None)
 msgid "translator-credits"
 msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2010, 2011"
+
+#~| msgid "Uploading photographs on Flickr"
+#~ msgid "Uploading photographs on Flickr."
+#~ msgstr "Subir fotografías a Flickr."
+
+#~ msgid "Choose the photographs that you want to upload on Flickr"
+#~ msgstr "Seleccione las fotografías que quiere subir a Flickr"
 
 #~ msgid "Getting started with Postr"
 #~ msgstr "Primeros pasos con Postr"
