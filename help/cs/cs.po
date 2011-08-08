@@ -1,14 +1,14 @@
 # Czech translation for postr.
 # Copyright (C) 2011 postr's COPYRIGHT HOLDER
 # This file is distributed under the same license as the postr package.
-
+#
 # Marek Černocký <marek@manet.cz>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2011-04-24 16:10+0000\n"
-"PO-Revision-Date: 2011-05-01 14:07+0200\n"
+"POT-Creation-Date: 2011-08-02 01:47+0000\n"
+"PO-Revision-Date: 2011-08-08 09:41+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -317,22 +317,27 @@ msgid "Advanced actions"
 msgstr "Pokročilé akce"
 
 #: C/uploading.page:8(desc)
-msgid "Uploading photographs on Flickr."
-msgstr "Nahrávání fotografií do služby Flickr."
+msgid "Share your photos with your family, friends or everyone"
+msgstr "Sdílejte své fotografie se svojí rodinou, přáteli nebo s celým světem."
 
 #: C/uploading.page:20(title)
 msgid "Uploading photographs on Flickr"
 msgstr "Nahrávání fotografií na Flickr"
 
 #: C/uploading.page:22(p)
-msgid "Click on Add Photos..."
-msgstr "Klikněte na Přidat fotky…"
+#| msgid "Click on Add Photos..."
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Klikněte na <gui>Přidat fotky…</gui>"
 
 #: C/uploading.page:23(p)
-msgid "Choose the photographs that you want to upload on Flickr"
-msgstr "Zvolte fotografie, které chcete nahrát na Flickr"
+msgid ""
+"From the <gui>Add Photos</gui> window, choose the photographs that you would "
+"like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr ""
+"V okně <gui>Přidání fotek</gui> zvolte fotografie, které chcete do služby "
+"Flickr nahrát. Můžete vybrat jednu nebo více fotografií naráz."
 
-#: C/uploading.page:24(p)
+#: C/uploading.page:26(p)
 msgid ""
 "Choose an image and edit the title, description, tags, privacy, safety, "
 "type, license and other data of image"
@@ -340,10 +345,18 @@ msgstr ""
 "Zvolte obrázek a upravte název, popis, štítky, soukromí, zabezpečení, typ, "
 "licenci a další informace o obrázku"
 
-#: C/uploading.page:25(p)
+#: C/uploading.page:27(p)
 msgid "When you finish add aditional description, click on Upload button"
 msgstr ""
 "Až zadávání doplňujících informací dokončíte, klikněte na tlačítko Nahrát"
+
+#: C/uploading.page:30(p)
+msgid ""
+"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
+"drop them on the left pane."
+msgstr ""
+"Fotografie můžete také přetahovat ze správce souborů (<gui>Nautilus</gui>) "
+"do panelu vlevo."
 
 #: C/sets.page:8(desc)
 msgid "Grouping pictures by set."
