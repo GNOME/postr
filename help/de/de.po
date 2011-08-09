@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr help master\n"
-"POT-Creation-Date: 2011-03-22 03:55+0000\n"
-"PO-Revision-Date: 2011-04-18 21:26+0100\n"
+"POT-Creation-Date: 2011-08-02 01:47+0000\n"
+"PO-Revision-Date: 2011-08-09 21:35+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -310,22 +310,28 @@ msgid "Advanced actions"
 msgstr "Fortgeschrittene Aktionen"
 
 #: C/uploading.page:8(desc)
-msgid "Uploading photographs on Flickr."
-msgstr "Hochladen von Fotos zu Flickr."
+msgid "Share your photos with your family, friends or everyone"
+msgstr ""
+"Teilen Sie Ihre Fotos mit Ihrer Familie, Ihren Freunden oder mit der Welt"
 
 #: C/uploading.page:20(title)
 msgid "Uploading photographs on Flickr"
 msgstr "Hochladen von Fotos zu Flickr"
 
 #: C/uploading.page:22(p)
-msgid "Click on Add Photos..."
-msgstr "Klicken Sie auf <gui>Fotos hinzufügen</gui>."
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Klicken Sie auf <gui>Fotos hinzufügen …</gui>"
 
 #: C/uploading.page:23(p)
-msgid "Choose the photographs that you want to upload on Flickr"
-msgstr "Wählen Sie die Fotos aus, die Sie zu Flickr übertragen wollen."
+msgid ""
+"From the <gui>Add Photos</gui> window, choose the photographs that you would "
+"like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr ""
+"Wählen Sie im Fenster <gui>Fotos hinzufügen</gui> die Fotos aus, die Sie zu "
+"Flickr hochladen wollen. Sie können nur ein Foto oder auch mehrere "
+"gleichzeitig auswählen."
 
-#: C/uploading.page:24(p)
+#: C/uploading.page:26(p)
 msgid ""
 "Choose an image and edit the title, description, tags, privacy, safety, type, "
 "license and other data of image"
@@ -333,9 +339,17 @@ msgstr ""
 "Wählen Sie ein Bild aus und bearbeiten Sie den Titel, die Markierungen, die "
 "Privatspähre, die Sicherheitsstufe und weitere Daten des Bildes."
 
-#: C/uploading.page:25(p)
+#: C/uploading.page:27(p)
 msgid "When you finish add aditional description, click on Upload button"
 msgstr "Sobald Sie fertig sind, klicken Sie auf den Knopf <gui>Hochladen</gui>."
+
+#: C/uploading.page:30(p)
+msgid ""
+"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
+"drop them on the left pane."
+msgstr ""
+"Sie können auch Fotos aus dem Fenster der Dateiverwaltung (<gui>Nautilus</"
+"gui>) in die linke Leiste ziehen und dort ablegen."
 
 #: C/sets.page:8(desc)
 msgid "Grouping pictures by set."
@@ -493,3 +507,9 @@ msgstr ""
 #: C/index.page:0(None)
 msgid "translator-credits"
 msgstr "Mario Blättermann <mariobl@freenet.de, 2010, 2011."
+
+#~ msgid "Uploading photographs on Flickr."
+#~ msgstr "Hochladen von Fotos zu Flickr."
+
+#~ msgid "Choose the photographs that you want to upload on Flickr"
+#~ msgstr "Wählen Sie die Fotos aus, die Sie zu Flickr übertragen wollen."
