@@ -1,0 +1,397 @@
+# Norwegian bokmål translation of frogr.
+# Copyright (C) 1999-2004, 2005 Free Software Foundation, Inc.
+#
+# Kjartan Maraas <kmaraas@gnome.org>, 1999-2011.
+# Terance Edward Sola <terance@lyse.net>, 2005.
+# Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: frogr 0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-05 15:54+0200\n"
+"PO-Revision-Date: 2011-09-04 21:53+0200\n"
+"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
+"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
+msgid "Flickr Uploader"
+msgstr ""
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr ""
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr ""
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr ""
+
+#: ../src/postr.glade.h:1
+msgid "Add Photos..."
+msgstr ""
+
+#: ../src/postr.glade.h:2
+msgid "Add to _Set:"
+msgstr ""
+
+#: ../src/postr.glade.h:3
+msgid "Dese_lect All"
+msgstr ""
+
+#: ../src/postr.glade.h:5
+msgid "Privacy, Safety, Type and License"
+msgstr ""
+
+#: ../src/postr.glade.h:6
+#, fuzzy
+msgid "Remove Photos"
+msgstr "Fje_rn bilder"
+
+#: ../src/postr.glade.h:7
+msgid "Rename"
+msgstr ""
+
+#: ../src/postr.glade.h:8
+msgid "Select"
+msgstr ""
+
+#: ../src/postr.glade.h:9
+#, fuzzy
+msgid "Send to Groups"
+msgstr "Legg til i grupper"
+
+#: ../src/postr.glade.h:10
+msgid "Ta_gs:"
+msgstr ""
+
+#: ../src/postr.glade.h:11
+msgid "_Add Photos..."
+msgstr ""
+
+#: ../src/postr.glade.h:12
+#, fuzzy
+msgid "_Content type:"
+msgstr "Innholdstype"
+
+#: ../src/postr.glade.h:13
+msgid "_Description:"
+msgstr "_Beskrivelse:"
+
+#: ../src/postr.glade.h:14
+msgid "_File"
+msgstr "_Fil"
+
+#: ../src/postr.glade.h:15
+msgid "_Help"
+msgstr "_Hjelp"
+
+#: ../src/postr.glade.h:16
+msgid "_Invert Selection"
+msgstr ""
+
+#: ../src/postr.glade.h:17
+msgid "_License:"
+msgstr ""
+
+#: ../src/postr.glade.h:18
+msgid "_Load session"
+msgstr ""
+
+#: ../src/postr.glade.h:19
+#, fuzzy
+msgid "_Privacy:"
+msgstr "_Privat"
+
+#: ../src/postr.glade.h:20
+#, fuzzy
+msgid "_Remove Photos"
+msgstr "Fje_rn bilder"
+
+#: ../src/postr.glade.h:21
+#, fuzzy
+msgid "_Safety:"
+msgstr "Sikkerhetsnivå"
+
+#: ../src/postr.glade.h:22
+msgid "_Save session"
+msgstr ""
+
+#: ../src/postr.glade.h:23
+msgid "_Switch user..."
+msgstr ""
+
+#: ../src/postr.glade.h:24
+msgid "_Title:"
+msgstr "_Tittel:"
+
+#: ../src/postr.glade.h:25
+#, fuzzy
+msgid "_Upload"
+msgstr "Last opp"
+
+#: ../src/postr.glade.h:26
+msgid "_Visible in search results"
+msgstr ""
+
+#: ../src/AuthenticationDialog.py:42
+#, fuzzy
+msgid "Continue"
+msgstr "Innholdstype"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr ""
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr ""
+
+#: ../src/ErrorDialog.py:47
+#, fuzzy
+msgid "Details"
+msgstr "Rediger detaljer …"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr ""
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr ""
+
+#: ../src/postr.py:412
+#, fuzzy
+msgid "Add Photos"
+msgstr "_Foto"
+
+#: ../src/postr.py:424
+#, fuzzy
+msgid "Images"
+msgstr "bilder"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr ""
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr ""
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr ""
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+
+#: ../src/postr.py:777
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+
+#: ../src/postr.py:945
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr ""
+
+#: ../src/postr.py:948
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr ""
+
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
+
+#: ../src/postr.py:1352
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+
+#: ../src/postr.py:1369
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/ProgressDialog.py:56
+#, fuzzy
+msgid "Uploading"
+msgstr "Last opp"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr ""
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr ""
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr ""
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr ""
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr ""
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr ""
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr ""
+
+#~ msgid "translator-credits"
+#~ msgstr ""
+#~ "Kjartan Maraas <kmaraas@gnome.org>\n"
+#~ "Torstein Adolf Winterseth <kvikende@fsfe.org>"
+
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#, fuzzy
+#~ msgid "Set's description:"
+#~ msgstr "Beskrivelse:"
+
+#~ msgid "Open with image viewer"
+#~ msgstr "Åpne med bildevisning"
+
+#~ msgid "Visibility"
+#~ msgstr "Synlighet"
+
+#~ msgid "P_ublic"
+#~ msgstr "_Offentlig"
+
+#~ msgid "Visible to _Family"
+#~ msgstr "Synlig for _familien"
+
+#~ msgid "Visible to F_riends"
+#~ msgstr "Synlig for venne_r"
+
+#~ msgid "Scree_nshot"
+#~ msgstr "Skjermdu_mp"
+
+#~ msgid "Oth_er"
+#~ msgstr "Ann_et"
+
+#~ msgid "(%d Picture)"
+#~ msgid_plural "(%d Pictures)"
+#~ msgstr[0] "(%d bilde)"
+#~ msgstr[1] "(%d bilder)"
+
+#~ msgid "Taken: %s"
+#~ msgstr "Tatt: %s"
+
+#~ msgid "File size: %s"
+#~ msgstr "Filstørrelse: %s"
+
+#~ msgid "Select a Picture"
+#~ msgstr "Velg et bilde"
+
+#~ msgid "_General"
+#~ msgstr "_Generelt"
+
+#, fuzzy
+#~ msgid "Proxy Settings"
+#~ msgstr "Egenskaper for bilde"
+
+#~ msgid "Connec_tion"
+#~ msgstr "_Tilkobling"
+
+#~ msgid "Other options"
+#~ msgstr "Andre alternativer"
+
+#~ msgid "_Misc"
+#~ msgstr "_Forskjellig"
+
+#~ msgid "Preferences"
+#~ msgstr "Brukervalg"
+
+#~ msgid "A_ctions"
+#~ msgstr "_Handlinger"
+
+#~ msgid "Accou_nts"
+#~ msgstr "Ko_ntoer"
+
+#~ msgid "Add"
+#~ msgstr "Legg til"
+
+#~ msgid "By _Title"
+#~ msgstr "Etter _tittel"
+
+#~ msgid "Remove"
+#~ msgstr "Fjern"
+
+#~ msgid "_About"
+#~ msgstr "_Om"
+
+#~ msgid "_Add Pictures"
+#~ msgstr "_Legg til bilder"
+
+#~ msgid "_Preferences…"
+#~ msgstr "_Brukervalg …"
+
+#~ msgid "_Quit"
+#~ msgstr "A_vslutt"
+
+#~ msgid "_Reversed Order"
+#~ msgstr "Omvendt _rekkefølge"
+
+#~ msgid "_Sort Pictures"
+#~ msgstr "_Sorter bilder"
+
+#~ msgid "_View"
+#~ msgstr "_Vis"
+
+#~ msgid "frogr"
+#~ msgstr "frogr"
