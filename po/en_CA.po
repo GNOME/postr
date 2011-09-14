@@ -1,0 +1,290 @@
+# Canadian English translation for postr.
+# Copyright (C) 2011 POSTR'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the POSTR package.
+# Tiffany Antopolski <tiffany.antopolski@gmail.com>
+# Tiffany Antopolski <tiffany.antopolski@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-14 11:51-0400\n"
+"PO-Revision-Date: 2011-09-14 12:03-0400\n"
+"Last-Translator: Tiffany Antopolski <tiffany.antopolski@gmail.com>\n"
+"Language-Team: Canadian English\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.0\n"
+
+#: ../src/postr.glade.h:5
+msgid "Privacy, Safety, Type and License"
+msgstr "Privacy, Safety, Type and Licence"
+
+#: ../src/postr.glade.h:17
+msgid "_License:"
+msgstr "_Licence:"
+
+#: ../src/postr.py:777
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "Image %s is too large, images must be no larger than %dMB in size."
+
+#: ../src/postr.py:945
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Uploading %(index)d of %(count)d"
+
+#: ../src/postr.py:948
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr Uploader (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1352
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+
+#: ../src/postr.py:1369
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Create Photoset \"%s\""
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr "new photoset (%d-%m-%y)"
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Logged in as <b>%s</b>.  "
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "You can upload %(quota)s this month."
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s to upload."
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:979
+msgid "Flickr Uploader"
+msgstr "Flickr Uploader"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Upload photos to Flickr"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Upload to Flickr..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Upload the selected files into Flickr"
+
+#: ../src/postr.glade.h:1
+msgid "Add Photos..."
+msgstr "Add Photos..."
+
+#: ../src/postr.glade.h:2
+msgid "Add to _Set:"
+msgstr "Add to _Set:"
+
+#: ../src/postr.glade.h:3
+msgid "Dese_lect All"
+msgstr "Dese_lect All"
+
+#: ../src/postr.glade.h:6
+msgid "Remove Photos"
+msgstr "Remove Photos"
+
+#: ../src/postr.glade.h:7
+msgid "Rename"
+msgstr "Rename"
+
+#: ../src/postr.glade.h:8
+msgid "Select"
+msgstr "Select"
+
+#: ../src/postr.glade.h:9
+msgid "Send to Groups"
+msgstr "Send to Groups"
+
+#: ../src/postr.glade.h:10
+msgid "Ta_gs:"
+msgstr "Ta_gs:"
+
+#: ../src/postr.glade.h:11
+msgid "_Add Photos..."
+msgstr "_Add Photos..."
+
+#: ../src/postr.glade.h:12
+msgid "_Content type:"
+msgstr "_Content type:"
+
+#: ../src/postr.glade.h:13
+msgid "_Description:"
+msgstr "_Description:"
+
+#: ../src/postr.glade.h:14
+msgid "_File"
+msgstr "_File"
+
+#: ../src/postr.glade.h:15
+msgid "_Help"
+msgstr "_Help"
+
+#: ../src/postr.glade.h:16
+msgid "_Invert Selection"
+msgstr "_Invert Selection"
+
+#: ../src/postr.glade.h:18
+msgid "_Load session"
+msgstr "_Load session"
+
+#: ../src/postr.glade.h:19
+msgid "_Privacy:"
+msgstr "_Privacy:"
+
+#: ../src/postr.glade.h:20
+msgid "_Remove Photos"
+msgstr "_Remove Photos"
+
+#: ../src/postr.glade.h:21
+msgid "_Safety:"
+msgstr "_Safety:"
+
+#: ../src/postr.glade.h:22
+msgid "_Save session"
+msgstr "_Save session"
+
+#: ../src/postr.glade.h:23
+msgid "_Switch user..."
+msgstr "_Switch user..."
+
+#: ../src/postr.glade.h:24
+msgid "_Title:"
+msgstr "_Title:"
+
+#: ../src/postr.glade.h:25
+msgid "_Upload"
+msgstr "_Upload"
+
+#: ../src/postr.glade.h:26
+msgid "_Visible in search results"
+msgstr "_Visible in search results"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Continue"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Login to Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "An error occurred"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Details"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "No title"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Default"
+
+#: ../src/postr.py:412
+msgid "Add Photos"
+msgstr "Add Photos"
+
+#: ../src/postr.py:424
+msgid "Images"
+msgstr "Images"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr "All Files"
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Currently Uploading</b>"
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Photos to be uploaded</b>"
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+
+#: ../src/postr.py:995
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Some Files does not exist or are currently inaccessible."
+
+#: ../src/postr.py:1356 ../src/postr.py:1373
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+
+#: ../src/ProgressDialog.py:56
+msgid "Uploading"
+msgstr "Uploading"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr "None"
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr "Name for the new photoset:"
