@@ -171,6 +171,15 @@
                 <child>
                   <widget class="GtkMenu" id="menuitem4_menu">
                     <child>
+                      <widget class="GtkImageMenuItem" id="help">
+                        <property name="stock_id">gtk-help</property>
+                        <property name="label" translatable="True">_Contents</property>
+                        <property name="visible">True</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_help_activate"/>
+                      </widget>
+                    </child>
+                    <child>
                       <widget class="GtkImageMenuItem" id="about">
                         <property name="label">gtk-about</property>
                         <property name="visible">True</property>

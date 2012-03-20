@@ -605,7 +605,11 @@ class Postr(UniqueApp):
         self.upload_index = 0
         self.list_failed_it = []
         self.upload()
-        
+       
+    def on_help_activate(self, menuitem):
+        """Callback from Help->Contents."""
+        gtk.show_uri(None,"ghelp:postr",gtk.gdk.CURRENT_TIME);
+
     def on_about_activate(self, menuitem):
         """Callback from Help->About."""
         dialog = AboutDialog(self.window)
