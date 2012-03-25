@@ -1,0 +1,292 @@
+# Galician translation for postr.
+# Copyright (C) 2012 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fran Dieguez <frandieguez@gnome.org>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2012-03-20 03:53+0000\n"
+"PO-Revision-Date: 2012-03-25 17:42+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:983
+msgid "Flickr Uploader"
+msgstr "Cargador para Flickr"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Subir fotos a Flickr"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Subir a Flickr…"
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Enviar as fotos seleccionadas a Flickr"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Ficheiro"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Engadir fotos…"
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Quitar fotos"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Gardar sesión"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Cargar sesión"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Cambiar de usuario…"
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Subir"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Seleccionar"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Deseleccionar todo"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Inverter a selección"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "A_xuda"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Engadir fotos…"
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Quitar fotos"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Envair a grupos"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "_Tipo de contido:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Privacidade:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Seguranza:"
+
+#: ../src/postr.glade.h:19
+msgid "_Visible in search results"
+msgstr "_Visíbel nos resultados de busca"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "_Licenza:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Privacidade, seguranza, tipo e licenza"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Título:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Descrición:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "E_tiquetas:"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "Engadir ao ál_bum:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Renomear"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Continuar"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr precisa iniciar sesión en Flickr para subir as súas fotos. Prema na "
+"ligazón de embaixo para iniciar a sesión en Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Iniciar sesión en Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "Produciuse un erro"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Detalles"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "Sen título"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Predeterminado"
+
+#: ../src/postr.py:412
+msgid "Add Photos"
+msgstr "Engadir fotos"
+
+#: ../src/postr.py:424
+msgid "Images"
+msgstr "Imaxes"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr "Todos os ficheiros"
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Subindo actualmente</b>"
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Aínda hai fotos que se están subindo neste momento. Ten certeza de querer "
+"saír? Tamén pode gardar as súas subidas pendentes para máis tarde."
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Fotos que subir</b>"
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Aínda hai fotos por subir. Ten certeza de querer saír? Tamén pode gardar as "
+"súas subidas pendentes para máis tarde."
+
+#: ../src/postr.py:781
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"A imaxe %s é demasiado grande, as imaxes non poden ser máis grandes de %dMB "
+"en tamaño."
+
+#: ../src/postr.py:949
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Subindo %(index)d de %(count)d"
+
+#: ../src/postr.py:952
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Cargador de Flickr (%(index)d/%(count)d)"
+
+#: ../src/postr.py:999
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Algúns ficheiros non existen ou actualmente son inaccesíbeis."
+
+#: ../src/postr.py:1356
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Iniciou sesión como %s pero está\n"
+"cargando un álbum para %s"
+
+#: ../src/postr.py:1360 ../src/postr.py:1377
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Desexa continuar coa carga? Non importará a información do álbum de fotos."
+
+#: ../src/postr.py:1373
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Non iniciou sesión pero estase\n"
+"cargando un álbum para %s"
+
+#: ../src/ProgressDialog.py:56
+msgid "Uploading"
+msgstr "Subindo"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr "Ningunha"
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Crear álbum «%s»"
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr "álbum novo (%d-%m-%y)"
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr "Nome do álbum novo:"
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Rexistrado como <b>%s</b>.  "
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr "Este mes pode subir %(quota)s, e ten %(to_upload)s para subir."
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Este mes pode subir %(quota)s."
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s para subir."
