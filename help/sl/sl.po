@@ -6,10 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"POT-Creation-Date: 2010-12-14 21:54+0000\n"
-"PO-Revision-Date: 2010-12-15 17:06+0100\n"
+"POT-Creation-Date: 2012-03-25 15:42+0000\n"
+"PO-Revision-Date: 2012-04-09 10:15+0200\n"
 "Last-Translator: Andrej Žnidaršič <andrej.znidarsic@gmail.com>\n"
 "Language-Team: Slovenian <gnome-si@googlegroups.com>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,14 +20,13 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: C/tags.page:8(desc)
-#: C/tags.page:20(title)
 msgid "Adding tags to your pictures."
 msgstr "Dodajanje oznak vašim slikam."
 
 #: C/tags.page:11(name)
 #: C/permissions.page:11(name)
 #: C/login.page:11(name)
-#: C/index.page:13(name)
+#: C/index.page:12(name)
 #: C/uploading.page:11(name)
 #: C/sets.page:11(name)
 #: C/offline.page:10(name)
@@ -38,7 +38,7 @@ msgstr "Germán Póo-Caamaño"
 #: C/tags.page:12(email)
 #: C/permissions.page:12(email)
 #: C/login.page:12(email)
-#: C/index.page:14(email)
+#: C/index.page:13(email)
 #: C/uploading.page:12(email)
 #: C/sets.page:12(email)
 #: C/offline.page:11(email)
@@ -50,7 +50,7 @@ msgstr "gpoo@gnome.org"
 #: C/tags.page:15(name)
 #: C/permissions.page:15(name)
 #: C/login.page:15(name)
-#: C/index.page:17(name)
+#: C/index.page:16(name)
 #: C/uploading.page:15(name)
 #: C/introduction.page:16(name)
 msgid "Sergio Infante"
@@ -59,12 +59,16 @@ msgstr "Sergio Infante"
 #: C/tags.page:16(email)
 #: C/permissions.page:16(email)
 #: C/login.page:16(email)
-#: C/index.page:18(email)
+#: C/index.page:17(email)
 #: C/uploading.page:16(email)
 #: C/introduction.page:17(email)
 #: C/groups.page:16(email)
 msgid "raulsergio9@gmail.com"
 msgstr "raulsergio9@gmail.com"
+
+#: C/tags.page:20(title)
+msgid "Adding tags to your pictures"
+msgstr "Dodajanje oznak vašim slikam."
 
 #: C/tags.page:24(title)
 #: C/tags.page:26(title)
@@ -89,7 +93,7 @@ msgid "Setting permissions to your photographs."
 msgstr "Nastavljanje dovoljenj za vaše fotografije."
 
 #: C/permissions.page:20(title)
-msgid "Privacy, safety and license."
+msgid "Privacy, safety and license"
 msgstr "Zasebnost, varnost in dovoljenje."
 
 #: C/permissions.page:24(title)
@@ -215,11 +219,11 @@ msgstr "Delo vlade Združenih držav"
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/login.page:31(None)
 msgid "@@image: 'figures/postr-login-flickr.png'; md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
-msgstr ""
+msgstr "@@image: 'figures/postr-login-flickr.png'; md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
 
 #: C/login.page:8(desc)
-msgid "Connecting <app>Postr</app> to your Flickr account"
-msgstr "Povezovanje <app>Postr</app> z vašim računom Flickr"
+msgid "Connecting <app>Postr</app> to your Flickr account."
+msgstr "Povezovanje <app>Postr</app> z vašim računom Flickr."
 
 #: C/login.page:19(title)
 msgid "Log in on Flickr"
@@ -255,71 +259,77 @@ msgstr "Za uporabo <app>Postr</app> z drugim računom Flickr morate izbrati <gui
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/index.page:27(None)
+#: C/index.page:26(None)
 msgid "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
-msgstr ""
+msgstr "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
 
+#: C/index.page:7(title)
 #: C/index.page:8(title)
-#: C/index.page:9(title)
 msgid "Postr"
 msgstr "Postr"
 
-#: C/index.page:10(desc)
+#: C/index.page:9(desc)
 msgid "Flickr Uploader."
 msgstr "Pošiljalnik Flickr."
 
-#: C/index.page:21(p)
+#: C/index.page:20(p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons - deljenje pod enakimi pogoji 3.0"
 
-#: C/index.page:26(title)
+#: C/index.page:25(title)
 msgid "<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> Postr: Photo Uploader for Flickr"
 msgstr "<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> Postr: Pošiljalnik fotografij za Flickr"
 
-#: C/index.page:30(p)
-msgid "Getting started with Postr"
-msgstr "Kako začeti s Postr"
-
-#: C/index.page:34(title)
-#: C/index.page:36(title)
+#: C/index.page:31(title)
+#: C/index.page:33(title)
 msgid "Getting Started"
 msgstr "Kako začeti"
 
-#: C/index.page:41(title)
-#: C/index.page:43(title)
+#: C/index.page:38(title)
+#: C/index.page:40(title)
 msgid "Setting photograph's properties"
 msgstr "Nastavljanje lastnosti fotografij"
 
-#: C/index.page:48(title)
-#: C/index.page:50(title)
+#: C/index.page:45(title)
+#: C/index.page:47(title)
 msgid "Advanced actions"
 msgstr "Napredna dejanja"
 
 #: C/uploading.page:8(desc)
+msgid "Share your photos with your family, friends or everyone"
+msgstr "Delite svoje fotografije z družino, prijatelji ali vsemi"
+
 #: C/uploading.page:20(title)
 msgid "Uploading photographs on Flickr"
 msgstr "Pošiljanje fotografij na Flickr"
 
 #: C/uploading.page:22(p)
-msgid "Click on Add Photos..."
-msgstr "Kliknite na Dodaj fotografije ..."
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Kliknite na <gui>Dodaj fotografije ...</gui>."
 
 #: C/uploading.page:23(p)
-msgid "Choose the photographs that you want to upload on Flickr"
-msgstr "Izberite fotografije, ki jih želite poslati na Flickr"
+msgid "From the <gui>Add Photos</gui> window, choose the photographs that you would like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr "Iz okna <gui>Dodajanje fotografij</gui> izberite fotografije, ki jih želite poslati na Flickr. Izberete lahko več fotografij hkrati."
 
-#: C/uploading.page:24(p)
+#: C/uploading.page:26(p)
 msgid "Choose an image and edit the title, description, tags, privacy, safety, type, license and other data of image"
 msgstr "Izberite sliko in uredite naslov, opis, oznake, zasebnost, varnost, vrsto, dovoljenja in druge podatke slike"
 
-#: C/uploading.page:25(p)
+#: C/uploading.page:27(p)
 msgid "When you finish add aditional description, click on Upload button"
 msgstr "Ko končate, dodajte dodaten opis in kliknite na gumb Pošlji"
 
+#: C/uploading.page:30(p)
+msgid "You also can add drag photos from the file manager (<gui>Nautilus</gui>) and drop them on the left pane."
+msgstr "Fotografije lahko tudi povlečete iz upravlajlnika datotek (<gui>Nautilus</gui>) in jih izpustite na levi pladenj."
+
 #: C/sets.page:8(desc)
-#: C/sets.page:16(title)
 msgid "Grouping pictures by set."
 msgstr "Združevanje slik po nizih."
+
+#: C/sets.page:16(title)
+msgid "Grouping pictures by set"
+msgstr "Združevanje slik po zbirkah"
 
 #: C/sets.page:20(title)
 #: C/sets.page:22(title)
@@ -364,7 +374,7 @@ msgstr "V primeru, da naložite sejo kadar niste povezani, bodo lastnosti, ki se
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/introduction.page:39(None)
 msgid "@@image: 'figures/postr-main-window.png'; md5=f0a241232213b440eedbf2d82c0c9204"
-msgstr ""
+msgstr "@@image: 'figures/postr-main-window.png'; md5=f0a241232213b440eedbf2d82c0c9204"
 
 #: C/introduction.page:9(desc)
 msgid "Introduction to the <app>Postr</app> flickr uploader."
@@ -411,8 +421,8 @@ msgid "Sergio Infante Montero"
 msgstr "Sergio Infante Montero"
 
 #: C/groups.page:19(title)
-msgid "Send your photographs to groups of your interest."
-msgstr "Pošljite svoje fotografije želenim skupinam."
+msgid "Send your photographs to groups of your interest"
+msgstr "Pošljite svoje fotografije želenim skupinam"
 
 #: C/groups.page:21(p)
 msgid "Choose an image to upload"
@@ -435,3 +445,8 @@ msgstr "Preden lahko uporabite možnost Pošlji skupinam, morate imeti vsaj eno.
 msgid "translator-credits"
 msgstr "Andrej Žnidaršič <andrej.znidarsic@gmail.com>"
 
+#~ msgid "Getting started with Postr"
+#~ msgstr "Kako začeti s Postr"
+
+#~ msgid "Choose the photographs that you want to upload on Flickr"
+#~ msgstr "Izberite fotografije, ki jih želite poslati na Flickr"
