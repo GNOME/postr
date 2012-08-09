@@ -1,0 +1,298 @@
+# Latvian translation for postr.
+# Copyright (C) 2012 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+#
+# arvislacis <arvis.lacis@gmail.com>, 2012.
+# Anita Reitere <nitalynx@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2012-07-23 00:19+0000\n"
+"PO-Revision-Date: 2012-08-08 23:21+0300\n"
+"Last-Translator: Anita Reitere <nitalynx@gmail.com>\n"
+"Language-Team: Latviešu <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:983
+msgid "Flickr Uploader"
+msgstr "Flickr augšupielādētājs"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Augšupielādēt fotogrāfijas Flickr"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Augšupielādēt Flickr..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Augšupielādēt izvēlētās datnes Flickr"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Datne"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Pievienot fotogrāfijas..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "Izņemt fotog_rāfijas"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Saglabāt sesiju"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "Ie_lādēt sesiju"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "Pār_slēgt lietotāju..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "A_ugšupielādēt"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Izvēlēties"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Atce_lt izvēli"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Invertēt izvēli"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Pievienot fotogrāfijas..."
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Izņemt fotogrāfijas"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Nosūtīt grupām"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "Satura vei_ds:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Privātums:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Drošība:"
+
+#: ../src/postr.glade.h:19
+msgid "_Visible in search results"
+msgstr "_Redzams meklēšanas rezultātos"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "_Licence:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Privātums, drošība, veids un licence"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Nosaukums:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Apraksts:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "Bir_kas:"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "Pievienot kolekcijai:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Pārdēvēt"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Turpināt"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr ir jāpiesakās Flickr, lai augšupielādētu fotogrāfijas. Lūdzu, "
+"noklikšķiniet uz zemāk esošās saites, lai pieteiktos Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Pieteikties Flickr"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "Radās kļūda"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Sīkāka informācija"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "Nav nosaukuma"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Noklusējums"
+
+#: ../src/postr.py:412
+msgid "Add Photos"
+msgstr "Pievienot fotogrāfijas"
+
+#: ../src/postr.py:424
+msgid "Images"
+msgstr "Attēli"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr "Visas datnes"
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Pašlaik augšupielādē</b>"
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Fotogrāfijas tiek augšupielādētas. Vai tiešām vēlaties iziet? "
+"Jūs varat arī saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Fotogrāfijas, kas jāaugšupielādē</b>"
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Ir fotogrāfijas, kas gaida augšupielādi. Vai tiešām vēlaties "
+"iziet? Jūs varat arī saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
+
+#: ../src/postr.py:781
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "Attēls %s ir pārāk liels, attēliem jābūt ne lielākiem par %dMB."
+
+#: ../src/postr.py:949
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Augšupielādē %(index)d no %(count)d"
+
+#: ../src/postr.py:952
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr augšupielādētājs (%(index)d/%(count)d)"
+
+#: ../src/postr.py:999
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Dažas datnes neeksistē vai arī pašlaik nav pieejamas."
+
+#: ../src/postr.py:1356
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Jūs esat pieteicies kā %s, bet ielādējat\n"
+"augšupielādes kolekciju %s"
+
+#: ../src/postr.py:1360 ../src/postr.py:1377
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Vai vēlaties turpināt ielādi? Jūs neimportēsiet fotogrāfiju kolekcijas "
+"informāciju."
+
+#: ../src/postr.py:1373
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Jūs neesat pieteicies, bet ielādējat\n"
+"augšupielādes kolekciju %s"
+
+#: ../src/ProgressDialog.py:56
+msgid "Uploading"
+msgstr "Augšupielādē"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr "Nav"
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Izveidot fotogrāfiju kolekciju “%s”"
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr "jauna fotogrāfiju kolekcija (%d-%m-%y)"
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr "Jaunās fotogrāfiju kolekcijas nosaukums:"
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Pieteicies kā <b>%s</b>."
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Šajā mēnesī var augšupielādēt %(quota)s, augšupielādējamās datnes aizņem %"
+"(to_upload)s."
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Šajā mēnesī var augšupielādēt %(quota)s."
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s augšupielādējamo datņu."
+
+
