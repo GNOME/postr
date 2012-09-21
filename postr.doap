@@ -4,19 +4,19 @@
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:gnome="http://api.gnome.org/doap-extensions#"
   xmlns="http://usefulinc.com/ns/doap#">
-  
+
   <name>Postr</name>
   <shortname>postr</shortname>
   <homepage rdf:resource="http://projects.gnome.org/postr/"/>
   <created>2006-08-15</created>
-  
+
   <shortdesc>A simple Flickr uploader for GNOME.</shortdesc>
   <description>A simple Flickr uploader for GNOME.</description>
   <programming-language>Python</programming-language>
   <os>Linux</os>
   <license rdf:resource="http://usefulinc.com/doap/licenses/gpl"/>
   <download-page rdf:resource="http://download.gnome.org/sources/postr/"/>
-  
+
   <maintainer>
     <foaf:Person>
       <foaf:name>Ross Burton</foaf:name>
@@ -25,24 +25,32 @@
   </maintainer>
   <maintainer>
     <foaf:Person>
-      <foaf:name>Germán Póo-Caamaño</foaf:name>
+      <foaf:name>Germán Poo-Caamaño</foaf:name>
       <foaf:mbox rdf:resource="mailto:gpoo@gnome.org"/>
       <gnome:userid>gpoo</gnome:userid>
     </foaf:Person>
   </maintainer>
-  
+
   <repository>
     <GitRepository>
       <browse rdf:resource="http://git.gnome.org/cgit/postr/"/>
       <location rdf:resource="git://git.gnome.org/postr"/>
     </GitRepository>
   </repository>
-  
+
   <bug-database rdf:resource="https://bugzilla.gnome.org/browse.cgi?product=postr" />
 
   <release>
     <Version>
-      <name>0.12.4</name> 
+      <revision>0.13</revision>
+      <created>2012-09-20</created>
+      <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/postr-0.13.tar.gz"/>
+    </Version>
+  </release>
+
+  <release>
+    <Version>
+      <name>0.12.4</name>
       <branch>postr-0-12</branch>
       <revision>0.12.4</revision>
       <created>2009-11-04</created>
