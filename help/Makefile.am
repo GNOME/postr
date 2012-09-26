@@ -20,4 +20,4 @@ DOC_PAGES = \
 
 MAINTAINERCLEANFILES = Makefile.in
 
-DOC_LINGUAS = cs de es sl
+DOC_LINGUAS = cs de es fr sl
