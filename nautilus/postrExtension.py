@@ -18,19 +18,19 @@
 import gettext
 gettext.install('postr')
 
-import gobject, nautilus
+from gi.repository import Nautilus, GObject
 import os, os.path
 from urllib import unquote
 
 PROGRAM_NAME = 'postr'
 
-class PostrExtension(nautilus.MenuProvider):
+class PostrExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
         # The constructor must be exists, even if there is nothing
         # to initialize (See Bug #374958)
         #self.program = None
         pass
-    
+
     def locate_program(self, program_name):
         path_list = os.environ['PATH']
         for d in path_list.split(os.path.pathsep):
@@ -51,12 +51,12 @@ class PostrExtension(nautilus.MenuProvider):
         if len(files) == 0:
             return
 
-        names = [ unquote(file.get_uri()[7:]) for file in files ]
+        names = [ file.get_uri() for file in files ]
 
         argv = [ PROGRAM_NAME ] + names
 
         # TODO: use startup notification
-        gobject.spawn_async(argv, flags=gobject.SPAWN_SEARCH_PATH)
+        GObject.spawn_async(argv, flags=GObject.SPAWN_SEARCH_PATH)
 
     def get_file_items(self, window, files):
         # Show the menu iif:
@@ -67,21 +67,27 @@ class PostrExtension(nautilus.MenuProvider):
         # - Postr is installed (is in PATH)
         if len(files) == 0:
             return
-        
-        for file in files:
-            if file.is_directory() or file.get_uri_scheme() != 'file':
+
+        for fd in files:
+            if fd.is_directory() or fd.get_uri_scheme() != 'file':
                 return
-            if not file.is_mime_type("image/*"):
+            if not fd.is_mime_type("image/*"):
                 return
 
         #self.program = self.locate_program(PROGRAM_NAME)
         #if not self.program:
         #    return
 
-        item = nautilus.MenuItem('PostrExtension::upload_files',
-                                 _('Upload to Flickr...'),
-                                 _('Upload the selected files into Flickr'),
-                                 "postr")
+        item = Nautilus.MenuItem(name='PostrExtension::upload_files',
+                                 label=_('Upload to Flickr...'),
+                                 tip=_('Upload the selected files into Flickr'),
+                                 icon="postr")
         item.connect('activate', self.upload_files, files)
 
         return item,
+
+    def get_background_items(self, window, files):
+        # If nothing is selected, Nautils still can show a contextual
+        # menu item.
+        # This method must exist even if we have nothing to offer here.
+        return

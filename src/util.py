@@ -15,30 +15,31 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk, os
+import os
+from gi.repository import Gtk, GdkPixbuf
 
 
 def greek(size):
     """Take a quantity (like 1873627) and display it in a human-readable rounded
     form (like 1.8M)"""
     _abbrevs = [
-        (1<<50L, 'P'),
-        (1<<40L, 'T'), 
-        (1<<30L, 'G'), 
-        (1<<20L, 'M'), 
-        (1<<10L, 'k'),
+        (1 << 50L, 'P'),
+        (1 << 40L, 'T'),
+        (1 << 30L, 'G'),
+        (1 << 20L, 'M'),
+        (1 << 10L, 'k'),
         (1, '')
         ]
     for factor, suffix in _abbrevs:
         if size > factor:
             break
-    return "%.1f%s" % (float(size)/factor, suffix)
+    return "%.1f%s" % (float(size) / factor, suffix)
 
 
 def get_widget_checked(glade, name):
     """Get widget name from glade, and if it doesn't exist raise an exception
     instead of returning None."""
-    widget = glade.get_widget(name)
+    widget = glade.get_object(name)
     if widget is None: raise "Cannot find widget %s" % name
     return widget
 
@@ -53,8 +54,8 @@ def get_glade_widgets (glade, object, widget_names):
 def get_thumb_size(srcw, srch, dstw, dsth):
     """Scale scrw x srch to an dimensions with the same ratio that fits as
     closely as possible to dstw x dsth."""
-    scalew = dstw/float(srcw)
-    scaleh = dsth/float(srch)
+    scalew = dstw / float(srcw)
+    scaleh = dsth / float(srch)
     scale = min(scalew, scaleh)
     return (int(srcw * scale), int(srch * scale))
 
@@ -62,7 +63,8 @@ def get_thumb_size(srcw, srch, dstw, dsth):
 def align_labels(glade, names):
     """Add the list of widgets identified by names in glade to a horizontal
     sizegroup."""
-    group = gtk.SizeGroup(gtk.SIZE_GROUP_HORIZONTAL)
+    group = Gtk.SizeGroup()
+    group.set_mode(Gtk.SizeGroupMode.HORIZONTAL)
     widget = [group.add_widget(get_widget_checked(glade, name)) for name in names]
 
 
@@ -87,7 +89,7 @@ def get_buddyicon(flickr, data, size=48):
             __buddy_cache = bsddb3.hashopen(path, "c")
 
     def load_thumb(page, size):
-        loader = gtk.gdk.PixbufLoader()
+        loader = GdkPixbuf.PixbufLoader()
         loader.set_size (size, size)
         loader.write(page)
         loader.close()
@@ -96,7 +98,7 @@ def get_buddyicon(flickr, data, size=48):
     def got_data(page, url, size):
         __buddy_cache[url] = page
         return load_thumb(page, size)
-    
+
     if int(data.get("iconfarm")) > 0:
         url = "http://farm%s.static.flickr.com/%s/buddyicons/%s.jpg" % (data.get("iconfarm"), data.get("iconserver"), data.get("nsid"))
     else:

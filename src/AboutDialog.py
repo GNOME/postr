@@ -1,6 +1,8 @@
 # Postr, a Flickr Uploader
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2012 Germán Poo-Caamaño <gpoo@gnome.org>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -15,16 +17,18 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
+from gi.repository import Gtk, GObject
 from version import __version__
 
-class AboutDialog(gtk.AboutDialog):
+class AboutDialog(Gtk.AboutDialog):
     def __init__(self, parent=None):
-        gtk.AboutDialog.__init__(self)
+        Gtk.AboutDialog.__init__(self)
         self.set_transient_for(parent)
         self.set_name(_('Flickr Uploader'))
-        self.set_copyright(u'Copyright \u00A9 2006-2008 Ross Burton')
-        self.set_authors(('Ross Burton <ross@burtonini.com>',))
+        self.set_copyright(u'Copyright \u00A9 2006-2008 Ross Burton\n'
+                           u'Copyright \u00A9 2009-2012 Germán Poo-Caamaño')
+        self.set_authors(('Ross Burton <ross@burtonini.com>',
+                          'Germán Poo-Caamaño <gpoo@gnome.org>'))
         self.set_website('http://projects.gnome.org/postr/')
         self.set_logo_icon_name('postr')
         self.set_version (__version__)
@@ -32,6 +36,6 @@ class AboutDialog(gtk.AboutDialog):
 
 if __name__ == "__main__":
     import gettext; gettext.install('postr')
-    
+
     AboutDialog().show()
-    gtk.main()
+    Gtk.main()

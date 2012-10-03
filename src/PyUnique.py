@@ -20,11 +20,11 @@
 #
 #
 
-import gobject
+from gi.repository import GObject
 import dbus
 import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
-from gtk import gdk
+from gi.repository import Gdk
 import time
 
 # Set the glib main loop as the default main loop for dbus
@@ -64,29 +64,29 @@ class UniqueDBusObject(dbus.service.Object):
         self.app.emit('message-received', command, data)
         return "OK"
     
-class UniqueApp(gobject.GObject):
+class UniqueApp(GObject.GObject):
     """ Base class for every single instance application."""
 
     __gproperties__ = {
 
-        'is-running': (gobject.TYPE_BOOLEAN, 'is-running', 'is-running',
+        'is-running': (GObject.TYPE_BOOLEAN, 'is-running', 'is-running',
                        False,
-                       gobject.PARAM_READWRITE | gobject.PARAM_CONSTRUCT),
-        'name': (gobject.TYPE_STRING, 'program name', 'program name',
-                 None, gobject.PARAM_READWRITE | gobject.PARAM_CONSTRUCT),
-        'screen': (gobject.TYPE_OBJECT, 'screen of app', 'screen of app',
-                   gobject.PARAM_READWRITE | gobject.PARAM_CONSTRUCT),
-        'startup-id': (gobject.TYPE_STRING, 'startup notification id',
+                       GObject.PARAM_READWRITE | GObject.PARAM_CONSTRUCT),
+        'name': (GObject.TYPE_STRING, 'program name', 'program name',
+                 None, GObject.PARAM_READWRITE | GObject.PARAM_CONSTRUCT),
+        'screen': (GObject.TYPE_OBJECT, 'screen of app', 'screen of app',
+                   GObject.PARAM_READWRITE | GObject.PARAM_CONSTRUCT),
+        'startup-id': (GObject.TYPE_STRING, 'startup notification id',
                        'startup notification id',
-                       None, gobject.PARAM_READWRITE | gobject.PARAM_CONSTRUCT),
+                       None, GObject.PARAM_READWRITE | GObject.PARAM_CONSTRUCT),
         }
 
     __gsignals__ = {
-        'message-received': (gobject.SIGNAL_RUN_LAST |
-                             gobject.SIGNAL_NO_RECURSE,
-                             gobject.TYPE_INT,        # out: integer
-                             (gobject.TYPE_INT,       # in:  command id
-                              gobject.TYPE_STRING)),  # in:  command data
+        'message-received': (GObject.SignalFlags.RUN_LAST |
+                             GObject.SignalFlags.NO_RECURSE,
+                             GObject.TYPE_INT,        # out: integer
+                             (GObject.TYPE_INT,       # in:  command id
+                              GObject.TYPE_STRING)),  # in:  command data
         }
     
     # Default commands available to UniqueApp instances. More commands
@@ -98,11 +98,11 @@ class UniqueApp(gobject.GObject):
                 'CLOSE':    -4}
     
     def __init__(self, name, startup_id=None):
-        gobject.GObject.__init__(self)
+        GObject.GObject.__init__(self)
         
         self._is_running = False
         self._name = name
-        self._screen = gdk.screen_get_default()
+        self._screen = Gdk.Screen.get_default()
 
         # TODO: Find out what the startup_id is meant to be.
         self._startup_id = startup_id

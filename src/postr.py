@@ -1,6 +1,8 @@
 # Postr, a Flickr Uploader
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2009-2012 Germán Poo-Caamaño <gpoo@gnome.org>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -19,10 +21,10 @@ import logging, os, urllib
 from urlparse import urlparse
 from os.path import basename
 
-import pygtk; pygtk.require ("2.0")
-import gobject, gtk, gtk.glade, gconf, gio
-import gnome.ui
+from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk
 
+#FIXME
+#import gnome.ui
 
 try:
     import gtkspell
@@ -34,7 +36,7 @@ from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
 from ProgressDialog import ProgressDialog
 from ErrorDialog import ErrorDialog
-import ImageStore, ImageList, StatusBar, PrivacyCombo, SafetyCombo, GroupSelector, ContentTypeCombo
+import ImageStore, ImageList, StatusBar, PrivacyCombo, SafetyCombo, GroupSelector, ContentTypeCombo, SetCombo, LicenseCombo, TagsEntry
 from proxyclient import EXTRA_STEP_SET_ID, EXTRA_STEP_GROUPS, EXTRA_STEP_LICENSE, EXTRA_STEP_NEW_SET, UploadProgressTracker
 
 from flickrest import Flickr
@@ -59,10 +61,11 @@ except ImportError:
  ROTATED_90_CCW
  ) = (1, 3, 6, 8)
 
-_FILE_ATTRIBUTES = ",".join([gio.FILE_ATTRIBUTE_STANDARD_TYPE,
-                             gio.FILE_ATTRIBUTE_STANDARD_NAME,
-                             gio.FILE_ATTRIBUTE_STANDARD_SIZE,
-                             gio.FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME])
+_FILE_ATTRIBUTES = ",".join([Gio.FILE_ATTRIBUTE_STANDARD_TYPE,
+                             Gio.FILE_ATTRIBUTE_STANDARD_NAME,
+                             Gio.FILE_ATTRIBUTE_STANDARD_SIZE,
+                             Gio.FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME])
+_SUPPORTED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp']
 
 class Postr(UniqueApp):
     def __init__(self):
@@ -73,17 +76,18 @@ class Postr(UniqueApp):
             pass
 
         self.is_connected = False
-        
+
         self.flickr = Flickr(api_key="c53cebd15ed936073134cec858036f1d",
                              secret="7db1b8ef68979779",
                              perms="write")
 
-        self.logo_icon_size = gtk.icon_size_register("logo", 128, 128)
-        
-        gtk.window_set_default_icon_name("postr")
-        gtk.glade.set_custom_handler(self.get_custom_handler)
-        glade = gtk.glade.XML(os.path.join(os.path.dirname(__file__), "postr.glade"))
-        glade.signal_autoconnect(self)
+        self.logo_icon_size = Gtk.icon_size_register("logo", 128, 128)
+
+        Gtk.Window.set_default_icon_name("postr")
+        glade = Gtk.Builder()
+        glade.add_from_file(os.path.join (os.path.dirname(__file__), "postr.glade"))
+        #Gtk.glade.set_custom_handler(self.get_custom_handler)
+        glade.connect_signals(self)
 
         get_glade_widgets(glade, self,
                            ("window",
@@ -109,25 +113,33 @@ class Postr(UniqueApp):
                             "license_combo",
                             "thumbview")
                            )
+
+        # Activate callbacks in custom widgets
+        self.group_selector.flickr = self.flickr
+        self.statusbar.flickr = self.flickr
+        self.tags_entry.flickr = self.flickr
+        self.license_combo.flickr = self.flickr
+        self.set_combo.flickr = self.flickr
+
         align_labels(glade, ("title_label", "desc_label",
                              "tags_label", "set_label",
                              "privacy_label", "safety_label"))
-        
+
         # Just for you, Daniel.
         try:
             if os.getlogin() == "daniels":
                 self.window.set_title("Respecognise")
         except Exception:
             pass
-        
+
         self.model = ImageStore.ImageStore()
         self.model.connect("row-inserted", self.on_model_changed)
         self.model.connect("row-deleted", self.on_model_changed)
-        
+
         self.thumbview.set_model(self.model)
 
         self.set_combo.connect("changed", self.on_set_combo_changed)
-        
+
         selection = self.thumbview.get_selection()
         selection.connect("changed", self.on_selection_changed)
 
@@ -159,7 +171,7 @@ class Postr(UniqueApp):
 
         self.thumbnail_image.clear()
         self.thumbnail_image.set_size_request(128, 128)
-        
+
         self.change_signals = [] # List of (widget, signal ID) tuples
         self.change_signals.append((self.title_entry, self.title_entry.connect('changed', self.on_field_changed, ImageStore.COL_TITLE)))
         self.change_signals.append((self.desc_view.get_buffer(), self.desc_view.get_buffer().connect('changed', self.on_field_changed, ImageStore.COL_DESCRIPTION)))
@@ -170,12 +182,12 @@ class Postr(UniqueApp):
         self.change_signals.append((self.visible_check, self.visible_check.connect('toggled', self.on_field_changed, ImageStore.COL_VISIBLE)))
         self.change_signals.append((self.content_type_combo, self.content_type_combo.connect('changed', self.on_field_changed, ImageStore.COL_CONTENT_TYPE)))
         self.change_signals.append((self.license_combo, self.license_combo.connect('changed', self.on_field_changed, ImageStore.COL_LICENSE)))
-        
+
         self.thumbnail_image.connect('size-allocate', self.update_thumbnail)
         self.old_thumb_allocation = None
 
         self.on_selection_changed(selection)
-        
+
         # The upload progress dialog
         self.uploading = False
         self.current_upload_it = None
@@ -193,11 +205,11 @@ class Postr(UniqueApp):
         self.update_remove()
 
         # Update the proxy configuration
-        client = gconf.client_get_default()
-        client.add_dir("/system/http_proxy", gconf.CLIENT_PRELOAD_RECURSIVE)
-        client.notify_add("/system/http_proxy", self.proxy_changed)
+        client = GConf.Client.get_default()
+        client.add_dir("/system/http_proxy", GConf.ClientPreloadType.PRELOAD_RECURSIVE)
+        client.notify_add("/system/http_proxy", self.proxy_changed, None)
         self.proxy_changed(client, 0, None, None)
-        
+
         # Connect to flickr, go go go
         self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
 
@@ -206,7 +218,7 @@ class Postr(UniqueApp):
 
     def twisted_error(self, failure):
         self.update_upload()
-        
+
         dialog = ErrorDialog(self.window)
         dialog.set_from_failure(failure)
         dialog.show_all()
@@ -218,7 +230,7 @@ class Postr(UniqueApp):
             if host is None or host == "" or port == 0:
                 self.flickr.set_proxy(None)
                 return
-            
+
             if client.get_bool("/system/http_proxy/use_authentication"):
                 user = client.get_string("/system/http_proxy/authentication_user")
                 password = client.get_string("/system/http_proxy/authentication_password")
@@ -232,48 +244,6 @@ class Postr(UniqueApp):
             self.flickr.set_proxy(url)
         else:
             self.flickr.set_proxy(None)
-    
-    def get_custom_handler(self, glade, function_name, widget_name, str1, str2, int1, int2):
-        """libglade callback to create custom widgets."""
-        handler = getattr(self, function_name, None)
-        if handler:
-            return handler(str1, str2, int1, int2)
-        else:
-            widget = eval(function_name)
-            widget.show()
-            return widget
-
-    def group_selector_new(self, *args):
-        w = GroupSelector.GroupSelector(self.flickr)
-        w.show()
-        return w
-
-    def set_combo_new(self, *args):
-        import SetCombo
-        w = SetCombo.SetCombo(self.flickr)
-        w.show()
-        return w
-
-    def license_combo_new(self, *args):
-        import LicenseCombo
-        w = LicenseCombo.LicenseCombo(self.flickr)
-        w.show()
-        return w
-    
-    def image_list_new(self, *args):
-        """Custom widget creation function to make the image list."""
-        view = ImageList.ImageList()
-        view.show()
-        return view
-
-    def status_bar_new(self, *args):
-        bar = StatusBar.StatusBar(self.flickr)
-        bar.show()
-        return bar
-    def tag_entry_new(self, *args):
-        import TagsEntry
-        entry = TagsEntry.TagsEntry(self.flickr)
-        return entry
 
     def on_message_pyunique(self, instance, command, data):
         """ PyUnique callback for receiving a message """
@@ -289,7 +259,7 @@ class Postr(UniqueApp):
         # the model was changed, not what was changed.
         self.update_upload()
         self.update_remove()
-    
+
     def auth_open_url(self, state):
         """Callback from midway through Flickr authentication.  At this point we
         either have cached tokens so can carry on, or need to open a web browser
@@ -298,10 +268,10 @@ class Postr(UniqueApp):
             self.connected(True)
         else:
             dialog = AuthenticationDialog(self.window, state['url'])
-            if dialog.run() == gtk.RESPONSE_ACCEPT:
+            if dialog.run() == Gtk.ResponseType.ACCEPT:
                 self.flickr.authenticate_2(state).addCallbacks(self.connected, self.twisted_error)
             dialog.destroy()
-    
+
     def connected(self, connected):
         """Callback when the Flickr authentication completes."""
         self.is_connected = connected
@@ -314,13 +284,14 @@ class Postr(UniqueApp):
             self.update_avatar()
             self.update_tag_list()
 
-    def on_statusbar_box_expose(self, widget, event):
+    def on_statusbar_box_draw(self, widget, cr):
         """
         Expose callback for the event box containing the status bar, to paint it
         in a different colour.
         """
-        widget.window.draw_rectangle(widget.style.dark_gc[gtk.STATE_NORMAL], True, *event.area)
-        
+        #FIXME: get the dark theme color instead
+        widget.override_background_color(Gtk.StateType.NORMAL, Gdk.RGBA(0.5, 0.5, 0.5, 0.6))
+
     def update_upload(self):
         connected = self.is_connected and self.model.iter_n_children(None) > 0
         self.upload_menu.set_sensitive(connected)
@@ -338,7 +309,7 @@ class Postr(UniqueApp):
         for row in self.model:
             size += row[ImageStore.COL_SIZE]
         self.statusbar.set_upload(size)
-    
+
     def update_avatar(self):
         """
         Update the avatar displayed at the top of the window.  Called when
@@ -356,14 +327,14 @@ class Postr(UniqueApp):
             get_buddyicon(self.flickr, data).addCallbacks(get_buddyicon_cb, self.twisted_error)
         # Need to call people.getInfo to get the iconserver/iconfarm
         self.flickr.people_getInfo(user_id=self.flickr.get_nsid()).addCallbacks(getinfo_cb, self.twisted_error)
-    
+
     def on_field_changed(self, widget, column):
         """Callback when the entry fields are changed."""
-        if isinstance(widget, gtk.Entry) or isinstance(widget, gtk.TextBuffer):
+        if isinstance(widget, Gtk.Entry) or isinstance(widget, Gtk.TextBuffer):
             value = widget.get_property("text")
-        elif isinstance(widget, gtk.ToggleButton):
+        elif isinstance(widget, Gtk.ToggleButton):
             value = widget.get_active()
-        elif isinstance(widget, gtk.ComboBox):
+        elif isinstance(widget, Gtk.ComboBox):
             value = widget.get_active_iter()
         elif isinstance(widget, GroupSelector.GroupSelector):
             value = widget.get_selected_groups()
@@ -383,7 +354,7 @@ class Postr(UniqueApp):
         """Callback when the set combo is changed."""
         set_it = self.set_combo.get_active_iter()
 
-        (id, ) = self.set_combo.get_id_for_iter(set_it) if set_it else (None, )
+        (id,) = self.set_combo.get_id_for_iter(set_it) if set_it else (None,)
         self._update_rename_button(id)
 
         selection = self.thumbview.get_selection()
@@ -394,43 +365,38 @@ class Postr(UniqueApp):
 
     def _update_rename_button(self, id):
         if id == '-1':
-            self.info_table.child_set(self.set_combo,
-                                      "right-attach",
-                                      2)
             self.rename_button.set_sensitive(True)
         else:
-            self.info_table.child_set(self.set_combo,
-                                      "right-attach",
-                                      3)
             self.rename_button.set_sensitive(False)
 
     def on_rename_activate(self, button):
-        self.set_combo.name_new_photoset()
+        self.set_combo.name_new_photoset(self.window)
 
     def on_add_photos_activate(self, widget):
         """Callback from the File->Add Photos menu item or Add button."""
-        dialog = gtk.FileChooserDialog(title=_("Add Photos"), parent=self.window,
-                                       action=gtk.FILE_CHOOSER_ACTION_OPEN,
-                                       buttons=(gtk.STOCK_CANCEL,
-                                                gtk.RESPONSE_CANCEL,
-                                                gtk.STOCK_OPEN,
-                                                gtk.RESPONSE_OK))
+        dialog = Gtk.FileChooserDialog(title=_("Add Photos"), parent=self.window,
+                                       action=Gtk.FileChooserAction.OPEN,
+                                       buttons=(Gtk.STOCK_CANCEL,
+                                                Gtk.ResponseType.CANCEL,
+                                                Gtk.STOCK_OPEN,
+                                                Gtk.ResponseType.OK))
         dialog.set_select_multiple(True)
         if self.last_folder:
             dialog.set_current_folder_uri(self.last_folder)
 
         # Add filters for all reasonable image types
-        filters = gtk.FileFilter()
+        filters = Gtk.FileFilter()
         filters.set_name(_("Images"))
-        filters.add_mime_type("image/*")
+        for mime_type in _SUPPORTED_MIME_TYPES:
+            filters.add_mime_type(mime_type)
         dialog.add_filter(filters)
-        filters = gtk.FileFilter()
+        filters = Gtk.FileFilter()
         filters.set_name(_("All Files"))
         filters.add_pattern("*")
         dialog.add_filter(filters)
 
         # Add a preview widget
-        preview = gtk.Image()
+        preview = Gtk.Image()
         dialog.set_preview_widget(preview)
 
         def get_thumbnail(uri):
@@ -438,16 +404,21 @@ class Postr(UniqueApp):
             # None in case is not possible to get it or
             # generate it.
 
-            gfile = gio.File(uri)
-            ginfo = gfile.query_info('time::modified,standard::content-type')
+            gfile = Gio.File.new_for_uri(uri)
+            attributes = ','.join([Gio.FILE_ATTRIBUTE_TIME_MODIFIED,
+                                   Gio.FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE])
+            ginfo = gfile.query_info(attributes,
+                                     Gio.FileQueryInfoFlags.NONE, None)
             mtime = ginfo.get_modification_time()
             mime = ginfo.get_content_type()
 
+            # FIXME: Port to GTK3
+            '''
             factory = gnome.ui.ThumbnailFactory(gnome.ui.THUMBNAIL_SIZE_NORMAL)
             thumb_path = factory.lookup(uri, int(mtime))
 
             if thumb_path:
-                return gtk.gdk.pixbuf_new_from_file(thumb_path)
+                return GdkPixbuf.Pixbuf.new_from_file(thumb_path)
 
             # There is no thumbmail, we will try to generate one
             # or return None if not possible
@@ -458,9 +429,10 @@ class Postr(UniqueApp):
                 return thumbnail
             else:
                 return None
+            '''
+            return None
 
         def update_preview_cb(file_chooser, preview):
-            filename = file_chooser.get_preview_filename()
             uri = file_chooser.get_preview_uri()
 
             if uri:
@@ -475,48 +447,48 @@ class Postr(UniqueApp):
             file_chooser.set_preview_widget_active(have_preview)
 
         dialog.connect("update-preview", update_preview_cb, preview)
-        
-        if dialog.run() == gtk.RESPONSE_OK:
+
+        if dialog.run() == Gtk.ResponseType.OK:
             dialog.hide()
             self.last_folder = dialog.get_current_folder_uri()
             for uri in dialog.get_uris():
                 self.add_image_uri(uri)
         dialog.destroy()
-            
+
     def on_quit_activate(self, widget, *args):
         """Callback from File->Quit."""
         if self.uploading:
-            dialog = gtk.MessageDialog(type=gtk.MESSAGE_WARNING, parent=self.window)
-            dialog.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-                               gtk.STOCK_SAVE, gtk.RESPONSE_ACCEPT,
-                               gtk.STOCK_QUIT, gtk.RESPONSE_OK)
+            dialog = Gtk.MessageDialog(type=Gtk.MessageType.WARNING, parent=self.window)
+            dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                               Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT,
+                               Gtk.STOCK_QUIT, Gtk.ResponseType.OK)
             dialog.set_markup(_('<b>Currently Uploading</b>'))
             dialog.format_secondary_text(_('Photos are still being uploaded. '
                                            'Are you sure you want to quit? '
                                            'You can also save your pending upload set for later.'))
-            dialog.set_default_response(gtk.RESPONSE_OK)
+            dialog.set_default_response(Gtk.ResponseType.OK)
             response = dialog.run()
             dialog.destroy()
-            if response == gtk.RESPONSE_CANCEL:
+            if response == Gtk.ResponseType.CANCEL:
                 return True
-            elif response == gtk.RESPONSE_ACCEPT:
+            elif response == Gtk.ResponseType.ACCEPT:
                 self.save_upload_set()
         elif self.is_connected and self.model.iter_n_children(None) > 0 and self.model.dirty():
-            dialog = gtk.MessageDialog(type=gtk.MESSAGE_WARNING, parent=self.window)
-            dialog.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-                               gtk.STOCK_SAVE, gtk.RESPONSE_ACCEPT,
-                               gtk.STOCK_QUIT, gtk.RESPONSE_OK)
+            dialog = Gtk.MessageDialog(type=Gtk.MessageType.WARNING, parent=self.window)
+            dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                               Gtk.STOCK_SAVE, Gtk.ResponseType.ACCEPT,
+                               Gtk.STOCK_QUIT, Gtk.ResponseType.OK)
             dialog.set_markup(_('<b>Photos to be uploaded</b>'))
             dialog.format_secondary_text(_('There are photos pending to '
                                            'be uploaded. '
                                            'Are you sure you want to quit? '
                                            'You can also save your pending upload set for later.'))
-            dialog.set_default_response(gtk.RESPONSE_OK)
+            dialog.set_default_response(Gtk.ResponseType.OK)
             response = dialog.run()
             dialog.destroy()
-            if response == gtk.RESPONSE_CANCEL:
+            if response == Gtk.ResponseType.CANCEL:
                 return True
-            elif response == gtk.RESPONSE_ACCEPT:
+            elif response == Gtk.ResponseType.ACCEPT:
                 self.save_upload_set()
 
         import twisted.internet.reactor
@@ -531,7 +503,7 @@ class Postr(UniqueApp):
 
     def on_remove_activate(self, widget):
         """Callback from File->Remove or Remove button."""
-        
+
         def get_selected_iter(model, path, iter, selectList):
             selectIter = model.get_iter(path)
             selectList.append(selectIter)
@@ -554,7 +526,6 @@ class Postr(UniqueApp):
             self.thumbview.set_cursor(model.get_path(next_select_iter))
         elif len(model) > 0:
             self.thumbview.set_cursor(model[-1].path)
-
 
     def on_select_all_activate(self, menuitem):
         """Callback from Edit->Select All."""
@@ -580,13 +551,13 @@ class Postr(UniqueApp):
         """Callback from File->Switch User."""
         self.flickr.clear_cached()
         self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
-    
+
     def on_upload_activate(self, menuitem):
         """Callback from File->Upload."""
         if self.uploading:
             print "Upload should be disabled, currently uploading"
             return
-        
+
         it = self.model.get_iter_first()
         if it is None:
             print "Upload should be disabled, no photos"
@@ -605,10 +576,10 @@ class Postr(UniqueApp):
         self.upload_index = 0
         self.list_failed_it = []
         self.upload()
-       
+
     def on_help_activate(self, menuitem):
         """Callback from Help->Contents."""
-        gtk.show_uri(None,"ghelp:postr",gtk.gdk.CURRENT_TIME);
+        Gtk.show_uri(None, "ghelp:postr", Gdk.CURRENT_TIME);
 
     def on_about_activate(self, menuitem):
         """Callback from Help->About."""
@@ -616,7 +587,7 @@ class Postr(UniqueApp):
         dialog.run()
         dialog.destroy()
 
-    def update_thumbnail(self, widget, allocation = None):
+    def update_thumbnail(self, widget, allocation=None):
         """Update the preview, as the selected image was changed."""
         if self.current_it:
             if not allocation:
@@ -636,7 +607,7 @@ class Postr(UniqueApp):
             self.old_thumb_allocation = allocation
 
             (simage,) = self.model.get(self.current_it, ImageStore.COL_PREVIEW)
-            
+
             tw = allocation.width
             th = allocation.height
             # Clamp the size to 512
@@ -646,23 +617,23 @@ class Postr(UniqueApp):
                                            simage.get_height(),
                                            tw, th)
 
-            thumb = simage.scale_simple(tw, th, gtk.gdk.INTERP_BILINEAR)
+            thumb = simage.scale_simple(tw, th, GdkPixbuf.InterpType.BILINEAR)
             widget.set_from_pixbuf(thumb)
 
     def on_selection_changed(self, selection):
         """Callback when the selection was changed, to update the entries and
         preview."""
-        [obj.handler_block(i) for obj,i in self.change_signals]
-        
+        [obj.handler_block(i) for obj, i in self.change_signals]
+
         def enable_field(field, value):
             field.set_sensitive(True)
-            if isinstance(field, gtk.Entry):
+            if isinstance(field, Gtk.Entry):
                 field.set_text(value)
-            elif isinstance(field, gtk.TextView):
+            elif isinstance(field, Gtk.TextView):
                 field.get_buffer().set_text(value)
-            elif isinstance(field, gtk.ToggleButton):
+            elif isinstance(field, Gtk.ToggleButton):
                 field.set_active(value)
-            elif isinstance(field, gtk.ComboBox):
+            elif isinstance(field, Gtk.ComboBox):
                 if value:
                     field.set_active_iter(value)
                 else:
@@ -674,13 +645,13 @@ class Postr(UniqueApp):
                 raise "Unhandled widget type %s" % field
         def disable_field(field):
             field.set_sensitive(False)
-            if isinstance(field, gtk.Entry):
+            if isinstance(field, Gtk.Entry):
                 field.set_text("")
-            elif isinstance(field, gtk.TextView):
+            elif isinstance(field, Gtk.TextView):
                 field.get_buffer().set_text("")
-            elif isinstance(field, gtk.ToggleButton):
+            elif isinstance(field, Gtk.ToggleButton):
                 field.set_active(True)
-            elif isinstance(field, gtk.ComboBox):
+            elif isinstance(field, Gtk.ComboBox):
                 field.set_active(-1)
             elif isinstance(field, GroupSelector.GroupSelector):
                 field.set_selected_groups(())
@@ -732,22 +703,22 @@ class Postr(UniqueApp):
             disable_field(self.license_combo)
 
             self.thumbnail_image.set_from_icon_name("postr", self.logo_icon_size)
-        [obj.handler_unblock(i) for obj,i in self.change_signals]
+        [obj.handler_unblock(i) for obj, i in self.change_signals]
 
     def add_image_dir_file(self, gfile):
-        children = gfile.enumerate_children(_FILE_ATTRIBUTES, flags=gio.FILE_QUERY_INFO_NONE)
-        child_info = children.next_file()
+        children = gfile.enumerate_children(_FILE_ATTRIBUTES, Gio.FileQueryInfoFlags.NONE, None)
+        child_info = children.next_file(None)
         while child_info:
             file_type = child_info.get_file_type()
-            if file_type == gio.FILE_TYPE_REGULAR:
+            if file_type == Gio.FileType.REGULAR:
                 self.add_image_fileinfo(gfile, child_info)
-            elif file_type == gio.FILE_TYPE_DIRECTORY:
+            elif file_type == Gio.FileType.DIRECTORY:
                 dirname = os.path.join(gfile.get_uri(), child_info.get_name())
-                self.add_image_dir_file(gio.File(dirname))
+                self.add_image_dir_file(Gio.File.new_for_uri(dirname))
             else:
                 print "Unhandled file %s" % gfile.get_uri()
-            child_info = children.next_file()
-        children.close()
+            child_info = children.next_file(None)
+        children.close(None)
 
     def add_image_uri(self, uri):
         """Add a file to the image list.  Called by the File->Add Photo and drag
@@ -755,14 +726,23 @@ class Postr(UniqueApp):
         return self.add_image_filename(uri)
 
     def add_image_filename(self, filename):
-        gfile = gio.File(filename)
-        fileinfo = gfile.query_info(_FILE_ATTRIBUTES, flags=gio.FILE_QUERY_INFO_NONE)
+        gfile = Gio.File.new_for_commandline_arg(filename)
+        fileinfo = gfile.query_info(_FILE_ATTRIBUTES,
+                                    Gio.FileQueryInfoFlags.NONE,
+                                    None)
         self.add_image_file(gfile, fileinfo)
 
     def add_image_fileinfo(self, parent, fileinfo):
         filename = os.path.join(parent.get_uri(), fileinfo.get_name())
-        gfile = gio.File(filename)
-        self.add_image_file(gfile, fileinfo)
+        gfile = Gio.File.new_for_uri(filename)
+        ginfo = gfile.query_info(Gio.FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+                                 Gio.FileQueryInfoFlags.NONE, None)
+        mime = ginfo.get_content_type()
+
+        if mime in _SUPPORTED_MIME_TYPES:
+            self.add_image_file(gfile, fileinfo)
+        else:
+            print 'Unsupported format (%s): %s' % (mime, filename)
 
     def _on_preview_size_prepared(self, loader, width, height):
         """Appropriately scale the image preview to fit inside 512x512"""
@@ -781,20 +761,20 @@ class Postr(UniqueApp):
             d.set_from_string(_("Image %s is too large, images must be no larger than %dMB in size.") % (gfile.get_path(), self.statusbar.maxfile))
             d.show_all()
             return
-        
+
         # TODO: we open the file three times now, which is madness, especially
         # if gnome-vfs is used to read remote files.  Need to find/write EXIF
         # and IPTC parsers that are incremental.
 
         # only opening the file_stream
-        file_stream = gfile.read()
+        file_stream = gfile.read(None)
 
         # First we load the image scaled to 512x512 for the preview.
         try:
             if gfile.is_native():
-                preview = gtk.gdk.pixbuf_new_from_file_at_size(gfile.get_path(), 512, 512)
+                preview = GdkPixbuf.Pixbuf.new_from_file_at_size(gfile.get_path(), 512, 512)
             else:
-                loader = gtk.gdk.PixbufLoader()
+                loader = GdkPixbuf.PixbufLoader()
                 loader.connect("size-prepared", self._on_preview_size_prepared)
                 loader.write(file_stream.read())
                 loader.close()
@@ -804,9 +784,9 @@ class Postr(UniqueApp):
             d.set_from_exception(e)
             d.show_all()
             return
-        
+
         # type 1 is beginning of file
-        if not file_stream.can_seek() or not file_stream.seek(0, type=1):
+        if not file_stream.can_seek() or not file_stream.seek(0, type=1, cancellable=None):
             file_stream = gfile.read()
 
         # On a file that doesn't contain EXIF, like a PNG, this just returns an
@@ -817,28 +797,28 @@ class Postr(UniqueApp):
             exif = {}
 
         # type 1 is beginning of file
-        if not file_stream.can_seek() or not file_stream.seek(0, type=1):
-            file_stream = gfile.read()
+        if not file_stream.can_seek() or not file_stream.seek(0, type=1, cancellable=None):
+            file_stream = gfile.read(None)
 
         try:
             iptc = IPTCInfo(file_stream).data
         except:
             iptc = {}
-        
+
         # Rotate the preview if required.  We don't need to manipulate the
         # original data as Flickr will do that for us.
         if "Image Orientation" in exif:
             rotation = exif["Image Orientation"].values[0]
             if rotation == ROTATED_180:
-                preview = preview.rotate_simple(gtk.gdk.PIXBUF_ROTATE_UPSIDEDOWN)
+                preview = preview.rotate_simple(Gdk.PIXBUF_ROTATE_UPSIDEDOWN)
             elif rotation == ROTATED_90_CW:
-                preview = preview.rotate_simple(gtk.gdk.PIXBUF_ROTATE_CLOCKWISE)
+                preview = preview.rotate_simple(Gdk.PIXBUF_ROTATE_CLOCKWISE)
             elif rotation == ROTATED_90_CCW:
-                preview = preview.rotate_simple(gtk.gdk.PIXBUF_ROTATE_COUNTERCLOCKWISE)
-        
+                preview = preview.rotate_simple(Gdk.PIXBUF_ROTATE_COUNTERCLOCKWISE)
+
         # Now scale the preview to a thumbnail
         sizes = get_thumb_size(preview.get_width(), preview.get_height(), 64, 64)
-        thumb = preview.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
+        thumb = preview.scale_simple(sizes[0], sizes[1], GdkPixbuf.InterpType.BILINEAR)
 
         # Slurp data from the EXIF and IPTC tags
         title_tags = (
@@ -863,15 +843,14 @@ class Postr(UniqueApp):
                     if value:
                         return value
             return default
-        
+
         title = slurp(title_tags, os.path.splitext(fileinfo.get_display_name())[0])
         desc = slurp(desc_tags)
         tags = slurp(tag_tags)
-        
+
         self.model.set(self.model.append(),
                        ImageStore.COL_URI, gfile.get_uri(),
                        ImageStore.COL_SIZE, filesize,
-                       ImageStore.COL_IMAGE, None,
                        ImageStore.COL_PREVIEW, preview,
                        ImageStore.COL_THUMBNAIL, thumb,
                        ImageStore.COL_TITLE, title,
@@ -881,25 +860,25 @@ class Postr(UniqueApp):
 
         self.update_statusbar()
         self.update_upload()
-    
+
     def on_drag_data_received(self, widget, context, x, y, selection, targetType, timestamp):
         """Drag and drop callback when data is received."""
         if targetType == ImageList.DRAG_IMAGE:
             pixbuf = selection.get_pixbuf()
 
             # TODO: don't scale up if the image is smaller than 512/512
-            
+
             # Scale the pixbuf to a preview
             sizes = get_thumb_size(pixbuf.get_width(), pixbuf.get_height(), 512, 512)
-            preview = pixbuf.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
+            preview = pixbuf.scale_simple(sizes[0], sizes[1], GdkPixbuf.InterpType.BILINEAR)
             # Now scale to a thumbnail
             sizes = get_thumb_size(pixbuf.get_width(), pixbuf.get_height(), 64, 64)
-            thumb = pixbuf.scale_simple(sizes[0], sizes[1], gtk.gdk.INTERP_BILINEAR)
+            thumb = pixbuf.scale_simple(sizes[0], sizes[1], GdkPixbuf.InterpType.BILINEAR)
 
             # TODO: This is wrong, and should generate a PNG here and use the
             # size of the PNG
             size = pixbuf.get_width() * pixbuf.get_height() * pixbuf.get_n_channels()
-            
+
             self.model.set(self.model.append(),
                            ImageStore.COL_IMAGE, pixbuf,
                            ImageStore.COL_SIZE, size,
@@ -911,15 +890,16 @@ class Postr(UniqueApp):
                            ImageStore.COL_TAGS, "",
                            ImageStore.COL_VISIBLE, True)
 
-        
+
         elif targetType == ImageList.DRAG_URI:
             for uri in selection.get_uris():
-                gfile = gio.File(uri)
-                fileinfo = gfile.query_info(_FILE_ATTRIBUTES)
+                gfile = Gio.File.new_for_uri(uri)
+                fileinfo = gfile.query_info(_FILE_ATTRIBUTES,
+                                            Gio.FileQueryInfoFlags.NONE, None)
                 file_type = fileinfo.get_file_type()
-                if file_type == gio.FILE_TYPE_REGULAR:
+                if file_type == Gio.FileType.REGULAR:
                     self.add_image_file(gfile, fileinfo)
-                elif file_type == gio.FILE_TYPE_DIRECTORY:
+                elif file_type == Gio.FileType.DIRECTORY:
                     self.add_image_dir_file(gfile)
                 else:
                     print "Unhandled file %s" % gfile.get_uri()
@@ -943,7 +923,7 @@ class Postr(UniqueApp):
 
         # Use named args for i18n
         data = {
-            "index": self.upload_index+1,
+            "index": self.upload_index + 1,
             "count": self.upload_count
             }
         progress_label = _('Uploading %(index)d of %(count)d') % data
@@ -953,14 +933,14 @@ class Postr(UniqueApp):
 
     def add_to_set(self, rsp, set):
         """Callback from the upload method to add the picture to a set."""
-        photo_id=rsp.find("photoid").text
+        photo_id = rsp.find("photoid").text
         self.flickr.photosets_addPhoto(photo_id=photo_id, photoset_id=set).addErrback(self.twisted_error)
         self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_SET_ID)
         return rsp
 
     def add_to_groups(self, rsp, groups):
         """Callback from the upload method to add the picture to a groups."""
-        photo_id=rsp.find("photoid").text
+        photo_id = rsp.find("photoid").text
         for group in groups:
             def error(failure):
                 # Code 6 means "moderated", which isn't an error
@@ -972,7 +952,7 @@ class Postr(UniqueApp):
 
     def set_license(self, rsp, license):
         """Callback from the upload method to set license for the picture."""
-        photo_id=rsp.find("photoid").text
+        photo_id = rsp.find("photoid").text
         self.flickr.photos_licenses_setLicense(photo_id=photo_id,
                                                license_id=license).addErrback(self.twisted_error)
         self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_LICENSE)
@@ -1100,7 +1080,7 @@ class Postr(UniqueApp):
                                        progress_tracker=self.upload_progress_tracker)
             else:
                 print "No filename or pixbuf stored"
-        except gio.Error, (error):
+        except Gio.Error, (error):
             # save the iterator and continue uploading process
             self.list_failed_it.append(it)
             self.current_upload_it = None
@@ -1128,7 +1108,7 @@ class Postr(UniqueApp):
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_NEW_SET)
 
     def create_photoset_then_continue(self, rsp, photoset_name):
-        photo_id=rsp.find("photoid").text
+        photo_id = rsp.find("photoid").text
         create_photoset = self.flickr.photosets_create(primary_photo_id=photo_id, title=photoset_name)
         create_photoset.addCallback(self._process_photoset_creation, photoset_name)
         create_photoset.addErrback(self.upload_error)
@@ -1147,7 +1127,7 @@ class Postr(UniqueApp):
 
         thumbnail = self.model.get_value(iter, ImageStore.COL_THUMBNAIL)
         #Use a pixmap to create a new image
-        drawable = gtk.gdk.Pixmap(self.window.window, # gtk.gdk.Drawable
+        drawable = Gdk.Pixmap(self.window.window, # Gdk.Drawable
                                     thumbnail.get_width(),
                                     thumbnail.get_height())
 
@@ -1158,24 +1138,24 @@ class Postr(UniqueApp):
                                 0, 0) #Destination X, Y coordinate
 
         error_icon = self.window.render_icon(
-                                stock_id=gtk.STOCK_DIALOG_ERROR,
-                                size=gtk.ICON_SIZE_DIALOG)
+                                stock_id=Gtk.STOCK_DIALOG_ERROR,
+                                size=Gtk.IconSize.DIALOG)
 
         # It chose a size for the error icon proportional to the thumbnail image
         size = min(int(thumbnail.get_width() * HALF_SIZE),
                     int(thumbnail.get_height() * HALF_SIZE))
 
         error_icon = error_icon.scale_simple(size, size,
-                                    gtk.gdk.INTERP_BILINEAR)
+                                    GdkPixbuf.InterpType.BILINEAR)
 
         # The error icon is drawed in the bottom right edge of the image
         drawable.draw_pixbuf(self.window.get_style().white_gc, #graphics context
                             error_icon, #the pixbuf
                             0, 0, #Source X,Y coordinate
-                            thumbnail.get_width()-size, #Destination X coordinate
-                            thumbnail.get_height()-size) #Destination Y coordinate
+                            thumbnail.get_width() - size, #Destination X coordinate
+                            thumbnail.get_height() - size) #Destination Y coordinate
 
-        new_thumbnail = gtk.gdk.Pixbuf(gtk.gdk.COLORSPACE_RGB, #color mode
+        new_thumbnail = GdkPixbuf.Pixbuf(GdkPixbuf.Colorspace.RGB, #color mode
                                 True, #has alpha
                                 8, #bits
                                 thumbnail.get_width(), #width
@@ -1185,7 +1165,7 @@ class Postr(UniqueApp):
                                         drawable.get_colormap(),
                                         0, 0, #Source X, Y coordinate
                                         0, 0, #Destination X, Y coordinate
-                                        -1, -1) #The full width, height
+                                        - 1, -1) #The full width, height
 
         self.model.set_value(iter, ImageStore.COL_THUMBNAIL, new_thumbnail)
 
@@ -1203,7 +1183,7 @@ class Postr(UniqueApp):
         self.thumbview.set_reorderable(False)
 
         self.thumbview.enable_targets()
-        [obj.handler_unblock(i) for obj,i in self.drag_signals]
+        [obj.handler_unblock(i) for obj, i in self.drag_signals]
 
     def on_button_press_cb(self, thumbview, event, data=None):
         if self.drop_disabled:
@@ -1211,45 +1191,43 @@ class Postr(UniqueApp):
         self.thumbview.unable_targets()
 
         self.drop_disabled = True
-        [obj.handler_block(i) for obj,i in self.drag_signals]
+        [obj.handler_block(i) for obj, i in self.drag_signals]
         thumbview.set_reorderable(True)
         return
 
     def on_button_release_cb(self, thumbview, event, data=None):
-
         if self.drop_disabled and (not self.drag_started):
             self.drop_disabled = False
             thumbview.set_reorderable(False)
             self.thumbview.enable_targets()
-            [obj.handler_unblock(i) for obj,i in self.drag_signals]
+            [obj.handler_unblock(i) for obj, i in self.drag_signals]
         return False
 
-
     def save_upload_set(self):
-        dialog = gtk.FileChooserDialog(title=None,
-                                       action=gtk.FILE_CHOOSER_ACTION_SAVE,
-                                       buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-                                                gtk.STOCK_SAVE, gtk.RESPONSE_OK))
+        dialog = Gtk.FileChooserDialog(title=None, parent=self.window,
+                                       action=Gtk.FileChooserAction.SAVE,
+                                       buttons=(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                                                Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
 
-        dialog.set_default_response(gtk.RESPONSE_OK)
+        dialog.set_default_response(Gtk.ResponseType.OK)
 
         default_filename = datetime.strftime(datetime.today(), "upload_saved_on_%m-%d-%y.postr")
         dialog.set_current_name(default_filename)
 
         dialog.set_do_overwrite_confirmation(True)
 
-        filter = gtk.FileFilter()
+        filter = Gtk.FileFilter()
         filter.set_name("postr upload sets")
         filter.add_pattern("*.postr")
         dialog.add_filter(filter)
 
-        filter = gtk.FileFilter()
+        filter = Gtk.FileFilter()
         filter.set_name("All Files")
         filter.add_pattern("*")
         dialog.add_filter(filter)
 
         response = dialog.run()
-        if response == gtk.RESPONSE_OK:
+        if response == Gtk.ResponseType.OK:
             filename = dialog.get_filename()
             dest = shelve.open(filename, 'n')
 
@@ -1310,7 +1288,7 @@ class Postr(UniqueApp):
         else:
             safety_path = None
 
-        args = ( path,
+        args = (path,
                  uri,
                  title,
                  desc,
@@ -1319,29 +1297,29 @@ class Postr(UniqueApp):
                  groups,
                  privacy_path,
                  safety_path,
-                 visible )
+                 visible)
         return args
 
     def load_upload_set(self):
-        dialog = gtk.FileChooserDialog(title=None,
-                                       action=gtk.FILE_CHOOSER_ACTION_OPEN,
-                                       buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL,
-                                                gtk.STOCK_OPEN, gtk.RESPONSE_OK))
+        dialog = Gtk.FileChooserDialog(title=None, parent=self.window,
+                                       action=Gtk.FileChooserAction.OPEN,
+                                       buttons=(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                                                Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
 
-        dialog.set_default_response(gtk.RESPONSE_OK)
+        dialog.set_default_response(Gtk.ResponseType.OK)
 
-        filter = gtk.FileFilter()
+        filter = Gtk.FileFilter()
         filter.set_name("postr upload sets")
         filter.add_pattern("*.postr")
         dialog.add_filter(filter)
 
-        filter = gtk.FileFilter()
+        filter = Gtk.FileFilter()
         filter.set_name("All Files")
         filter.add_pattern("*")
         dialog.add_filter(filter)
 
         response = dialog.run()
-        if response == gtk.RESPONSE_OK:
+        if response == Gtk.ResponseType.OK:
             filename = dialog.get_filename()
             source = shelve.open(filename, 'r')
             if source:
@@ -1354,14 +1332,14 @@ class Postr(UniqueApp):
                         if self.flickr.get_nsid() != nsid:
                             markup_args = (self.flickr.get_username(), username) if self.flickr.get_username() and username else (self.flickr.get_nsid(), nsid)
                             markup_pattern = _("You are logged in as %s but loading\nan upload set for %s")
-                            confirm_dialog = gtk.MessageDialog(buttons=gtk.BUTTONS_YES_NO)
-                            confirm_dialog.set_default_response(gtk.RESPONSE_YES)
+                            confirm_dialog = Gtk.MessageDialog(buttons=Gtk.ButtonsType.YES_NO)
+                            confirm_dialog.set_default_response(Gtk.ResponseType.YES)
                             confirm_dialog.set_markup(markup_pattern % markup_args)
                             confirm_dialog.format_secondary_text(_("Do you want to continue "
                                                                    "with the load?  You will "
                                                                    "not import photoset information."))
                             response = confirm_dialog.run()
-                            if response == gtk.RESPONSE_NO:
+                            if response == Gtk.ResponseType.NO:
                                 dialog.destroy()
                                 return
                             else:
@@ -1371,14 +1349,14 @@ class Postr(UniqueApp):
                     if source.has_key("nsid"):
                         source_user = source.get("username", source["nsid"])
                         markup_pattern = _("You are not logged in but loading\nan upload set for %s")
-                        confirm_dialog = gtk.MessageDialog(buttons=gtk.BUTTONS_YES_NO)
-                        confirm_dialog.set_default_response(gtk.RESPONSE_YES)
+                        confirm_dialog = Gtk.MessageDialog(buttons=Gtk.ButtonsType.YES_NO)
+                        confirm_dialog.set_default_response(Gtk.ResponseType.YES)
                         confirm_dialog.set_markup(markup_pattern % source_user)
                         confirm_dialog.format_secondary_text(_("Do you want to continue "
                                                                "with the load?  You will "
                                                                "not import photoset information."))
                         response = confirm_dialog.run()
-                        if response == gtk.RESPONSE_NO:
+                        if response == Gtk.ResponseType.NO:
                             dialog.destroy()
                             return
                         else:

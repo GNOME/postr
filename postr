@@ -21,8 +21,8 @@ import gettext
 gettext.install('postr')
 
 import sys
-from twisted.internet import gtk2reactor
-reactor = gtk2reactor.install()
+from twisted.internet import gtk3reactor
+reactor = gtk3reactor.install()
 
 # Import from src first so that we can run directly from the source tree for
 # development.

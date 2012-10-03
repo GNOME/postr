@@ -15,13 +15,14 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import os, gtk, gconf
+import os
+from gi.repository import Gtk, GConf, GObject
 
 def on_url_clicked(button, url):
     """Global LinkButton handler that starts the default GNOME HTTP handler, or
     firefox."""
     # Get the HTTP URL handler
-    client = gconf.client_get_default()
+    client = GConf.Client.get_default()
     browser = client.get_string("/desktop/gnome/url-handlers/http/command") or "firefox"
 
     # Because the world sucks and everyone hates me, just use the first word and
@@ -33,30 +34,30 @@ def on_url_clicked(button, url):
     os.spawnlp(os.P_NOWAIT, browser, browser, url)
     # TODO: if that didn't work fallback on x-www-browser or something
 
-class AuthenticationDialog(gtk.Dialog):
+class AuthenticationDialog(Gtk.Dialog):
     def __init__(self, parent, url):
-        gtk.Dialog.__init__(self,
+        Gtk.Dialog.__init__(self,
                             title=_("Flickr Uploader"), parent=parent,
-                            flags=gtk.DIALOG_NO_SEPARATOR,
-                            buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
-                                     _("Continue"), gtk.RESPONSE_ACCEPT))
-        vbox = gtk.VBox(spacing=8)
+                            buttons=(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
+                                     _("Continue"), Gtk.ResponseType.ACCEPT))
+        vbox = Gtk.VBox(spacing=8)
+
         vbox.set_border_width(8)
-        
-        label = gtk.Label(_("Postr needs to login to Flickr to upload your photos. "
+
+        label = Gtk.Label(_("Postr needs to login to Flickr to upload your photos. "
                           "Please click on the link below to login to Flickr."))
         label.set_line_wrap(True)
         vbox.add(label)
 
-        # gtk.LinkButton is only in 2.10, so use a normal button if it isn't
+        # Gtk.LinkButton is only in 2.10, so use a normal button if it isn't
         # available.
-        if hasattr(gtk, "LinkButton"):
-            gtk.link_button_set_uri_hook(on_url_clicked)
-            button = gtk.LinkButton(url, _("Login to Flickr"))
+        if hasattr(Gtk, "LinkButton"):
+            Gtk.link_button_set_uri_hook(on_url_clicked)
+            button = Gtk.LinkButton(url, _("Login to Flickr"))
         else:
-            button = gtk.Button(_("Login to Flickr"))
+            button = Gtk.Button(_("Login to Flickr"))
             button.connect("clicked", on_url_clicked, url)
         vbox.add(button)
-        
+
         self.vbox.add(vbox)
         self.show_all()

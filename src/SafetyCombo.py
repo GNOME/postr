@@ -15,22 +15,24 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gobject, gtk
+from gi.repository import GObject, Gtk
 
-class SafetyCombo(gtk.ComboBox):
+class SafetyCombo(Gtk.ComboBox):
+    __gtype_name__ = 'SafetyCombo'
+
     def __init__(self):
-        gtk.ComboBox.__init__(self)
+        Gtk.ComboBox.__init__(self)
         # Name, is_public, is_family, is_friend
-        model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_INT)
-        model.set(model.append(), 0, "Safe", 1, 1)
-        model.set(model.append(), 0, "Moderate", 1, 2)
-        model.set(model.append(), 0, "Restricted", 1, 3)
+        model = Gtk.ListStore(GObject.TYPE_STRING, GObject.TYPE_INT)
+        model.append(["Safe", 1])
+        model.append(["Moderate", 2])
+        model.append(["Restricted", 3])
         self.model = model
         self.set_model(model)
         self.set_active(0)
 
-        cell = gtk.CellRendererText()
-        self.pack_start(cell)
+        cell = Gtk.CellRendererText()
+        self.pack_start(cell, True)
         self.add_attribute(cell, "text", 0)
 
     def get_safety_for_iter(self, it):

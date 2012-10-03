@@ -15,7 +15,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gobject, gtk
+from gi.repository import GObject, Gtk, GdkPixbuf
 
 # Column indexes
 (COL_URI, # The filename of an image (can be None)
@@ -35,23 +35,23 @@ import gobject, gtk
  COL_LICENSE # Iterator containing license
  ) = range (0, 15)
 
-class ImageStore (gtk.ListStore):
+class ImageStore (Gtk.ListStore):
     def __init__(self):
-        gtk.ListStore.__init__(self, gobject.TYPE_STRING, # COL_URI
-                               gobject.TYPE_INT, # COL_SIZE
-                               gtk.gdk.Pixbuf, # COL_IMAGE
-                               gtk.gdk.Pixbuf, # COL_PREVIEW
-                               gtk.gdk.Pixbuf,  #COL_THUMBNAIL
-                               gobject.TYPE_STRING, # COL_TITLE
-                               gobject.TYPE_STRING, # COL_DESCRIPTION
-                               gobject.TYPE_STRING, # COL_TAGS
-                               gtk.TreeIter, # COL_SET
+        Gtk.ListStore.__init__(self, GObject.TYPE_STRING, # COL_URI
+                               GObject.TYPE_LONG, # COL_SIZE
+                               GdkPixbuf.Pixbuf, # COL_IMAGE
+                               GdkPixbuf.Pixbuf, # COL_PREVIEW
+                               GdkPixbuf.Pixbuf,  #COL_THUMBNAIL
+                               GObject.TYPE_STRING, # COL_TITLE
+                               GObject.TYPE_STRING, # COL_DESCRIPTION
+                               GObject.TYPE_STRING, # COL_TAGS
+                               Gtk.TreeIter, # COL_SET
                                object, # COL_GROUPS
-                               gtk.TreeIter, # COL_PRIVACY
-                               gtk.TreeIter, # COL_SAFETY
-                               gobject.TYPE_BOOLEAN, # COL_VISIBLE
-                               gtk.TreeIter, # COL_CONTENT_TYPE
-                               gtk.TreeIter) # COL_LICENSE
+                               Gtk.TreeIter, # COL_PRIVACY
+                               Gtk.TreeIter, # COL_SAFETY
+                               GObject.TYPE_BOOLEAN, # COL_VISIBLE
+                               Gtk.TreeIter, # COL_CONTENT_TYPE
+                               Gtk.TreeIter) # COL_LICENSE
         self._dirty = False
         self.connect("row-changed", self._on_row_changed)
 

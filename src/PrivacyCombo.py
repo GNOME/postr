@@ -15,23 +15,25 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gobject, gtk
+from gi.repository import Gtk, GObject
 
-class PrivacyCombo(gtk.ComboBox):
+class PrivacyCombo(Gtk.ComboBox):
+    __gtype_name__ = 'PrivacyCombo'
+
     def __init__(self):
-        gtk.ComboBox.__init__(self)
+        Gtk.ComboBox.__init__(self)
         # Name, is_public, is_family, is_friend
-        model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_BOOLEAN, gobject.TYPE_BOOLEAN, gobject.TYPE_BOOLEAN)
-        model.set(model.append(), 0, "Public", 1, True, 2, False, 3, False)
-        model.set(model.append(), 0, "Family Only", 1, False, 2, True, 3, False)
-        model.set(model.append(), 0, "Friends and Family Only", 1, False, 2, True, 3, True)
-        model.set(model.append(), 0, "Private", 1, False, 2, False, 3, False)
+        model = Gtk.ListStore(GObject.TYPE_STRING, GObject.TYPE_BOOLEAN, GObject.TYPE_BOOLEAN, GObject.TYPE_BOOLEAN)
+        model.append(["Public", True, False, False])
+        model.append(["Family Only", False, True, False])
+        model.append(["Friends and Family Only", False, True, True])
+        model.append(["Private", False, False, False])
         self.model = model
         self.set_model(model)
         self.set_active(0)
 
-        cell = gtk.CellRendererText()
-        self.pack_start(cell)
+        cell = Gtk.CellRendererText()
+        self.pack_start(cell, True)
         self.add_attribute(cell, "text", 0)
 
     # (is_public, is_family, is_friend)

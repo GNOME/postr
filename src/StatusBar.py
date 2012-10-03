@@ -15,16 +15,18 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
+from gi.repository import Gtk, GObject
 from ErrorDialog import ErrorDialog
 from util import greek
 from xml.sax.saxutils import escape
 
-class StatusBar(gtk.Label):
-    def __init__(self, flickr):
-        gtk.Label.__init__(self)
+class StatusBar(Gtk.Label):
+    __gtype_name__ = 'StatusBar'
+
+    def __init__(self):
+        Gtk.Label.__init__(self)
+        self.flickr = None
         self.set_alignment(0.0, 0.5)
-        self.flickr = flickr
         self.quota = None
         self.to_upload = None
         # In case we are offline or we can not get the max file size to

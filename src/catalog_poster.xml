@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<glade-catalog name="postr" depends="gtk+" version="1.0">
+  <glade-widget-classes>
+    <glade-widget-class title="ContentTypeCombo" name="ContentTypeCombo"
+                        generic-name="ContentTypeCombo" parent="GtkComboBox"
+                        icon-name="widget-gtk-combobox" />
+    <glade-widget-class title="GroupSelector" name="GroupSelector"
+                        generic-name="GroupSelector" parent="GtkTreeView"
+                        icon-name="widget-gtk-treeview" />
+    <glade-widget-class title="ImageList" name="ImageList"
+                        generic-name="ImageList" parent="GtkTreeView"
+                        icon-name="widget-gtk-treeview" />
+    <glade-widget-class title="LicenseCombo" name="LicenseCombo"
+                        generic-name="LicenseCombo" parent="GtkComboBox"
+                        icon-name="widget-gtk-combobox" />
+    <glade-widget-class title="PrivacyCombo" name="PrivacyCombo"
+                        generic-name="PrivacyCombo" parent="GtkComboBox"
+                        icon-name="widget-gtk-combobox" />
+    <glade-widget-class title="SafetyCombo" name="SafetyCombo"
+                        generic-name="SafetyCombo" parent="GtkComboBox"
+                        icon-name="widget-gtk-combobox" />
+    <glade-widget-class title="SetCombo" name="SetCombo"
+                        generic-name="SetCombo" parent="GtkComboBox"
+                        icon-name="widget-gtk-combobox" />
+    <glade-widget-class title="StatusBar" name="StatusBar"
+                        generic-name="StatusBar" parent="GtkLabel"
+                        icon-name="widget-gtk-label" />
+    <glade-widget-class title="TagsEntry" name="TagsEntry"
+                        generic-name="TagsEntry" parent="GtkEntry"
+                        icon-name="widget-gtk-entry" />
+  </glade-widget-classes>
+
+  <glade-widget-group name="postr-widgets" title="Postr Custom Widgets">
+    <glade-widget-class-ref name="ContentTypeCombo"/>
+    <glade-widget-class-ref name="GroupSelector"/>
+    <glade-widget-class-ref name="ImageList"/>
+    <glade-widget-class-ref name="LicenseCombo"/>
+    <glade-widget-class-ref name="PrivacyCombo"/>
+    <glade-widget-class-ref name="SafetyCombo"/>
+    <glade-widget-class-ref name="StatusBar"/>
+    <glade-widget-class-ref name="SetCombo"/>
+    <glade-widget-class-ref name="TagsEntry"/>
+  </glade-widget-group>
+
+</glade-catalog>

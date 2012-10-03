@@ -15,20 +15,22 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gobject, gtk
+from gi.repository import GObject, Gtk
 
-class LicenseCombo(gtk.ComboBox):
-    def __init__(self, flickr):
-        gtk.ComboBox.__init__(self)
-        self.flickr = flickr
+class LicenseCombo(Gtk.ComboBox):
+    __gtype_name__ = 'LicenseCombo'
+
+    def __init__(self):
+        Gtk.ComboBox.__init__(self)
+        self.flickr = None
         
-        self.model = gtk.ListStore(gobject.TYPE_STRING, gobject.TYPE_INT)
-        self.model.set(self.model.append(), 0, _("Default"), 1, -1)
+        self.model = Gtk.ListStore(GObject.TYPE_STRING, GObject.TYPE_INT)
+        self.model.append([_("Default"), -1])
         self.set_model(self.model)
         self.set_active(-1)
 
-        cell = gtk.CellRendererText()
-        self.pack_start(cell)
+        cell = Gtk.CellRendererText()
+        self.pack_start(cell, True)
         self.add_attribute(cell, "text", 0)
 
     def twisted_error(self, failure):
@@ -42,9 +44,8 @@ class LicenseCombo(gtk.ComboBox):
         for license in rsp.findall("licenses/license"):
             license_id = int(license.get("id"))
             it = self.model.append()
-            self.model.set(it,
-                           0, license.get("name"),
-                           1, license_id)
+            self.model.append([license.get("name"), license_id])
+
             # Set default license to All Rights Reserved.
             # I haven't found a way to get the default license
             # from flickr by the API.

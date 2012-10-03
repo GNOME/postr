@@ -15,7 +15,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gobject, gtk, pango
+from gi.repository import Gtk, GObject, Pango, GdkPixbuf
 from ErrorDialog import ErrorDialog
 import util
 
@@ -24,65 +24,66 @@ import util
  COL_NAME,
  COL_ICON) = range(0, 4)
 
-class GroupSelector(gtk.TreeView):
-
+class GroupSelector(Gtk.TreeView):
+    __gtype_name__ = 'GroupSelector'
     __gsignals__ = {
-        'changed' : (gobject.SIGNAL_RUN_LAST, gobject.TYPE_NONE, ())
+        'changed' : (GObject.SignalFlags.RUN_LAST, None, ())
         }
-    
-    def __init__(self, flickr):
-        self.flickr = flickr
-        self.model = gtk.ListStore(gobject.TYPE_BOOLEAN,
-                                   gobject.TYPE_STRING,
-                                   gobject.TYPE_STRING,
-                                   gtk.gdk.Pixbuf)
+
+    def __init__(self):
+        self.flickr = None
+        self.model = Gtk.ListStore(GObject.TYPE_BOOLEAN,
+                                   GObject.TYPE_STRING,
+                                   GObject.TYPE_STRING,
+                                   GdkPixbuf.Pixbuf)
         self.model.connect("row-changed", lambda model, path, iter: self.emit("changed"))
-        
-        gtk.TreeView.__init__(self, self.model)
-        
+
+        Gtk.TreeView.__init__(self, self.model)
+
         # Calculate the size of thumbnails based on the size of the text
         # renderer, but provide a default in case style-set isn't called.
         self.connect("style-set", self.style_set);
         self.thumb_size = 24
 
-        column = gtk.TreeViewColumn('Selected')
+        column = Gtk.TreeViewColumn('Selected')
         self.append_column(column)
-        
-        renderer =  gtk.CellRendererToggle()
+
+        renderer = Gtk.CellRendererToggle()
         def toggled(r, path):
             self.model[path][COL_SELECTED] = not r.get_active()
         renderer.connect("toggled", toggled)
         column.pack_start(renderer, False)
         column.add_attribute(renderer, "active", COL_SELECTED)
-        
-        column = gtk.TreeViewColumn('Group')
+
+        column = Gtk.TreeViewColumn('Group')
         self.append_column(column)
 
-        renderer =  gtk.CellRendererPixbuf()
+        renderer = Gtk.CellRendererPixbuf()
         column.pack_start(renderer, False)
         column.add_attribute(renderer, "pixbuf", COL_ICON)
-        
-        self.text_renderer =  gtk.CellRendererText()
+
+        self.text_renderer = Gtk.CellRendererText()
         column.pack_start(self.text_renderer, True)
         column.add_attribute(self.text_renderer, "text", COL_NAME)
-        
-        self.set_size_request(-1, 24 * 3 + self.style_get_property("vertical-separator") * 6)
+
+        # FIXME: Port to GTK3
+        # self.set_size_request(-1, 24 * 3 + self.style_get_property("vertical-separator") * 6)
         self.set_headers_visible(False)
         self.set_search_column(COL_NAME)
-        def search_func(model, column, key, iter):
+        def search_func(model, column, key, iter, user_data):
             s = model.get_value(iter, column)
             # This API is braindead, false=matches
             return key.lower() not in s.lower()
-        self.set_search_equal_func(search_func)
+        self.set_search_equal_func(search_func, None)
         # TODO: enable case insensitive substring searching
-    
+
     def style_set(self, widget, old_style):
         self.thumb_size = self.text_renderer.get_size(self, None)[3]
 
     def update(self):
         # TODO: block changed signals
         self.flickr.groups_pools_getGroups().addCallbacks(self.got_groups, self.twisted_error)
-    
+
     def got_groups(self, rsp):
         for group in rsp.findall("groups/group"):
             it = self.model.append()
@@ -92,7 +93,7 @@ class GroupSelector(gtk.TreeView):
             def got_thumb(thumb, it):
                 self.model.set (it, COL_ICON, thumb)
             util.get_buddyicon(self.flickr, group, self.thumb_size).addCallback(got_thumb, it)
-    
+
     def twisted_error(self, failure):
         dialog = ErrorDialog()
         dialog.set_from_failure(failure)

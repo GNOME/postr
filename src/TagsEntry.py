@@ -15,20 +15,21 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
+from gi.repository import Gtk, GObject
 
 _USER_POPULAR_TAGS = 200
 _HOTS_TAGS = 20
 _COL_TAG_NAME = 0
 
-class TagsEntry(gtk.Entry):
-    def __init__(self, flickr):
-        gtk.Entry.__init__(self)
+class TagsEntry(Gtk.Entry):
+    __gtype_name__ = 'TagsEntry'
 
-        self.flickr = flickr
+    def __init__(self):
+        Gtk.Entry.__init__(self)
+        self.flickr = None
 
         # Create the completion object
-        self.completion = gtk.EntryCompletion()
+        self.completion = Gtk.EntryCompletion()
         self.completion.set_match_func(self.__match_func, None)
         self.completion.connect('match-selected', self.on_completion_match)
 
@@ -41,7 +42,7 @@ class TagsEntry(gtk.Entry):
         self.completion.set_minimum_key_length(1)
 
 
-        self.completion_model = gtk.ListStore(str)
+        self.completion_model = Gtk.ListStore(str)
 
         self.show_all()
 
@@ -98,9 +99,7 @@ class TagsEntry(gtk.Entry):
         '''
 
         for tag in rsp.getiterator('tag'):
-            self.completion_model.set(self.completion_model.append(),
-                                    _COL_TAG_NAME,
-                                    tag.text)
+            self.completion_model.append([tag.text])
 
         self.completion.set_model(self.completion_model)
 

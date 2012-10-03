@@ -1,6 +1,8 @@
 # Postr, a Flickr Uploader
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2006-2008 Ross Burton <ross@burtonini.com>
+# Copyright (C) 2012 Germán Poo-Caamaño <gpoo@gnome.org>
 #
 # This program is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -15,8 +17,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
-import pango 
+from gi.repository import Gtk, Pango, GObject, Gdk
 
 import ImageStore
 
@@ -24,20 +25,22 @@ import ImageStore
 (DRAG_URI,
  DRAG_IMAGE) = range (0, 2)
 
-class ImageList(gtk.TreeView):
-    def __init__(self):
-        gtk.TreeView.__init__(self)
+class ImageList(Gtk.TreeView):
+    __gtype_name__ = 'ImageList'
 
-        column = gtk.TreeViewColumn('Preview', 
-                                     gtk.CellRendererPixbuf(),
+    def __init__(self):
+        Gtk.TreeView.__init__(self)
+
+        column = Gtk.TreeViewColumn('Preview',
+                                    Gtk.CellRendererPixbuf(),
                                     pixbuf=ImageStore.COL_THUMBNAIL)
 
         self.append_column(column)
 
-        renderer =  gtk.CellRendererText()
-        renderer.set_property('ellipsize', pango.ELLIPSIZE_END) 
+        renderer = Gtk.CellRendererText()
+        renderer.set_property('ellipsize', Pango.EllipsizeMode.END)
 
-        column = gtk.TreeViewColumn('Info', renderer)
+        column = Gtk.TreeViewColumn('Info', renderer)
         column.set_cell_data_func(renderer, self.data_func)
         self.append_column(column)
 
@@ -45,27 +48,31 @@ class ImageList(gtk.TreeView):
         self.set_enable_search(False)
 
         selection = self.get_selection()
-        selection.set_mode(gtk.SELECTION_MULTIPLE)
+        selection.set_mode(Gtk.SelectionMode.MULTIPLE)
 
         # Setup the drag and drop
         self.targets = self.drag_dest_get_target_list()
-        self.targets = gtk.target_list_add_image_targets (self.targets, DRAG_IMAGE, False)
-        self.targets = gtk.target_list_add_uri_targets (self.targets, DRAG_URI)
-        self.drag_dest_set (gtk.DEST_DEFAULT_ALL, self.targets, gtk.gdk.ACTION_COPY)
+        if not self.targets:
+            self.targets = Gtk.TargetList.new([])
+        self.targets.add_image_targets (DRAG_IMAGE, True)
+        self.targets.add_uri_targets (DRAG_URI)
+        self.drag_dest_set (Gtk.DestDefaults.ALL, [], Gdk.DragAction.COPY)
+        self.drag_dest_set_target_list(self.targets)
 
     def enable_targets(self):
         """Enable the drag and drop destination. """
-        self.drag_dest_set(gtk.DEST_DEFAULT_ALL, self.targets, gtk.gdk.ACTION_COPY)
+        self.drag_dest_set(Gtk.DestDefaults.ALL, [], Gdk.DragAction.COPY)
+        self.drag_dest_set_target_list(self.targets)
 
     def unable_targets(self):
         """Unable the drag and drop destination. """
         self.drag_dest_unset()
 
-    def data_func(self, column, cell, model, it):
+    def data_func(self, column, cell, model, it, data):
         from xml.sax.saxutils import escape
 
         (title, description, tags) = model.get(it, ImageStore.COL_TITLE, ImageStore.COL_DESCRIPTION, ImageStore.COL_TAGS)
-        
+
         if title:
             info_title = title
         else:
@@ -80,8 +87,7 @@ class ImageList(gtk.TreeView):
 
         s = "<b><big>%s</big></b>\n%s\n" % (escape (info_title), escape (info_desc))
         if tags:
-            colour = self.style.text[gtk.STATE_INSENSITIVE].pixel
-            s = s + "<span color='#%X'>%s</span>" % (colour, escape (tags))
-        
+            s = s + '%s' % (escape (tags))
+
         cell.set_property("markup", s)
 

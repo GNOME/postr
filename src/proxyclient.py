@@ -426,7 +426,7 @@ EXTRA_STEP_FRACTION = 0.04
 
 class UploadProgressTracker(object):
     """
-    This object takes a gtk.ProgressBar object as a parameter
+    This object takes a Gtk.ProgressBar object as a parameter
     and appropriately calls progress.set_fraction() as more
     data gets written to the pipe.
     """

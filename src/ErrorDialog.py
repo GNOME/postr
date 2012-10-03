@@ -15,15 +15,17 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import gtk
+from gi.repository import Gtk, GObject
 
-class ErrorDialog(gtk.MessageDialog):
+class ErrorDialog(Gtk.MessageDialog):
     def __init__(self, parent=None):
-        gtk.MessageDialog.__init__(self, flags=gtk.DIALOG_DESTROY_WITH_PARENT,
-                                   type=gtk.MESSAGE_ERROR,
-                                   buttons=gtk.BUTTONS_OK,
+        Gtk.MessageDialog.__init__(self,
+                                   flags=Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                                   type=Gtk.MessageType.ERROR,
+                                   buttons=Gtk.ButtonsType.OK,
                                    parent=parent,
                                    message_format=_("An error occurred"))
+        self.set_destroy_with_parent(True)
         self.connect("response", lambda dialog, response: dialog.destroy())
         self.expander = None
 
@@ -44,19 +46,19 @@ class ErrorDialog(gtk.MessageDialog):
     def add_details(self, message):
         # TODO: format nicer
         if not self.expander:
-            self.expander = gtk.Expander(_('Details'))
-            self.view = gtk.TextView();
+            self.expander = Gtk.Expander(_('Details'))
+            self.view = Gtk.TextView();
             self.buffer = self.view.get_buffer()
 
-            sw = gtk.ScrolledWindow()
-            sw.set_shadow_type(gtk.SHADOW_ETCHED_IN)
-            sw.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+            sw = Gtk.ScrolledWindow()
+            sw.set_shadow_type(Gtk.Shadow.ETCHED_IN)
+            sw.set_policy(Gtk.Policy.AUTOMATIC, Gtk.Policy.AUTOMATIC)
 
             sw.add(self.view)
 
             self.expander.add(sw)
             self.expander.show_all()
-            self.vbox.pack_start(self.expander)
+            self.vbox.pack_start(self.expander, True, True, 0)
 
 
         iter = self.buffer.get_end_iter()

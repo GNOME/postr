@@ -16,7 +16,7 @@
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
 import logging, os, mimetools, urllib
-import gio
+from gi.repository import Gio
 from twisted.internet import defer
 from twisted.python.failure import Failure
 import proxyclient as client
@@ -145,13 +145,13 @@ class Flickr:
         for key, val in inputs.items():
             lines.append("--" + boundary.encode("utf-8"))
             header = 'Content-Disposition: form-data; name="%s";' % key
-            if isinstance(val, gio.File):
+            if isinstance(val, Gio.File):
                 header += 'filename="%s";' % val.get_basename()
                 lines.append(header)
                 header = "Content-Type: application/octet-stream"
             lines.append(header)
             lines.append("")
-            if isinstance(val, gio.File):
+            if isinstance(val, Gio.File):
                 contents, length, etags = val.load_contents()
                 lines.append(contents)
             # Otherwise just hope it is string-like and encode it to
@@ -198,7 +198,7 @@ class Flickr:
         if imageData:
             kwargs['photo'] = imageData
         else:
-            kwargs['photo'] = gio.File(uri)
+            kwargs['photo'] = Gio.File.new_for_uri(uri)
 
         (boundary, form) = self.__encodeForm(kwargs)
         headers= {
