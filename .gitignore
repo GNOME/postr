@@ -52,6 +52,10 @@ po/*.gmo
 po/*.mo
 config.lt
 help/Makefile
-help/de/*.page
-help/de/*.mo
+help/**/*.page
+help/**/*.mo
+!help/C
 m4
+.project
+.settings
+.pydevproject
