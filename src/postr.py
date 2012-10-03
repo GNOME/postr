@@ -879,17 +879,16 @@ class Postr(UniqueApp):
             # size of the PNG
             size = pixbuf.get_width() * pixbuf.get_height() * pixbuf.get_n_channels()
 
+            print selection
             self.model.set(self.model.append(),
                            ImageStore.COL_IMAGE, pixbuf,
-                           ImageStore.COL_SIZE, size,
-                           ImageStore.COL_URI, None,
+                           ImageStore.COL_SIZE, long(size),
                            ImageStore.COL_PREVIEW, preview,
                            ImageStore.COL_THUMBNAIL, thumb,
                            ImageStore.COL_TITLE, "",
                            ImageStore.COL_DESCRIPTION, "",
                            ImageStore.COL_TAGS, "",
                            ImageStore.COL_VISIBLE, True)
-
 
         elif targetType == ImageList.DRAG_URI:
             for uri in selection.get_uris():
