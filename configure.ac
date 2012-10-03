@@ -1,6 +1,6 @@
 AC_PREREQ([2.67])
 
-AC_INIT([Postr],[0.13],[https://bugzilla.gnome.org/browse.cgi?product=postr],[postr],[http://projects.gnome.org/postr/])
+AC_INIT([Postr],[0.20],[https://bugzilla.gnome.org/browse.cgi?product=postr],[postr],[http://projects.gnome.org/postr/])
 AC_CONFIG_SRCDIR([src/postr.py])
 AM_INIT_AUTOMAKE([1.11.1])
 
@@ -8,8 +8,8 @@ AC_CONFIG_MACRO_DIR([m4])
 
 AM_PATH_PYTHON
 PKG_CHECK_MODULES(POSTR,
-		  pygtk-2.0
-		  nautilus-python >= 0.6.1)
+		  pygobject-3.0
+		  libnautilus-extension >= 3.0)
 
 AC_ARG_WITH(nautilus-extension-dir,
 	    [AS_HELP_STRING([--with-nautilus-extension-dir],
