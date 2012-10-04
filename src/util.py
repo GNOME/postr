@@ -17,7 +17,7 @@
 
 import os
 from gi.repository import Gtk, GdkPixbuf
-
+import bsddb3
 
 def greek(size):
     """Take a quantity (like 1873627) and display it in a human-readable rounded
@@ -73,7 +73,6 @@ def get_buddyicon(flickr, data, size=48):
     """Lookup the buddyicon from the data in @data using @flickr and resize it
     to @size pixels."""
     from twisted.web.client import getPage
-    import bsddb3
 
     global __buddy_cache
     if __buddy_cache is None:
