@@ -19,6 +19,7 @@ from gi.repository import Gtk, GObject
 from ErrorDialog import ErrorDialog
 from util import greek
 from xml.sax.saxutils import escape
+from twisted.python import log
 
 class StatusBar(Gtk.Label):
     __gtype_name__ = 'StatusBar'
@@ -38,7 +39,7 @@ class StatusBar(Gtk.Label):
 
         if self.flickr.get_username():
             message = message + _("Logged in as <b>%s</b>.  ") % escape(self.flickr.get_fullname() or self.flickr.get_username())
-        
+
         if self.quota and self.to_upload:
             message = message + _("You can upload %(quota)s this month, and have %(to_upload)s to upload.") % self.__dict__
         elif self.quota:
@@ -47,7 +48,7 @@ class StatusBar(Gtk.Label):
             message = message + _("%(to_upload)s to upload.") % self.__dict__
 
         self.set_markup(message)
-    
+
     def update_quota(self):
         """Call Flickr to get the current upload quota, and update the status bar."""
         def got_quota(rsp):
@@ -61,7 +62,9 @@ class StatusBar(Gtk.Label):
             dialog = ErrorDialog(self.get_toplevel())
             dialog.set_from_failure(failure)
             dialog.show_all()
-        self.flickr.people_getUploadStatus().addCallbacks(got_quota, error)
+        deferred = self.flickr.people_getUploadStatus()
+        deferred.addCallback(got_quota)
+        deferred.addErrback(log.err)
 
     def set_upload(self, to_upload):
         """Set the amount of data to be uploaded, and update the status bar."""

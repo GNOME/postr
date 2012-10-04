@@ -20,6 +20,7 @@
 import datetime
 from gi.repository import GObject, Gtk, GdkPixbuf
 from twisted.web.client import getPage
+from twisted.python import log
 
 _NO_PHOTOSET_ID = "-1"
 _NO_PHOTOSET_LABEL = _("None")
@@ -71,6 +72,9 @@ class SetCombo(Gtk.ComboBox):
         dialog.set_from_failure(failure)
         dialog.show_all()
 
+        log.err(failure, 'Exception in %s' % self.__gtype_name__)
+        return failure
+
     def __got_set_thumb(self, page, it):
         loader = GdkPixbuf.PixbufLoader()
         loader.set_size (self.thumb_size, self.thumb_size)
@@ -87,10 +91,14 @@ class SetCombo(Gtk.ComboBox):
                            1, photoset.find("title").text)
 
             url = "http://static.flickr.com/%s/%s_%s%s.jpg" % (photoset.get("server"), photoset.get("primary"), photoset.get("secret"), "_s")
-            getPage (url).addCallback(self.__got_set_thumb, it).addErrback(self.twisted_error)
+            deferred = getPage(url)
+            deferred.addCallback(self.__got_set_thumb, it)
+            deferred.addErrback(self.twisted_error)
 
     def update(self):
-        self.flickr.photosets_getList().addCallbacks(self.__got_photosets, self.twisted_error)
+        deferred = self.flickr.photosets_getList()
+        deferred.addCallback(self.__got_photosets)
+        deferred.addErrback(self.twisted_error)
 
     def get_id_for_iter(self, it):
         if it is None: return None

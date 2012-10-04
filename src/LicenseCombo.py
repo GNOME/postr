@@ -16,6 +16,7 @@
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
 from gi.repository import GObject, Gtk
+from twisted.python import log
 
 class LicenseCombo(Gtk.ComboBox):
     __gtype_name__ = 'LicenseCombo'
@@ -23,7 +24,7 @@ class LicenseCombo(Gtk.ComboBox):
     def __init__(self):
         Gtk.ComboBox.__init__(self)
         self.flickr = None
-        
+
         self.model = Gtk.ListStore(GObject.TYPE_STRING, GObject.TYPE_INT)
         self.model.append([_("Default"), -1])
         self.set_model(self.model)
@@ -33,12 +34,6 @@ class LicenseCombo(Gtk.ComboBox):
         self.pack_start(cell, True)
         self.add_attribute(cell, "text", 0)
 
-    def twisted_error(self, failure):
-        from ErrorDialog import ErrorDialog
-        dialog = ErrorDialog()
-        dialog.set_from_failure(failure)
-        dialog.show_all()
-
     def __got_licenses(self, rsp):
         """Callback for the photos.licenses.getInfo call"""
         for license in rsp.findall("licenses/license"):
@@ -46,8 +41,9 @@ class LicenseCombo(Gtk.ComboBox):
             self.model.append([license.get("name"), license_id])
 
     def update(self):
-        self.flickr.photos_licenses_getInfo().addCallbacks(self.__got_licenses,
-                                                           self.twisted_error)
+        deferred = self.flickr.photos_licenses_getInfo()
+        deferred.addCallback(self.__got_licenses)
+        deferred.addErrback(log.err)
 
     def get_license_for_iter(self, it):
         if it is None: return None

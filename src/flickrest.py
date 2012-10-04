@@ -19,6 +19,7 @@ import logging, os, mimetools, urllib
 from gi.repository import Gio
 from twisted.internet import defer
 from twisted.python.failure import Failure
+from twisted.python import log
 import proxyclient as client
 
 try:
@@ -36,7 +37,7 @@ class FlickrError(Exception):
         Exception.__init__(self)
         self.code = int(code)
         self.message = message
-    
+
     def __str__(self):
         return "%d: %s" % (self.code, self.message)
 
@@ -48,7 +49,7 @@ class FlickrError(Exception):
 
 class Flickr:
     endpoint = "http://api.flickr.com/services/rest/?"
-    
+
     def __init__(self, api_key, secret, perms="read"):
         self.__methods = {}
         self.api_key = api_key
@@ -75,10 +76,10 @@ class Flickr:
         if proxy and "://" not in proxy:
             proxy = "http://" + proxy
         self.proxy = proxy
-    
+
     def __repr__(self):
         return "<FlickREST>"
-    
+
     def __getTokenFile(self):
         """Get the filename that contains the authentication token for the API key"""
         return os.path.expanduser(os.path.join("~", ".flickr", self.api_key, "auth.xml"))
@@ -92,7 +93,7 @@ class Flickr:
         if os.path.exists(token):
             os.remove(token)
         self.token = None
-    
+
     def __sign(self, kwargs):
         kwargs['api_key'] = self.api_key
         # If authenticating we don't yet have a token
@@ -112,7 +113,7 @@ class Flickr:
         return client.getPage(Flickr.endpoint, proxy=self.proxy, method="POST",
                               headers={"Content-Type": "application/x-www-form-urlencoded"},
                               postdata=urllib.urlencode(kwargs))
-    
+
     def __cb(self, data, method):
         self.logger.info("%s returned" % method)
         xml = ElementTree.XML(data)
@@ -124,12 +125,16 @@ class Flickr:
         else:
             # Fake an error in this case
             raise FlickrError(0, "Invalid response")
-    
+
     def __getattr__(self, method):
         method = "flickr." + method.replace("_", ".")
         if not self.__methods.has_key(method):
             def proxy(method=method, **kwargs):
-                return self.__call(method, kwargs).addCallback(self.__cb, method)
+                deferred = self.__call(method, kwargs)
+                deferred.addCallback(self.__cb, method)
+                deferred.addErrback(log.err)
+                return deferred
+
             self.__methods[method] = proxy
         return self.__methods[method]
 
@@ -161,7 +166,7 @@ class Flickr:
         # Add final boundary.
         lines.append("--" + boundary.encode("utf-8"))
         return (boundary, '\r\n'.join(lines))
-    
+
     def upload(self, uri=None, imageData=None,
                title=None, desc=None, tags=None,
                is_public=None, is_family=None, is_friend=None,
@@ -194,23 +199,27 @@ class Flickr:
             kwargs['content_type'] = content_type
         self.__sign(kwargs)
         self.logger.info("Upload args %s" % kwargs)
-        
+
         if imageData:
             kwargs['photo'] = imageData
         else:
             kwargs['photo'] = Gio.File.new_for_uri(uri)
 
         (boundary, form) = self.__encodeForm(kwargs)
-        headers= {
+        headers = {
             "Content-Type": "multipart/form-data; boundary=%s" % boundary,
             "Content-Length": str(len(form))
             }
 
         self.logger.info("Calling upload")
-        return client.upload("http://api.flickr.com/services/upload/",
-                             proxy=self.proxy, method="POST",
-                             headers=headers, postdata=form,
-                             progress_tracker=progress_tracker).addCallback(self.__cb, "upload")
+        deferred = client.upload("http://api.flickr.com/services/upload/",
+                                 proxy=self.proxy, method="POST",
+                                 headers=headers, postdata=form,
+                                 progress_tracker=progress_tracker)
+        deferred.addCallback(self.__cb, "upload")
+        deferred.addErrback(log.err)
+
+        return deferred
 
     def authenticate_2(self, state):
         def gotToken(e):
@@ -235,7 +244,11 @@ class Flickr:
 
             # Callback to the user
             return True
-        return self.auth_getToken(frob=state['frob']).addCallback(gotToken)
+        deferred = self.auth_getToken(frob=state['frob'])
+        deferred.addCallback(gotToken)
+        deferred.addErrback(log.err)
+
+        return deferred
 
     def __get_frob(self):
         """Make the getFrob() call."""
@@ -246,7 +259,12 @@ class Flickr:
             self.__sign(keys)
             url = "http://flickr.com/services/auth/?api_key=%(api_key)s&perms=%(perms)s&frob=%(frob)s&api_sig=%(api_sig)s" % keys
             return {'url': url, 'frob': frob}
-        return self.auth_getFrob().addCallback(gotFrob)
+
+        deferred = self.auth_getFrob()
+        deferred.addCallback(gotFrob)
+        deferred.addErrback(log.err)
+
+        return deferred
 
     def authenticate_1(self):
         """Attempts to log in to Flickr. The return value is a Twisted Deferred
@@ -263,7 +281,7 @@ class Flickr:
             try:
                 e = ElementTree.parse(filename).getroot()
                 self.token = e.find("auth/token").text
-                
+
                 user = e.find("auth/user")
                 self.fullname = user.get("fullname")
                 self.username = user.get("username")
@@ -275,13 +293,17 @@ class Flickr:
                     # If checkToken() failed, we need to re-authenticate
                     self.clear_cached()
                     return self.__get_frob()
-                return self.auth_checkToken().addCallbacks(reply, failed)
+                deferred = self.auth_checkToken()
+                deferred.addCallbacks(reply, failed)
+                deferred.addErrback(log.err)
+
+                return deferred
             except:
                 # TODO: print the exception to stderr?
                 pass
-            
+
         return self.__get_frob()
-    
+
     @staticmethod
     def get_photo_url(photo, size=SIZE_MEDIUM):
         if photo is None:

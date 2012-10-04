@@ -19,6 +19,8 @@ from gi.repository import Gtk, GObject, Pango, GdkPixbuf
 from ErrorDialog import ErrorDialog
 import util
 
+from twisted.python import log
+
 (COL_SELECTED,
  COL_ID,
  COL_NAME,
@@ -82,7 +84,9 @@ class GroupSelector(Gtk.TreeView):
 
     def update(self):
         # TODO: block changed signals
-        self.flickr.groups_pools_getGroups().addCallbacks(self.got_groups, self.twisted_error)
+        deferred = self.flickr.groups_pools_getGroups()
+        deferred.addCallback(self.got_groups)
+        deferred.addErrback(self.twisted_error)
 
     def got_groups(self, rsp):
         for group in rsp.findall("groups/group"):
@@ -92,12 +96,18 @@ class GroupSelector(Gtk.TreeView):
                             COL_NAME, group.get("name"))
             def got_thumb(thumb, it):
                 self.model.set (it, COL_ICON, thumb)
-            util.get_buddyicon(self.flickr, group, self.thumb_size).addCallback(got_thumb, it)
+
+            deferred = util.get_buddyicon(self.flickr, group, self.thumb_size)
+            deferred.addCallback(got_thumb, it)
+            deferred.addErrback(self.twisted_error)
 
     def twisted_error(self, failure):
         dialog = ErrorDialog()
         dialog.set_from_failure(failure)
         dialog.show_all()
+
+        log.err(failure, 'Exception in %s' % self.__gtype_name__)
+        return failure
 
     def get_selected_groups(self):
         return [row[COL_ID] for row in self.model if row[COL_SELECTED]]

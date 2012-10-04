@@ -16,6 +16,7 @@
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
 from gi.repository import Gtk, GObject
+from twisted.python import log
 
 _USER_POPULAR_TAGS = 200
 _HOTS_TAGS = 20
@@ -57,7 +58,7 @@ class TagsEntry(Gtk.Entry):
             # add the matching word
             current_text = '%s %s ' % (current_text, model[iter][_COL_TAG_NAME])
         else:
-            current_text = model[iter][_COL_TAG_NAME] +' '
+            current_text = model[iter][_COL_TAG_NAME] + ' '
 
         # set back the whole text
         self.set_text(current_text)
@@ -83,15 +84,20 @@ class TagsEntry(Gtk.Entry):
         return modelstr.lower().startswith(key_string.lower())
 
     def update(self):
-
         self.completion_model.clear()
 
-        self.flickr.tags_getListUserPopular(user_id=self.flickr.get_nsid(), \
-        count=_USER_POPULAR_TAGS).addCallbacks(self.create_completion_model,
-        self.twisted_error)
+        # In both cases, we do not call a dialog to throw an error
+        # because it is too invasive when we query Flickr constantly.
+        user_id = self.flickr.get_nsid()
+        deferred1 = self.flickr.tags_getListUserPopular(user_id=user_id,
+                                                       count=_USER_POPULAR_TAGS)
+        deferred1.addCallback(self.create_completion_model)
+        deferred1.addErrback(log.err)
 
-        self.flickr.tags_getHotList(user_id=self.flickr.get_nsid(), count=_HOTS_TAGS)\
-        .addCallbacks(self.create_completion_model, self.twisted_error)
+        deferred2 = self.flickr.tags_getHotList(user_id=user_id,
+                                               count=_HOTS_TAGS)
+        deferred2.addCallback(self.create_completion_model)
+        deferred2.addErrback(log.err)
 
     def create_completion_model(self, rsp):
         '''
@@ -102,10 +108,3 @@ class TagsEntry(Gtk.Entry):
             self.completion_model.append([tag.text])
 
         self.completion.set_model(self.completion_model)
-
-    def twisted_error(self, failure):
-        #TODO: throw a message in a less invasive way
-        from ErrorDialog import ErrorDialog
-        dialog = ErrorDialog()
-        dialog.set_from_failure(failure)
-        dialog.show_all()

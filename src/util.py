@@ -18,6 +18,9 @@
 import os
 from gi.repository import Gtk, GdkPixbuf
 import bsddb3
+from twisted.web.client import getPage
+from twisted.internet import defer
+from twisted.python import log
 
 def greek(size):
     """Take a quantity (like 1873627) and display it in a human-readable rounded
@@ -72,7 +75,6 @@ __buddy_cache = None
 def get_buddyicon(flickr, data, size=48):
     """Lookup the buddyicon from the data in @data using @flickr and resize it
     to @size pixels."""
-    from twisted.web.client import getPage
 
     global __buddy_cache
     if __buddy_cache is None:
@@ -104,11 +106,12 @@ def get_buddyicon(flickr, data, size=48):
         url = "http://www.flickr.com/images/buddyicon.jpg"
 
     if __buddy_cache.has_key(url):
-        from twisted.internet import defer
-        return defer.succeed(load_thumb(__buddy_cache[url], size))
+        return defer.execute(load_thumb, __buddy_cache[url], size)
     else:
-        return getPage(url).addCallback(got_data, url, size)
-
+        deferred = getPage(url)
+        deferred.addCallback(got_data, url, size)
+        deferred.addErrback(log.err)
+        return deferred
 
 def get_cache_path():
     """Return the location of the XDG cache directory."""

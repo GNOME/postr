@@ -21,6 +21,8 @@ import logging, os, urllib
 from urlparse import urlparse
 from os.path import basename
 from tempfile import mkstemp
+from twisted.python import log
+from twisted.internet import reactor
 
 from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk, GLib
 
@@ -216,7 +218,9 @@ class Postr(UniqueApp):
         self.proxy_changed(client, 0, None, None)
 
         # Connect to flickr, go go go
-        self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
+        deferred = self.flickr.authenticate_1()
+        deferred.addCallback(self.auth_open_url)
+        deferred.addErrback(self.twisted_error)
 
     def open_uri(self, uri):
         return self.send_message(self.commands['OPEN'], uri)
@@ -227,6 +231,9 @@ class Postr(UniqueApp):
         dialog = ErrorDialog(self.window)
         dialog.set_from_failure(failure)
         dialog.show_all()
+
+        log.err(failure, 'Exception in %s' % self.__gtype_name__)
+        return failure
 
     def proxy_changed(self, client, cnxn_id, entry, something):
         if client.get_bool("/system/http_proxy/use_http_proxy"):
@@ -274,7 +281,9 @@ class Postr(UniqueApp):
         else:
             dialog = AuthenticationDialog(self.window, state['url'])
             if dialog.run() == Gtk.ResponseType.ACCEPT:
-                self.flickr.authenticate_2(state).addCallbacks(self.connected, self.twisted_error)
+                deferred = self.flickr.authenticate_2(state)
+                deferred.addCallback(self.connected)
+                deferred.addErrback(self.twisted_error)
             dialog.destroy()
 
     def connected(self, connected):
@@ -320,18 +329,24 @@ class Postr(UniqueApp):
         Update the avatar displayed at the top of the window.  Called when
         authentication is completed.
         """
-        def getinfo_cb(rsp):
+        def getinfo_cb(rsp, user_id):
             p = rsp.find("person")
             data = {
-                "nsid": self.flickr.get_nsid(),
+                "nsid": user_id,
                 "iconfarm": p.get("iconfarm"),
                 "iconserver": p.get("iconserver")
             }
             def get_buddyicon_cb(icon):
                 self.avatar_image.set_from_pixbuf(icon)
-            get_buddyicon(self.flickr, data).addCallbacks(get_buddyicon_cb, self.twisted_error)
+            deferred = get_buddyicon(self.flickr, data)
+            deferred.addCallback(get_buddyicon_cb)
+            deferred.addErrback(log.err)
+
         # Need to call people.getInfo to get the iconserver/iconfarm
-        self.flickr.people_getInfo(user_id=self.flickr.get_nsid()).addCallbacks(getinfo_cb, self.twisted_error)
+        user_id = self.flickr.get_nsid()
+        deferred = self.flickr.people_getInfo(user_id=user_id)
+        deferred.addCallback(getinfo_cb, user_id)
+        deferred.addErrback(log.err)
 
     def on_field_changed(self, widget, column):
         """Callback when the entry fields are changed."""
@@ -499,8 +514,7 @@ class Postr(UniqueApp):
         for gfile in self.temporary_files:
             gfile.delete(None)
 
-        import twisted.internet.reactor
-        twisted.internet.reactor.stop()
+        reactor.stop()
 
     def on_save_session_activate(self, widget):
         """Callback from File->Save session."""
@@ -558,7 +572,9 @@ class Postr(UniqueApp):
     def on_switch_activate(self, menuitem):
         """Callback from File->Switch User."""
         self.flickr.clear_cached()
-        self.flickr.authenticate_1().addCallbacks(self.auth_open_url, self.twisted_error)
+        deferred = self.flickr.authenticate_1()
+        deferred.addCallback(self.auth_open_url)
+        deferred.addErrback(self.twisted_error)
 
     def on_upload_activate(self, menuitem):
         """Callback from File->Upload."""
@@ -1103,7 +1119,8 @@ class Postr(UniqueApp):
                                        progress_tracker=self.upload_progress_tracker)
             else:
                 print "No filename or pixbuf stored"
-        except Gio.Error, (error):
+        except GLib.GError, e:
+            print e
             # save the iterator and continue uploading process
             self.list_failed_it.append(it)
             self.current_upload_it = None
@@ -1112,29 +1129,34 @@ class Postr(UniqueApp):
 
         if set_id:
             d.addCallback(self.add_to_set, set_id)
+            d.addErrback(log.err)
         else:
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_SET_ID)
         if groups:
             d.addCallback(self.add_to_groups, groups)
+            d.addErrback(log.err)
         else:
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_GROUPS)
         if license is not None: # 0 is a valid license.
             d.addCallback(self.set_license, license)
+            d.addErrback(log.err)
         else:
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_LICENSE)
         # creating a new photoset has implications on subsequent uploads,
         # so this has to finish before starting the next upload
         if new_photoset_name:
             d.addCallback(self.create_photoset_then_continue, new_photoset_name)
+            d.addErrback(log.err)
         else:
             d.addCallbacks(self.upload, self.upload_error)
+            d.addErrback(self.log.err)
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_NEW_SET)
 
     def create_photoset_then_continue(self, rsp, photoset_name):
         photo_id = rsp.find("photoid").text
-        create_photoset = self.flickr.photosets_create(primary_photo_id=photo_id, title=photoset_name)
-        create_photoset.addCallback(self._process_photoset_creation, photoset_name)
-        create_photoset.addErrback(self.upload_error)
+        deferred = self.flickr.photosets_create(primary_photo_id=photo_id, title=photoset_name)
+        deferred.addCallback(self._process_photoset_creation, photoset_name)
+        deferred.addErrback(self.upload_error)
         return rsp
 
     def _process_photoset_creation(self, create_rsp, photoset_name):
