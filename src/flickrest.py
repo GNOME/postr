@@ -157,7 +157,7 @@ class Flickr:
             lines.append(header)
             lines.append("")
             if isinstance(val, Gio.File):
-                contents, length, etags = val.load_contents()
+                status, contents, etags = val.load_contents(None)
                 lines.append(contents)
             # Otherwise just hope it is string-like and encode it to
             # UTF-8. TODO: this breaks when val is binary data.
