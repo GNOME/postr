@@ -22,7 +22,7 @@ from urlparse import urlparse
 from os.path import basename
 from tempfile import mkstemp
 
-from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk
+from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk, GLib
 
 #FIXME
 #import gnome.ui
@@ -734,10 +734,17 @@ class Postr(UniqueApp):
         return self.add_image_filename(uri)
 
     def add_image_filename(self, filename):
-        gfile = Gio.File.new_for_commandline_arg(filename)
-        fileinfo = gfile.query_info(_FILE_ATTRIBUTES,
-                                    Gio.FileQueryInfoFlags.NONE,
-                                    None)
+        try:
+            gfile = Gio.File.new_for_commandline_arg(filename)
+            fileinfo = gfile.query_info(_FILE_ATTRIBUTES,
+                                        Gio.FileQueryInfoFlags.NONE,
+                                        None)
+        except GLib.GError, e:
+            d = ErrorDialog(self.window)
+            d.set_from_exception(e)
+            d.show_all()
+            return
+
         self.add_image_file(gfile, fileinfo)
 
     def add_image_fileinfo(self, parent, fileinfo):
