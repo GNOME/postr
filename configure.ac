@@ -1,6 +1,6 @@
 AC_PREREQ([2.67])
 
-AC_INIT([Postr],[0.13],[https://bugzilla.gnome.org/browse.cgi?product=postr],[postr],[http://projects.gnome.org/postr/])
+AC_INIT([Postr],[0.13.1],[https://bugzilla.gnome.org/browse.cgi?product=postr],[postr],[http://projects.gnome.org/postr/])
 AC_CONFIG_SRCDIR([src/postr.py])
 AM_INIT_AUTOMAKE([1.11.1])
 

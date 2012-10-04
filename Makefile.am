@@ -4,7 +4,7 @@ SUBDIRS = help po
 
 bin_SCRIPTS = postr
 
-uidir = $(datadir)/postr
+uidir = $(pythondir)/postr
 ui_DATA = src/postr.glade
 
 postrdir = $(pythondir)/postr
