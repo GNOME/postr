@@ -20,6 +20,7 @@
 import logging, os, urllib
 from urlparse import urlparse
 from os.path import basename
+from tempfile import mkstemp
 
 from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk
 
@@ -163,6 +164,10 @@ class Postr(UniqueApp):
 
         if has_gtkspell:
           gtkspell.Spell(self.desc_view)
+
+        # We create temporary files when we receive images as Pixbufs
+        # (drag & drop). We have to delete them at the of the session.
+        self.temporary_files = []
 
         # TODO: remove this
         self.current_it = None
@@ -490,6 +495,9 @@ class Postr(UniqueApp):
                 return True
             elif response == Gtk.ResponseType.ACCEPT:
                 self.save_upload_set()
+
+        for gfile in self.temporary_files:
+            gfile.delete(None)
 
         import twisted.internet.reactor
         twisted.internet.reactor.stop()
@@ -875,14 +883,23 @@ class Postr(UniqueApp):
             sizes = get_thumb_size(pixbuf.get_width(), pixbuf.get_height(), 64, 64)
             thumb = pixbuf.scale_simple(sizes[0], sizes[1], GdkPixbuf.InterpType.BILINEAR)
 
-            # TODO: This is wrong, and should generate a PNG here and use the
-            # size of the PNG
-            size = pixbuf.get_width() * pixbuf.get_height() * pixbuf.get_n_channels()
+            # Generate a PNG to get the right size file and to send a
+            # smaller image to Flickr
+            filename = mkstemp('-postr.png')[1]
+            pixbuf.savev(filename, 'png', [], [])
 
-            print selection
+            gfile = Gio.File.new_for_path(filename)
+            self.temporary_files.append(gfile)
+
+            fileinfo = gfile.query_info(_FILE_ATTRIBUTES,
+                                        Gio.FileQueryInfoFlags.NONE, None)
+
+            # TODO: Since we store the pixbuf in a temporary file, we
+            # could just call add_image_file(), once add_image_file()
+            # does not open a file 3 times.
             self.model.set(self.model.append(),
-                           ImageStore.COL_IMAGE, pixbuf,
-                           ImageStore.COL_SIZE, long(size),
+                           ImageStore.COL_SIZE, fileinfo.get_size(),
+                           ImageStore.COL_URI, gfile.get_uri(),
                            ImageStore.COL_PREVIEW, preview,
                            ImageStore.COL_THUMBNAIL, thumb,
                            ImageStore.COL_TITLE, "",
