@@ -43,14 +43,7 @@ class LicenseCombo(Gtk.ComboBox):
         """Callback for the photos.licenses.getInfo call"""
         for license in rsp.findall("licenses/license"):
             license_id = int(license.get("id"))
-            it = self.model.append()
             self.model.append([license.get("name"), license_id])
-
-            # Set default license to All Rights Reserved.
-            # I haven't found a way to get the default license
-            # from flickr by the API.
-            if license_id == 0:
-                self.set_active_iter(it)
 
     def update(self):
         self.flickr.photos_licenses_getInfo().addCallbacks(self.__got_licenses,
