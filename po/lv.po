@@ -4,26 +4,26 @@
 #
 # arvislacis <arvis.lacis@gmail.com>, 2012.
 # Anita Reitere <nitalynx@gmail.com>, 2012.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2012-07-23 00:19+0000\n"
-"PO-Revision-Date: 2012-08-08 23:21+0300\n"
-"Last-Translator: Anita Reitere <nitalynx@gmail.com>\n"
-"Language-Team: Latviešu <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-13 00:02+0300\n"
+"PO-Revision-Date: 2012-10-13 00:02+0300\n"
+"Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:983
+#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Flickr augšupielādētājs"
 
@@ -84,66 +84,70 @@ msgid "_Help"
 msgstr "_Palīdzība"
 
 #: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Saturs"
+
+#: ../src/postr.glade.h:14
 msgid "Add Photos..."
 msgstr "Pievienot fotogrāfijas..."
 
-#: ../src/postr.glade.h:14
+#: ../src/postr.glade.h:15
 msgid "Remove Photos"
 msgstr "Izņemt fotogrāfijas"
 
-#: ../src/postr.glade.h:15
-msgid "Send to Groups"
-msgstr "Nosūtīt grupām"
-
 #: ../src/postr.glade.h:16
-msgid "_Content type:"
-msgstr "Satura vei_ds:"
+msgid "Rename"
+msgstr "Pārdēvēt"
 
 #: ../src/postr.glade.h:17
-msgid "_Privacy:"
-msgstr "_Privātums:"
-
-#: ../src/postr.glade.h:18
-msgid "_Safety:"
-msgstr "_Drošība:"
-
-#: ../src/postr.glade.h:19
-msgid "_Visible in search results"
-msgstr "_Redzams meklēšanas rezultātos"
-
-#: ../src/postr.glade.h:20
-msgid "_License:"
-msgstr "_Licence:"
-
-#: ../src/postr.glade.h:21
-msgid "Privacy, Safety, Type and License"
-msgstr "Privātums, drošība, veids un licence"
-
-#: ../src/postr.glade.h:22
 msgid "_Title:"
 msgstr "_Nosaukums:"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:18
 msgid "_Description:"
 msgstr "_Apraksts:"
 
-#: ../src/postr.glade.h:24
+#: ../src/postr.glade.h:19
 msgid "Ta_gs:"
 msgstr "Bir_kas:"
 
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:20
 msgid "Add to _Set:"
 msgstr "Pievienot kolekcijai:"
 
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Nosūtīt grupām"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Redzams meklēšanas rezultātos"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Privātums:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Drošība:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Satura vei_ds:"
+
 #: ../src/postr.glade.h:26
-msgid "Rename"
-msgstr "Pārdēvēt"
+msgid "_License:"
+msgstr "_Licence:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Privātums, drošība, veids un licence"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Turpināt"
 
-#: ../src/AuthenticationDialog.py:46
+#: ../src/AuthenticationDialog.py:47
 msgid ""
 "Postr needs to login to Flickr to upload your photos. Please click on the "
 "link below to login to Flickr."
@@ -151,82 +155,82 @@ msgstr ""
 "Postr ir jāpiesakās Flickr, lai augšupielādētu fotogrāfijas. Lūdzu, "
 "noklikšķiniet uz zemāk esošās saites, lai pieteiktos Flickr."
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
 msgid "Login to Flickr"
 msgstr "Pieteikties Flickr"
 
-#: ../src/ErrorDialog.py:26
+#: ../src/ErrorDialog.py:27
 msgid "An error occurred"
 msgstr "Radās kļūda"
 
-#: ../src/ErrorDialog.py:47
+#: ../src/ErrorDialog.py:49
 msgid "Details"
 msgstr "Sīkāka informācija"
 
-#: ../src/ImageList.py:72
+#: ../src/ImageList.py:79
 msgid "No title"
 msgstr "Nav nosaukuma"
 
-#: ../src/LicenseCombo.py:26
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Noklusējums"
 
-#: ../src/postr.py:412
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Pievienot fotogrāfijas"
 
-#: ../src/postr.py:424
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Attēli"
 
-#: ../src/postr.py:428
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Visas datnes"
 
-#: ../src/postr.py:493
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Pašlaik augšupielādē</b>"
 
-#: ../src/postr.py:494
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
 msgstr ""
-"Fotogrāfijas tiek augšupielādētas. Vai tiešām vēlaties iziet? "
-"Jūs varat arī saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
+"Fotogrāfijas tiek augšupielādētas. Vai tiešām vēlaties iziet? Jūs varat arī "
+"saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
 
-#: ../src/postr.py:509
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotogrāfijas, kas jāaugšupielādē</b>"
 
-#: ../src/postr.py:510
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
 msgstr ""
-"Ir fotogrāfijas, kas gaida augšupielādi. Vai tiešām vēlaties "
-"iziet? Jūs varat arī saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
+"Ir fotogrāfijas, kas gaida augšupielādi. Vai tiešām vēlaties iziet? Jūs "
+"varat arī saglabāt vēl neizpildīto augšupielādi vēlākam laikam."
 
-#: ../src/postr.py:781
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Attēls %s ir pārāk liels, attēliem jābūt ne lielākiem par %dMB."
 
-#: ../src/postr.py:949
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Augšupielādē %(index)d no %(count)d"
 
-#: ../src/postr.py:952
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flickr augšupielādētājs (%(index)d/%(count)d)"
 
-#: ../src/postr.py:999
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Dažas datnes neeksistē vai arī pašlaik nav pieejamas."
 
-#: ../src/postr.py:1356
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -235,7 +239,7 @@ msgstr ""
 "Jūs esat pieteicies kā %s, bet ielādējat\n"
 "augšupielādes kolekciju %s"
 
-#: ../src/postr.py:1360 ../src/postr.py:1377
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -243,7 +247,7 @@ msgstr ""
 "Vai vēlaties turpināt ielādi? Jūs neimportēsiet fotogrāfiju kolekcijas "
 "informāciju."
 
-#: ../src/postr.py:1373
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -252,47 +256,46 @@ msgstr ""
 "Jūs neesat pieteicies, bet ielādējat\n"
 "augšupielādes kolekciju %s"
 
-#: ../src/ProgressDialog.py:56
+#: ../src/ProgressDialog.py:59
 msgid "Uploading"
 msgstr "Augšupielādē"
 
-#: ../src/SetCombo.py:23
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Nav"
 
-#: ../src/SetCombo.py:24
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Izveidot fotogrāfiju kolekciju “%s”"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "jauna fotogrāfiju kolekcija (%d-%m-%y)"
 
-#: ../src/SetCombo.py:132
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Jaunās fotogrāfiju kolekcijas nosaukums:"
 
-#: ../src/StatusBar.py:38
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Pieteicies kā <b>%s</b>."
 
-#: ../src/StatusBar.py:41
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
-"Šajā mēnesī var augšupielādēt %(quota)s, augšupielādējamās datnes aizņem %"
-"(to_upload)s."
+"Šajā mēnesī var augšupielādēt %(quota)s, augšupielādējamās datnes aizņem "
+"%(to_upload)s."
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Šajā mēnesī var augšupielādēt %(quota)s."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s augšupielādējamo datņu."
-
 
