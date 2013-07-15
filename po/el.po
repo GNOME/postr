@@ -1,0 +1,303 @@
+# Greek translation for postr.
+# Copyright (C) 2013 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Dimitris Spingos <dmtrs32@gmail.com>, 2013.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&"
+"keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2013-03-17 14:25+0000\n"
+"PO-Revision-Date: 2013-07-15 18:40+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Αποστολέας του Flickr"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Αποστολή φωτογραφιών στο Flickr"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Αποστολή στο Flickr..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Αποστολή των επιλεγμένων αρχείων στο Flickr"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Αρχείο"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Προσθήκη φωτογραφιών..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "Α_φαίρεση φωτογραφιών"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "Απο_θήκευση συνεδρίας"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Φόρτωση συνεδρίας"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "Α_λλαγή χρήστη..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Αποστολή"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Επιλογή"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Αποεπι_λογή όλων"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "Α_ντιστροφή επιλογής"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Προσθήκη φωτογραφιών..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Αφαίρεση φωτογραφιών"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Μετονομασία"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Τίτλος:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Περιγραφή:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Ετ_ικέτες:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Προσθήκη σε _συλλογή:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Αποστολή σε ομάδες"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "Ο_ρατό σε αποτελέσματα αναζήτησης"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Ιδιωτικότητα:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "Ασ_φάλεια:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Τύπος _περιεχομένου:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "Ά_δεια:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Ιδιωτικότητα, ασφάλεια, τύπος και άδεια"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Το Postr χρειάζεται να συνδεθεί στο Flickr για αποστολή των φωτογραφιών σας. "
+"Παρακαλούμε, πατήστε στον παρακάτω σύνδεσμο για σύνδεση στο Flickr."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Σύνδεση στο Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Προέκυψε ένα σφάλμα"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Χωρίς τίτλο"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Προσθήκη φωτογραφιών"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Εικόνες"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Όλα τα αρχεία"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Τώρα αποστέλλεται</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Οι φωτογραφίες ανεβαίνουν ακόμα. Είσαστε βέβαιος ότι θέλετε να "
+"εγκαταλείψετε; Μπορείτε επίσης να αποθηκεύσετε την εκκρεμή σειρά αποστολής "
+"σας για αργότερα."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Φωτογραφίες για αποστολή</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Υπάρχουν εκκρεμείς φωτογραφίες για αποστολή. Είσαστε βέβαιος ότι θέλετε να "
+"εγκαταλείψετε; Μπορείτε επίσης να αποθηκεύσετε την εκκρεμή σειρά αποστολής "
+"σας για αργότερα."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"Η εικόνα %s είναι υπερβολικά μεγάλη, οι εικόνες πρέπει να είναι μεγαλύτερες "
+"από %dMB σε μέγεθος."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Ανεβαίνουν %(index)d από %(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Αποστολέας του Flickr (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Κάποια αρχεία δεν υπάρχουν ή είναι προς το παρόν απροσπέλαστα."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Συνδεθήκατε ως %s αλλά φορτώνετε\n"
+"μια συλλογή για αποστολή για τον %s"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Θέλετε να συνεχίσετε με τη φόρτωση; Δεν θα εισάγετε πληροφορίες για τη σειρά "
+"φωτογραφιών."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Δεν συνδεθήκατε αλλά στέλνετε\n"
+"μια σειρά για αποστολή για τον %s"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Αποστέλλεται"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Κανένα"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Δημιουργία σειράς φωτογραφιών \"%s\""
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "νέα σειρά φωτογραφιών (%d-%m-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Όνομα για τη νέα σειρά φωτογραφιών:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Σύνδεση ως <b>%s</b>."
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Μπορείτε να στείλετε %(quota)s αυτόν τον μήνα και να έχετε %(to_upload)s για "
+"αποστολή."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Μπορείτε να στείλετε %(quota)s αυτόν τον μήνα."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s για αποστολή."
