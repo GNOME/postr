@@ -1,0 +1,510 @@
+# Danish translation for postr.
+# Copyright (C) 2011 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Joe Hansen <joedalton2@yahoo.dk>, 2011.
+#
+# evt. fejlmelde
+# The next time, you can load a session previously save. -> saved
+# type, license and other data of image" -> afsluttende punktum
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"POT-Creation-Date: 2011-03-22 20:07+0000\n"
+"PO-Revision-Date: 2013-08-05 20:07+0000\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: C/tags.page:8(desc)
+msgid "Adding tags to your pictures."
+msgstr "Tilføje mærker til dine billeder."
+
+#: C/tags.page:11(name) C/permissions.page:11(name) C/login.page:11(name)
+#: C/index.page:12(name) C/uploading.page:11(name) C/sets.page:11(name)
+#: C/offline.page:10(name) C/introduction.page:12(name) C/groups.page:11(name)
+msgid "Germán Póo-Caamaño"
+msgstr "Germán Póo-Caamaño"
+
+#: C/tags.page:12(email) C/permissions.page:12(email) C/login.page:12(email)
+#: C/index.page:13(email) C/uploading.page:12(email) C/sets.page:12(email)
+#: C/offline.page:11(email) C/introduction.page:13(email)
+#: C/groups.page:12(email)
+msgid "gpoo@gnome.org"
+msgstr "gpoo@gnome.org"
+
+#: C/tags.page:15(name) C/permissions.page:15(name) C/login.page:15(name)
+#: C/index.page:16(name) C/uploading.page:15(name)
+#: C/introduction.page:16(name)
+msgid "Sergio Infante"
+msgstr "Sergio Infante"
+
+#: C/tags.page:16(email) C/permissions.page:16(email) C/login.page:16(email)
+#: C/index.page:17(email) C/uploading.page:16(email)
+#: C/introduction.page:17(email) C/groups.page:16(email)
+msgid "raulsergio9@gmail.com"
+msgstr "raulsergio9@gmail.com"
+
+#: C/tags.page:20(title)
+msgid "Adding tags to your pictures"
+msgstr "Tilføje mærker til dine billeder"
+
+#: C/tags.page:24(title) C/tags.page:26(title)
+msgid "What is a tag?"
+msgstr "Hvad er et mærke?"
+
+#: C/tags.page:27(p)
+msgid ""
+"A tag is a non-hierarchical term assigned to a piece of information. This "
+"term helps describe an item and allows it to be found again by browsing or "
+"searching. Tags are generally chosen informally and personally by the user."
+msgstr ""
+"Et mærke er en ikkehierarkisk benævnelse, som tildeles en informationsbid. Denne "
+"benævnelse hjælper med at beskrive en enhed og tillader, at denne kan findes "
+"igen ved at gennemse eller søge efter den. Mærker vælges normalt uformelt "
+"og personligt af brugeren."
+
+#: C/tags.page:32(title) C/tags.page:34(title)
+msgid "Creating a tag"
+msgstr "Oprette et mærke"
+
+#: C/tags.page:35(p)
+msgid ""
+"Tags are created by typing the term on Tags field on <app>Postr</app> main "
+"window"
+msgstr ""
+"Mærker oprettes ved at indtaste benævnelsen i mærkefelter i hovedvinduet i "
+"<app>Postr</app>"
+
+#: C/permissions.page:8(desc)
+msgid "Setting permissions to your photographs."
+msgstr "Angive rettigheder for dine billeder."
+
+#: C/permissions.page:20(title)
+msgid "Privacy, safety and license"
+msgstr "Privatliv, sikkerhed og licens"
+
+#: C/permissions.page:24(title)
+msgid "Privacy"
+msgstr "Privatliv"
+
+#: C/permissions.page:26(title)
+msgid "Privacy of your photographs"
+msgstr "Privatlivsindstillinger for dine billeder"
+
+#: C/permissions.page:27(p) C/permissions.page:41(p) C/permissions.page:54(p)
+#: C/permissions.page:67(p)
+msgid "You can choose between:"
+msgstr "Du kan vælge imellem:"
+
+#: C/permissions.page:29(p)
+msgid "Public"
+msgstr "Offentlig"
+
+#: C/permissions.page:30(p)
+msgid "Family Only"
+msgstr "Kun familie"
+
+#: C/permissions.page:31(p)
+msgid "Friends and Family Only"
+msgstr "Kun venner og familie"
+
+#: C/permissions.page:32(p)
+msgid "Private"
+msgstr "Private"
+
+#: C/permissions.page:38(title)
+msgid "Safety"
+msgstr "Sikkerhed"
+
+#: C/permissions.page:40(title)
+msgid "Defining the safety of your content"
+msgstr "Definer sikkerheden af dit indhold"
+
+#: C/permissions.page:43(p)
+msgid "Safe"
+msgstr "Sikker"
+
+#: C/permissions.page:44(p)
+msgid "Moderate"
+msgstr "Moderat"
+
+#: C/permissions.page:45(p)
+msgid "Restricted"
+msgstr "Begrænset"
+
+#: C/permissions.page:51(title)
+msgid "Content Type"
+msgstr "Indholdstype"
+
+#: C/permissions.page:53(title)
+msgid "Content Type of your content"
+msgstr "Typen af indhold"
+
+#: C/permissions.page:56(p)
+msgid "Photo"
+msgstr "Billede"
+
+#: C/permissions.page:57(p)
+msgid "Screenshot"
+msgstr "Skærmbillede"
+
+#: C/permissions.page:58(p)
+msgid "Other"
+msgstr "Andet"
+
+#: C/permissions.page:64(title)
+msgid "License"
+msgstr "Licens"
+
+#: C/permissions.page:66(title)
+msgid "Choosing a license for your photographs"
+msgstr "Vælge en licens for dine billeder"
+
+#: C/permissions.page:69(p)
+msgid "Default"
+msgstr "Standard"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+# og dog mon ikke den her er så generel at den godt kan
+# oversættes.
+#: C/permissions.page:70(p)
+msgid "All Rights Reserved"
+msgstr "Alle rettigheder forbeholdes"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:71(p)
+msgid "Attribution License"
+msgstr "Attribution License"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:72(p)
+msgid "Attribution-NoDerivs License"
+msgstr "Attribution-NoDerivs License"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:73(p)
+msgid "Attribution-NonCommercial-NoDerivs License"
+msgstr "Attribution-NonCommercial-NoDerivs License"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:74(p)
+msgid "Attribution-NonCommercial License"
+msgstr "Attribution-NonCommercial License"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:75(p)
+msgid "Attribution-NonCommercial-ShareAlike License"
+msgstr "Attribution-NonCommercial-ShareAlike License"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:76(p)
+msgid "Attribution-ShareAlike License"
+msgstr "Attribution-ShareAlike License"
+
+#: C/permissions.page:77(p)
+msgid "No known copyright restrictions"
+msgstr "Ingen kendte ophavsretsbegrænsninger"
+
+# må være Flickrs beskrivelser, så har beholdt uoversat
+#: C/permissions.page:78(p)
+msgid "United States Government Work"
+msgstr "United States Government Work"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/login.page:31(None)
+msgid ""
+"@@image: 'figures/postr-login-flickr.png'; "
+"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+msgstr ""
+"@@image: 'figures/postr-login-flickr.png'; "
+"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+
+#: C/login.page:8(desc)
+msgid "Connecting <app>Postr</app> to your Flickr account."
+msgstr "Forbinde <app>Postr</app> til din Flickr-konto."
+
+#: C/login.page:19(title)
+msgid "Log in on Flickr"
+msgstr "Logind på Flickr"
+
+#: C/login.page:21(p)
+msgid ""
+"<app>Postr</app> requires authorization from your Flickr account to upload "
+"your photos. In order to connect <app>Postr</app> with your Flickr account, "
+"the first time you run <app>Postr</app>, you will be asked to login to "
+"Flickr with the following dialog:"
+msgstr ""
+"<app>Postr</app> kræver godkendelse fra din Flickr-konto for at overføre "
+"dine billeder. For at forbinde <app>Postr</app> med din Flickr-konto, "
+"bliver du første gang du kører <app>Postr</app> bedt om at logge ind "
+"på Flickr via den følgende dialog:"
+
+#: C/login.page:29(title)
+msgid "<app>Postr</app> Login to Flickr window"
+msgstr "<app>Postr</app> Logind til Flickr-vindue"
+
+#: C/login.page:30(desc)
+msgid "<app>Postr</app> Switch account and Login to Flickr window"
+msgstr "<app>Postr</app> Skift konto og logind til Flickr-vindue"
+
+#: C/login.page:34(p)
+msgid ""
+"Click on <gui>Login to Flickr</gui>. This action will open the Flickr "
+"authentication page on your default web browser."
+msgstr ""
+"Klip på <gui>Logind til Flickr</gui>. Denne handling vil åbne Flickrs "
+"godkendelsesside i din standardbrowser."
+
+#: C/login.page:37(p)
+msgid ""
+"Follow the instructions on Flickr website to authorize <app>Postr</app>. The "
+"permissions requested are for read and write, but not delete."
+msgstr ""
+"Følg instruktionerne på Flickrs hjemmeside for at godkende <app>Postr</app>. "
+"Rettighederne, som der bliver spurgt om, er til skrivning og læsning men ikke "
+"sletning."
+
+#: C/login.page:40(p)
+msgid ""
+"Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click "
+"on <gui>Continue</gui>."
+msgstr ""
+"Gå tilbage til <gui>Logind til Flickr</gui>-vinduet på <app>Postr</app> og "
+"klik på <gui>Fortsæt</gui>."
+
+#: C/login.page:45(p)
+msgid ""
+"To use <app>Postr</app> with another Flickr account, you have to to select "
+"<guiseq><gui>File</gui><gui>Switch user...</gui></guiseq> and repeat the "
+"procedure."
+msgstr ""
+"For at bruge <app>Postr</app> med en anden Flickr-konto, skal du vælge "
+"<guiseq><gui>Fil</gui><gui>Skift bruger...</gui></guiseq> og gentage "
+"proceduren."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/index.page:26(None)
+msgid "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+msgstr "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+
+#: C/index.page:7(title) C/index.page:8(title)
+msgid "Postr"
+msgstr "Postr"
+
+#: C/index.page:9(desc)
+msgid "Flickr Uploader."
+msgstr "Flickr-overførsel."
+
+#: C/index.page:20(p)
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#: C/index.page:25(title)
+msgid ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
+"Postr: Photo Uploader for Flickr"
+msgstr ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
+"Postr: Billedoverføring for Flickr"
+
+#: C/index.page:31(title) C/index.page:33(title)
+msgid "Getting Started"
+msgstr "Kom i gang"
+
+#: C/index.page:38(title) C/index.page:40(title)
+msgid "Setting photograph's properties"
+msgstr "Angive billedernes egenskaber"
+
+#: C/index.page:45(title) C/index.page:47(title)
+msgid "Advanced actions"
+msgstr "Avancerede handlinger"
+
+#: C/uploading.page:8(desc)
+msgid "Uploading photographs on Flickr."
+msgstr "Overføre billeder til Flickr."
+
+#: C/uploading.page:20(title)
+msgid "Uploading photographs on Flickr"
+msgstr "Overføre billeder til Flickr"
+
+#: C/uploading.page:22(p)
+msgid "Click on Add Photos..."
+msgstr "Klik på tilføj billeder..."
+
+#: C/uploading.page:23(p)
+msgid "Choose the photographs that you want to upload on Flickr"
+msgstr "Vælg billederne du ønske at overføre til Flickr"
+
+#: C/uploading.page:24(p)
+msgid ""
+"Choose an image and edit the title, description, tags, privacy, safety, "
+"type, license and other data of image"
+msgstr ""
+"Vælg et billede og rediger titlen, beskrivelsen, mærker, privatliv, sikkerhed, "
+"type, licens og andre billeddata."
+
+#: C/uploading.page:25(p)
+msgid "When you finish add aditional description, click on Upload button"
+msgstr "Når du er færdig med at tilføje yderligere beskrivelse så klik på knappen Overfør"
+
+#: C/sets.page:8(desc)
+msgid "Grouping pictures by set."
+msgstr "Gruppere billeder i sæt."
+
+#: C/sets.page:16(title)
+msgid "Grouping pictures by set"
+msgstr "Gruppere billeder i sæt"
+
+#: C/sets.page:20(title) C/sets.page:22(title)
+msgid "What is a set?"
+msgstr "Hvad er et sæt?"
+
+#: C/sets.page:27(title) C/sets.page:29(title)
+msgid "Creating a set"
+msgstr "Oprette et sæt"
+
+#: C/sets.page:34(title) C/sets.page:36(title)
+msgid "Choosing a set"
+msgstr "Vælge et sæt"
+
+#: C/offline.page:7(desc)
+msgid "How to continue your work later."
+msgstr "Hvordan du fortsætter dit arbejde senere."
+
+#: C/offline.page:15(title)
+msgid "Continue the uploading later"
+msgstr "Fortsætte overførsel senere"
+
+#: C/offline.page:20(p)
+msgid "Save session."
+msgstr "Gem session."
+
+#: C/offline.page:21(p)
+msgid "Choose a name."
+msgstr "Vælg et navn."
+
+#: C/offline.page:22(p)
+msgid "The next time, you can load a session previously save."
+msgstr "Næste gang kan du indlæse en tidligere gemt session."
+
+#: C/offline.page:26(p)
+msgid ""
+"If you load a session when you are off-line, the properties that relies on "
+"your connection will be lost. These properties are: sets, groups and privacy."
+msgstr ""
+"Hvis du indlæser en session, når du er frakoblet, vil egenskaberne som afhænger "
+"af din forbindelse gå tabt. Disse egenskaber er: sæt, grupper og privatliv."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/introduction.page:39(None)
+msgid ""
+"@@image: 'figures/postr-main-window.png'; "
+"md5=f0a241232213b440eedbf2d82c0c9204"
+msgstr ""
+"@@image: 'figures/postr-main-window.png'; "
+"md5=f0a241232213b440eedbf2d82c0c9204"
+
+#: C/introduction.page:9(desc)
+msgid "Introduction to the <app>Postr</app> flickr uploader."
+msgstr "Introduktion til <app>Postrs</app> flickr-overførsel."
+
+#: C/introduction.page:21(title)
+msgid "Introduction"
+msgstr "Introduktion"
+
+#: C/introduction.page:23(p)
+msgid ""
+"<app>Postr</app> is a tool for uploading pictures to <link href=\"http://"
+"flickr.com/\"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps "
+"you to share your pictures with your family, friends, contacts or everyone."
+msgstr ""
+"<app>Postr</app> er et værktøj for GNOME-skrivebordet til overførsel af "
+"billeder til <link href=\"http://flickr.com/\"> Flickr</link>. "
+"<app>Postr</app> hjælper dig med at dele dine billeder med familie, "
+"venner, kontakter eller alle."
+
+#: C/introduction.page:26(p)
+msgid ""
+"<app>Postr</app> supports the most common properties of a picture in Flickr, "
+"such as title, description and tags. It also supports groups, where you can "
+"share your pictures to the groups you are already subscribed in Flickr."
+msgstr ""
+"<app>Postr</app> understøtter de fleste almindelige egenskaber for et billede "
+"på Flickr, såsom titel, beskrivelse og mærker. Programmet understøtter også "
+"grupper, hvor du kan dele dine billeder med grupper, du allerede har "
+"abonnement på i Flickr."
+
+#: C/introduction.page:29(p)
+msgid ""
+"Using <app>Postr</app> you can define a set for your pictures, either new or "
+"existent, where you can keep them organized."
+msgstr ""
+"Med brug af <app>Postr</app> kan du definere et billedsæt, enten et nyt eller "
+"et eksisterende, hvor du kan organisere dine billeder."
+
+#: C/introduction.page:32(p)
+msgid ""
+"In order to use <app>Postr</app> you need an account on <link href=\"http://"
+"flickr.com/\">Flickr</link>."
+msgstr ""
+"For at kunne bruge <app>Postr</app> har du brug for en konto på <link href=\"http://"
+"flickr.com/\">Flickr</link>."
+
+#: C/introduction.page:37(title)
+msgid "<app>Postr</app> window"
+msgstr "<app>Postr</app>-vindue"
+
+#: C/introduction.page:38(desc)
+msgid "<app>Postr</app> main window"
+msgstr "<app>Postr</app>-hovedvindue"
+
+#: C/introduction.page:40(p)
+msgid "<app>Postr</app> main window."
+msgstr "<app>Postr</app>-hovedvindue."
+
+#: C/groups.page:8(desc)
+msgid "Sharing your photographs with other people."
+msgstr "Dele dine billeder med andre."
+
+#: C/groups.page:15(name)
+msgid "Sergio Infante Montero"
+msgstr "Sergio Infante Montero"
+
+#: C/groups.page:19(title)
+msgid "Send your photographs to groups of your interest"
+msgstr "Send dine billeder til grupper der deler dine interesser"
+
+#: C/groups.page:21(p)
+msgid "Choose an image to upload"
+msgstr "Vælg et billede at overføre"
+
+#: C/groups.page:22(p)
+msgid "Click on Send to Groups option. A list of your groups must be shown"
+msgstr "Klik på indstillingen Send til grupper. En liste med dine grupper skal fremgå"
+
+#: C/groups.page:23(p)
+msgid "Choose in what group or groups will be send the image"
+msgstr "Vælg hvilken gruppe eller grupper som billedet skal sendes til"
+
+#: C/groups.page:26(p)
+msgid ""
+"Before you can use the Send to Groups option, at least you must have one."
+msgstr ""
+"Du skal have oprettet mindst en gruppe, før du kan bruge indstillingen Send til grupper."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/index.page:0(None)
+msgid "translator-credits"
+msgstr ""
+"Joe Hansen, 2011.\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
+
