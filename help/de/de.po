@@ -72,7 +72,7 @@ msgid ""
 "window"
 msgstr ""
 "Sie können Markierungen erstellen, indem Sie den gewünschten Begriff in das "
-"<gui>Markierungen</app>-Feld im Hauptfenster von <app>Postr</app> eingeben."
+"<gui>Markierungen</gui>-Feld im Hauptfenster von <app>Postr</app> eingeben."
 
 #: C/permissions.page:8(desc)
 msgid "Setting permissions to your photographs."
