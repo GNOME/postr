@@ -29,7 +29,7 @@ class AboutDialog(Gtk.AboutDialog):
                            u'Copyright \u00A9 2009-2012 Germán Poo-Caamaño')
         self.set_authors(('Ross Burton <ross@burtonini.com>',
                           'Germán Poo-Caamaño <gpoo@gnome.org>'))
-        self.set_website('http://projects.gnome.org/postr/')
+        self.set_website('https://wiki.gnome.org/Apps/Postr')
         self.set_logo_icon_name('postr')
         self.set_version (__version__)
 

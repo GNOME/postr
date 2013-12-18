@@ -113,7 +113,7 @@ setup(name='postr',
       description='Flickr Uploader',
       author='Ross Burton',
       author_email='ross@burtonini.com',
-      url='http://projects.gnome.org/postr/',
+      url='https://wiki.gnome.org/Apps/Postr',
 
       scripts=['postr'],
       package_dir={'postr': 'src'},

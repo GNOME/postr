@@ -7,7 +7,7 @@
 
   <name>Postr</name>
   <shortname>postr</shortname>
-  <homepage rdf:resource="http://projects.gnome.org/postr/"/>
+  <homepage rdf:resource="https://wiki.gnome.org/Apps/Postr/"/>
   <created>2006-08-15</created>
 
   <shortdesc>A simple Flickr uploader for GNOME.</shortdesc>
