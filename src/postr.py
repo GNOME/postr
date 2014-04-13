@@ -1149,7 +1149,7 @@ class Postr(UniqueApp):
             d.addErrback(log.err)
         else:
             d.addCallbacks(self.upload, self.upload_error)
-            d.addErrback(self.log.err)
+            d.addErrback(log.err)
             self.upload_progress_tracker.complete_extra_step(EXTRA_STEP_NEW_SET)
 
     def create_photoset_then_continue(self, rsp, photoset_name):
