@@ -47,7 +47,7 @@ class FlickrError(Exception):
  SIZE_LARGE) = range (0, 5)
 
 class Flickr:
-    endpoint = "http://api.flickr.com/services/rest/?"
+    endpoint = "https://api.flickr.com/services/rest/?"
     
     def __init__(self, api_key, secret, perms="read"):
         self.__methods = {}
@@ -73,7 +73,7 @@ class Flickr:
     def set_proxy(self, proxy):
         # Handle proxies which are not URLs
         if proxy and "://" not in proxy:
-            proxy = "http://" + proxy
+            proxy = "https://" + proxy
         self.proxy = proxy
     
     def __repr__(self):
@@ -207,7 +207,7 @@ class Flickr:
             }
 
         self.logger.info("Calling upload")
-        return client.upload("http://api.flickr.com/services/upload/",
+        return client.upload("https://api.flickr.com/services/upload/",
                              proxy=self.proxy, method="POST",
                              headers=headers, postdata=form,
                              progress_tracker=progress_tracker).addCallback(self.__cb, "upload")
@@ -244,7 +244,7 @@ class Flickr:
             keys = { 'perms': self.perms,
                      'frob': frob }
             self.__sign(keys)
-            url = "http://flickr.com/services/auth/?api_key=%(api_key)s&perms=%(perms)s&frob=%(frob)s&api_sig=%(api_sig)s" % keys
+            url = "https://flickr.com/services/auth/?api_key=%(api_key)s&perms=%(perms)s&frob=%(frob)s&api_sig=%(api_sig)s" % keys
             return {'url': url, 'frob': frob}
         return self.auth_getFrob().addCallback(gotFrob)
 
@@ -298,4 +298,4 @@ class Flickr:
         elif size == SIZE_LARGE:
             suffix = "_b"
 
-        return "http://static.flickr.com/%s/%s_%s%s.jpg" % (photo.get("server"), photo.get("id"), photo.get("secret"), suffix)
+        return "https://static.flickr.com/%s/%s_%s%s.jpg" % (photo.get("server"), photo.get("id"), photo.get("secret"), suffix)

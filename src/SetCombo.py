@@ -82,7 +82,7 @@ class SetCombo(gtk.ComboBox):
                            0, photoset.get("id"),
                            1, photoset.find("title").text)
 
-            url = "http://static.flickr.com/%s/%s_%s%s.jpg" % (photoset.get("server"), photoset.get("primary"), photoset.get("secret"), "_s")
+            url = "https://static.flickr.com/%s/%s_%s%s.jpg" % (photoset.get("server"), photoset.get("primary"), photoset.get("secret"), "_s")
             getPage (url).addCallback(self.__got_set_thumb, it).addErrback(self.twisted_error)
 
     def update(self):
