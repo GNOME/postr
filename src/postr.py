@@ -180,11 +180,11 @@ class Postr (UniqueApp):
                 user = client.get_string("/system/http_proxy/authentication_user")
                 password = client.get_string("/system/http_proxy/authentication_password")
                 if user and user != "":
-                    url = "http://%s:%s@%s:%d" % (user, password, host, port)
+                    url = "https://%s:%s@%s:%d" % (user, password, host, port)
                 else:
-                    url = "http://%s:%d" % (host, port)
+                    url = "https://%s:%d" % (host, port)
             else:
-                url = "http://%s:%d" % (host, port)
+                url = "https://%s:%d" % (host, port)
 
             self.flickr.set_proxy(url)
         else:
