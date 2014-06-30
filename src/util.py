@@ -101,9 +101,9 @@ def get_buddyicon(flickr, data, size=48):
         return load_thumb(page, size)
 
     if int(data.get("iconfarm")) > 0:
-        url = "http://farm%s.static.flickr.com/%s/buddyicons/%s.jpg" % (data.get("iconfarm"), data.get("iconserver"), data.get("nsid"))
+        url = "https://farm%s.static.flickr.com/%s/buddyicons/%s.jpg" % (data.get("iconfarm"), data.get("iconserver"), data.get("nsid"))
     else:
-        url = "http://www.flickr.com/images/buddyicon.jpg"
+        url = "https://www.flickr.com/images/buddyicon.jpg"
 
     if __buddy_cache.has_key(url):
         return defer.execute(load_thumb, __buddy_cache[url], size)
