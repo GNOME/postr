@@ -42,6 +42,14 @@
 
   <release>
     <Version>
+      <revision>0.13.1</revision>
+      <created>2014-07-05</created>
+      <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/postr-0.13.1.tar.xz"/>
+    </Version>
+  </release>
+
+  <release>
+    <Version>
       <revision>0.13</revision>
       <created>2012-09-20</created>
       <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/postr-0.13.tar.xz"/>
