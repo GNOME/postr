@@ -4,12 +4,12 @@ from distutils.core import setup
 from glob import glob
 from src.version import __version__
 
-setup(name='Postr',
+setup(name='postr',
       version=__version__,
       description='Flickr Uploader',
       author='Ross Burton',
       author_email='ross@burtonini.com',
-      url='http://www.burtonini.com/',
+      url='https://wiki.gnome.org/Apps/Postr',
 
       scripts=['postr'],
       package_dir={'postr': 'src'},
