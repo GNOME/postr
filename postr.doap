@@ -44,13 +44,23 @@
     <Version>
       <revision>0.13</revision>
       <created>2012-09-20</created>
-      <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/postr-0.13.tar.gz"/>
+      <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/0.13/postr-0.13.tar.xz"/>
     </Version>
   </release>
 
   <release>
     <Version>
-      <name>0.12.4</name>
+      <name>0.12.5</name>
+      <branch>postr-0-12</branch>
+      <revision>0.12.5</revision>
+      <created>2014-07-05</created>
+      <file-release rdf:resource="http://ftp.gnome.org/pub/GNOME/sources/postr/"/>
+    </Version>
+  </release>
+
+  <release>
+    <Version>
+      <name>0.12.4</name> 
       <branch>postr-0-12</branch>
       <revision>0.12.4</revision>
       <created>2009-11-04</created>
