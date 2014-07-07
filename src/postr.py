@@ -39,7 +39,7 @@ from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
 from ProgressDialog import ProgressDialog
 from ErrorDialog import ErrorDialog
-import ImageStore, ImageList, GroupSelector
+import ImageStore, ImageList, GroupSelector, StatusBar, SetCombo, TagsEntry, PrivacyCombo, SafetyCombo, ContentTypeCombo, LicenseCombo
 from proxyclient import EXTRA_STEP_SET_ID, EXTRA_STEP_GROUPS, EXTRA_STEP_LICENSE, EXTRA_STEP_NEW_SET, UploadProgressTracker
 
 from flickrest import Flickr
