@@ -239,7 +239,7 @@ SURELY_WRITE_CHARSET_INFO = False
 
 from struct import pack, unpack
 from cStringIO import StringIO
-import sys, re, codecs, os
+import sys, re, os
 
 class String(basestring):
   def __iadd__(self, other):

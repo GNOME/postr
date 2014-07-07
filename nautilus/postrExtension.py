@@ -20,7 +20,6 @@ gettext.install('postr')
 
 from gi.repository import Nautilus, GObject
 import os, os.path
-from urllib import unquote
 
 PROGRAM_NAME = 'postr'
 

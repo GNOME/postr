@@ -17,14 +17,14 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-import logging, os, urllib
-from urlparse import urlparse
+# import logging
+import os
 from os.path import basename
 from tempfile import mkstemp
 from twisted.python import log
 from twisted.internet import reactor
 
-from gi.repository import GObject, Gtk, GConf, GdkPixbuf, Gio, Gdk, GLib
+from gi.repository import Gtk, GConf, GdkPixbuf, Gio, Gdk, GLib
 
 #FIXME
 #import gnome.ui
@@ -39,13 +39,13 @@ from AboutDialog import AboutDialog
 from AuthenticationDialog import AuthenticationDialog
 from ProgressDialog import ProgressDialog
 from ErrorDialog import ErrorDialog
-import ImageStore, ImageList, StatusBar, PrivacyCombo, SafetyCombo, GroupSelector, ContentTypeCombo, SetCombo, LicenseCombo, TagsEntry
+import ImageStore, ImageList, GroupSelector
 from proxyclient import EXTRA_STEP_SET_ID, EXTRA_STEP_GROUPS, EXTRA_STEP_LICENSE, EXTRA_STEP_NEW_SET, UploadProgressTracker
 
 from flickrest import Flickr
 import EXIF
 from iptcinfo import IPTCInfo
-from util import *
+from util import get_thumb_size, get_buddyicon, get_glade_widgets, align_labels
 from datetime import datetime
 import shelve
 

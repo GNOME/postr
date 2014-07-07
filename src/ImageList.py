@@ -17,7 +17,7 @@
 # this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 # St, Fifth Floor, Boston, MA 02110-1301 USA
 
-from gi.repository import Gtk, Pango, GObject, Gdk
+from gi.repository import Gtk, Pango, Gdk
 
 import ImageStore
 

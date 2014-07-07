@@ -18,7 +18,6 @@
 import logging, os, mimetools, urllib
 from gi.repository import Gio
 from twisted.internet import defer
-from twisted.python.failure import Failure
 from twisted.python import log
 import proxyclient as client
 

@@ -5,8 +5,8 @@ from shutil import copyfile
 from distutils.core import setup
 from distutils.command.install_data import install_data
 from glob import glob
-from DistUtilsExtra.command import *
-import distutils.cmd
+from DistUtilsExtra.command import build_help, build_extra, build_icons
+from DistUtilsExtra.command import build_i18n, clean_i18n
 import os.path
 from src.version import __version__
 
