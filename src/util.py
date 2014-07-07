@@ -69,6 +69,7 @@ def align_labels(glade, names):
     group = Gtk.SizeGroup()
     group.set_mode(Gtk.SizeGroupMode.HORIZONTAL)
     widget = [group.add_widget(get_widget_checked(glade, name)) for name in names]
+    return widget
 
 
 __buddy_cache = None
