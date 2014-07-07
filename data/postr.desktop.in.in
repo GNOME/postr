@@ -1,6 +1,7 @@
 [Desktop Entry]
 _Name=Flickr Uploader
 _Comment=Upload photos to Flickr
+_Keywords=Flickr;Image;Picture;Photo;Uploader;
 Icon=postr
 TryExec=postr
 Exec=postr %F
@@ -12,3 +13,4 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=postr
 X-GNOME-Bugzilla-Component=general
 X-GNOME-Bugzilla-Version=@VERSION@
+MimeType=image/jpg;image/jpeg;image/png;image/gif
