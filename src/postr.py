@@ -424,6 +424,8 @@ class Postr(UniqueApp):
             # None in case is not possible to get it or
             # generate it.
 
+            # FIXME: Port to GTK3
+            '''
             gfile = Gio.File.new_for_uri(uri)
             attributes = ','.join([Gio.FILE_ATTRIBUTE_TIME_MODIFIED,
                                    Gio.FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE])
@@ -432,8 +434,6 @@ class Postr(UniqueApp):
             mtime = ginfo.get_modification_time()
             mime = ginfo.get_content_type()
 
-            # FIXME: Port to GTK3
-            '''
             factory = gnome.ui.ThumbnailFactory(gnome.ui.THUMBNAIL_SIZE_NORMAL)
             thumb_path = factory.lookup(uri, int(mtime))
 
