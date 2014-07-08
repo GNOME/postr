@@ -108,7 +108,7 @@ class SetCombo(Gtk.ComboBox):
     #   index of the iterator on export might no longer be valid
     #   when the upload set is imported.
     def get_iter_for_set(self, set_id):
-        iter = self.model.get_iter_root()
+        iter = self.model.get_iter_first()
         while iter:
             iter_set_id = self.model.get(iter, COL_SETID)
             if iter_set_id[0] == set_id:

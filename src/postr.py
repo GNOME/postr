@@ -1285,7 +1285,7 @@ class Postr(UniqueApp):
             if self.set_combo.new_photoset_name:
                 dest["new_photoset_name"] = self.set_combo.new_photoset_name
 
-            iter = self.model.get_iter_root()
+            iter = self.model.get_iter_first()
             while iter:
                 path = self.model.get_string_from_iter(iter)
                 dest[path] = self._marshal_row(path, iter)
@@ -1446,7 +1446,8 @@ class Postr(UniqueApp):
             if set_iter:
                 self._set_value_in_model(ImageStore.COL_SET, set_iter, [index])
 
-        self._set_value_in_model(ImageStore.COL_GROUPS, groups, [index])
+        if groups:
+            self._set_value_in_model(ImageStore.COL_GROUPS, groups, [index])
 
         if privacy_path:
             privacy_iter = self.privacy_combo.model.get_iter(privacy_path)
