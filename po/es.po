@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2010.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2012-10-03 23:05+0000\n"
-"PO-Revision-Date: 2012-10-13 12:51+0200\n"
+"POT-Creation-Date: 2014-07-07 17:15+0000\n"
+"PO-Revision-Date: 2014-07-08 12:33+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
-#: ../src/postr.py:963
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Cargador para Flickr"
 
@@ -30,11 +30,15 @@ msgstr "Cargador para Flickr"
 msgid "Upload photos to Flickr"
 msgstr "Subir fotos a Flickr"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Imagen;Foto;Cargador;"
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Subir a Flickr…"
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Enviar las fotos seleccionadas a Flickr"
 
@@ -83,7 +87,6 @@ msgid "_Help"
 msgstr "A_yuda"
 
 #: ../src/postr.glade.h:13
-#| msgid "_Content type:"
 msgid "_Contents"
 msgstr "_Contenido"
 
@@ -171,27 +174,27 @@ msgstr "Detalles"
 msgid "No title"
 msgstr "Sin título"
 
-#: ../src/LicenseCombo.py:28
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Predeterminado"
 
-#: ../src/postr.py:377
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Añadir fotos"
 
-#: ../src/postr.py:389
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Imágenes"
 
-#: ../src/postr.py:394
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Todos los archivos"
 
-#: ../src/postr.py:465
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Subiendo actualmente</b>"
 
-#: ../src/postr.py:466
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -199,11 +202,11 @@ msgstr ""
 "Aún hay fotos que se están subiendo en este momento. ¿Seguro que quiere "
 "salir? También puede guardar sus subidas pendientes para más tarde."
 
-#: ../src/postr.py:481
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotos que subir</b>"
 
-#: ../src/postr.py:482
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -211,28 +214,28 @@ msgstr ""
 "Aún hay fotos por subir. ¿Está seguro de que quiere salir? También puede "
 "guardar sus subidas pendientes para más tarde."
 
-#: ../src/postr.py:761
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr ""
 "La imagen %s es demasiado grande, las imágenes no puede ser más grandes de "
 "%dMB en tamaño."
 
-#: ../src/postr.py:929
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Subiendo %(index)d de %(count)d"
 
-#: ../src/postr.py:932
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Cargador para Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:979
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Algunos archivos no existen o actualmente son inaccesibles."
 
-#: ../src/postr.py:1334
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -241,7 +244,7 @@ msgstr ""
 "Ha iniciado sesión como %s pero está\n"
 "cargando un álbum para %s"
 
-#: ../src/postr.py:1338 ../src/postr.py:1355
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -249,7 +252,7 @@ msgstr ""
 "¿Quiere continuar con la carga? No importará la información del álbum de "
 "fotos."
 
-#: ../src/postr.py:1351
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -262,39 +265,39 @@ msgstr ""
 msgid "Uploading"
 msgstr "Subiendo"
 
-#: ../src/SetCombo.py:25
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Ninguna"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Crear álbum «%s»"
 
-#: ../src/SetCombo.py:28
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "álbum nuevo (%d-%m-%y)"
 
-#: ../src/SetCombo.py:136
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Nombre del álbum nuevo:"
 
-#: ../src/StatusBar.py:40
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Registrado como <b>%s</b>.  "
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr "Este mes puede subir %(quota)s, y tiene %(to_upload)s para subir."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Este mes puede subir %(quota)s."
 
-#: ../src/StatusBar.py:47
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s para subir."
