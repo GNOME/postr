@@ -1,16 +1,15 @@
 # Czech translation for postr.
 # Copyright (C) 2010 postr's COPYRIGHT HOLDER
 # This file is distributed under the same license as the postr package.
-#
-# Marek Černocký <marek@manet.cz>, 2010, 2012.
+# Marek Černocký <marek@manet.cz>, 2010, 2012, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2012-10-03 23:05+0000\n"
-"PO-Revision-Date: 2012-10-07 17:56+0100\n"
+"POT-Creation-Date: 2014-07-07 17:15+0000\n"
+"PO-Revision-Date: 2014-07-10 23:23+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -18,10 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
-#: ../src/postr.py:963
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Nahrávání na Flickr"
 
@@ -29,11 +29,15 @@ msgstr "Nahrávání na Flickr"
 msgid "Upload photos to Flickr"
 msgstr "Nahrát fotky na Flickr"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "flickr;obrázek;obrázky;fotka;fotky;nahrávání;vystavení;"
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Nahrát na Flickr…"
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Nahrát vybrané soubory na Flickr"
 
@@ -169,27 +173,27 @@ msgstr "Podrobnosti"
 msgid "No title"
 msgstr "Bez názvu"
 
-#: ../src/LicenseCombo.py:28
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Výchozí"
 
-#: ../src/postr.py:377
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Přidaní fotek"
 
-#: ../src/postr.py:389
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Obrázky"
 
-#: ../src/postr.py:394
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Všechny obrázky"
 
-#: ../src/postr.py:465
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Právě se nahrává</b>"
 
-#: ../src/postr.py:466
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -197,11 +201,11 @@ msgstr ""
 "Stále se nahrávají fotky. Opravdu chcete skončit? Svoji nenahranou sadu "
 "můžete případně uložit na později."
 
-#: ../src/postr.py:481
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotky k nahrání</b>"
 
-#: ../src/postr.py:482
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -209,27 +213,27 @@ msgstr ""
 "Jsou zde fotky, které nebyly ještě nahrány. Opravdu chcete skončit? Svoji "
 "nenahranou sadu můžete případně uložit na později."
 
-#: ../src/postr.py:761
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr ""
 "Obrázek %s je příliš velký, obrázky nesmí mít větší velikost než %d MB."
 
-#: ../src/postr.py:929
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Nahrává se %(index)d z %(count)d"
 
-#: ../src/postr.py:932
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Nahrávání na Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:979
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Některé soubory neexistují nebo jsou právě nedostupné."
 
-#: ../src/postr.py:1334
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -238,13 +242,13 @@ msgstr ""
 "Jste přihlášen jako %s, ale načítáte\n"
 "nahranou sadu pro %s"
 
-#: ../src/postr.py:1338 ../src/postr.py:1355
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
 msgstr "Chcete pokračovat s načítáním? Nenaimportujete informace o sadě fotek."
 
-#: ../src/postr.py:1351
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -257,41 +261,41 @@ msgstr ""
 msgid "Uploading"
 msgstr "Nahrává se"
 
-#: ../src/SetCombo.py:25
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Žádná"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Vytvoření sady fotek „%s“"
 
-#: ../src/SetCombo.py:28
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "nová sada fotek (%m-%d-%y)"
 
-#: ../src/SetCombo.py:136
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Název pro novou sadu fotek:"
 
-#: ../src/StatusBar.py:40
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Přihlášen jako <b>%s</b>.  "
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
 "Tento měsíc můžete nahrát %(quota)s a máte k nahrání nachystáno "
 "%(to_upload)s."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Tento měsíc můžete nahrát %(quota)s."
 
-#: ../src/StatusBar.py:47
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s k nahrání."
