@@ -4,12 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2014.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-23 02:18+0200\n"
-"PO-Revision-Date: 2012-07-23 02:19+0200\n"
+"POT-Creation-Date: 2014-07-14 18:21+0200\n"
+"PO-Revision-Date: 2014-07-14 18:23+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: \n"
@@ -30,6 +32,12 @@ msgstr "Wysyłanie do serwisu Flickr"
 #: ../data/postr.desktop.in.in.h:2
 msgid "Upload photos to Flickr"
 msgstr "Wysyłanie zdjęć do serwisu Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr ""
+"Flickr;Obraz;Obrazy;Obrazów;Obrazek;Obrazki;Obrazków;Zdjęcie;Zdjęcia;Zdjęć;"
+"Wysyłanie;Uploader;"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -97,7 +105,7 @@ msgstr "Wyślij do grup"
 
 #: ../src/postr.glade.h:16
 msgid "_Content type:"
-msgstr "_Typ treści:"
+msgstr "_Rodzaj treści:"
 
 #: ../src/postr.glade.h:17
 msgid "_Privacy:"
@@ -117,7 +125,7 @@ msgstr "_Licencja:"
 
 #: ../src/postr.glade.h:21
 msgid "Privacy, Safety, Type and License"
-msgstr "Prywatność, bezpieczeństwo, typ i licencja"
+msgstr "Prywatność, bezpieczeństwo, rodzaj i licencja"
 
 #: ../src/postr.glade.h:22
 msgid "_Title:"
@@ -270,7 +278,7 @@ msgstr "nowy zestaw zdjęć (%d-%m-%y)"
 
 #: ../src/SetCombo.py:132
 msgid "Name for the new photoset:"
-msgstr "Nazwa dla nowego zestawu zdjęć:"
+msgstr "Nazwa nowego zestawu zdjęć:"
 
 #: ../src/StatusBar.py:38
 #, python-format
