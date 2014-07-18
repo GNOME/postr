@@ -1,35 +1,39 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Brazilian Portuguese translation of Postr.
+# Copyright (C) 2014 THE Postr'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Postr package.
 # Antonio Fernandes C. Neto <fernandes@pelivre.org>, 2010.
 # Djavan Fagundes <djavan@syst.com.br>, 2009, 2010.
+# Enrico Nicoletto <liverig@gmail.com>, 2014.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=postr&component=General\n"
-"POT-Creation-Date: 2010-12-06 19:36+0000\n"
-"PO-Revision-Date: 2010-12-09 11:21-0200\n"
-"Last-Translator: Djavan Fagundes <djavan@syst.com.br>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2014-07-18 10:19+0000\n"
+"PO-Revision-Date: 2014-07-18 16:49-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.6.1\n"
-"X-Poedit-Language: Portuguese\n"
-"X-Poedit-Country: Brazil\n"
+"X-Generator: Poedit 1.6.5\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:979
+#: ../src/postr.py:983
 msgid "Flickr Uploader"
 msgstr "Ferramenta de envio do Flickr"
 
 #: ../data/postr.desktop.in.in.h:2
 msgid "Upload photos to Flickr"
 msgstr "Enviar para o Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Imagem;Imagens;Figura;Foto;Envio;Uploader;"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -39,105 +43,105 @@ msgstr "Enviar para o Flickr..."
 msgid "Upload the selected files into Flickr"
 msgstr "Enviar os arquivos selecionados para o Flickr"
 
-#: ../src/postr.glade.h:1
-msgid "Add Photos..."
-msgstr "Adicionar fotos..."
-
 #: ../src/postr.glade.h:2
-msgid "Add to _Set:"
-msgstr "Adicionar para _Álbum:"
-
-#: ../src/postr.glade.h:3
-msgid "Dese_lect All"
-msgstr "D_esmarcar todos"
-
-#: ../src/postr.glade.h:5
-msgid "Privacy, Safety, Type and License"
-msgstr "Privacidade, segurança, tipo e licença"
-
-#: ../src/postr.glade.h:6
-msgid "Remove Photos"
-msgstr "Remover fotos"
-
-#: ../src/postr.glade.h:7
-msgid "Rename"
-msgstr "Renomear"
-
-#: ../src/postr.glade.h:8
-msgid "Select"
-msgstr "Selecionar"
-
-#: ../src/postr.glade.h:9
-msgid "Send to Groups"
-msgstr "Enviar para grupos"
-
-#: ../src/postr.glade.h:10
-msgid "Ta_gs:"
-msgstr "E_tiquetas:"
-
-#: ../src/postr.glade.h:11
-msgid "_Add Photos..."
-msgstr "_Adicionar fotos..."
-
-#: ../src/postr.glade.h:12
-msgid "_Content type:"
-msgstr "_Tipo de conteúdo:"
-
-#: ../src/postr.glade.h:13
-msgid "_Description:"
-msgstr "_Descrição:"
-
-#: ../src/postr.glade.h:14
 msgid "_File"
 msgstr "_Arquivo"
 
-#: ../src/postr.glade.h:15
-msgid "_Help"
-msgstr "_Ajuda"
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Adicionar fotos..."
 
-#: ../src/postr.glade.h:16
-msgid "_Invert Selection"
-msgstr "_Inverter seleção"
-
-#: ../src/postr.glade.h:17
-msgid "_License:"
-msgstr "_Licença:"
-
-#: ../src/postr.glade.h:18
-msgid "_Load session"
-msgstr "_Carregar sessão"
-
-#: ../src/postr.glade.h:19
-msgid "_Privacy:"
-msgstr "_Privacidade:"
-
-#: ../src/postr.glade.h:20
+#: ../src/postr.glade.h:4
 msgid "_Remove Photos"
 msgstr "_Remover fotos"
 
-#: ../src/postr.glade.h:21
-msgid "_Safety:"
-msgstr "_Segurança:"
-
-#: ../src/postr.glade.h:22
+#: ../src/postr.glade.h:5
 msgid "_Save session"
 msgstr "_Salvar sessão"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Carregar sessão"
+
+#: ../src/postr.glade.h:7
 msgid "_Switch user..."
 msgstr "Alternar u_suário..."
 
-#: ../src/postr.glade.h:24
-msgid "_Title:"
-msgstr "_Título:"
-
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:8
 msgid "_Upload"
 msgstr "_Enviar"
 
-#: ../src/postr.glade.h:26
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Selecionar"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "D_esmarcar todos"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Inverter seleção"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Ajuda"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Adicionar fotos..."
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Remover fotos"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Enviar para grupos"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "_Tipo de conteúdo:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Privacidade:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Segurança:"
+
+#: ../src/postr.glade.h:19
 msgid "_Visible in search results"
 msgstr "_Visível em resultados de busca"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "_Licença:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Privacidade, segurança, tipo e licença"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Título:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Descrição:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "E_tiquetas:"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "Adicionar para _Álbum:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Renomear"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
@@ -207,27 +211,27 @@ msgstr ""
 "Há fotos pendentes para serem enviadas. Você tem certeza que quer sair? Você "
 "pode também salvar seus envios pendentes para depois."
 
-#: ../src/postr.py:777
+#: ../src/postr.py:781
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr ""
 "Imagem %s é muito larga, imagens não devem ter mais que %dMB de tamanho."
 
-#: ../src/postr.py:945
+#: ../src/postr.py:949
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Enviando %(index)d de %(count)d"
 
-#: ../src/postr.py:948
+#: ../src/postr.py:952
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flickr Uploader (%(index)d/%(count)d)"
 
-#: ../src/postr.py:995
+#: ../src/postr.py:999
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Alguns arquivos não existem ou não estão atualmente acessíveis"
 
-#: ../src/postr.py:1352
+#: ../src/postr.py:1356
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -236,7 +240,7 @@ msgstr ""
 "Você está autenticado como %s, mas carregando\n"
 "um envio de álbum como %s"
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
+#: ../src/postr.py:1360 ../src/postr.py:1377
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -244,7 +248,7 @@ msgstr ""
 "Você deseja continuar com o carregamento? Você não irá importar a informação "
 "do álbum."
 
-#: ../src/postr.py:1369
+#: ../src/postr.py:1373
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -282,7 +286,8 @@ msgstr "Autenticado como <b>%s</b>.  "
 #: ../src/StatusBar.py:41
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "Você pode enviar %(quota)s este mês, e possui %(to_upload)s para envio."
+msgstr ""
+"Você pode enviar %(quota)s este mês, e possui %(to_upload)s para envio."
 
 #: ../src/StatusBar.py:43
 #, python-format
@@ -293,4 +298,3 @@ msgstr "Você pode enviar %(quota)s este mês."
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s para envio."
-
