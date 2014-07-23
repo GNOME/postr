@@ -1,0 +1,296 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-23 10:25+0200\n"
+"PO-Revision-Date: 2014-07-21 20:06+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Language-Team: Basque <Basque <librezale@librezale.org>>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
+#: ../src/postr.py:983
+msgid "Flickr Uploader"
+msgstr "Flickr igotzailea"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Igo argazkiak Flickr-era"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Irudia;Argazkia;Igotzailea;"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload to Flickr..."
+msgstr "Igo Flickr-era..."
+
+#: ../nautilus/postrExtension.py:83
+msgid "Upload the selected files into Flickr"
+msgstr "Igo hautatutako fitxategiak Flickr-era"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Gehitu argazkiak..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Kendu argazkiak"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Gorde saioa"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Kargatu saioa"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Aldatu erabiltzailez..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Igo"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Hautatu"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Desautatu denak"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Alderantzikatu hautapena"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Gehitu argazkiak..."
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Kendu argazkiak"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Bidali taldeei"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "_Eduki mota:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Pribatutasuna:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Segurtasuna:"
+
+#: ../src/postr.glade.h:19
+msgid "_Visible in search results"
+msgstr "_Ikusgai bilaketen emaitzetan"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "_Lizentzia:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Pribatutasuna, segurtasuna, mota eta lizentzia"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Izenburua:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Azalpena:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "E_tiketak:"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "Gehitu _multzoari:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Aldatu izena"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Jarraitu"
+
+#: ../src/AuthenticationDialog.py:46
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr-ek Flickr-en saioa hasi behar du zure argazkiak igotzeko. Egin klik "
+"azpiko estekan Flick-en saioa hasteko."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Hasi saioa Flickr-en"
+
+#: ../src/ErrorDialog.py:26
+msgid "An error occurred"
+msgstr "Errorea gertatu da"
+
+#: ../src/ErrorDialog.py:47
+msgid "Details"
+msgstr "Xehetasunak"
+
+#: ../src/ImageList.py:72
+msgid "No title"
+msgstr "Izenbururik ez"
+
+#: ../src/LicenseCombo.py:26
+msgid "Default"
+msgstr "Lehenetsia"
+
+#: ../src/postr.py:412
+msgid "Add Photos"
+msgstr "Gehitu argazkiak"
+
+#: ../src/postr.py:424
+msgid "Images"
+msgstr "Irudiak"
+
+#: ../src/postr.py:428
+msgid "All Files"
+msgstr "Fitxategi guztiak"
+
+#: ../src/postr.py:493
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Unean igotzen</b>"
+
+#: ../src/postr.py:494
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Oraindik argazkiak igotzen ari da. Ziur zaude irtetea nahi duzula? Igotzea "
+"falta den multzoa gorde dezakezu geroago igotzeko."
+
+#: ../src/postr.py:509
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Argazkiak igotzeko</b>"
+
+#: ../src/postr.py:510
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Argazkiak daude igotzeko zain. Ziur zaude irtetea nahi duzula? Igotzea falta "
+"den multzoa gorde dezakezu geroago igotzeko."
+
+#: ../src/postr.py:781
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"'%s' irudia handiegia da, irudiek ezin dira %d MB baino handiagoak izan."
+
+#: ../src/postr.py:949
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "%(index)d / %(count)d igotzen"
+
+#: ../src/postr.py:952
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr igotzailea (%(index)d/%(count)d)"
+
+#: ../src/postr.py:999
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Fitxategi batzuk ez dira existitzen edo unean ez daude atzigarri."
+
+#: ../src/postr.py:1356
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"'%s' gisa hasi duzu saioa, baina\n"
+"'%s'(r)en igotako multzoa kargatzen ari zara."
+
+#: ../src/postr.py:1360 ../src/postr.py:1377
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Nahi duzu kargatzen jarraitzea? Ezingo duzu argazki multzoaren informazioa "
+"inportatu."
+
+#: ../src/postr.py:1373
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Ez duzu saiorik hasi, baina\n"
+"'%s'(r)en igotako multzoa kargatzen ari zara."
+
+#: ../src/ProgressDialog.py:56
+msgid "Uploading"
+msgstr "Igotzen"
+
+#: ../src/SetCombo.py:23
+msgid "None"
+msgstr "Bat ere ez"
+
+#: ../src/SetCombo.py:24
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Sortu '%s' argazki multzoa"
+
+#: ../src/SetCombo.py:26
+msgid "new photoset (%m-%d-%y)"
+msgstr "argazki multzo berria (%y-%m-%d)"
+
+#: ../src/SetCombo.py:132
+msgid "Name for the new photoset:"
+msgstr "Argazki multzo berriaren izena:"
+
+#: ../src/StatusBar.py:38
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "<b>%s</b> gisa saioa hasita.  "
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Hila honetan %(quota)s igo ditzakezu, eta %(to_upload)s igotzeko eduki."
+
+#: ../src/StatusBar.py:43
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Hila honetan %(quota)s igo ditzakezu."
+
+#: ../src/StatusBar.py:45
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s igotzeko."
