@@ -4,29 +4,36 @@
 #
 # György Balló <ballogy at freestart dot hu>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011.
+# Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&component=General\n"
-"POT-Creation-Date: 2011-02-02 18:31+0000\n"
-"PO-Revision-Date: 2011-03-18 10:32+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2014-07-26 10:19+0000\n"
+"PO-Revision-Date: 2014-07-26 13:15+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.2\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:979
+#: ../src/postr.py:983
 msgid "Flickr Uploader"
 msgstr "Flickr feltöltő"
 
 #: ../data/postr.desktop.in.in.h:2
 msgid "Upload photos to Flickr"
 msgstr "Fényképek feltöltése a Flickr-re"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Kép;Fénykép;Fotó;Feltöltő;"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -36,105 +43,105 @@ msgstr "Feltöltés a Flickr-re…"
 msgid "Upload the selected files into Flickr"
 msgstr "A kijelölt fájlok feltöltése a Flickr-re"
 
-#: ../src/postr.glade.h:1
-msgid "Add Photos..."
-msgstr "Fényképek hozzáadása…"
-
 #: ../src/postr.glade.h:2
-msgid "Add to _Set:"
-msgstr "_Hozzáadás albumhoz:"
-
-#: ../src/postr.glade.h:3
-msgid "Dese_lect All"
-msgstr "Kijelölés megs_züntetése"
-
-#: ../src/postr.glade.h:5
-msgid "Privacy, Safety, Type and License"
-msgstr "Adatvédelem, biztonság, típus és licenc"
-
-#: ../src/postr.glade.h:6
-msgid "Remove Photos"
-msgstr "Fényképek eltávolítása"
-
-#: ../src/postr.glade.h:7
-msgid "Rename"
-msgstr "Átnevezés"
-
-#: ../src/postr.glade.h:8
-msgid "Select"
-msgstr "Kijelölés"
-
-#: ../src/postr.glade.h:9
-msgid "Send to Groups"
-msgstr "Küldés csoportokba"
-
-#: ../src/postr.glade.h:10
-msgid "Ta_gs:"
-msgstr "Cí_mkék"
-
-#: ../src/postr.glade.h:11
-msgid "_Add Photos..."
-msgstr "Fényképek _hozzáadása…"
-
-#: ../src/postr.glade.h:12
-msgid "_Content type:"
-msgstr "_Tartalom típusa:"
-
-#: ../src/postr.glade.h:13
-msgid "_Description:"
-msgstr "_Leírás:"
-
-#: ../src/postr.glade.h:14
 msgid "_File"
 msgstr "_Fájl"
 
-#: ../src/postr.glade.h:15
-msgid "_Help"
-msgstr "_Súgó"
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "Fényképek _hozzáadása…"
 
-#: ../src/postr.glade.h:16
-msgid "_Invert Selection"
-msgstr "_Kijelölés megfordítása"
-
-#: ../src/postr.glade.h:17
-msgid "_License:"
-msgstr "L_icenc:"
-
-#: ../src/postr.glade.h:18
-msgid "_Load session"
-msgstr "Munkamenet _betöltése"
-
-#: ../src/postr.glade.h:19
-msgid "_Privacy:"
-msgstr "_Adatvédelem:"
-
-#: ../src/postr.glade.h:20
+#: ../src/postr.glade.h:4
 msgid "_Remove Photos"
 msgstr "Fényképek _eltávolítása"
 
-#: ../src/postr.glade.h:21
-msgid "_Safety:"
-msgstr "_Biztonság:"
-
-#: ../src/postr.glade.h:22
+#: ../src/postr.glade.h:5
 msgid "_Save session"
 msgstr "Munkamenet _mentése"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "Munkamenet _betöltése"
+
+#: ../src/postr.glade.h:7
 msgid "_Switch user..."
 msgstr "Felhasználó _váltása…"
 
-#: ../src/postr.glade.h:24
-msgid "_Title:"
-msgstr "_Cím:"
-
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:8
 msgid "_Upload"
 msgstr "_Feltöltés"
 
-#: ../src/postr.glade.h:26
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Kijelölés"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Kijelölés megs_züntetése"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Kijelölés megfordítása"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Fényképek hozzáadása…"
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Fényképek eltávolítása"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Küldés csoportokba"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "_Tartalom típusa:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Adatvédelem:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Biztonság:"
+
+#: ../src/postr.glade.h:19
 msgid "_Visible in search results"
 msgstr "Megjelenjen a _keresési találatok között"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "L_icenc:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Adatvédelem, biztonság, típus és licenc"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Cím:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Leírás:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "Cí_mkék"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "_Hozzáadás albumhoz:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Átnevezés"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
@@ -204,26 +211,26 @@ msgstr ""
 "Néhány fénykép még feltöltésre vár. Biztos benne, hogy ki szeretne lépni? El "
 "is mentheti a függőben lévő feltöltési csomagot későbbre."
 
-#: ../src/postr.py:777
+#: ../src/postr.py:781
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "A(z) %s kép túl nagy. A képek nem lehetnek %d MB-nál nagyobb méretűek."
 
-#: ../src/postr.py:945
+#: ../src/postr.py:949
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "%(index)d. feltöltése, összesen %(count)d"
 
-#: ../src/postr.py:948
+#: ../src/postr.py:952
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flickr feltöltő (%(index)d/%(count)d)"
 
-#: ../src/postr.py:995
+#: ../src/postr.py:999
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Néhány fájl nem létezik, vagy jelenleg nem elérhető."
 
-#: ../src/postr.py:1352
+#: ../src/postr.py:1356
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -232,7 +239,7 @@ msgstr ""
 "%s néven jelentkezett be, de %s\n"
 "feltöltési csomagját tölti"
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
+#: ../src/postr.py:1360 ../src/postr.py:1377
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -240,7 +247,7 @@ msgstr ""
 "Szeretné folytatni a betöltéssel? Fényképalbum-információ nem lesz "
 "importálva."
 
-#: ../src/postr.py:1369
+#: ../src/postr.py:1373
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
