@@ -1,0 +1,523 @@
+# Romanian translation for postr.
+# Copyright (C) 2011 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# George Labau <cntv.george@yahoo.com>, 2011.
+# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"POT-Creation-Date: 2014-02-04 11:57+0000\n"
+"PO-Revision-Date: 2014-08-07 22:28+0200\n"
+"Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
+"Language-Team: Gnome Romanian Translation Team\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#: C/tags.page:8(desc)
+msgid "Adding tags to your pictures."
+msgstr "Adaugă etichete imaginilor dumneavoastră."
+
+#: C/tags.page:11(name) C/permissions.page:11(name) C/login.page:11(name)
+#: C/index.page:12(name) C/uploading.page:11(name) C/sets.page:11(name)
+#: C/offline.page:10(name) C/introduction.page:12(name) C/groups.page:11(name)
+msgid "Germán Póo-Caamaño"
+msgstr "Germán Póo-Caamaño"
+
+#: C/tags.page:12(email) C/permissions.page:12(email) C/login.page:12(email)
+#: C/index.page:13(email) C/uploading.page:12(email) C/sets.page:12(email)
+#: C/offline.page:11(email) C/introduction.page:13(email)
+#: C/groups.page:12(email)
+msgid "gpoo@gnome.org"
+msgstr "gpoo@gnome.org"
+
+#: C/tags.page:15(name) C/permissions.page:15(name) C/login.page:15(name)
+#: C/index.page:16(name) C/uploading.page:15(name)
+#: C/introduction.page:16(name)
+msgid "Sergio Infante"
+msgstr "Sergio Infante"
+
+#: C/tags.page:16(email) C/permissions.page:16(email) C/login.page:16(email)
+#: C/index.page:17(email) C/uploading.page:16(email)
+#: C/introduction.page:17(email) C/groups.page:16(email)
+msgid "raulsergio9@gmail.com"
+msgstr "raulsergio9@gmail.com"
+
+#: C/tags.page:20(title)
+msgid "Adding tags to your pictures"
+msgstr "Adăugarea etichetelor imaginilor"
+
+#: C/tags.page:24(title) C/tags.page:26(title)
+msgid "What is a tag?"
+msgstr "Ce este o etichetă?"
+
+#: C/tags.page:27(p)
+msgid ""
+"A tag is a non-hierarchical term assigned to a piece of information. This "
+"term helps describe an item and allows it to be found again by browsing or "
+"searching. Tags are generally chosen informally and personally by the user."
+msgstr ""
+"O etichetă este un termen non-ierarhic atribuit unor anumite informații. "
+"Acest termen ajută la descrierea unui obiect și permite să fie găsit din nou "
+"prin navigare și căutare. Etichetele sunt în general alese informal și "
+"personal de către utilizator."
+
+#: C/tags.page:32(title) C/tags.page:34(title)
+msgid "Creating a tag"
+msgstr "Crearea unei etichete"
+
+#: C/tags.page:35(p)
+msgid ""
+"Tags are created by typing the term on Tags field on <app>Postr</app> main "
+"window"
+msgstr ""
+"Etichetele sunt create prin tastarea termenului în câmpul Etichete din "
+"fereastra principală <app>Postr</app>"
+
+#: C/permissions.page:8(desc)
+msgid "Setting permissions to your photographs."
+msgstr "Modifică permisiunile fotografiilor dumneavoastră."
+
+#: C/permissions.page:20(title)
+msgid "Privacy, safety and license"
+msgstr "Intimitate, siguranță și licență"
+
+#: C/permissions.page:24(title)
+msgid "Privacy"
+msgstr "Intimitate"
+
+#: C/permissions.page:26(title)
+msgid "Privacy of your photographs"
+msgstr "Intimitatea fotografiilor dumneavoastră"
+
+#: C/permissions.page:27(p) C/permissions.page:41(p) C/permissions.page:54(p)
+#: C/permissions.page:67(p)
+msgid "You can choose between:"
+msgstr "Puteți alege dintre:"
+
+#: C/permissions.page:29(p)
+msgid "Public"
+msgstr "Public"
+
+#: C/permissions.page:30(p)
+msgid "Family Only"
+msgstr "Numai familia"
+
+#: C/permissions.page:31(p)
+msgid "Friends and Family Only"
+msgstr "Numai familia și prietenii"
+
+#: C/permissions.page:32(p)
+msgid "Private"
+msgstr "Privat"
+
+#: C/permissions.page:38(title)
+msgid "Safety"
+msgstr "Sigure"
+
+#: C/permissions.page:40(title)
+msgid "Defining the safety of your content"
+msgstr "Definirea siguranței conținutului dumneavoastră"
+
+#: C/permissions.page:43(p)
+msgid "Safe"
+msgstr "Sigur"
+
+#: C/permissions.page:44(p)
+msgid "Moderate"
+msgstr "Moderat"
+
+#: C/permissions.page:45(p)
+msgid "Restricted"
+msgstr "Restricționat"
+
+#: C/permissions.page:51(title)
+msgid "Content Type"
+msgstr "Tipul conținutului"
+
+#: C/permissions.page:53(title)
+msgid "Content Type of your content"
+msgstr "Tipul conținutului dumneavoastră"
+
+#: C/permissions.page:56(p)
+msgid "Photo"
+msgstr "Fotografie"
+
+#: C/permissions.page:57(p)
+msgid "Screenshot"
+msgstr "Captură de ecran"
+
+#: C/permissions.page:58(p)
+msgid "Other"
+msgstr "Alta"
+
+#: C/permissions.page:64(title)
+msgid "License"
+msgstr "Licență"
+
+#: C/permissions.page:66(title)
+msgid "Choosing a license for your photographs"
+msgstr "Alegerea licenței pentru fotografiile dumneavoastră"
+
+#: C/permissions.page:69(p)
+msgid "Default"
+msgstr "Implicit"
+
+#: C/permissions.page:70(p)
+msgid "All Rights Reserved"
+msgstr "Toate drepturile rezervate"
+
+#: C/permissions.page:71(p)
+msgid "Attribution License"
+msgstr "Licență de atribuire"
+
+#: C/permissions.page:72(p)
+msgid "Attribution-NoDerivs License"
+msgstr "Licență de atribuire fără derivate"
+
+#: C/permissions.page:73(p)
+msgid "Attribution-NonCommercial-NoDerivs License"
+msgstr "Licență de atribuire necomercială fără derivate"
+
+#: C/permissions.page:74(p)
+msgid "Attribution-NonCommercial License"
+msgstr "Licență de atribuire necomercială"
+
+#: C/permissions.page:75(p)
+msgid "Attribution-NonCommercial-ShareAlike License"
+msgstr ""
+"Licență de atribuire necomercială Atribuire-Distribuire-în-condiții-identice"
+
+#: C/permissions.page:76(p)
+msgid "Attribution-ShareAlike License"
+msgstr "Licență de atribuire Atribuire-Distribuire-în-condiții-identice"
+
+#: C/permissions.page:77(p)
+msgid "No known copyright restrictions"
+msgstr "Fără restricții cunoscute de drepturi de autor"
+
+#: C/permissions.page:78(p)
+msgid "United States Government Work"
+msgstr "Guvernul de lucru al Statelor Unite"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/login.page:31(None)
+msgid ""
+"@@image: 'figures/postr-login-flickr.png'; "
+"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+msgstr ""
+"@@image: 'figures/postr-login-flickr.png'; "
+"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+
+#: C/login.page:8(desc)
+msgid "Connecting <app>Postr</app> to your Flickr account."
+msgstr "Conectarea <app>Postr</app> la contul dumneavoastră Flickr."
+
+#: C/login.page:19(title)
+msgid "Log in on Flickr"
+msgstr "Autentificarea la Flickr"
+
+#: C/login.page:21(p)
+msgid ""
+"<app>Postr</app> requires authorization from your Flickr account to upload "
+"your photos. In order to connect <app>Postr</app> with your Flickr account, "
+"the first time you run <app>Postr</app>, you will be asked to login to "
+"Flickr with the following dialog:"
+msgstr ""
+"<app>Postr</app> necesită aprobare de la contul dumneavoastră Flickr pentru "
+"încărcarea pozelor. Pentru conectarea <app>Postr</app> cu contul "
+"dumneavoastră Flickr, prima dată când rulați <app>Postr</app>, vi se va cere "
+"să vă autentificați la Flickr cu următorul dialog:"
+
+#: C/login.page:29(title)
+msgid "<app>Postr</app> Login to Flickr window"
+msgstr "Fereastra <app>Postr</app> - Autentificarea la Flickr"
+
+#: C/login.page:30(desc)
+msgid "<app>Postr</app> Switch account and Login to Flickr window"
+msgstr ""
+"Fereastra <app>Postr</app> Schimbați contul și autentificați-vă la Flickr"
+
+#: C/login.page:34(p)
+msgid ""
+"Click on <gui>Login to Flickr</gui>. This action will open the Flickr "
+"authentication page on your default web browser."
+msgstr ""
+"Clic pe <gui>Autentificare la Flickr</gui>. Această acțiune va deschide "
+"pagina de autentificare Flickr în navigatorul web implicit."
+
+#: C/login.page:37(p)
+msgid ""
+"Follow the instructions on Flickr website to authorize <app>Postr</app>. The "
+"permissions requested are for read and write, but not delete."
+msgstr ""
+"Urmați instrucțiunile de pe siteul Flickr pentru a autoriza "
+"<app>Postr</app>. Permisiunile sunt solicitate pentru citire și scriere, dar "
+"nu și ștergere."
+
+#: C/login.page:40(p)
+msgid ""
+"Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click "
+"on <gui>Continue</gui>."
+msgstr ""
+"Navigați înapoi la <gui>Autentificare la Flickr</gui> pe fereastra "
+"<app>Postr</app> și apăsați pe <gui>Continuă</gui>."
+
+#: C/login.page:45(p)
+msgid ""
+"To use <app>Postr</app> with another Flickr account, you have to to select "
+"<guiseq><gui>File</gui><gui>Switch user...</gui></guiseq> and repeat the "
+"procedure."
+msgstr ""
+"Pentru a folosi <app>Postr</app> cu alt cont Flickr, trebuie să selectați "
+"<guiseq><gui>Fișier</gui><gui>Schimbă utilizatorul...</gui></guiseq> și "
+"repetați procedura."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/index.page:26(None)
+msgid "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+msgstr "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+
+#: C/index.page:7(title) C/index.page:8(title)
+msgid "Postr"
+msgstr "Postr"
+
+#: C/index.page:9(desc)
+msgid "Flickr Uploader."
+msgstr "Încărcător pentru Flickr."
+
+#: C/index.page:20(p)
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Atribuire-Distribuire-în-condiții-identice 3.0"
+
+#: C/index.page:25(title)
+msgid ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
+"Postr: Photo Uploader for Flickr"
+msgstr ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> Postr: "
+"Încărcarea fotografiilor pentru Flickr "
+
+#: C/index.page:31(title) C/index.page:33(title)
+msgid "Getting Started"
+msgstr "Noțiuni de bază"
+
+#: C/index.page:38(title) C/index.page:40(title)
+msgid "Setting photograph's properties"
+msgstr "Stabilirea proprietațiilor fotografiei"
+
+#: C/index.page:45(title) C/index.page:47(title)
+msgid "Advanced actions"
+msgstr "Acțiuni avansate"
+
+#: C/uploading.page:8(desc)
+msgid "Share your photos with your family, friends or everyone"
+msgstr "Partajați fotografiile cu familia, prietenii sau oricine altcineva"
+
+#: C/uploading.page:20(title)
+msgid "Uploading photographs on Flickr"
+msgstr "Încărcarea fotografiilor pe Flickr"
+
+#: C/uploading.page:22(p)
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Clic pe <gui>Adaugă fotografii...</gui>"
+
+#: C/uploading.page:23(p)
+msgid ""
+"From the <gui>Add Photos</gui> window, choose the photographs that you would "
+"like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr ""
+"Din fereastra <gui>Adăugare fotografii</gui>, alegeți fotografiile pe care "
+"doriți să le încărcați pe Flick. Puteți selecta una sau mai multe fotografii "
+"deodată."
+
+#: C/uploading.page:26(p)
+msgid ""
+"Choose an image and edit the title, description, tags, privacy, safety, "
+"type, license and other data of image"
+msgstr ""
+"Alegeți o imagine și editați titlul, descrierea, etichetele, intimitatea, "
+"siguranța, tipul, licența și alte date ale imaginii"
+
+#: C/uploading.page:27(p)
+msgid "When you finish add aditional description, click on Upload button"
+msgstr ""
+"Când ați terminat adăugarea descrierilor adiționale, apăsați clic pe butonul "
+"Încărcare"
+
+#: C/uploading.page:30(p)
+msgid ""
+"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
+"drop them on the left pane."
+msgstr ""
+"Puteți de asemenea trage fotografii din administratorul de fișiere "
+"(<gui>Nautilus</gui>) și plasa în panoul din stânga."
+
+#: C/sets.page:8(desc)
+msgid "Grouping pictures by set."
+msgstr "Grupează imaginile după set."
+
+#: C/sets.page:16(title)
+msgid "Grouping pictures by set"
+msgstr "Gruparea imaginilor după set"
+
+#: C/sets.page:20(title) C/sets.page:22(title)
+msgid "What is a set?"
+msgstr "Ce este un set?"
+
+#: C/sets.page:27(title) C/sets.page:29(title)
+msgid "Creating a set"
+msgstr "Crearea unui set"
+
+#: C/sets.page:34(title) C/sets.page:36(title)
+msgid "Choosing a set"
+msgstr "Selectarea unui set"
+
+#: C/offline.page:7(desc)
+msgid "How to continue your work later."
+msgstr "Cum să continui munca mai târziu."
+
+#: C/offline.page:15(title)
+msgid "Continue the uploading later"
+msgstr "Continuarea încărcării mai târziu"
+
+#: C/offline.page:20(p)
+msgid "Save session."
+msgstr "Salvați sesiunea."
+
+#: C/offline.page:21(p)
+msgid "Choose a name."
+msgstr "Alegeți un nume."
+
+#: C/offline.page:22(p)
+msgid "The next time, you can load a session previously save."
+msgstr "Data viitoare, puteți încărca o sesiune salvată anterior."
+
+#: C/offline.page:26(p)
+msgid ""
+"If you load a session when you are off-line, the properties that relies on "
+"your connection will be lost. These properties are: sets, groups and privacy."
+msgstr ""
+"Dacă încărcați o sesiune când sunteți deconectat, proprietățile pe care se "
+"bazează conexiunea dumneavoastră vor fi pierdute. Aceste proprietăți sunt: "
+"seturi, grupuri și intimitate."
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/introduction.page:39(None)
+msgid ""
+"@@image: 'figures/postr-main-window.png'; "
+"md5=f0a241232213b440eedbf2d82c0c9204"
+msgstr ""
+"@@image: 'figures/postr-main-window.png'; "
+"md5=f0a241232213b440eedbf2d82c0c9204"
+
+#: C/introduction.page:9(desc)
+msgid "Introduction to the <app>Postr</app> flickr uploader."
+msgstr "Introducere în <app>Postr</app> încarcarea flickr."
+
+#: C/introduction.page:21(title)
+msgid "Introduction"
+msgstr "Introducere"
+
+#: C/introduction.page:23(p)
+msgid ""
+"<app>Postr</app> is a tool for uploading pictures to <link href=\"http://"
+"flickr.com/\"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps "
+"you to share your pictures with your family, friends, contacts or everyone."
+msgstr ""
+"<app>Postr</app> este un instrument pentru desktopul GNOME ce ajută la "
+"încarcarea pozelor pe <link "
+"href=\"http://flickr.com/\">Flickr</link>.<app>Postr</app> vă ajută să vă "
+"partajați pozele cu familia, prietenii, contactele sau oricine altcineva."
+
+#: C/introduction.page:26(p)
+msgid ""
+"<app>Postr</app> supports the most common properties of a picture in Flickr, "
+"such as title, description and tags. It also supports groups, where you can "
+"share your pictures to the groups you are already subscribed in Flickr."
+msgstr ""
+"<app>Postr</app> suportă proprietățile cele mai frecvente ale unei "
+"fotografii în Flickr, cum ar fi titlu, descrierea și etichetele. Deasemenea "
+"suportă grupuri, unde vă puteți partaja fotografiile cu grupurile la care "
+"sunteți deja abonat în Flickr."
+
+#: C/introduction.page:29(p)
+msgid ""
+"Using <app>Postr</app> you can define a set for your pictures, either new or "
+"existent, where you can keep them organized."
+msgstr ""
+"Folosind <app>Postr</app> puteți defini un set pentru pozele dumneavoastră, "
+"fie nou sau existent, unde le puteți păstra organizate."
+
+#: C/introduction.page:32(p)
+msgid ""
+"In order to use <app>Postr</app> you need an account on <link href=\"http://"
+"flickr.com/\">Flickr</link>."
+msgstr ""
+"În scopul utilizării <app>Postr</app> aveți nevoie de un cont pe <link "
+"href=\"http://flickr.com/\">Flickr</link>."
+
+#: C/introduction.page:37(title)
+msgid "<app>Postr</app> window"
+msgstr "Fereastra <app>Postr</app>"
+
+#: C/introduction.page:38(desc)
+msgid "<app>Postr</app> main window"
+msgstr "Fereastra principală <app>Postr</app>"
+
+#: C/introduction.page:40(p)
+msgid "<app>Postr</app> main window."
+msgstr "Fereastra principală <app>Postr</app>."
+
+#: C/groups.page:8(desc)
+msgid "Sharing your photographs with other people."
+msgstr "Partajarea fotografiilor dumneavoastră cu alte persoane."
+
+#: C/groups.page:15(name)
+msgid "Sergio Infante Montero"
+msgstr "Sergio Infante Montero"
+
+#: C/groups.page:19(title)
+msgid "Send your photographs to groups of your interest"
+msgstr "Trimiterea fotografiilor către grupurile de interes personal"
+
+#: C/groups.page:21(p)
+msgid "Choose an image to upload"
+msgstr "Alegeți o imagine pentru încărcare"
+
+#: C/groups.page:22(p)
+msgid "Click on Send to Groups option. A list of your groups must be shown"
+msgstr ""
+"Clic pe opțiunea Trimite la grupuri. O listă a grupurilor dumneavoastră va "
+"apărea"
+
+#: C/groups.page:23(p)
+msgid "Choose in what group or groups will be send the image"
+msgstr "Alegeți în ce grup sau grupuri veți trimite imaginea"
+
+#: C/groups.page:26(p)
+msgid ""
+"Before you can use the Send to Groups option, at least you must have one."
+msgstr ""
+"Înainte să folosiți opțiunea Trimite la grupuri, trebuie să aveți cel puțin "
+"unul."
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/groups.page:0(None)
+msgid "translator-credits"
+msgstr ""
+"Labau George <cntv.george@yahoo.com>, 2010, 2011\n"
+"Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2013, 2014"
+
+#~ msgid "Getting started with Postr"
+#~ msgstr "Noţiuni de bază cu Postr"
+
+#~ msgid "Choose the photographs that you want to upload on Flickr"
+#~ msgstr "Alegeţi fotografiile care vreţi să le încărcaţi pe Flickr"
