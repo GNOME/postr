@@ -31,7 +31,7 @@ msgstr "Nahrát fotky na Flickr"
 
 #: ../data/postr.desktop.in.in.h:3
 msgid "Flickr;Image;Picture;Photo;Uploader;"
-msgstr "flickr;obrázek;obrázky;fotka;fotky;nahrávání;vystavení;"
+msgstr "flickr;obrázek;obrázky;fotka;fotky;nahrávání;vystavení;nahrát;vystavit;"
 
 #: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
