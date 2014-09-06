@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: postr postr-0-13\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2014-09-05 10:21+0000\n"
-"PO-Revision-Date: 2014-09-06 11:24+0700\n"
+"POT-Creation-Date: 2014-09-06 04:30+0000\n"
+"PO-Revision-Date: 2014-09-06 11:31+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Poedit 1.6.9\n"
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:983
+#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Pengunggah Flickr"
 
@@ -32,11 +32,11 @@ msgstr "Unggah foto ke Flickr"
 msgid "Flickr;Image;Picture;Photo;Uploader;"
 msgstr "Flickr;Citra;Gambar;Foto;Pengunggah;"
 
-#: ../nautilus/postrExtension.py:82
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Unggah ke Flickr..."
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Unggah berkas yang dipilih ke Flickr"
 
@@ -85,66 +85,70 @@ msgid "_Help"
 msgstr "Bant_uan"
 
 #: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Isi"
+
+#: ../src/postr.glade.h:14
 msgid "Add Photos..."
 msgstr "Tambah Foto..."
 
-#: ../src/postr.glade.h:14
+#: ../src/postr.glade.h:15
 msgid "Remove Photos"
 msgstr "Hapus Foto"
 
-#: ../src/postr.glade.h:15
-msgid "Send to Groups"
-msgstr "Kirim ke Grup"
-
 #: ../src/postr.glade.h:16
-msgid "_Content type:"
-msgstr "Tipe _isi:"
+msgid "Rename"
+msgstr "Ubah Nama"
 
 #: ../src/postr.glade.h:17
-msgid "_Privacy:"
-msgstr "_Privasi:"
-
-#: ../src/postr.glade.h:18
-msgid "_Safety:"
-msgstr "Ke_selamatan:"
-
-#: ../src/postr.glade.h:19
-msgid "_Visible in search results"
-msgstr "_Tampak dalam hasil pencarian"
-
-#: ../src/postr.glade.h:20
-msgid "_License:"
-msgstr "_Lisensi:"
-
-#: ../src/postr.glade.h:21
-msgid "Privacy, Safety, Type and License"
-msgstr "Privasi, Keselamatan, Tipe, dan Lisensi"
-
-#: ../src/postr.glade.h:22
 msgid "_Title:"
 msgstr "_Judul"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:18
 msgid "_Description:"
 msgstr "_Deskripsi:"
 
-#: ../src/postr.glade.h:24
+#: ../src/postr.glade.h:19
 msgid "Ta_gs:"
 msgstr "Ta_g:"
 
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:20
 msgid "Add to _Set:"
 msgstr "Tambah ke _Set:"
 
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Kirim ke Grup"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Tampak dalam hasil pencarian"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Privasi:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "Ke_selamatan:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Tipe _isi:"
+
 #: ../src/postr.glade.h:26
-msgid "Rename"
-msgstr "Ubah Nama"
+msgid "_License:"
+msgstr "_Lisensi:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Privasi, Keselamatan, Tipe, dan Lisensi"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Lanjutkan"
 
-#: ../src/AuthenticationDialog.py:46
+#: ../src/AuthenticationDialog.py:47
 msgid ""
 "Postr needs to login to Flickr to upload your photos. Please click on the "
 "link below to login to Flickr."
@@ -152,43 +156,43 @@ msgstr ""
 "Postr perlu log masuk ke Flickr untuk mengunggah foto-foto Anda. Harap klik "
 "pada taut di bawah untuk log masuk ke Flickr."
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
 msgid "Login to Flickr"
 msgstr "Log Masuk ke Flickr"
 
-#: ../src/ErrorDialog.py:26
+#: ../src/ErrorDialog.py:27
 msgid "An error occurred"
 msgstr "Terjadi galat"
 
-#: ../src/ErrorDialog.py:47
+#: ../src/ErrorDialog.py:49
 msgid "Details"
 msgstr "Rincian"
 
-#: ../src/ImageList.py:72
+#: ../src/ImageList.py:79
 msgid "No title"
 msgstr "Tanpa judul"
 
-#: ../src/LicenseCombo.py:26
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Baku"
 
-#: ../src/postr.py:412
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Tambah Foto"
 
-#: ../src/postr.py:424
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Citra"
 
-#: ../src/postr.py:428
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Semua Berkas"
 
-#: ../src/postr.py:493
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Saat Ini Sedang Mengunggah</b>"
 
-#: ../src/postr.py:494
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -196,11 +200,11 @@ msgstr ""
 "Foto sedang diunggah. Apakah Anda yakin ingin keluar? Anda juga dapat "
 "menyimpan set pengunggahan yang tertunda untuk nanti."
 
-#: ../src/postr.py:509
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Foto yang akan diunggah</b>"
 
-#: ../src/postr.py:510
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -208,26 +212,26 @@ msgstr ""
 "Ada foto yang tertunda diunggah. Apakah Anda yakin ingin keluar? Anda juga "
 "dapat menyimpan set pengunggahan tertunda untuk nanti."
 
-#: ../src/postr.py:781
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Citra %s terlalu besar, ukuran citra mesti tak lebih dari %dMB."
 
-#: ../src/postr.py:949
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Mengunggah %(index)d dari %(count)d"
 
-#: ../src/postr.py:952
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Pengunggah Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:999
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Beberapa berkas tak ada atau saat ini tak dapat diakses."
 
-#: ../src/postr.py:1356
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -236,7 +240,7 @@ msgstr ""
 "Anda log masuk sebagai %s tapi memuat\n"
 "set unggah bagi %s"
 
-#: ../src/postr.py:1360 ../src/postr.py:1377
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -244,7 +248,7 @@ msgstr ""
 "Apakah Anda ingin melanjutkan memuat? Anda tak akan mengimpor informasi set "
 "foto."
 
-#: ../src/postr.py:1373
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -253,45 +257,45 @@ msgstr ""
 "Anda tidak sedang log masuk tapi memuat\n"
 "set unggah bagi %s"
 
-#: ../src/ProgressDialog.py:56
+#: ../src/ProgressDialog.py:59
 msgid "Uploading"
 msgstr "Mengunggah"
 
-#: ../src/SetCombo.py:23
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Nihil"
 
-#: ../src/SetCombo.py:24
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Buat Set Foto \"%s\""
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "set foto baru (%d-%m-%y)"
 
-#: ../src/SetCombo.py:132
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Nama bagi set foto baru:"
 
-#: ../src/StatusBar.py:38
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Log masuk sebagai <b>%s</b>.  "
 
-#: ../src/StatusBar.py:41
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
 "Anda dapat mengunggah %(quota)s bulan ini, dan memiliki %(to_upload)s untuk "
 "diunggah."
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Anda dapat mengunggah %(quota)s bulan ini."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s untuk diunggah."
