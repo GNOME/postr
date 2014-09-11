@@ -5,14 +5,15 @@
 # György Balló <ballogy at freestart dot hu>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011.
 # Balázs Úr <urbalazs at gmail dot com>, 2013.
+# Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2012-10-03 23:05+0000\n"
-"PO-Revision-Date: 2013-03-17 15:25+0100\n"
-"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
+"POT-Creation-Date: 2014-09-11 10:21+0000\n"
+"PO-Revision-Date: 2014-09-11 20:36+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
-#: ../src/postr.py:963
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Flickr feltöltő"
 
@@ -31,11 +32,15 @@ msgstr "Flickr feltöltő"
 msgid "Upload photos to Flickr"
 msgstr "Fényképek feltöltése a Flickr-re"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Kép;Fénykép;Fotó;Feltöltő;"
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Feltöltés a Flickr-re…"
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "A kijelölt fájlok feltöltése a Flickr-re"
 
@@ -84,7 +89,6 @@ msgid "_Help"
 msgstr "_Súgó"
 
 #: ../src/postr.glade.h:13
-#| msgid "_Content type:"
 msgid "_Contents"
 msgstr "_Tartalom"
 
@@ -172,27 +176,27 @@ msgstr "Részletek"
 msgid "No title"
 msgstr "Nincs cím"
 
-#: ../src/LicenseCombo.py:28
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Alapértelmezett"
 
-#: ../src/postr.py:377
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Fényképek hozzáadása"
 
-#: ../src/postr.py:389
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Képek"
 
-#: ../src/postr.py:394
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Minden fájl"
 
-#: ../src/postr.py:465
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Jelenlegi feltöltés</b>"
 
-#: ../src/postr.py:466
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -200,11 +204,11 @@ msgstr ""
 "A fényképek feltöltése még tart. Biztos benne, hogy ki szeretne lépni? El is "
 "mentheti a függőben lévő feltöltési csomagot későbbre."
 
-#: ../src/postr.py:481
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Feltöltendő fényképek</b>"
 
-#: ../src/postr.py:482
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -212,26 +216,26 @@ msgstr ""
 "Néhány fénykép még feltöltésre vár. Biztos benne, hogy ki szeretne lépni? El "
 "is mentheti a függőben lévő feltöltési csomagot későbbre."
 
-#: ../src/postr.py:761
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "A(z) %s kép túl nagy. A képek nem lehetnek %d MB-nál nagyobb méretűek."
 
-#: ../src/postr.py:929
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "%(index)d. feltöltése, összesen %(count)d"
 
-#: ../src/postr.py:932
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flickr feltöltő (%(index)d/%(count)d)"
 
-#: ../src/postr.py:979
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Néhány fájl nem létezik, vagy jelenleg nem elérhető."
 
-#: ../src/postr.py:1334
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -240,7 +244,7 @@ msgstr ""
 "%s néven jelentkezett be, de %s\n"
 "feltöltési csomagját tölti"
 
-#: ../src/postr.py:1338 ../src/postr.py:1355
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
@@ -248,7 +252,7 @@ msgstr ""
 "Szeretné folytatni a betöltéssel? Fényképalbum-információ nem lesz "
 "importálva."
 
-#: ../src/postr.py:1351
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -261,41 +265,41 @@ msgstr ""
 msgid "Uploading"
 msgstr "Feltöltés"
 
-#: ../src/SetCombo.py:25
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Nincs"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Fényképalbum létrehozása: „%s”"
 
-#: ../src/SetCombo.py:28
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "új fényképalbum (%y-%m-%d)"
 
-#: ../src/SetCombo.py:136
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Az új fényképalbum neve:"
 
-#: ../src/StatusBar.py:40
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Bejelentkezve mint <b>%s</b>.  "
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
 "%(quota)s-ot tölthet fel ebben a hónapban, és %(to_upload)s várakozik "
 "feltöltésre."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "%(quota)s-ot tölthet fel ebben a hónapban."
 
-#: ../src/StatusBar.py:47
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s várakozik feltöltésre."
