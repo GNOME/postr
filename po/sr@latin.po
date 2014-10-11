@@ -1,14 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Serbian translation of postr.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2014.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012—2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&"
-"keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2011-09-19 15:47+0000\n"
-"PO-Revision-Date: 2012-03-18 16:32+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&k"
+"eywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2014-10-06 22:38+0000\n"
+"PO-Revision-Date: 2014-10-11 11:14+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -19,15 +20,19 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:4
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:979
+#: ../src/postr.py:983
 msgid "Flickr Uploader"
-msgstr "Flikrov otprenik"
+msgstr "Flikrov otpremnik"
 
 #: ../data/postr.desktop.in.in.h:2
 msgid "Upload photos to Flickr"
 msgstr "Otpremite fotografije na Flikr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "flikr;slika;fotografija;otpremnik;"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload to Flickr..."
@@ -37,105 +42,105 @@ msgstr "Otpremi na Flikr..."
 msgid "Upload the selected files into Flickr"
 msgstr "Otpremite izabrane datoteke na Flikr"
 
-#: ../src/postr.glade.h:1
-msgid "Add Photos..."
-msgstr "Dodaj fotografije..."
-
 #: ../src/postr.glade.h:2
-msgid "Add to _Set:"
-msgstr "Dodaj u _podešavanje:"
-
-#: ../src/postr.glade.h:3
-msgid "Dese_lect All"
-msgstr "Poništi _izbor"
-
-#: ../src/postr.glade.h:5
-msgid "Privacy, Safety, Type and License"
-msgstr "Privatnost, bezbednost, vrsta i dozvola"
-
-#: ../src/postr.glade.h:6
-msgid "Remove Photos"
-msgstr "Ukloni fotografije"
-
-#: ../src/postr.glade.h:7
-msgid "Rename"
-msgstr "Preimenuj"
-
-#: ../src/postr.glade.h:8
-msgid "Select"
-msgstr "Izaberi"
-
-#: ../src/postr.glade.h:9
-msgid "Send to Groups"
-msgstr "Pošalji grupama"
-
-#: ../src/postr.glade.h:10
-msgid "Ta_gs:"
-msgstr "_Oznake:"
-
-#: ../src/postr.glade.h:11
-msgid "_Add Photos..."
-msgstr "_Dodaj fotografije..."
-
-#: ../src/postr.glade.h:12
-msgid "_Content type:"
-msgstr "_Vrsta sadržaja:"
-
-#: ../src/postr.glade.h:13
-msgid "_Description:"
-msgstr "_Opis:"
-
-#: ../src/postr.glade.h:14
 msgid "_File"
 msgstr "_Datoteka"
 
-#: ../src/postr.glade.h:15
-msgid "_Help"
-msgstr "Po_moć"
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Dodaj fotografije..."
 
-#: ../src/postr.glade.h:16
-msgid "_Invert Selection"
-msgstr "_Preokreni izbor"
-
-#: ../src/postr.glade.h:17
-msgid "_License:"
-msgstr "_Licenca:"
-
-#: ../src/postr.glade.h:18
-msgid "_Load session"
-msgstr "_Učitaj sesiju"
-
-#: ../src/postr.glade.h:19
-msgid "_Privacy:"
-msgstr "_Privatnost:"
-
-#: ../src/postr.glade.h:20
+#: ../src/postr.glade.h:4
 msgid "_Remove Photos"
 msgstr "_Ukloni fotografije"
 
-#: ../src/postr.glade.h:21
-msgid "_Safety:"
-msgstr "_Bezbednost:"
-
-#: ../src/postr.glade.h:22
+#: ../src/postr.glade.h:5
 msgid "_Save session"
 msgstr "_Sačuvaj sesiju"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Učitaj sesiju"
+
+#: ../src/postr.glade.h:7
 msgid "_Switch user..."
 msgstr "_Promeni korisnika..."
 
-#: ../src/postr.glade.h:24
-msgid "_Title:"
-msgstr "_Naslov:"
-
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:8
 msgid "_Upload"
 msgstr "_Otpremi"
 
-#: ../src/postr.glade.h:26
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Izaberi"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Poništi _izbor"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Preokreni izbor"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "Po_moć"
+
+#: ../src/postr.glade.h:13
+msgid "Add Photos..."
+msgstr "Dodaj fotografije..."
+
+#: ../src/postr.glade.h:14
+msgid "Remove Photos"
+msgstr "Ukloni fotografije"
+
+#: ../src/postr.glade.h:15
+msgid "Send to Groups"
+msgstr "Pošalji grupama"
+
+#: ../src/postr.glade.h:16
+msgid "_Content type:"
+msgstr "_Vrsta sadržaja:"
+
+#: ../src/postr.glade.h:17
+msgid "_Privacy:"
+msgstr "_Privatnost:"
+
+#: ../src/postr.glade.h:18
+msgid "_Safety:"
+msgstr "_Bezbednost:"
+
+#: ../src/postr.glade.h:19
 msgid "_Visible in search results"
 msgstr "_Vidljivo u rezultatima pretrage"
+
+#: ../src/postr.glade.h:20
+msgid "_License:"
+msgstr "_Licenca:"
+
+#: ../src/postr.glade.h:21
+msgid "Privacy, Safety, Type and License"
+msgstr "Privatnost, bezbednost, vrsta i dozvola"
+
+#: ../src/postr.glade.h:22
+msgid "_Title:"
+msgstr "_Naslov:"
+
+#: ../src/postr.glade.h:23
+msgid "_Description:"
+msgstr "_Opis:"
+
+#: ../src/postr.glade.h:24
+msgid "Ta_gs:"
+msgstr "_Oznake:"
+
+#: ../src/postr.glade.h:25
+msgid "Add to _Set:"
+msgstr "Dodaj u _podešavanje:"
+
+#: ../src/postr.glade.h:26
+msgid "Rename"
+msgstr "Preimenuj"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
@@ -205,26 +210,26 @@ msgstr ""
 "Imate fotografija zakazanih za otpremanje. Da li ste sigurni da želite da "
 "izađete? Možete takođe da sačuvate vaše zakazano otpremanje za kasnije."
 
-#: ../src/postr.py:777
+#: ../src/postr.py:781
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Slika %s je prevelika, slike ne smeju biti veće od %dMB."
 
-#: ../src/postr.py:945
+#: ../src/postr.py:949
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Otpremam %(index)d od %(count)d"
 
-#: ../src/postr.py:948
+#: ../src/postr.py:952
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flikrov otpremnik (%(index)d/%(count)d)"
 
-#: ../src/postr.py:995
+#: ../src/postr.py:999
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Neke datoteke ne postoje ili su trenutno nedostupne."
 
-#: ../src/postr.py:1352
+#: ../src/postr.py:1356
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -233,14 +238,14 @@ msgstr ""
 "Prijavljeni ste kao %s ali otpremate\n"
 "otpremni skup za „%s“"
 
-#: ../src/postr.py:1356 ../src/postr.py:1373
+#: ../src/postr.py:1360 ../src/postr.py:1377
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
 msgstr ""
 "Da li želite da nastavite sa otpremanjem?  Nećete uvesti podatke fotoskupa."
 
-#: ../src/postr.py:1369
+#: ../src/postr.py:1373
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
