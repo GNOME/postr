@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&"
-"keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2012-10-03 23:05+0000\n"
-"PO-Revision-Date: 2012-10-06 08:45+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&k"
+"eywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2014-10-27 11:16+0000\n"
+"PO-Revision-Date: 2014-10-27 17:33+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
 #: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
-#: ../src/postr.py:963
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Flikrov otprenik"
 
@@ -29,11 +29,15 @@ msgstr "Flikrov otprenik"
 msgid "Upload photos to Flickr"
 msgstr "Otpremite fotografije na Flikr"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "flikr;slika;fotografija;otpremnik;"
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Otpremi na Flikr..."
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Otpremite izabrane datoteke na Flikr"
 
@@ -82,7 +86,6 @@ msgid "_Help"
 msgstr "Po_moć"
 
 #: ../src/postr.glade.h:13
-#| msgid "_Content type:"
 msgid "_Contents"
 msgstr "_Sadržaj"
 
@@ -170,27 +173,27 @@ msgstr "Detalji"
 msgid "No title"
 msgstr "Bez naslova"
 
-#: ../src/LicenseCombo.py:28
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Osnovno"
 
-#: ../src/postr.py:377
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Dodajte fotografije"
 
-#: ../src/postr.py:389
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Slike"
 
-#: ../src/postr.py:394
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Sve datoteke"
 
-#: ../src/postr.py:465
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Trenutno otpremam</b>"
 
-#: ../src/postr.py:466
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -198,11 +201,11 @@ msgstr ""
 "Fotografije se još uvek otpremaju. Da li ste sigurni da želite da izađete? "
 "Možete takođe da sačuvate vaše zakazano otpremanje za kasnije."
 
-#: ../src/postr.py:481
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotografije koje će biti otpremljene</b>"
 
-#: ../src/postr.py:482
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -210,26 +213,26 @@ msgstr ""
 "Imate fotografija zakazanih za otpremanje. Da li ste sigurni da želite da "
 "izađete? Možete takođe da sačuvate vaše zakazano otpremanje za kasnije."
 
-#: ../src/postr.py:761
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Slika %s je prevelika, slike ne smeju biti veće od %dMB."
 
-#: ../src/postr.py:929
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Otpremam %(index)d od %(count)d"
 
-#: ../src/postr.py:932
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Flikrov otpremnik (%(index)d/%(count)d)"
 
-#: ../src/postr.py:979
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Neke datoteke ne postoje ili su trenutno nedostupne."
 
-#: ../src/postr.py:1334
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -238,14 +241,14 @@ msgstr ""
 "Prijavljeni ste kao %s ali otpremate\n"
 "otpremni skup za „%s“"
 
-#: ../src/postr.py:1338 ../src/postr.py:1355
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
 msgstr ""
 "Da li želite da nastavite sa otpremanjem?  Nećete uvesti podatke fotoskupa."
 
-#: ../src/postr.py:1351
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -258,41 +261,41 @@ msgstr ""
 msgid "Uploading"
 msgstr "Otpremam"
 
-#: ../src/SetCombo.py:25
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Ništa"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Napravi fotoskup „%s“"
 
-#: ../src/SetCombo.py:28
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "novi fotoskup (%m.%d.%y)"
 
-#: ../src/SetCombo.py:136
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Naziv novog fotoskupa:"
 
-#: ../src/StatusBar.py:40
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Prijavljeni ste kao <b>%s</b>.  "
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
 "Ovog meseca možete da otpremite %(quota)s, a imate %(to_upload)s za "
 "otpremanje."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Možete da otpremite %(quota)s ovog meseca."
 
-#: ../src/StatusBar.py:47
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s za otpremanje."
