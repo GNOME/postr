@@ -6,8 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Postr\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 18:36+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2014-07-14 16:25+0000\n"
 "PO-Revision-Date: 2010-12-29 18:38+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -16,11 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/postr.desktop.in.in.h:1
-#: ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25
-#: ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:979
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Skicka upp till Flickr"
 
@@ -28,191 +27,212 @@ msgstr "Skicka upp till Flickr"
 msgid "Upload photos to Flickr"
 msgstr "Skicka upp foton till Flickr"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr ""
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Skicka upp till Flickr..."
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Skicka upp markerade filer till Flickr"
 
-#: ../src/postr.glade.h:1
-msgid "Add Photos..."
-msgstr "Lägg till foton..."
-
 #: ../src/postr.glade.h:2
-msgid "Add to _Set:"
-msgstr "Lägg till i _uppsättning:"
-
-#: ../src/postr.glade.h:3
-msgid "Dese_lect All"
-msgstr "Avmark_era allt"
-
-#: ../src/postr.glade.h:5
-msgid "Privacy, Safety, Type and License"
-msgstr "Integritet, säkerhet, typ och licens"
-
-#: ../src/postr.glade.h:6
-msgid "Remove Photos"
-msgstr "Ta bort foton"
-
-#: ../src/postr.glade.h:7
-msgid "Rename"
-msgstr "Byt namn"
-
-#: ../src/postr.glade.h:8
-msgid "Select"
-msgstr "Markera"
-
-#: ../src/postr.glade.h:9
-msgid "Send to Groups"
-msgstr "Skicka till grupper"
-
-#: ../src/postr.glade.h:10
-msgid "Ta_gs:"
-msgstr "Ta_ggar:"
-
-#: ../src/postr.glade.h:11
-msgid "_Add Photos..."
-msgstr "_Lägg till foton..."
-
-#: ../src/postr.glade.h:12
-msgid "_Content type:"
-msgstr "I_nnehållstyp:"
-
-#: ../src/postr.glade.h:13
-msgid "_Description:"
-msgstr "_Beskrivning:"
-
-#: ../src/postr.glade.h:14
 msgid "_File"
 msgstr "_Arkiv"
 
-#: ../src/postr.glade.h:15
-msgid "_Help"
-msgstr "_Hjälp"
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Lägg till foton..."
 
-#: ../src/postr.glade.h:16
-msgid "_Invert Selection"
-msgstr "_Invertera markering"
-
-#: ../src/postr.glade.h:17
-msgid "_License:"
-msgstr "_Licens:"
-
-#: ../src/postr.glade.h:18
-msgid "_Load session"
-msgstr "_Läs in session"
-
-#: ../src/postr.glade.h:19
-msgid "_Privacy:"
-msgstr "_Integritet:"
-
-#: ../src/postr.glade.h:20
+#: ../src/postr.glade.h:4
 msgid "_Remove Photos"
 msgstr "_Ta bort foton"
 
-#: ../src/postr.glade.h:21
-msgid "_Safety:"
-msgstr "_Säkerhet:"
-
-#: ../src/postr.glade.h:22
+#: ../src/postr.glade.h:5
 msgid "_Save session"
 msgstr "_Spara session"
 
-#: ../src/postr.glade.h:23
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Läs in session"
+
+#: ../src/postr.glade.h:7
 msgid "_Switch user..."
 msgstr "_Växla användare..."
 
-#: ../src/postr.glade.h:24
-msgid "_Title:"
-msgstr "_Titel:"
-
-#: ../src/postr.glade.h:25
+#: ../src/postr.glade.h:8
 msgid "_Upload"
 msgstr "Skicka _upp"
 
-#: ../src/postr.glade.h:26
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Markera"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Avmark_era allt"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Invertera markering"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../src/postr.glade.h:13
+#, fuzzy
+#| msgid "_Content type:"
+msgid "_Contents"
+msgstr "I_nnehållstyp:"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Lägg till foton..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Ta bort foton"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Byt namn"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Titel:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Beskrivning:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Ta_ggar:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Lägg till i _uppsättning:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Skicka till grupper"
+
+#: ../src/postr.glade.h:22
 msgid "_Visible in search results"
 msgstr "S_ynlig i sökresultat"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Sekretess:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Säkerhet:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "I_nnehållstyp:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Licens:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Sekretess, säkerhet, typ och licens"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Fortsätt"
 
-#: ../src/AuthenticationDialog.py:46
-msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
-msgstr "Postr behöver logga in på Flickr för att skicka upp dina foton. Klicka på nedanstående länk för att logga in på Flickr."
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr behöver logga in på Flickr för att skicka upp dina foton. Klicka på "
+"nedanstående länk för att logga in på Flickr."
 
-#: ../src/AuthenticationDialog.py:55
-#: ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
 msgid "Login to Flickr"
 msgstr "Logga in på Flickr"
 
-#: ../src/ErrorDialog.py:26
+#: ../src/ErrorDialog.py:27
 msgid "An error occurred"
 msgstr "Ett fel inträffade"
 
-#: ../src/ErrorDialog.py:47
+#: ../src/ErrorDialog.py:49
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../src/ImageList.py:72
+#: ../src/ImageList.py:79
 msgid "No title"
 msgstr "Ingen titel"
 
-#: ../src/LicenseCombo.py:26
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "Standard"
 
-#: ../src/postr.py:412
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Lägg till foton"
 
-#: ../src/postr.py:424
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Bilder"
 
-#: ../src/postr.py:428
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Alla filer"
 
-#: ../src/postr.py:493
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Skickar upp</b>"
 
-#: ../src/postr.py:494
-msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Foton håller på att skickas. Är du säker på att du vill avsluta? Du kan även spara din väntande sändning till senare."
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Foton håller på att skickas. Är du säker på att du vill avsluta? Du kan även "
+"spara din väntande sändning till senare."
 
-#: ../src/postr.py:509
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Foton att skickas upp</b>"
 
-#: ../src/postr.py:510
-msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Det finns foton som väntar på att skickas upp. Är du säker på att du vill avsluta? Du kan även spara din väntande sändning till senare."
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Det finns foton som väntar på att skickas upp. Är du säker på att du vill "
+"avsluta? Du kan även spara din väntande sändning till senare."
 
-#: ../src/postr.py:777
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Bilden %s är för stor. Bilder får inte vara större än %d MB."
 
-#: ../src/postr.py:945
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Skickar upp %(index)d av %(count)d"
 
-#: ../src/postr.py:948
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Skicka upp till Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:995
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Några filer finns inte eller är inte åtkomliga för närvarande."
 
-#: ../src/postr.py:1352
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -221,12 +241,15 @@ msgstr ""
 "Du är inloggad som %s men läser\n"
 "in en sändning för %s"
 
-#: ../src/postr.py:1356
-#: ../src/postr.py:1373
-msgid "Do you want to continue with the load?  You will not import photoset information."
-msgstr "Vill du fortsätta med inläsningen?  Du kommer inte importera information om fotouppsättningen."
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Vill du fortsätta med inläsningen?  Du kommer inte importera information om "
+"fotouppsättningen."
 
-#: ../src/postr.py:1369
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -235,59 +258,65 @@ msgstr ""
 "Du är inte inloggad men läser in\n"
 "en sändning för %s"
 
-#: ../src/ProgressDialog.py:56
+#: ../src/ProgressDialog.py:59
 msgid "Uploading"
 msgstr "Skickar upp"
 
-#: ../src/SetCombo.py:23
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Ingen"
 
-#: ../src/SetCombo.py:24
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Skapa fotouppsättning \"%s\""
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "ny fotouppsättning (%y-%m-%d)"
 
-#: ../src/SetCombo.py:132
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Namn för den nya fotouppsättningen:"
 
-#: ../src/StatusBar.py:38
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Inloggad som <b>%s</b>.  "
 
-#: ../src/StatusBar.py:41
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "Du kan skicka upp %(quota)s denna månad och har %(to_upload)s att skicka upp."
+msgstr ""
+"Du kan skicka upp %(quota)s denna månad och har %(to_upload)s att skicka upp."
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Du kan skicka upp %(quota)s denna månad."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s att skicka upp."
 
 #~ msgid "_Select All"
 #~ msgstr "_Markera allt"
+
 #~ msgid "gtk-about"
 #~ msgstr "Om"
+
 #~ msgid "..."
 #~ msgstr "..."
+
 #~ msgid "Privacy and Safety"
 #~ msgstr "Integritet och säkerhet"
+
 #~ msgid "You have %s remaining this month"
 #~ msgstr "Du har %s återstående denna månad"
+
 #~ msgid "_Delete"
 #~ msgstr "_Ta bort"
+
 #~ msgid "_About"
 #~ msgstr "_Om"
-
