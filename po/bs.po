@@ -1,0 +1,300 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2015-02-26 23:46+0000\n"
+"PO-Revision-Date: 2015-02-18 19:10+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-02-05 07:06+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
+#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr pošiljalac"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Pošaljite fotografije na Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Image;Picture;Photo;Uploader;Slika;Fotografija"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Učitajte na Flickr..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Učitaj označene datoteke na Flickr"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Datoteka"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Dodaj slike..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Ukloni slike"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Snimi sesiju"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Očitaj sesiju"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Promijeni korisnika..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Učitaj"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Označi"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Po_ništi sve označeno"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Obrni Izbor"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Sadržaj"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Dodaj slike..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Ukloni slike..."
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Preimenuj"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Naslov:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Opis:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "O_znake:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Dodaj u _kolekciju:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Pošalji u grupe"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Prikaži u rezultatima pretrage"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Privatnost:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Sigurnost:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Tip _sadržaja:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Licenca:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Privatnost, sigurnost, tip sadržaja i licenca"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Nastavi"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr zahtijeva prijavu na Flickr za učitavanje tvojih slika. Molimo "
+"pritisnite na link ispod za prijavu na Flickr."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Prijavi se na Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Došlo je do greške"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Detalji"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Bez naslova"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Podrazumijevano"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Dodaj slike"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Slike"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Sve datoteke"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Trenutno se učitava</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Slike se još uvijek učitavaju. Da li si siguran da želiš odustati? Možeš "
+"spasiti učitavanja koja su na čekanju za kasnije."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Slike za učitavanje</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Neke slike su na čekanju za učitavanje. Da li si siguran da želiš odustati? "
+"Možeš spasiti učitavanja koja su na čekanju za kasnije."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "Slika %s je prevelika, veličina slike ne smije biti veća od %dMB."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Učitavanje %(index)d od %(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr učitavač (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Neke datoteke ne postoje ili trenutno nisu dostupne."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Prijavljen si kao %s, ali je učitavanje\n"
+"postavljeno za %s"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Da li želiš nastaviti sa učitavanjem? Nećeš moći unijeti informacije o "
+"slikama."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Nisi prijavljen, ali preuzimaš\n"
+"učitavanje od %s"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Učitavanje"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Nije izabran"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Kreiraj skup slika \"%s\""
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "novi skup slika (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Ime novog skupa slika:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Prijavljen si kao <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr "Ovaj mjesec možeš učitati %(quota)s, a imaš %(to_upload)s za učitati."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Ovaj mjesec možeš učitati %(quota)s."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s za učitavanje."
