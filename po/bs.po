@@ -31,7 +31,7 @@ msgstr "Pošaljite fotografije na Flickr"
 
 #: ../data/postr.desktop.in.in.h:3
 msgid "Flickr;Image;Picture;Photo;Uploader;"
-msgstr "Flickr;Image;Picture;Photo;Uploader;Slika;Fotografija"
+msgstr "Flickr;Image;Picture;Photo;Uploader;Slika;Fotografija;"
 
 #: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
