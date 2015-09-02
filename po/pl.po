@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2012-2014.
-# Aviary.pl <gnomepl@aviary.pl>, 2012-2014.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-14 18:24+0200\n"
-"PO-Revision-Date: 2014-07-14 18:25+0200\n"
+"POT-Creation-Date: 2015-09-02 20:31+0200\n"
+"PO-Revision-Date: 2015-09-02 20:32+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: \n"
@@ -23,8 +23,8 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
-#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
 #: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Wysyłanie do serwisu Flickr"
@@ -41,11 +41,43 @@ msgstr ""
 
 #: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
-msgstr "Wyślij do serwisu Flickr..."
+msgstr "Wyślij do serwisu Flickr…"
 
 #: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Wysyła zaznaczone pliki do serwisu Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Kontynuuj"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Program Postr musi zalogować się w serwisie Flickr, aby wysłać zdjęcia. "
+"Proszę kliknąć na poniższym odnośniku, aby się zalogować."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Zaloguj się w serwisie Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Wystąpił błąd"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Szczegóły"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Bez tytułu"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Domyślne"
 
 #: ../src/postr.glade.h:2
 msgid "_File"
@@ -53,7 +85,7 @@ msgstr "_Plik"
 
 #: ../src/postr.glade.h:3
 msgid "_Add Photos..."
-msgstr "_Dodaj zdjęcia..."
+msgstr "_Dodaj zdjęcia…"
 
 #: ../src/postr.glade.h:4
 msgid "_Remove Photos"
@@ -61,7 +93,7 @@ msgstr "_Usuń zdjęcia"
 
 #: ../src/postr.glade.h:5
 msgid "_Save session"
-msgstr "Zapi_sz sesję"
+msgstr "_Zapisz sesję"
 
 #: ../src/postr.glade.h:6
 msgid "_Load session"
@@ -69,7 +101,7 @@ msgstr "W_czytaj sesję"
 
 #: ../src/postr.glade.h:7
 msgid "_Switch user..."
-msgstr "Przełącz _użytkownika..."
+msgstr "Przełącz _użytkownika…"
 
 #: ../src/postr.glade.h:8
 msgid "_Upload"
@@ -97,7 +129,7 @@ msgstr "_Spis treści"
 
 #: ../src/postr.glade.h:14
 msgid "Add Photos..."
-msgstr "Dodaj zdjęcia..."
+msgstr "Dodaj zdjęcia…"
 
 #: ../src/postr.glade.h:15
 msgid "Remove Photos"
@@ -150,38 +182,6 @@ msgstr "_Licencja:"
 #: ../src/postr.glade.h:27
 msgid "Privacy, Safety, Type and License"
 msgstr "Prywatność, bezpieczeństwo, rodzaj i licencja"
-
-#: ../src/AuthenticationDialog.py:42
-msgid "Continue"
-msgstr "Kontynuuj"
-
-#: ../src/AuthenticationDialog.py:47
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Program Postr musi zalogować się w serwisie Flickr, aby wysłać zdjęcia. "
-"Proszę kliknąć na poniższym odnośniku, aby się zalogować."
-
-#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
-msgid "Login to Flickr"
-msgstr "Zaloguj się w serwisie Flickr"
-
-#: ../src/ErrorDialog.py:27
-msgid "An error occurred"
-msgstr "Wystąpił błąd"
-
-#: ../src/ErrorDialog.py:49
-msgid "Details"
-msgstr "Szczegóły"
-
-#: ../src/ImageList.py:79
-msgid "No title"
-msgstr "Bez tytułu"
-
-#: ../src/LicenseCombo.py:29
-msgid "Default"
-msgstr "Domyślne"
 
 #: ../src/postr.py:397
 msgid "Add Photos"
@@ -274,7 +274,7 @@ msgstr "Brak"
 #: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
-msgstr "Utwórz zestaw zdjęć \"%s\""
+msgstr "Utwórz zestaw zdjęć „%s”"
 
 #: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
