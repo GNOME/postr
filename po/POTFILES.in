@@ -1,6 +1,5 @@
 data/postr.desktop.in.in
 nautilus/postrExtension.py
-[type: gettext/glade]src/postr.glade
 src/AboutDialog.py
 src/AuthenticationDialog.py
 src/ContentTypeCombo.py
@@ -14,7 +13,7 @@ src/ImageStore.py
 src/__init__.py
 src/iptcinfo.py
 src/LicenseCombo.py
-src/postr.glade
+[type: gettext/glade]src/postr.glade
 src/postr.py
 src/PrivacyCombo.py
 src/ProgressDialog.py
