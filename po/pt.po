@@ -156,8 +156,8 @@ msgid ""
 "Postr needs to login to Flickr to upload your photos. Please click on the "
 "link below to login to Flickr."
 msgstr ""
-"O Postr tem de iniciar sessão no Flickr para enviar as suas fotografias. Por "
-"favor, clique na ligação abaixo para iniciar sessão."
+"O Postr precisa de autenticação no Flickr para enviar as suas fotografias. "
+"Clique na ligação abaixo para se autenticar no Flickr."
 
 #: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
 msgid "Login to Flickr"
