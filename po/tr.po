@@ -1,0 +1,300 @@
+# Turkish translation for postr.
+# Copyright (C) 2015 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Necdet Yücel <necdetyucel@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2015-09-02 18:30+0000\n"
+"PO-Revision-Date: 2015-02-20 00:03+0000\n"
+"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1424390630.000000\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr Yükleyici"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Flickr'a fotoğraflarınızı yükleyin"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Görüntü;Resim;Fotoğraf;Yükleyici;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Flickr'a Yükle..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Seçili dosyaları Flickr'a yükle"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Devam Et"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr fotoğraflarınızı yüklemek için Flickr'da oturum açmanızı gerektiriyor. "
+"Lütfen aşağıdaki linke tıklayarak oturum açın."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Flickr'da oturum aç"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Bir hata oluştu"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Başlık yok"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Varsayılan"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Dosya"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "Fotoğraf Ekle..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "Fotoğrafları _Sil"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Oturumu Kaydet"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "Oturumu _Yükle"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Kullanıcı Değiştir..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Yükle"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Seç"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Seçimi Kaldır"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "Seçimi _Tersine Çevir"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Yardım"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_İçerik"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Fotoğraf Ekle..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Fotoğrafları Kaldır"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Başlık:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Tanımlama:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Et_iketler:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "K_ümeye Ekle:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Gruplara Gönder"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Arama sonuçlarında görünür"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Gizlilik:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Güvenlik:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "_İçerik türü:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Lisans:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Gizlilik, Güvenlik, Tür ve Lisans"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Fotoğraf Ekle"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Resimler"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Tüm Dosyalar"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Halen Yükleniyor</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Fotoğrafların yüklenmesi sürüyor. Çıkmak istediğinizden emin misiniz? "
+"Bekleyen yüklemelerinizi erteleyebilirsiniz."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Fotoğraflar yüklendi</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Yüklenmeyi bekleyen fotoğraflar var. Çıkmak istediğinizden emin misiniz? "
+"Bekleyen yüklemelerinizi erteleyebilirsiniz."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "%s görüntüsü çok büyük, görüntüler en fazla %dMB boyutunda olabilir."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Yükleniyor %(index)d of %(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr Yükleyici (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Bazı dosyalar ya yok ya da erişilebilir değil."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"%s olarak oturum açtığınız halde\n"
+"%s için dosya gönderiyorsunuz"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Yüklemeye devam etmek istiyor musunuz?  Fotoğraf bilgisini içe "
+"aktaramayacaksınız."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr "Oturum açmadınız ama\\%s için yükleme kümesi yüklüyorsunuz"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Yükleniyor"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Hiçbiri"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "\"%s\" Fotoğraf Kümesini Oluştur"
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "yeni fotoğraf kümesi (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Yeni fotoğraf kümesi için isim:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "<b>%s</b> olarak oturum açıldı.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Bu ay en fazla %(quota)s yükleme yapabilirsiniz, kalan kotanız %(to_upload)s."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Bu ay %(quota)s boyutunda yükleme yapabilirsiniz."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s yüklenecek."
