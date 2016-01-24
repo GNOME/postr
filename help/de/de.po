@@ -1,18 +1,18 @@
 # German translation of the postr documentation.
-# Mario Blättermann <mariobl@freenet.de>, 2010-2011.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2011, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr help master\n"
-"POT-Creation-Date: 2011-08-02 01:47+0000\n"
-"PO-Revision-Date: 2011-08-09 21:35+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@freenet.de>\n"
+"POT-Creation-Date: 2016-01-24 14:23+0000\n"
+"PO-Revision-Date: 2016-01-24 17:55+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: C/tags.page:8(desc)
 msgid "Adding tags to your pictures."
@@ -205,7 +205,7 @@ msgstr "United States Government Work"
 msgid ""
 "@@image: 'figures/postr-login-flickr.png'; "
 "md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
-msgstr ""
+msgstr "ok"
 
 #: C/login.page:8(desc)
 msgid "Connecting <app>Postr</app> to your Flickr account."
@@ -219,8 +219,8 @@ msgstr "Anmeldung bei Flickr"
 msgid ""
 "<app>Postr</app> requires authorization from your Flickr account to upload "
 "your photos. In order to connect <app>Postr</app> with your Flickr account, "
-"the first time you run <app>Postr</app>, you will be asked to login to Flickr "
-"with the following dialog:"
+"the first time you run <app>Postr</app>, you will be asked to login to "
+"Flickr with the following dialog:"
 msgstr ""
 "<app>Postr</app> erfordert die Legitimierung Ihres Flickr-Kontos, um Ihre "
 "Fotos hochladen zu können. Um <app>Postr</app> mit Ihrem Flickr-Konto "
@@ -255,8 +255,8 @@ msgstr ""
 
 #: C/login.page:40(p)
 msgid ""
-"Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click on "
-"<gui>Continue</gui>."
+"Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click "
+"on <gui>Continue</gui>."
 msgstr ""
 "Kehren Sie zum Flickr-Anmeldungsfenster in <app>Postr</app> zurück und "
 "klicken Sie auf <gui>Fortsetzen</gui>."
@@ -275,7 +275,8 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/index.page:26(None)
 msgid "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
-msgstr "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+msgstr ""
+"@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
 
 #: C/index.page:7(title) C/index.page:8(title)
 msgid "Postr"
@@ -333,15 +334,16 @@ msgstr ""
 
 #: C/uploading.page:26(p)
 msgid ""
-"Choose an image and edit the title, description, tags, privacy, safety, type, "
-"license and other data of image"
+"Choose an image and edit the title, description, tags, privacy, safety, "
+"type, license and other data of image"
 msgstr ""
 "Wählen Sie ein Bild aus und bearbeiten Sie den Titel, die Markierungen, die "
 "Privatspähre, die Sicherheitsstufe und weitere Daten des Bildes."
 
 #: C/uploading.page:27(p)
 msgid "When you finish add aditional description, click on Upload button"
-msgstr "Sobald Sie fertig sind, klicken Sie auf den Knopf <gui>Hochladen</gui>."
+msgstr ""
+"Sobald Sie fertig sind, klicken Sie auf den Knopf <gui>Hochladen</gui>."
 
 #: C/uploading.page:30(p)
 msgid ""
@@ -406,8 +408,9 @@ msgstr ""
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/introduction.page:39(None)
 msgid ""
-"@@image: 'figures/postr-main-window.png'; md5=f0a241232213b440eedbf2d82c0c9204"
-msgstr ""
+"@@image: 'figures/postr-main-window.png'; "
+"md5=f0a241232213b440eedbf2d82c0c9204"
+msgstr "ok"
 
 #: C/introduction.page:9(desc)
 msgid "Introduction to the <app>Postr</app> flickr uploader."
@@ -444,9 +447,9 @@ msgid ""
 "Using <app>Postr</app> you can define a set for your pictures, either new or "
 "existent, where you can keep them organized."
 msgstr ""
-"Mit <app>Postr</app> können Sie eine Reihe von Bildern zusammenfassen, um sie "
-"besser zu organisieren. Es kann sich dabei sowohl um neue als auch bereits "
-"vorhandene Bilder handeln."
+"Mit <app>Postr</app> können Sie eine Reihe von Bildern zusammenfassen, um "
+"sie besser zu organisieren. Es kann sich dabei sowohl um neue als auch "
+"bereits vorhandene Bilder handeln."
 
 #: C/introduction.page:32(p)
 msgid ""
@@ -504,9 +507,9 @@ msgstr ""
 "mindestens eine Gruppe vorhanden sein."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: C/index.page:0(None)
+#: C/groups.page:0(None)
 msgid "translator-credits"
-msgstr "Mario Blättermann <mariobl@freenet.de, 2010, 2011."
+msgstr "Mario Blättermann <mario.blaettermann@gmail.com, 2010, 2011, 2016"
 
 #~ msgid "Uploading photographs on Flickr."
 #~ msgstr "Hochladen von Fotos zu Flickr."
