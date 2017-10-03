@@ -26,6 +26,7 @@ class PrivacyCombo(Gtk.ComboBox):
         model = Gtk.ListStore(GObject.TYPE_STRING, GObject.TYPE_BOOLEAN, GObject.TYPE_BOOLEAN, GObject.TYPE_BOOLEAN)
         model.append(["Public", True, False, False])
         model.append(["Family Only", False, True, False])
+        model.append(["Friends Only", 1, False, 2, False, 3, True])
         model.append(["Friends and Family Only", False, True, True])
         model.append(["Private", False, False, False])
         self.model = model
