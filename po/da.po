@@ -1,26 +1,29 @@
 # Danish translation for postr.
-# Copyright (C) 2013 postr og nedenstående oversættere.
+# Copyright (C) 2017 postr og nedenstående oversættere.
 # This file is distributed under the same license as the postr package.
 # Joe Hansen <joedalton2@yahoo.dk>, 2011, 2013.
+# Alan Mortensen <alanmortensen.am@gmail.com>, 2017.
 #
 # ønsker kunne også være vil (3 strenge)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-15 18:43+0200\n"
-"PO-Revision-Date: 2013-10-14 12:12+0100\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2017-04-08 15:30+0000\n"
+"PO-Revision-Date: 2017-10-25 17:29+0200\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
-#: ../src/AboutDialog.py:27 ../src/AuthenticationDialog.py:40
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
 #: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Flickr-overførsel"
@@ -29,13 +32,50 @@ msgstr "Flickr-overførsel"
 msgid "Upload photos to Flickr"
 msgstr "Overfør billeder til Flickr"
 
-#: ../nautilus/postrExtension.py:82
-msgid "Upload to Flickr..."
-msgstr "Overfør til Flickr ..."
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Billede;Foto;Uploader;Overførsel;"
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Overfør til Flickr …"
+
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Overfør de valgte filer til Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Fortsæt"
+
+# Postr skal først logge ind hos Flickr, før programmet
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr skal være logget ind hos Flickr, før programmet kan overføre dine "
+"billeder. Klik venligst på linket nedenfor for at logge ind hos Flickr."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Log ind hos Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Der opstod en fejl"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Detaljer"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Ingen titel"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Standard"
 
 #: ../src/postr.glade.h:2
 msgid "_File"
@@ -47,7 +87,7 @@ msgstr "_Tilføj billeder ..."
 
 #: ../src/postr.glade.h:4
 msgid "_Remove Photos"
-msgstr "_Fjern billeder"
+msgstr "F_jern billeder"
 
 #: ../src/postr.glade.h:5
 msgid "_Save session"
@@ -59,7 +99,7 @@ msgstr "_Indlæs session"
 
 #: ../src/postr.glade.h:7
 msgid "_Switch user..."
-msgstr "_Skift bruger ..."
+msgstr "_Skift bruger …"
 
 #: ../src/postr.glade.h:8
 msgid "_Upload"
@@ -87,7 +127,7 @@ msgstr "_Indhold"
 
 #: ../src/postr.glade.h:14
 msgid "Add Photos..."
-msgstr "Tilføj billeder ..."
+msgstr "Tilføj billeder …"
 
 #: ../src/postr.glade.h:15
 msgid "Remove Photos"
@@ -141,39 +181,6 @@ msgstr "_Licens:"
 msgid "Privacy, Safety, Type and License"
 msgstr "Privatliv, sikkerhed, type og licens"
 
-#: ../src/AuthenticationDialog.py:42
-msgid "Continue"
-msgstr "Fortsæt"
-
-# Postr skal først logge ind hos Flickr, før programmet
-#: ../src/AuthenticationDialog.py:47
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Postr skal være logget ind hos Flickr, før programmet kan overføre dine "
-"billeder. Klik venligst på henvisningen nedenfor for at logge ind hos Flickr."
-
-#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
-msgid "Login to Flickr"
-msgstr "Log ind hos Flickr"
-
-#: ../src/ErrorDialog.py:27
-msgid "An error occurred"
-msgstr "Der opstod en fejl"
-
-#: ../src/ErrorDialog.py:49
-msgid "Details"
-msgstr "Detaljer"
-
-#: ../src/ImageList.py:79
-msgid "No title"
-msgstr "Intet navn"
-
-#: ../src/LicenseCombo.py:29
-msgid "Default"
-msgstr "Standard"
-
 #: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Tilføj billeder"
@@ -224,7 +231,7 @@ msgstr "Overfører %(index)d af %(count)d"
 #: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
-msgstr "Flickr-overføresel (%(index)d/%(count)d)"
+msgstr "Flickr-overførsel (%(index)d/%(count)d)"
 
 #: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
@@ -236,8 +243,8 @@ msgid ""
 "You are logged in as %s but loading\n"
 "an upload set for %s"
 msgstr ""
-"Du er logget ind som %s men overfører\n"
-"et sæt for %s"
+"Du er logget ind som %s, men indlæser\n"
+"et overførselssæt for %s"
 
 #: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
@@ -253,8 +260,8 @@ msgid ""
 "You are not logged in but loading\n"
 "an upload set for %s"
 msgstr ""
-"Du er ikke logget ind men overfører\n"
-"et sæt for %s"
+"Du er ikke logget ind, men indlæser\n"
+"et overførselssæt for %s"
 
 #: ../src/ProgressDialog.py:59
 msgid "Uploading"
@@ -271,7 +278,7 @@ msgstr "Opret billedsæt \"%s\""
 
 #: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
-msgstr "nyt billedsæt (%m-%d-%y)"
+msgstr "nyt billedsæt (%d-%m-%y)"
 
 #: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
