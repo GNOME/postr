@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: postr master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
 "product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2017-04-08 15:30+0000\n"
+"POT-Creation-Date: 2017-11-04 12:51+0000\n"
 "PO-Revision-Date: 2017-10-25 17:29+0200\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -83,7 +83,7 @@ msgstr "_Fil"
 
 #: ../src/postr.glade.h:3
 msgid "_Add Photos..."
-msgstr "_Tilføj billeder ..."
+msgstr "_Tilføj billeder …"
 
 #: ../src/postr.glade.h:4
 msgid "_Remove Photos"
@@ -274,7 +274,7 @@ msgstr "Ingen"
 #: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
-msgstr "Opret billedsæt \"%s\""
+msgstr "Opret billedsæt “%s”"
 
 #: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
