@@ -1,15 +1,15 @@
 # Polish translation for postr.
-# Copyright © 2012-2017 the postr authors.
+# Copyright © 2012-2018 the postr authors.
 # This file is distributed under the same license as the postr package.
-# Piotr Drąg <piotrdrag@gmail.com>, 2012-2017.
-# Aviary.pl <community-poland@mozilla.org>, 2012-2017.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2018.
+# Aviary.pl <community-poland@mozilla.org>, 2012-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: postr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-04 04:05+0200\n"
-"PO-Revision-Date: 2017-10-04 04:10+0200\n"
+"POT-Creation-Date: 2018-01-21 20:09+0100\n"
+"PO-Revision-Date: 2018-01-21 20:10+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -153,7 +153,7 @@ msgstr "_Dodanie do zestawu:"
 
 #: ../src/postr.glade.h:21
 msgid "Send to Groups"
-msgstr "Wyślij do grup"
+msgstr "Wysyłanie do grup"
 
 #: ../src/postr.glade.h:22
 msgid "_Visible in search results"
@@ -181,7 +181,7 @@ msgstr "Prywatność, bezpieczeństwo, rodzaj i licencja"
 
 #: ../src/postr.py:397
 msgid "Add Photos"
-msgstr "Dodaj zdjęcia"
+msgstr "Dodanie zdjęć"
 
 #: ../src/postr.py:409
 msgid "Images"
