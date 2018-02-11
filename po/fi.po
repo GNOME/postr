@@ -1,0 +1,295 @@
+# Finnish translation for postr.
+# Copyright (C) 2018 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=postr&keywords=I18N+L10N&component=General\n"
+"POT-Creation-Date: 2018-01-21 19:11+0000\n"
+"PO-Revision-Date: 2018-02-11 12:04+0200\n"
+"Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr-lähetin"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Lähetä kuvia Flickriin"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Image;Picture;Photo;Uploader;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Lähetä Flickriin..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Lähetä valitut kuvat Flickriin"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Jatka"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postrin tulee olla kirjautunut Flickriin, jotta kuvia on mahdollista "
+"lähettää. Napsauta alla olevaa linkkiä kirjautuaksesi Flickriin."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Kirjaudu Flickriin"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Tapahtui virhe"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Tiedot"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Ei nimeä"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Oletus"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Tiedosto"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Lisää kuvia..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Poista kuvat"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "Tallen_na istunto"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "L_ataa istunto"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Vaih_da käyttäjää..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "Lähet_ä"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Valitse"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Älä valitse mitään"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "Käänteinen valint_a"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Ohje"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "Sisält_ö"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Lisää kuvia..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Poista kuvat"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Nimeä uudelleen"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Nimi:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "K_uvaus:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "T_unnisteet:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Lisä_ä kokoelmaan:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Lähetä ryhmiin"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "Nä_kyvissä hakutuloksissa"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Yksityisyys:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "Tu_rvallisuus:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Sisällön t_yyppi:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "L_isenssi:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Yksityisyys, turvallisuus, tyyppi ja lisenssi"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Lisää kuvia"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Kuvat"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Kaikki tiedostot"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Lähetetään parhaillaan</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Kuvia lähetetään parhaillaan. Haluatko varmasti lopettaa? Voit tallentaa "
+"odottavan lähetyskokoelman myöhempää käyttöä varten."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Lähetettävät kuvat</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Kuvia odottaa lähetystä. Haluatko varmasti lopettaa? Voit tallentaa "
+"odottavan lähetyskokoelman myöhempää käyttöä varten."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "Kuva %s on liian suuri. Kuvat voivat olla kooltaan korkeintaan %dMt."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Lähetetään %(index)d/%(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr-lähetin (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr ""
+"Joitain tiedostoja ei ole olemassa tai ne eivät ole juuri nyt käytettävissä."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Lähetetään"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Ei mitään"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Luo kuvakokoelma\"%s\""
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "uusi kuvakokoelma (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Nimi uudelle kuvakokoelmalle:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Kirjautuneena tilille <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Voit lähettää %(quota)s tämän kuukauden aikana."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr ""
