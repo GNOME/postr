@@ -45,12 +45,16 @@ appicon16dir = $(iconthemedir)/16x16/apps
 appicon22dir = $(iconthemedir)/22x22/apps
 appicon24dir = $(iconthemedir)/24x24/apps
 appicon32dir = $(iconthemedir)/32x32/apps
+appicon32dir = $(iconthemedir)/48x48/apps
+appicon32dir = $(iconthemedir)/256x256/apps
 appiconscdir = $(iconthemedir)/scalable/apps
 
 dist_appicon16_DATA = data/16x16/postr.png
 dist_appicon22_DATA = data/22x22/postr.png
 dist_appicon24_DATA = data/24x24/postr.png
 dist_appicon32_DATA = data/32x32/postr.png
+dist_appicon32_DATA = data/48x48/postr.png
+dist_appicon32_DATA = data/256x256/postr.png
 dist_appiconsc_DATA = data/scalable/postr.svg
 
 noinst_icons = data/16x16/postr.svg \
