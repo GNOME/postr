@@ -52,11 +52,10 @@ class AuthenticationDialog(Gtk.Dialog):
         # Gtk.LinkButton is only in 2.10, so use a normal button if it isn't
         # available.
         if hasattr(Gtk, "LinkButton"):
-            Gtk.link_button_set_uri_hook(on_url_clicked)
             button = Gtk.LinkButton(url, _("Login to Flickr"))
         else:
             button = Gtk.Button(_("Login to Flickr"))
-            button.connect("clicked", on_url_clicked, url)
+        button.connect("clicked", on_url_clicked, url)
         vbox.add(button)
 
         self.vbox.add(vbox)
