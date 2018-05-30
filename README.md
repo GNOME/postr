@@ -14,5 +14,5 @@ use but exposing enough of Flickr to be useful.
 
 Postr requires PyGObject and GTK+3.
 
-[postr-logo]: 
+[postr-logo]: data/48x48/postr.png
 [1]: https://flickr.com/
