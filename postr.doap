@@ -33,8 +33,8 @@
 
   <repository>
     <GitRepository>
-      <browse rdf:resource="http://git.gnome.org/cgit/postr/"/>
-      <location rdf:resource="git://git.gnome.org/postr"/>
+      <browse rdf:resource="https://gitlab.gnome.org/GNOME/postr"/>
+      <location rdf:resource="https://gitlab.gnome.org/GNOME/postr.git"/>
     </GitRepository>
   </repository>
 
