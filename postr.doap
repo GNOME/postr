@@ -38,7 +38,7 @@
     </GitRepository>
   </repository>
 
-  <bug-database rdf:resource="https://bugzilla.gnome.org/browse.cgi?product=postr" />
+  <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/postr/issues/" />
 
   <release>
     <Version>
