@@ -1,0 +1,299 @@
+# Dutch translation for postr.
+# Copyright (C) 2019 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Nathan Follens <nthn@unseen.is>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues\n"
+"POT-Creation-Date: 2018-12-15 23:52+0000\n"
+"PO-Revision-Date: 2019-01-17 00:26+0100\n"
+"Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
+"X-Generator: Poedit 2.2\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr-uploader"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Upload foto’s naar Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Image;Picture;Photo;Uploader;Afbeelding;Foto;Uploaden;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Uploaden naar Flickr…"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Upload de geselecteerde bestanden naar Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Doorgaan"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr moet kunnen inloggen bij Flickr om uw foto’s te kunnen uploaden. Klik "
+"op de verwijzing hieronder om in te loggen bij Flickr."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Inloggen bij Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Er is een fout opgetreden"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Details"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Geen titel"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Standaard"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Bestand"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "Foto’s _toevoegen…"
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "Foto’s ve_rwijderen"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "Sessie op_slaan"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "Sessie _laden"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Gebruiker wisselen…"
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Uploaden"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Selecteren"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Niets selecteren"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "Select_ie omkeren"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Hulp"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "In_houd"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Foto’s toevoegen…"
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Foto’s verwijderen"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Hernoemen"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Titel:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Beschrijving:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Ta_gs:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Toevoegen aan _set:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Versturen naar groepen"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Vindbaar in zoekresultaten"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Privacy:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "Veilighei_d:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "_Inhoudstype:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Licentie:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Privacy, veiligheid, type en licentie"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Foto’s toevoegen"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Alle bestanden"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Momenteel aan het uploaden</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Er worden nog foto’s geüpload. Weet u zeker dat u wilt afsluiten? U kunt uw "
+"uploadset ook in wacht plaatsen voor later."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Nog te uploaden foto’s</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Er staan nog foto’s in wacht om geüpload te worden. Weet u zeker dat u wilt "
+"afsluiten? U kunt uw uploadset ook in wacht plaatsen voor later."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"Afbeelding %s is te groot, afbeeldingen mogen niet groter dan %dMB zijn."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "%(index)d van %(count)d wordt geüpload"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr-uploader (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Sommige bestanden bestaan niet of zijn momenteel niet beschikbaar."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"U bent ingelogd als %s, maar probeert\n"
+"een uploadset voor %s te laden"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr "Wilt u verdergaan met laden? U zult geen fotosetinformatie importeren."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"U bent niet ingelogd, maar probeert\n"
+"een uploadset voor %s te laden"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Bezig met uploaden"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Geen"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Fotoset ‘%s’ aanmaken"
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "nieuwe fotoset (%d-%m-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Naam voor de nieuwe fotoset:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Ingelogd als <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"U kunt deze maand %(quota)s uploaden, en hebt %(to_upload)s te uploaden."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "U kunt deze maand %(quota)s uploaden."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s te uploaden."
