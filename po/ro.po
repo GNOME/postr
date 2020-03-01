@@ -205,7 +205,7 @@ msgstr ""
 
 #: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
-msgstr "<b/>Fotografii de încărcat</b>"
+msgstr "<b>Fotografii de încărcat</b>"
 
 #: ../src/postr.py:502
 msgid ""
