@@ -1,0 +1,307 @@
+# Ukrainian translation for postr.
+# Copyright (C) 2020 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues\n"
+"POT-Creation-Date: 2020-03-01 12:24+0000\n"
+"PO-Revision-Date: 2020-04-07 21:36+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.07.70\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Вивантаження до Flickr"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Вивантаження фотографій до Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr ""
+"Flickr;Image;Picture;Photo;Uploader;флікр;зображення;знімок;фотографія;виванта"
+"ження;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Вивантаження на Flickr…"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Вивантажити позначені файли на Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Продовжити"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Для вивантаження ваших фотографій на Flickr Postr потрібно увійти до"
+" облікового запису. Будь ласка, натисніть наведене нижче посилання, щоб"
+" увійти до вашого облікового запису на Flickr."
+
+#: ../src/AuthenticationDialog.py:56 ../src/AuthenticationDialog.py:58
+msgid "Login to Flickr"
+msgstr "Вхід до Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Сталася помилка"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Подробиці"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Без заголовка"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Типовий"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Додати фотоографії…"
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "Ви_лучити фотографії"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "З_берегти сеанс…"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "З_авантажити сеанс"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "П_еремкнути користувача…"
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Вивантажити"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Вибрати"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Зняти виділення"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Інвертувати позначення"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Довідка"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Зміст"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Додати фотографії…"
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Вилучити фотографії"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Перейменувати"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Назва:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Опис:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Мі_тки:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Додати до _набору:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Надіслати до груп"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Видима у результатах пошуку"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Приватність:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Безпека:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "Тип _вмісту:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Ліцензія:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Конфіденційність, безпека, тип та умови ліцензування"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Додати фотографії"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "зображення"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "усі файли"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Зараз вивантажуємо</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Виконуємо вивантаження фотографій. Ви справді хочете завершити роботу"
+" програми? Ви можете запланувати вивантаження набору фотографій на майбутнє."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Фотографії, які буде вивантажено</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"У черзі вивантаження перебувають фотографії. Ви справді хочете завершити"
+" роботу програми? Ви можете запланувати вивантаження набору фотографій на"
+" майбутнє."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"Зображення %s є надто великим. Розмір зображень не може перевищувати %d МБ."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Вивантажуємо %(index)d з %(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Вивантажувач на Flickr (%(index)d з %(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Деяких файлів не існує або ці файли зараз недоступні."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Ви увійшли до системи від імені %s, але завантажили\n"
+"набір для вивантаження від імені %s"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Хочете продовжити завантаження? Відомості щодо набору фотографій не буде"
+" імпортовано."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Ви не увійшли до системи, але завантажили\n"
+"набір для вивантаження від імені %s"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Вивантаження"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Немає"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Створити набір фотографій «%s»"
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "новий набір фотографій (%d.%m.%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Назва нового набору фотографій:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Вхід до системи від імені <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Ви можете вивантажити %(quota)s цього місяця і маєте ще %(to_upload)s до"
+" вивантаження."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Ви можете вивантажити %(quota)s цього місяця."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s до вивантаження."
