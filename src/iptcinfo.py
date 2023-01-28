@@ -1,5 +1,5 @@
-# :mode=python:encoding=ISO-8859-2:
-# -*- coding: iso-8859-2 -*-
+# :mode=python:encoding=utf-8:
+# -*- coding: utf-8 -*-
 # Author: 2004 Gulácsi Tamás
 #
 # Ported from Josh Carter's Perl IPTCInfo.pm by Tam?s Gul?csi
