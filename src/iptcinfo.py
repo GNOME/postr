@@ -1,6 +1,6 @@
 # :mode=python:encoding=ISO-8859-2:
 # -*- coding: iso-8859-2 -*-
-# Author: 2004 Gulácsi Tamás
+# Author: 2004 GulĂĄcsi TamĂĄs
 #
 # Ported from Josh Carter's Perl IPTCInfo.pm by Tam?s Gul?csi
 #
@@ -15,7 +15,7 @@
 """
 IPTCInfo - Python module for extracting and modifying IPTC image meta-data
 
-Ported from Josh Carter's Perl IPTCInfo-1.9.pm by Tamás Gulácsi
+Ported from Josh Carter's Perl IPTCInfo-1.9.pm by TamĂĄs GulĂĄcsi
 
 Ever wish you add information to your photos like a caption, the place
 you took it, the date, and perhaps even keywords and categories? You
@@ -42,7 +42,7 @@ and tested only by me reading/writing IPTC metadata for family photos.
 Any suggestions welcomed!
 
 Thanks,
-Tamás Gulácsi <gthomas at fw dot hu>
+TamĂĄs GulĂĄcsi <gthomas at fw dot hu>
 
 SYNOPSIS
 
@@ -233,7 +233,7 @@ Josh Carter, josh@multipart-mixed.com
 """
 
 __version__ = '1.9.2-rc5'
-__author__ = 'Gulácsi, Tamás'
+__author__ = 'GulĂĄcsi, TamĂĄs'
 
 SURELY_WRITE_CHARSET_INFO = False
 
