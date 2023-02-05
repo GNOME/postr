@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr-help\n"
-"POT-Creation-Date: 2017-12-23 20:52+0000\n"
+"POT-Creation-Date: 2023-01-29 12:52+0000\n"
 "PO-Revision-Date: 2018-01-21 20:00+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -18,208 +18,361 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: C/tags.page:8(desc)
-msgid "Adding tags to your pictures."
-msgstr "Dodawanie etykiet do zdjęć."
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Piotr Drąg <piotrdrag@gmail.com>, 2018\n"
+"Aviary.pl <community-poland@mozilla.org>, 2018"
 
-#: C/tags.page:11(name) C/permissions.page:11(name) C/login.page:11(name)
-#: C/index.page:12(name) C/uploading.page:11(name) C/sets.page:11(name)
-#: C/offline.page:10(name) C/introduction.page:12(name) C/groups.page:11(name)
+#. (itstool) path: info/desc
+#: C/groups.page:8
+msgid "Sharing your photographs with other people."
+msgstr "Udostępnianie zdjęć innym."
+
+#. (itstool) path: credit/name
+#: C/groups.page:11 C/introduction.page:12 C/offline.page:10 C/sets.page:11
+#: C/uploading.page:11 C/index.page:12 C/login.page:11 C/permissions.page:11
+#: C/tags.page:11
 msgid "Germán Póo-Caamaño"
 msgstr "Germán Póo-Caamaño"
 
-#: C/tags.page:12(email) C/permissions.page:12(email) C/login.page:12(email)
-#: C/index.page:13(email) C/uploading.page:12(email) C/sets.page:12(email)
-#: C/offline.page:11(email) C/introduction.page:13(email)
-#: C/groups.page:12(email)
-msgid "gpoo@gnome.org"
-msgstr "gpoo@gnome.org"
+#. (itstool) path: credit/name
+#: C/groups.page:15
+msgid "Sergio Infante Montero"
+msgstr "Sergio Infante Montero"
 
-#: C/tags.page:15(name) C/permissions.page:15(name) C/login.page:15(name)
-#: C/index.page:16(name) C/uploading.page:15(name) C/introduction.page:16(name)
+#. (itstool) path: page/title
+#: C/groups.page:19
+msgid "Send your photographs to groups of your interest"
+msgstr "Wysyłanie zdjęć do wybranych grup"
+
+#. (itstool) path: item/p
+#: C/groups.page:21
+msgid "Choose an image to upload"
+msgstr "Wybierz obraz do wysłania."
+
+#. (itstool) path: item/p
+#: C/groups.page:22
+msgid "Click on Send to Groups option. A list of your groups must be shown"
+msgstr ""
+"Kliknij opcję <gui>Wysyłanie do grup</gui>. Zostanie wyświetlona lista grup "
+"użytkownika."
+
+#. (itstool) path: item/p
+#: C/groups.page:23
+msgid "Choose in what group or groups will be send the image"
+msgstr "Wybierz grupę lub grupy, do których wysłać obraz."
+
+#. (itstool) path: note/p
+#: C/groups.page:26
+msgid ""
+"Before you can use the Send to Groups option, at least you must have one."
+msgstr ""
+"Aby móc używać opcji <gui>Wysyłanie do grup</gui>, użytkownik musi mieć co "
+"najmniej jedną."
+
+#. (itstool) path: info/desc
+#: C/introduction.page:9
+msgid "Introduction to the <app>Postr</app> flickr uploader."
+msgstr ""
+"Wprowadzenie do <app>Postr</app>, programu do wysyłania zdjęć do serwisu "
+"Flickr."
+
+#. (itstool) path: credit/name
+#: C/introduction.page:16 C/uploading.page:15 C/index.page:16 C/login.page:15
+#: C/permissions.page:15 C/tags.page:15
 msgid "Sergio Infante"
 msgstr "Sergio Infante"
 
-#: C/tags.page:16(email) C/permissions.page:16(email) C/login.page:16(email)
-#: C/index.page:17(email) C/uploading.page:16(email)
-#: C/introduction.page:17(email) C/groups.page:16(email)
-msgid "raulsergio9@gmail.com"
-msgstr "raulsergio9@gmail.com"
+#. (itstool) path: page/title
+#: C/introduction.page:21
+msgid "Introduction"
+msgstr "Wprowadzenie"
 
-#: C/tags.page:20(title)
-msgid "Adding tags to your pictures"
-msgstr "Dodawanie etykiet do zdjęć"
-
-#: C/tags.page:24(title) C/tags.page:26(title)
-msgid "What is a tag?"
-msgstr "Czym jest etykieta?"
-
-#: C/tags.page:27(p)
+#. (itstool) path: page/p
+#: C/introduction.page:23
 msgid ""
-"A tag is a non-hierarchical term assigned to a piece of information. This "
-"term helps describe an item and allows it to be found again by browsing or "
-"searching. Tags are generally chosen informally and personally by the user."
+"<app>Postr</app> is a tool for uploading pictures to <link href=\"http://"
+"flickr.com/\"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps "
+"you to share your pictures with your family, friends, contacts or everyone."
 msgstr ""
-"Etykieta to niehierarchiczny termin przydzielony jakiejś informacji. Opisuje "
-"ona element i umożliwia odnajdowanie go przez przeglądanie lub wyszukiwanie. "
-"Etykiety są zwykle wybierane nieformalnie i osobiście przez użytkownika."
+"<app>Postr</app> to narzędzie do wysyłania zdjęć do serwisu <link href="
+"\"https://www.flickr.com/\">Flickr</link> dla środowiska GNOME. <app>Postr</"
+"app> pomaga udostępniać zdjęcia rodzinie, znajomym, kontaktom lub wszystkim."
 
-#: C/tags.page:32(title) C/tags.page:34(title)
-msgid "Creating a tag"
-msgstr "Tworzenie etykiety"
-
-#: C/tags.page:35(p)
+#. (itstool) path: page/p
+#: C/introduction.page:26
 msgid ""
-"Tags are created by typing the term on Tags field on <app>Postr</app> main "
-"window"
+"<app>Postr</app> supports the most common properties of a picture in Flickr, "
+"such as title, description and tags. It also supports groups, where you can "
+"share your pictures to the groups you are already subscribed in Flickr."
 msgstr ""
-"Etykiety są tworzone przez wpisanie terminu w polu Etykiety w głównym oknie "
-"programu <app>Postr</app>."
+"<app>Postr</app> obsługuje najczęściej używane właściwości zdjęcia "
+"w serwisie Flickr, takie jak tytuł, opis i etykiety. Obsługuje także grupy, "
+"więc można udostępniać zdjęcia w grupach, które już subskrybowano w serwisie "
+"Flickr."
 
-#: C/permissions.page:8(desc)
-msgid "Setting permissions to your photographs."
-msgstr "Ustawianie uprawnień do zdjęć."
-
-#: C/permissions.page:20(title)
-msgid "Privacy, safety and license"
-msgstr "Prywatność, bezpieczeństwo i licencja"
-
-#: C/permissions.page:24(title)
-msgid "Privacy"
-msgstr "Prywatność"
-
-#: C/permissions.page:26(title)
-msgid "Privacy of your photographs"
-msgstr "Prywatność zdjęć"
-
-#: C/permissions.page:27(p) C/permissions.page:41(p) C/permissions.page:54(p)
-#: C/permissions.page:67(p)
-msgid "You can choose between:"
-msgstr "Można wybrać z:"
-
-#: C/permissions.page:29(p)
-msgid "Public"
-msgstr "Publiczne"
-
-#: C/permissions.page:30(p)
-msgid "Family Only"
-msgstr "Tylko rodzina"
-
-#: C/permissions.page:31(p)
-msgid "Friends and Family Only"
-msgstr "Tylko znajomi i rodzina"
-
-#: C/permissions.page:32(p)
-msgid "Private"
-msgstr "Prywatne"
-
-#: C/permissions.page:38(title)
-msgid "Safety"
-msgstr "Bezpieczeństwo"
-
-#: C/permissions.page:40(title)
-msgid "Defining the safety of your content"
-msgstr "Określanie bezpieczeństwa treści użytkownika"
-
-#: C/permissions.page:43(p)
-msgid "Safe"
-msgstr "Bezpieczne"
-
-#: C/permissions.page:44(p)
-msgid "Moderate"
-msgstr "Średnie"
-
-#: C/permissions.page:45(p)
-msgid "Restricted"
-msgstr "Ograniczone"
-
-#: C/permissions.page:51(title)
-msgid "Content Type"
-msgstr "Rodzaj treści"
-
-#: C/permissions.page:53(title)
-msgid "Content Type of your content"
-msgstr "Rodzaj treści użytkownika"
-
-#: C/permissions.page:56(p)
-msgid "Photo"
-msgstr "Zdjęcie"
-
-#: C/permissions.page:57(p)
-msgid "Screenshot"
-msgstr "Zrzut ekranu"
-
-#: C/permissions.page:58(p)
-msgid "Other"
-msgstr "Inne"
-
-#: C/permissions.page:64(title)
-msgid "License"
-msgstr "Licencja"
-
-#: C/permissions.page:66(title)
-msgid "Choosing a license for your photographs"
-msgstr "Wybór licencji zdjęć użytkownika"
-
-#: C/permissions.page:69(p)
-msgid "Default"
-msgstr "Domyślna"
-
-#: C/permissions.page:70(p)
-msgid "All Rights Reserved"
-msgstr "Wszystkie prawa zastrzeżone"
-
-#: C/permissions.page:71(p)
-msgid "Attribution License"
-msgstr "Uznanie autorstwa"
-
-#: C/permissions.page:72(p)
-msgid "Attribution-NoDerivs License"
-msgstr "Uznanie autorstwa, bez utworów zależnych"
-
-#: C/permissions.page:73(p)
-msgid "Attribution-NonCommercial-NoDerivs License"
-msgstr "Uznanie autorstwa, użycie niekomercyjne, bez utworów zależnych"
-
-#: C/permissions.page:74(p)
-msgid "Attribution-NonCommercial License"
-msgstr "Uznanie autorstwa, użycie niekomercyjne"
-
-#: C/permissions.page:75(p)
-msgid "Attribution-NonCommercial-ShareAlike License"
-msgstr "Uznanie autorstwa, użycie niekomercyjne, na tych samych warunkach"
-
-#: C/permissions.page:76(p)
-msgid "Attribution-ShareAlike License"
-msgstr "Uznanie autorstwa, na tych samych warunkach"
-
-#: C/permissions.page:77(p)
-msgid "No known copyright restrictions"
-msgstr "Brak znanych ograniczeń praw autorskich"
-
-#: C/permissions.page:78(p)
-msgid "United States Government Work"
-msgstr "Dzieło pracownika rządu Stanów Zjednoczonych"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/login.page:31(None)
+#. (itstool) path: page/p
+#: C/introduction.page:29
 msgid ""
-"@@image: 'figures/postr-login-flickr.png'; "
-"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+"Using <app>Postr</app> you can define a set for your pictures, either new or "
+"existent, where you can keep them organized."
 msgstr ""
-"@@image: 'figures/postr-login-flickr.png'; "
-"md5=3fafc029e3eadcdfed8fa8fe8f1bd0b4"
+"Za pomocą programu <app>Postr</app> można określić zestaw zdjęć, nowy lub "
+"istniejący, w którym można je organizować."
 
-#: C/login.page:8(desc)
+#. (itstool) path: page/p
+#: C/introduction.page:32
+msgid ""
+"In order to use <app>Postr</app> you need an account on <link href=\"http://"
+"flickr.com/\">Flickr</link>."
+msgstr ""
+"Do używania programu <app>Postr</app> wymagane jest konto w serwisie <link "
+"href=\"https://www.flickr.com/\">Flickr</link>."
+
+#. (itstool) path: figure/title
+#: C/introduction.page:37
+msgid "<app>Postr</app> window"
+msgstr "Okno programu <app>Postr</app>"
+
+#. (itstool) path: figure/desc
+#: C/introduction.page:38
+msgid "<app>Postr</app> main window"
+msgstr "Główne okno programu <app>Postr</app>"
+
+#. (itstool) path: figure/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/introduction.page:39
+msgctxt "_"
+msgid ""
+"external ref='figures/postr-main-window.png' "
+"md5='f0a241232213b440eedbf2d82c0c9204'"
+msgstr ""
+"external ref='figures/postr-main-window.png' "
+"md5='f0a241232213b440eedbf2d82c0c9204'"
+
+#. (itstool) path: media/p
+#: C/introduction.page:40
+msgid "<app>Postr</app> main window."
+msgstr "Główne okno programu <app>Postr</app>."
+
+#. (itstool) path: info/desc
+#: C/offline.page:7
+msgid "How to continue your work later."
+msgstr "Jak kontynuować pracę później."
+
+#. (itstool) path: page/title
+#: C/offline.page:15
+msgid "Continue the uploading later"
+msgstr "Kontynuacja wysyłania później"
+
+#. (itstool) path: item/p
+#: C/offline.page:20
+msgid "Save session."
+msgstr "Zapisz sesję."
+
+#. (itstool) path: item/p
+#: C/offline.page:21
+msgid "Choose a name."
+msgstr "Wybierz nazwę."
+
+#. (itstool) path: item/p
+#: C/offline.page:22
+msgid "The next time, you can load a session previously save."
+msgstr "Następnym razem można wczytać poprzednio zapisaną sesję."
+
+#. (itstool) path: note/p
+#: C/offline.page:26
+msgid ""
+"If you load a session when you are off-line, the properties that relies on "
+"your connection will be lost. These properties are: sets, groups and privacy."
+msgstr ""
+"Jeśli sesja zostanie wczytana bez dostępu do Internetu, to właściwości "
+"korzystające z połączenia (zestawy, grupy i prywatność) zostaną utracone."
+
+#. (itstool) path: info/desc
+#: C/sets.page:8
+msgid "Grouping pictures by set."
+msgstr "Grupowanie zdjęć według zestawów."
+
+#. (itstool) path: page/title
+#: C/sets.page:16
+msgid "Grouping pictures by set"
+msgstr "Grupowanie zdjęć według zestawów"
+
+#. (itstool) path: info/title
+#: C/sets.page:20
+msgctxt "link"
+msgid "What is a set?"
+msgstr "Czym jest zestaw?"
+
+#. (itstool) path: section/title
+#: C/sets.page:22
+msgid "What is a set?"
+msgstr "Czym jest zestaw?"
+
+#. (itstool) path: info/title
+#: C/sets.page:27
+msgctxt "link"
+msgid "Creating a set"
+msgstr "Tworzenie zestawu"
+
+#. (itstool) path: section/title
+#: C/sets.page:29
+msgid "Creating a set"
+msgstr "Tworzenie zestawu"
+
+#. (itstool) path: info/title
+#: C/sets.page:34
+msgctxt "link"
+msgid "Choosing a set"
+msgstr "Wybór zestawu"
+
+#. (itstool) path: section/title
+#: C/sets.page:36
+msgid "Choosing a set"
+msgstr "Wybór zestawu"
+
+#. (itstool) path: info/desc
+#: C/uploading.page:8
+msgid "Share your photos with your family, friends or everyone"
+msgstr "Udostępnianie zdjęć rodzinie, znajomym lub wszystkim"
+
+#. (itstool) path: page/title
+#: C/uploading.page:20
+msgid "Uploading photographs on Flickr"
+msgstr "Wysyłanie zdjęć do serwisu Flickr"
+
+#. (itstool) path: item/p
+#: C/uploading.page:22
+msgid "Click on <gui>Add Photos...</gui>"
+msgstr "Kliknij przycisk <gui>Dodaj zdjęcia…</gui>"
+
+#. (itstool) path: item/p
+#: C/uploading.page:23
+msgid ""
+"From the <gui>Add Photos</gui> window, choose the photographs that you would "
+"like to upload on Flickr. You can select one or multiple photographs at once."
+msgstr ""
+"W oknie <gui>Dodanie zdjęć</gui> wybierz zdjęcia do wysłania do serwisu "
+"Flickr. Można wybrać jedno lub wiele zdjęć naraz."
+
+#. (itstool) path: item/p
+#: C/uploading.page:26
+msgid ""
+"Choose an image and edit the title, description, tags, privacy, safety, "
+"type, license and other data of image"
+msgstr ""
+"Wybierz obraz i zmodyfikuj tytuł, opis, etykiety, prywatność, "
+"bezpieczeństwo, rodzaj, licencję i inne dane o obrazie."
+
+#. (itstool) path: item/p
+#: C/uploading.page:27
+msgid "When you finish add aditional description, click on Upload button"
+msgstr ""
+"Po ukończeniu dodawania dodatkowego opisu kliknij przycisk <gui>Wyślij</gui>."
+
+#. (itstool) path: note/p
+#: C/uploading.page:30
+msgid ""
+"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
+"drop them on the left pane."
+msgstr ""
+"Można także przeciągnąć zdjęcia z menedżera plików (<gui>Nautilus</gui>) do "
+"lewego panelu."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link"
+msgid "Postr"
+msgstr "Postr"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "text"
+msgid "Postr"
+msgstr "Postr"
+
+#. (itstool) path: info/desc
+#: C/index.page:9
+msgid "Flickr Uploader."
+msgstr "Wysyłanie do serwisu Flickr."
+
+#. (itstool) path: license/p
+#: C/index.page:20
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: title/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:26
+msgctxt "_"
+msgid ""
+"external ref='figures/postr-logo.png' md5='c4f269b5b3d7a03297079f721300a734'"
+msgstr ""
+"external ref='figures/postr-logo.png' md5='c4f269b5b3d7a03297079f721300a734'"
+
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
+"Postr: Photo Uploader for Flickr"
+msgstr ""
+"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
+"Postr: wysyłanie zdjęć do serwisu Flickr"
+
+#. (itstool) path: info/title
+#: C/index.page:31
+msgctxt "link"
+msgid "Getting Started"
+msgstr "Pierwsze kroki"
+
+#. (itstool) path: section/title
+#: C/index.page:33
+msgid "Getting Started"
+msgstr "Pierwsze kroki"
+
+#. (itstool) path: info/title
+#: C/index.page:38
+msgctxt "link"
+msgid "Setting photograph's properties"
+msgstr "Ustawianie właściwości zdjęcia"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Setting photograph's properties"
+msgstr "Ustawianie właściwości zdjęcia"
+
+#. (itstool) path: info/title
+#: C/index.page:45
+msgctxt "link"
+msgid "Advanced actions"
+msgstr "Zaawansowane"
+
+#. (itstool) path: section/title
+#: C/index.page:47
+msgid "Advanced actions"
+msgstr "Zaawansowane"
+
+#. (itstool) path: info/desc
+#: C/login.page:8
 msgid "Connecting <app>Postr</app> to your Flickr account."
 msgstr "Łączenie programu <app>Postr</app> z kontem serwisu Flickr."
 
-#: C/login.page:19(title)
+#. (itstool) path: page/title
+#: C/login.page:19
 msgid "Log in on Flickr"
 msgstr "Logowanie do serwisu Flickr"
 
-#: C/login.page:21(p)
+#. (itstool) path: page/p
+#: C/login.page:21
 msgid ""
 "<app>Postr</app> requires authorization from your Flickr account to upload "
 "your photos. In order to connect <app>Postr</app> with your Flickr account, "
@@ -231,17 +384,34 @@ msgstr ""
 "użytkownik zostanie poproszony o zalogowanie się w serwisie Flickr w tym "
 "oknie:"
 
-#: C/login.page:29(title)
+#. (itstool) path: figure/title
+#: C/login.page:29
 msgid "<app>Postr</app> Login to Flickr window"
 msgstr "Okno logowania do serwisu Flickr programu <app>Postr</app>"
 
-#: C/login.page:30(desc)
+#. (itstool) path: figure/desc
+#: C/login.page:30
 msgid "<app>Postr</app> Switch account and Login to Flickr window"
 msgstr ""
 "Okno przełączania konta i logowania do serwisu Flickr programu <app>Postr</"
 "app>"
 
-#: C/login.page:34(p)
+#. (itstool) path: figure/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/login.page:31
+msgctxt "_"
+msgid ""
+"external ref='figures/postr-login-flickr.png' "
+"md5='3fafc029e3eadcdfed8fa8fe8f1bd0b4'"
+msgstr ""
+"external ref='figures/postr-login-flickr.png' "
+"md5='3fafc029e3eadcdfed8fa8fe8f1bd0b4'"
+
+#. (itstool) path: item/p
+#: C/login.page:34
 msgid ""
 "Click on <gui>Login to Flickr</gui>. This action will open the Flickr "
 "authentication page on your default web browser."
@@ -249,7 +419,8 @@ msgstr ""
 "Kliknij <gui>Zaloguj się w serwisie Flickr</gui>. Otworzy to stronę "
 "uwierzytelnienia serwisu Flickr w domyślnej przeglądarce WWW."
 
-#: C/login.page:37(p)
+#. (itstool) path: item/p
+#: C/login.page:37
 msgid ""
 "Follow the instructions on Flickr website to authorize <app>Postr</app>. The "
 "permissions requested are for read and write, but not delete."
@@ -258,7 +429,8 @@ msgstr ""
 "<app>Postr</app>. Żądane uprawnienia są do odczytu i zapisu, ale nie do "
 "usuwania."
 
-#: C/login.page:40(p)
+#. (itstool) path: item/p
+#: C/login.page:40
 msgid ""
 "Go back to <gui>Login to Flickr</gui> window on <app>Postr</app> and click "
 "on <gui>Continue</gui>."
@@ -266,7 +438,8 @@ msgstr ""
 "Wróć do okna <gui>Zaloguj się w serwisie Flickr</gui>w programie <app>Postr</"
 "app> i kliknij przycisk <gui>Kontynuuj</gui>."
 
-#: C/login.page:45(p)
+#. (itstool) path: note/p
+#: C/login.page:45
 msgid ""
 "To use <app>Postr</app> with another Flickr account, you have to to select "
 "<guiseq><gui>File</gui><gui>Switch user...</gui></guiseq> and repeat the "
@@ -276,239 +449,214 @@ msgstr ""
 "wybrać <guiseq><gui>Plik</gui><gui>Przełącz użytkownika…</gui></guiseq> "
 "i powtórzyć ten proces."
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/index.page:26(None)
-msgid "@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
-msgstr ""
-"@@image: 'figures/postr-logo.png'; md5=c4f269b5b3d7a03297079f721300a734"
+#. (itstool) path: info/desc
+#: C/permissions.page:8
+msgid "Setting permissions to your photographs."
+msgstr "Ustawianie uprawnień do zdjęć."
 
-#: C/index.page:7(title) C/index.page:8(title)
-msgid "Postr"
-msgstr "Postr"
+#. (itstool) path: page/title
+#: C/permissions.page:20
+msgid "Privacy, safety and license"
+msgstr "Prywatność, bezpieczeństwo i licencja"
 
-#: C/index.page:9(desc)
-msgid "Flickr Uploader."
-msgstr "Wysyłanie do serwisu Flickr."
+#. (itstool) path: info/title
+#: C/permissions.page:24
+msgctxt "link"
+msgid "Privacy"
+msgstr "Prywatność"
 
-#: C/index.page:20(p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
+#. (itstool) path: section/title
+#: C/permissions.page:26
+msgid "Privacy of your photographs"
+msgstr "Prywatność zdjęć"
 
-#: C/index.page:25(title)
+#. (itstool) path: section/p
+#: C/permissions.page:27 C/permissions.page:41 C/permissions.page:54
+#: C/permissions.page:67
+msgid "You can choose between:"
+msgstr "Można wybrać z:"
+
+#. (itstool) path: item/p
+#: C/permissions.page:29
+msgid "Public"
+msgstr "Publiczne"
+
+#. (itstool) path: item/p
+#: C/permissions.page:30
+msgid "Family Only"
+msgstr "Tylko rodzina"
+
+#. (itstool) path: item/p
+#: C/permissions.page:31
+msgid "Friends and Family Only"
+msgstr "Tylko znajomi i rodzina"
+
+#. (itstool) path: item/p
+#: C/permissions.page:32
+msgid "Private"
+msgstr "Prywatne"
+
+#. (itstool) path: info/title
+#: C/permissions.page:38
+msgctxt "link"
+msgid "Safety"
+msgstr "Bezpieczeństwo"
+
+#. (itstool) path: section/title
+#: C/permissions.page:40
+msgid "Defining the safety of your content"
+msgstr "Określanie bezpieczeństwa treści użytkownika"
+
+#. (itstool) path: item/p
+#: C/permissions.page:43
+msgid "Safe"
+msgstr "Bezpieczne"
+
+#. (itstool) path: item/p
+#: C/permissions.page:44
+msgid "Moderate"
+msgstr "Średnie"
+
+#. (itstool) path: item/p
+#: C/permissions.page:45
+msgid "Restricted"
+msgstr "Ograniczone"
+
+#. (itstool) path: info/title
+#: C/permissions.page:51
+msgctxt "link"
+msgid "Content Type"
+msgstr "Rodzaj treści"
+
+#. (itstool) path: section/title
+#: C/permissions.page:53
+msgid "Content Type of your content"
+msgstr "Rodzaj treści użytkownika"
+
+#. (itstool) path: item/p
+#: C/permissions.page:56
+msgid "Photo"
+msgstr "Zdjęcie"
+
+#. (itstool) path: item/p
+#: C/permissions.page:57
+msgid "Screenshot"
+msgstr "Zrzut ekranu"
+
+#. (itstool) path: item/p
+#: C/permissions.page:58
+msgid "Other"
+msgstr "Inne"
+
+#. (itstool) path: info/title
+#: C/permissions.page:64
+msgctxt "link"
+msgid "License"
+msgstr "Licencja"
+
+#. (itstool) path: section/title
+#: C/permissions.page:66
+msgid "Choosing a license for your photographs"
+msgstr "Wybór licencji zdjęć użytkownika"
+
+#. (itstool) path: item/p
+#: C/permissions.page:69
+msgid "Default"
+msgstr "Domyślna"
+
+#. (itstool) path: item/p
+#: C/permissions.page:70
+msgid "All Rights Reserved"
+msgstr "Wszystkie prawa zastrzeżone"
+
+#. (itstool) path: item/p
+#: C/permissions.page:71
+msgid "Attribution License"
+msgstr "Uznanie autorstwa"
+
+#. (itstool) path: item/p
+#: C/permissions.page:72
+msgid "Attribution-NoDerivs License"
+msgstr "Uznanie autorstwa, bez utworów zależnych"
+
+#. (itstool) path: item/p
+#: C/permissions.page:73
+msgid "Attribution-NonCommercial-NoDerivs License"
+msgstr "Uznanie autorstwa, użycie niekomercyjne, bez utworów zależnych"
+
+#. (itstool) path: item/p
+#: C/permissions.page:74
+msgid "Attribution-NonCommercial License"
+msgstr "Uznanie autorstwa, użycie niekomercyjne"
+
+#. (itstool) path: item/p
+#: C/permissions.page:75
+msgid "Attribution-NonCommercial-ShareAlike License"
+msgstr "Uznanie autorstwa, użycie niekomercyjne, na tych samych warunkach"
+
+#. (itstool) path: item/p
+#: C/permissions.page:76
+msgid "Attribution-ShareAlike License"
+msgstr "Uznanie autorstwa, na tych samych warunkach"
+
+#. (itstool) path: item/p
+#: C/permissions.page:77
+msgid "No known copyright restrictions"
+msgstr "Brak znanych ograniczeń praw autorskich"
+
+#. (itstool) path: item/p
+#: C/permissions.page:78
+msgid "United States Government Work"
+msgstr "Dzieło pracownika rządu Stanów Zjednoczonych"
+
+#. (itstool) path: info/desc
+#: C/tags.page:8
+msgid "Adding tags to your pictures."
+msgstr "Dodawanie etykiet do zdjęć."
+
+#. (itstool) path: page/title
+#: C/tags.page:20
+msgid "Adding tags to your pictures"
+msgstr "Dodawanie etykiet do zdjęć"
+
+#. (itstool) path: info/title
+#: C/tags.page:24
+msgctxt "link"
+msgid "What is a tag?"
+msgstr "Czym jest etykieta?"
+
+#. (itstool) path: section/title
+#: C/tags.page:26
+msgid "What is a tag?"
+msgstr "Czym jest etykieta?"
+
+#. (itstool) path: section/p
+#: C/tags.page:27
 msgid ""
-"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
-"Postr: Photo Uploader for Flickr"
+"A tag is a non-hierarchical term assigned to a piece of information. This "
+"term helps describe an item and allows it to be found again by browsing or "
+"searching. Tags are generally chosen informally and personally by the user."
 msgstr ""
-"<media type=\"image\" mime=\"image/png\" src=\"figures/postr-logo.png\"/> "
-"Postr: wysyłanie zdjęć do serwisu Flickr"
+"Etykieta to niehierarchiczny termin przydzielony jakiejś informacji. Opisuje "
+"ona element i umożliwia odnajdowanie go przez przeglądanie lub wyszukiwanie. "
+"Etykiety są zwykle wybierane nieformalnie i osobiście przez użytkownika."
 
-#: C/index.page:31(title) C/index.page:33(title)
-msgid "Getting Started"
-msgstr "Pierwsze kroki"
+#. (itstool) path: info/title
+#: C/tags.page:32
+msgctxt "link"
+msgid "Creating a tag"
+msgstr "Tworzenie etykiety"
 
-#: C/index.page:38(title) C/index.page:40(title)
-msgid "Setting photograph's properties"
-msgstr "Ustawianie właściwości zdjęcia"
+#. (itstool) path: section/title
+#: C/tags.page:34
+msgid "Creating a tag"
+msgstr "Tworzenie etykiety"
 
-#: C/index.page:45(title) C/index.page:47(title)
-msgid "Advanced actions"
-msgstr "Zaawansowane"
-
-#: C/uploading.page:8(desc)
-msgid "Share your photos with your family, friends or everyone"
-msgstr "Udostępnianie zdjęć rodzinie, znajomym lub wszystkim"
-
-#: C/uploading.page:20(title)
-msgid "Uploading photographs on Flickr"
-msgstr "Wysyłanie zdjęć do serwisu Flickr"
-
-#: C/uploading.page:22(p)
-msgid "Click on <gui>Add Photos...</gui>"
-msgstr "Kliknij przycisk <gui>Dodaj zdjęcia…</gui>"
-
-#: C/uploading.page:23(p)
+#. (itstool) path: section/p
+#: C/tags.page:35
 msgid ""
-"From the <gui>Add Photos</gui> window, choose the photographs that you would "
-"like to upload on Flickr. You can select one or multiple photographs at once."
+"Tags are created by typing the term on Tags field on <app>Postr</app> main "
+"window"
 msgstr ""
-"W oknie <gui>Dodanie zdjęć</gui> wybierz zdjęcia do wysłania do serwisu "
-"Flickr. Można wybrać jedno lub wiele zdjęć naraz."
-
-#: C/uploading.page:26(p)
-msgid ""
-"Choose an image and edit the title, description, tags, privacy, safety, "
-"type, license and other data of image"
-msgstr ""
-"Wybierz obraz i zmodyfikuj tytuł, opis, etykiety, prywatność, "
-"bezpieczeństwo, rodzaj, licencję i inne dane o obrazie."
-
-#: C/uploading.page:27(p)
-msgid "When you finish add aditional description, click on Upload button"
-msgstr ""
-"Po ukończeniu dodawania dodatkowego opisu kliknij przycisk <gui>Wyślij</gui>."
-
-#: C/uploading.page:30(p)
-msgid ""
-"You also can add drag photos from the file manager (<gui>Nautilus</gui>) and "
-"drop them on the left pane."
-msgstr ""
-"Można także przeciągnąć zdjęcia z menedżera plików (<gui>Nautilus</gui>) do "
-"lewego panelu."
-
-#: C/sets.page:8(desc)
-msgid "Grouping pictures by set."
-msgstr "Grupowanie zdjęć według zestawów."
-
-#: C/sets.page:16(title)
-msgid "Grouping pictures by set"
-msgstr "Grupowanie zdjęć według zestawów"
-
-#: C/sets.page:20(title) C/sets.page:22(title)
-msgid "What is a set?"
-msgstr "Czym jest zestaw?"
-
-#: C/sets.page:27(title) C/sets.page:29(title)
-msgid "Creating a set"
-msgstr "Tworzenie zestawu"
-
-#: C/sets.page:34(title) C/sets.page:36(title)
-msgid "Choosing a set"
-msgstr "Wybór zestawu"
-
-#: C/offline.page:7(desc)
-msgid "How to continue your work later."
-msgstr "Jak kontynuować pracę później."
-
-#: C/offline.page:15(title)
-msgid "Continue the uploading later"
-msgstr "Kontynuacja wysyłania później"
-
-#: C/offline.page:20(p)
-msgid "Save session."
-msgstr "Zapisz sesję."
-
-#: C/offline.page:21(p)
-msgid "Choose a name."
-msgstr "Wybierz nazwę."
-
-#: C/offline.page:22(p)
-msgid "The next time, you can load a session previously save."
-msgstr "Następnym razem można wczytać poprzednio zapisaną sesję."
-
-#: C/offline.page:26(p)
-msgid ""
-"If you load a session when you are off-line, the properties that relies on "
-"your connection will be lost. These properties are: sets, groups and privacy."
-msgstr ""
-"Jeśli sesja zostanie wczytana bez dostępu do Internetu, to właściwości "
-"korzystające z połączenia (zestawy, grupy i prywatność) zostaną utracone."
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/introduction.page:39(None)
-msgid ""
-"@@image: 'figures/postr-main-window.png'; "
-"md5=f0a241232213b440eedbf2d82c0c9204"
-msgstr ""
-"@@image: 'figures/postr-main-window.png'; "
-"md5=f0a241232213b440eedbf2d82c0c9204"
-
-#: C/introduction.page:9(desc)
-msgid "Introduction to the <app>Postr</app> flickr uploader."
-msgstr ""
-"Wprowadzenie do <app>Postr</app>, programu do wysyłania zdjęć do serwisu "
-"Flickr."
-
-#: C/introduction.page:21(title)
-msgid "Introduction"
-msgstr "Wprowadzenie"
-
-#: C/introduction.page:23(p)
-msgid ""
-"<app>Postr</app> is a tool for uploading pictures to <link href=\"http://"
-"flickr.com/\"> Flickr</link> for the GNOME Desktop. <app>Postr</app> helps "
-"you to share your pictures with your family, friends, contacts or everyone."
-msgstr ""
-"<app>Postr</app> to narzędzie do wysyłania zdjęć do serwisu <link href="
-"\"https://www.flickr.com/\">Flickr</link> dla środowiska GNOME. <app>Postr</"
-"app> pomaga udostępniać zdjęcia rodzinie, znajomym, kontaktom lub wszystkim."
-
-#: C/introduction.page:26(p)
-msgid ""
-"<app>Postr</app> supports the most common properties of a picture in Flickr, "
-"such as title, description and tags. It also supports groups, where you can "
-"share your pictures to the groups you are already subscribed in Flickr."
-msgstr ""
-"<app>Postr</app> obsługuje najczęściej używane właściwości zdjęcia "
-"w serwisie Flickr, takie jak tytuł, opis i etykiety. Obsługuje także grupy, "
-"więc można udostępniać zdjęcia w grupach, które już subskrybowano w serwisie "
-"Flickr."
-
-#: C/introduction.page:29(p)
-msgid ""
-"Using <app>Postr</app> you can define a set for your pictures, either new or "
-"existent, where you can keep them organized."
-msgstr ""
-"Za pomocą programu <app>Postr</app> można określić zestaw zdjęć, nowy lub "
-"istniejący, w którym można je organizować."
-
-#: C/introduction.page:32(p)
-msgid ""
-"In order to use <app>Postr</app> you need an account on <link href=\"http://"
-"flickr.com/\">Flickr</link>."
-msgstr ""
-"Do używania programu <app>Postr</app> wymagane jest konto w serwisie <link "
-"href=\"https://www.flickr.com/\">Flickr</link>."
-
-#: C/introduction.page:37(title)
-msgid "<app>Postr</app> window"
-msgstr "Okno programu <app>Postr</app>"
-
-#: C/introduction.page:38(desc)
-msgid "<app>Postr</app> main window"
-msgstr "Główne okno programu <app>Postr</app>"
-
-#: C/introduction.page:40(p)
-msgid "<app>Postr</app> main window."
-msgstr "Główne okno programu <app>Postr</app>."
-
-#: C/groups.page:8(desc)
-msgid "Sharing your photographs with other people."
-msgstr "Udostępnianie zdjęć innym."
-
-#: C/groups.page:15(name)
-msgid "Sergio Infante Montero"
-msgstr "Sergio Infante Montero"
-
-#: C/groups.page:19(title)
-msgid "Send your photographs to groups of your interest"
-msgstr "Wysyłanie zdjęć do wybranych grup"
-
-#: C/groups.page:21(p)
-msgid "Choose an image to upload"
-msgstr "Wybierz obraz do wysłania."
-
-#: C/groups.page:22(p)
-msgid "Click on Send to Groups option. A list of your groups must be shown"
-msgstr ""
-"Kliknij opcję <gui>Wysyłanie do grup</gui>. Zostanie wyświetlona lista grup "
-"użytkownika."
-
-#: C/groups.page:23(p)
-msgid "Choose in what group or groups will be send the image"
-msgstr "Wybierz grupę lub grupy, do których wysłać obraz."
-
-#: C/groups.page:26(p)
-msgid ""
-"Before you can use the Send to Groups option, at least you must have one."
-msgstr ""
-"Aby móc używać opcji <gui>Wysyłanie do grup</gui>, użytkownik musi mieć co "
-"najmniej jedną."
-
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: C/groups.page:0(None)
-msgid "translator-credits"
-msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2018\n"
-"Aviary.pl <community-poland@mozilla.org>, 2018"
+"Etykiety są tworzone przez wpisanie terminu w polu Etykiety w głównym oknie "
+"programu <app>Postr</app>."
