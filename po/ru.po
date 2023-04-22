@@ -6,21 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2011-05-10 16:44+0000\n"
-"PO-Revision-Date: 2011-07-27 22:55+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues\n"
+"POT-Creation-Date: 2023-01-29 12:52+0000\n"
+"PO-Revision-Date: 2023-04-18 22:47+1000\n"
+"Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: ../data/postr.desktop.in.in.h:1
-#: ../src/postr.glade.h:4
-#: ../src/AboutDialog.py:25
-#: ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:979
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Загрузчик для Flickr"
 
@@ -28,191 +29,211 @@ msgstr "Загрузчик для Flickr"
 msgid "Upload photos to Flickr"
 msgstr "Загрузить фотоснимки на Flickr"
 
-#: ../nautilus/postrExtension.py:82
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr ""
+"Flickr;Image;Picture;Photo;Uploader;Изображение;Картинка;Фото;Фотография;"
+
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Загрузить на Flickr…"
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Загрузить выбранные файлы на Flickr"
-
-#: ../src/postr.glade.h:1
-msgid "Add Photos..."
-msgstr "Добавить фотоснимки…"
-
-#: ../src/postr.glade.h:2
-msgid "Add to _Set:"
-msgstr "Добавить в _набор:"
-
-#: ../src/postr.glade.h:3
-msgid "Dese_lect All"
-msgstr "_Снять выделение"
-
-#: ../src/postr.glade.h:5
-msgid "Privacy, Safety, Type and License"
-msgstr "Доступ, безопасность, тип и лицензия"
-
-#: ../src/postr.glade.h:6
-msgid "Remove Photos"
-msgstr "Удалить фотоснимки"
-
-#: ../src/postr.glade.h:7
-msgid "Rename"
-msgstr "Переименовать"
-
-#: ../src/postr.glade.h:8
-msgid "Select"
-msgstr "Выбор"
-
-#: ../src/postr.glade.h:9
-msgid "Send to Groups"
-msgstr "Отправить в группы"
-
-#: ../src/postr.glade.h:10
-msgid "Ta_gs:"
-msgstr "_Метки:"
-
-#: ../src/postr.glade.h:11
-msgid "_Add Photos..."
-msgstr "_Добавить фотоснимки…"
-
-#: ../src/postr.glade.h:12
-msgid "_Content type:"
-msgstr "_Тип содержимого:"
-
-#: ../src/postr.glade.h:13
-msgid "_Description:"
-msgstr "_Описание:"
-
-#: ../src/postr.glade.h:14
-msgid "_File"
-msgstr "_Файл"
-
-#: ../src/postr.glade.h:15
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../src/postr.glade.h:16
-msgid "_Invert Selection"
-msgstr "_Инвертировать выделение"
-
-#: ../src/postr.glade.h:17
-msgid "_License:"
-msgstr "_Лицензия:"
-
-#: ../src/postr.glade.h:18
-msgid "_Load session"
-msgstr "_Загрузить сеанс"
-
-#: ../src/postr.glade.h:19
-msgid "_Privacy:"
-msgstr "_Доступ:"
-
-#: ../src/postr.glade.h:20
-msgid "_Remove Photos"
-msgstr "_Удалить фотоснимки"
-
-#: ../src/postr.glade.h:21
-msgid "_Safety:"
-msgstr "_Безопасность:"
-
-#: ../src/postr.glade.h:22
-msgid "_Save session"
-msgstr "_Сохранить сеанс"
-
-#: ../src/postr.glade.h:23
-msgid "_Switch user..."
-msgstr "_Переключить пользователя…"
-
-#: ../src/postr.glade.h:24
-msgid "_Title:"
-msgstr "_Заголовок:"
-
-#: ../src/postr.glade.h:25
-msgid "_Upload"
-msgstr "_Загрузить"
-
-#: ../src/postr.glade.h:26
-msgid "_Visible in search results"
-msgstr "_Показывать в результатах поиска"
 
 #: ../src/AuthenticationDialog.py:42
 msgid "Continue"
 msgstr "Продолжить"
 
-#: ../src/AuthenticationDialog.py:46
-msgid "Postr needs to login to Flickr to upload your photos. Please click on the link below to login to Flickr."
-msgstr "Чтобы загрузить фотоснимки, postr должен войти на Flickr. Щёлкните по ссылке, чтобы выполнить вход."
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Чтобы загрузить фотоснимки, postr должен войти на Flickr. Щёлкните по "
+"ссылке, чтобы выполнить вход."
 
-#: ../src/AuthenticationDialog.py:55
-#: ../src/AuthenticationDialog.py:57
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
 msgid "Login to Flickr"
 msgstr "Войти в Flickr"
 
-#: ../src/ErrorDialog.py:26
+#: ../src/ErrorDialog.py:27
 msgid "An error occurred"
 msgstr "Произошла ошибка"
 
-#: ../src/ErrorDialog.py:47
+#: ../src/ErrorDialog.py:49
 msgid "Details"
 msgstr "Подробности"
 
-#: ../src/ImageList.py:72
+#: ../src/ImageList.py:79
 msgid "No title"
 msgstr "Без заголовка"
 
-#: ../src/LicenseCombo.py:26
+#: ../src/LicenseCombo.py:29
 msgid "Default"
 msgstr "По умолчанию"
 
-#: ../src/postr.py:412
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Добавить фотоснимки…"
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Удалить фотоснимки"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Сохранить сеанс"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Загрузить сеанс"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Переключить пользователя…"
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Загрузить"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Выбор"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "_Снять выделение"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Инвертировать выделение"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Содержимое"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Добавить фотоснимки…"
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Удалить фотоснимки"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Переименовать"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Заголовок:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Описание:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "_Метки:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Добавить в _набор:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Отправить в группы"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Показывать в результатах поиска"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Доступ:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Безопасность:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "_Тип содержимого:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Лицензия:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Доступ, безопасность, тип и лицензия"
+
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Добавить фотоснимки"
 
-#: ../src/postr.py:424
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Изображения"
 
-#: ../src/postr.py:428
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Все файлы"
 
-#: ../src/postr.py:493
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Текущая загрузка</b>"
 
-#: ../src/postr.py:494
-msgid "Photos are still being uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Фотоснимки всё ещё не загружены. Действительно хотите выйти? Вы можете сохранить отложенную загрузку для следующего раза."
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Фотоснимки всё ещё не загружены. Действительно хотите выйти? Вы можете "
+"сохранить отложенную загрузку для следующего раза."
 
-#: ../src/postr.py:509
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Снимки для загрузки</b>"
 
-#: ../src/postr.py:510
-msgid "There are photos pending to be uploaded. Are you sure you want to quit? You can also save your pending upload set for later."
-msgstr "Имеется отложенная загрузка фотоснимков. Действительно хотите выйти? Вы можете сохранить отложенную загрузку для следующего раза."
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Имеется отложенная загрузка фотоснимков. Действительно хотите выйти? Вы "
+"можете сохранить отложенную загрузку для следующего раза."
 
-#: ../src/postr.py:777
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Изображение %s слишком большое, изображения не должен превышать %dМБ."
 
-#: ../src/postr.py:945
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Загрузка %(index)d из %(count)d"
 
-#: ../src/postr.py:948
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Загрузчик Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:995
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Некоторые файлы не существуют или в настоящий момент недоступны."
 
-#: ../src/postr.py:1352
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -221,12 +242,15 @@ msgstr ""
 "Вы вошли как %s, но загрузка\n"
 "установлена для %s"
 
-#: ../src/postr.py:1356
-#: ../src/postr.py:1373
-msgid "Do you want to continue with the load?  You will not import photoset information."
-msgstr "Хотите продолжить с загрузки? Информация о наборе снимков не будет импортирована."
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Хотите продолжить с загрузки? Информация о наборе снимков не будет "
+"импортирована."
 
-#: ../src/postr.py:1369
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -235,44 +259,44 @@ msgstr ""
 "Вход не выполнен, но для %s\n"
 "установлена загрузка"
 
-#: ../src/ProgressDialog.py:56
+#: ../src/ProgressDialog.py:59
 msgid "Uploading"
 msgstr "Загрузка"
 
-#: ../src/SetCombo.py:23
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Нет"
 
-#: ../src/SetCombo.py:24
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Создать набор фотоснимков «%s»"
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "новый набор фотоснимков (%d-%m-%y)"
 
-#: ../src/SetCombo.py:132
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Название нового набора снимков:"
 
-#: ../src/StatusBar.py:38
-#, python-format
-msgid "Logged in as <b>%s</b>.  "
-msgstr "Вы вошли как <b>%s</b>."
-
 #: ../src/StatusBar.py:41
 #, python-format
-msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
-msgstr "В этом месяце можно загрузить %(quota)s, будет загружено %(to_upload)s."
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Вы вошли как <b>%s</b>.  "
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"В этом месяце можно загрузить %(quota)s, будет загружено %(to_upload)s."
+
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "В этом месяце можно загрузить %(quota)s."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "Будет загружено %(to_upload)s."
-
