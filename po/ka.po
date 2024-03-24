@@ -1,0 +1,299 @@
+# Georgian translation for postr.
+# Copyright (C) 2024 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Ekaterine Papava <papava.e@gtu.ge>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues\n"
+"POT-Creation-Date: 2023-09-09 12:12+0000\n"
+"PO-Revision-Date: 2024-03-24 07:00+0100\n"
+"Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
+"Language-Team: Georgian <ka@li.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr-ზე ატვირთვა"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "სურათების ატვირთვა Flickr-ზე"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Image;Picture;Photo;Uploader;გამოსახულება;ამტვირთავი;სურათი;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Flickr-ზე ატვირთვა..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "მონიშნული სურათების ატვირთვა Flickr-ზე"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "გაგრძელება"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr-ს სურათების ასათვირთად Flickr-ზე შესვლა სჭირება. დააწკაპუნეთ ღილაკზე "
+"ქვემოთ, რომ Flickr-ზე შეხვიდეთ."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Flickr-ზე შესვლა"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "შეცდომა"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "დეტალები"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "სათაურის გარეშე"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_ფაილი"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "ფოტოების დ_ამატება..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "ფოტოების _წაშლა"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_სესიის შენახვა"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "სესიის ჩატვირთვ_ა"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "მომხმარებლი_ს გადართვა..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_ატვირთვა"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "არჩევა"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "მონიშვნის მოხსნა"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_მონიშვნის ინვერსია"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_დახმარება"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_შინაარსი"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "ფოტოების დამატება..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "ფოტოების წაშლა"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "გადარქმევა"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_სათაური:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_აღწერა:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "_ჭდეები:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "_სეტში ჩამატება:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "ჯგუფებში გაგზავნა"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_ხილულია ძებნი შედეგებში"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_კონფიდენციალობა:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_უსაფრთხოება:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "შემ_ცველობის ტიპი:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_ლიცენზია:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "კონფიდენციალობა, უსაფრთხოება, ტიპი და ლიცენზია"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "ფოტოების დამატება"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "გამოსახულებები"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "ყველა ფაილი"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>ამჟამად მიმდინარეობს ატვირთვა</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"ფოტოების ატვირთვა ჯერ კიდევ მიმდინარეობს. დარწმუნებული ბრძანდებით, რომ "
+"გნებავთ, გახვიდეთ? ასევე შეგიძლიათ, დანარჩენი ასატვირთი ფაილები "
+"მოგვიანებისთვის გადადოთ."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>ასატვირთი ფოტოები</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"არსებობს დარჩენილი ასატვირთი ფოტოები. მართლა გნებავთ, გახვიდეთ? ასევე "
+"შეგიძლიათ, დარჩენილი ასატვირთი ფაილების გაგზავნა მომავლისთვის გადადოთ."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr ""
+"გამოსახულება %s მეტისმეტად დიდია. გამოსახულებები %dმბ-ზე დიდი არ უნდა იყოს."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "იტვირთება %(index)d / %(count)d-დან"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr ამტვირთავი (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "ზოგიერთი ფაილი არ არსებობს ან ამჟამად ხელმისაწვდომი არაა."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"შესული ბრძანდებით როგორც %s, მაგრამ ტვირთავთ\n"
+"სეტს %s-სთვის"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"გნებავთ ჩატვირთვის გაგრძელება?  ფოტოსეტის ინფორმაციის შემოტანა არ მოხდება."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"შესული არ ბრძანდებით, მაგრამ ტვირთავთ\n"
+"ატვირთვის სეტს %s-სთვის"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "ატვირთვა"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "არაფერი"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "შეიქმნება ფოტოსეტი \"%s\""
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "ახალი ფოტოსეტი (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "სახელი ახალი ფოტოსეტისთვის:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "შესული ბრძანდებით, როგორც <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr "ამ თვეში %(quota)s შეგიძლიათ, ატვირთოთ. დაგრჩათ %(to_upload)s."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "ამ თვეში %(quota)s შეგიძლიათ, ატვირთოთ."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s ასატვირთია."
