@@ -1,0 +1,300 @@
+# Hindi translation for postr.
+# Copyright (C) 2024 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# Scrambled 777 <weblate.scrambled777@simplelogin.com>, 2024.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues\n"
+"POT-Creation-Date: 2024-03-24 06:01+0000\n"
+"PO-Revision-Date: 2024-04-23 10:46+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 46.0\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr अपलोडर"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Flickr पर तस्वीरें अपलोड करें"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;छवि;तस्वीर;फोटो;अपलोडर;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Flickr पर अपलोड करें..."
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "चयनित फाइलें Flickr में अपलोड करें"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "जारी रखें"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"आपकी तस्वीरें अपलोड करने के लिए Postr को Flickr पर लॉग इन करना होगा। कृपया Flickr "
+"पर लॉगिन करने के लिए नीचे दिए गए लिंक पर क्लिक करें।"
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Flickr पर लॉगिन करें"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "एक त्रुटि हुई"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "विवरण"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "कोई शीर्षक नहीं"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "तयशुदा"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "फाइल (_F)"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "तस्वीरें जोड़ें (_A)..."
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "तस्वीरें हटाएं (_R)"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "सत्र सहेजें (_S)"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "सत्र लोड करें (_L)"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "उपयोक्ता बदलें (_S)..."
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "अपलोड (_U)"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "चुनें"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "सभी अचयनित करें (_l)"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "चयन को उल्टें (_I)"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "सहायता (_H)"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "अंतर्वस्तु (_C)"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "तस्वीरें जोड़ें..."
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "तस्वीरें हटाएं"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "नाम बदलें"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "शीर्षक (_T):"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "विवरण (_D):"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "टैग (_g):"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "समूह में जोड़ें (_S):"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "समूहों को भेजें"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "खोज परिणामों में दृश्यमान (_V)"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "गोपनीयता (_P):"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "सुरक्षा (_S):"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "सामग्री प्रकार (_C):"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "लाइसेंस (_L):"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "गोपनीयता, सुरक्षा, प्रकार और लाइसेंस"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "तस्वीरें जोड़ें"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "छवियां"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "सभी फाइलें"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>अभी अपलोड हो रहा है</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"तस्वीरें अभी भी अपलोड की जा रही हैं। क्या आप वाकई छोड़ना चाहते हैं? आप अपने लंबित अपलोड "
+"समूह को बाद के लिए भी सहेज सकते हैं।"
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>अपलोड करने के लिये तस्वीरें</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"कुछ तस्वीरें अपलोड की जानी बाकी हैं। क्या आप वाकई छोड़ना चाहते हैं? आप अपने लंबित अपलोड "
+"समूह को बाद के लिए भी सहेज सकते हैं।"
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "छवि %s बहुत बड़ी है, छवियों का आकार %dMB से बड़ा नहीं होना चाहिए।"
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "%(count)d में से %(index)d अपलोड किया जा रहा है"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr अपलोडर (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "कुछ फाइलें मौजूद नहीं हैं या वर्तमान में पहुंच योग्य नहीं हैं।"
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"आप %s के रूप में लॉग इन हैं लेकिन %s\n"
+"के लिए अपलोड समूह लोड कर रहे हैं"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr "क्या आप लोड जारी रखना चाहते हैं? आप फोटोसेट की जानकारी आयात नहीं करेंगे।"
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"आप लॉग इन नहीं हैं लेकिन %s के लिए\n"
+"अपलोड समूह लोड कर रहे हैं"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "अपलोड हो रहा है"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "कोई नहीं"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "फोटोसेट \"%s\" बनाएं"
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "नये फोटोसेट (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "नये फोटोसेट का नाम:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "<b>%s</b> के रूप में लॉगिन किया।  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"आप इस महीने %(quota)s अपलोड कर सकते हैं, और आपके पास अपलोड करने के लिए "
+"%(to_upload)s हैं।"
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "आप इस महीने %(quota)s अपलोड कर सकते हैं।"
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "अपलोड करने के लिए %(to_upload)s।"
