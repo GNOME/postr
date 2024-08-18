@@ -7,23 +7,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: postr master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=postr&keywords=I18N+L10N&component=General\n"
-"POT-Creation-Date: 2014-08-06 10:18+0000\n"
-"PO-Revision-Date: 2014-08-06 14:32+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues/\n"
+"POT-Creation-Date: 2024-05-12 13:27+0000\n"
+"PO-Revision-Date: 2024-08-18 23:24+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../data/postr.desktop.in.in.h:1 ../src/postr.glade.h:1
-#: ../src/AboutDialog.py:25 ../src/AuthenticationDialog.py:39
-#: ../src/postr.py:983
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
 msgid "Flickr Uploader"
 msgstr "Program za prenos datotek na Flickr"
 
@@ -35,13 +35,45 @@ msgstr "Prenos slik na portal Flickr"
 msgid "Flickr;Image;Picture;Photo;Uploader;"
 msgstr "Flickr;Slika;Fotografija;Objavljanje;Galerija;"
 
-#: ../nautilus/postrExtension.py:82
+#: ../nautilus/postrExtension.py:81
 msgid "Upload to Flickr..."
 msgstr "Prenesi na Flickr ..."
 
-#: ../nautilus/postrExtension.py:83
+#: ../nautilus/postrExtension.py:82
 msgid "Upload the selected files into Flickr"
 msgstr "Prenesi izbrane datoteke na Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Nadaljuj"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Program zahteva prijavo na Flickr za pošiljanje slik. S klikom na spodnji "
+"naslov je mogoče vzpostaviti povezavo."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Prijava v Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Prišlo je do napake"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Brez naslova"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Privzeto"
 
 #: ../src/postr.glade.h:2
 msgid "_File"
@@ -88,110 +120,82 @@ msgid "_Help"
 msgstr "Pomo_č"
 
 #: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Vsebina"
+
+#: ../src/postr.glade.h:14
 msgid "Add Photos..."
 msgstr "Dodajanje fotografij ..."
 
-#: ../src/postr.glade.h:14
+#: ../src/postr.glade.h:15
 msgid "Remove Photos"
 msgstr "Odstrani fotografije"
 
-#: ../src/postr.glade.h:15
-msgid "Send to Groups"
-msgstr "Pošlji skupinam"
-
 #: ../src/postr.glade.h:16
-msgid "_Content type:"
-msgstr "_Vrsta vsebine:"
-
-#: ../src/postr.glade.h:17
-msgid "_Privacy:"
-msgstr "_Zasebnost:"
-
-#: ../src/postr.glade.h:18
-msgid "_Safety:"
-msgstr "_Varnost:"
-
-#: ../src/postr.glade.h:19
-msgid "_Visible in search results"
-msgstr "_Vidno med rezultati iskanja"
-
-#: ../src/postr.glade.h:20
-msgid "_License:"
-msgstr "_Dovoljenje:"
-
-#: ../src/postr.glade.h:21
-msgid "Privacy, Safety, Type and License"
-msgstr "Zasebnost, varnost, vrste in dovoljenje"
-
-#: ../src/postr.glade.h:22
-msgid "_Title:"
-msgstr "_Naziv:"
-
-#: ../src/postr.glade.h:23
-msgid "_Description:"
-msgstr "_Opis:"
-
-#: ../src/postr.glade.h:24
-msgid "Ta_gs:"
-msgstr "_Oznake:"
-
-#: ../src/postr.glade.h:25
-msgid "Add to _Set:"
-msgstr "Dodajanje v _zbirko:"
-
-#: ../src/postr.glade.h:26
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: ../src/AuthenticationDialog.py:42
-msgid "Continue"
-msgstr "Nadaljuj"
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Naziv:"
 
-#: ../src/AuthenticationDialog.py:46
-msgid ""
-"Postr needs to login to Flickr to upload your photos. Please click on the "
-"link below to login to Flickr."
-msgstr ""
-"Program zahteva prijavo na Flickr za pošiljanje slik. S klikom na spodnji "
-"naslov je mogoče vzpostaviti povezavo."
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Opis:"
 
-#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
-msgid "Login to Flickr"
-msgstr "Prijava v Flickr"
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "_Oznake:"
 
-#: ../src/ErrorDialog.py:26
-msgid "An error occurred"
-msgstr "Prišlo je do napake"
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Dodajanje v _zbirko:"
 
-#: ../src/ErrorDialog.py:47
-msgid "Details"
-msgstr "Podrobnosti"
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Pošlji skupinam"
 
-#: ../src/ImageList.py:72
-msgid "No title"
-msgstr "Brez naslova"
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Vidno med rezultati iskanja"
 
-#: ../src/LicenseCombo.py:26
-msgid "Default"
-msgstr "Privzeto"
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Zasebnost:"
 
-#: ../src/postr.py:412
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Varnost:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "_Vrsta vsebine:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Dovoljenje:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Zasebnost, varnost, vrste in dovoljenje"
+
+#: ../src/postr.py:397
 msgid "Add Photos"
 msgstr "Dodaj fotografije"
 
-#: ../src/postr.py:424
+#: ../src/postr.py:409
 msgid "Images"
 msgstr "Slike"
 
-#: ../src/postr.py:428
+#: ../src/postr.py:414
 msgid "All Files"
 msgstr "Vse datoteke"
 
-#: ../src/postr.py:493
+#: ../src/postr.py:485
 msgid "<b>Currently Uploading</b>"
 msgstr "<b>Trenutno v prenosu</b>"
 
-#: ../src/postr.py:494
+#: ../src/postr.py:486
 msgid ""
 "Photos are still being uploaded. Are you sure you want to quit? You can also "
 "save your pending upload set for later."
@@ -199,11 +203,11 @@ msgstr ""
 "Slike se še vedno pošiljajo.  Ali zares želite program končati? Pripravljene "
 "slike je mogoče tudi shraniti za kasnejše pošiljanje."
 
-#: ../src/postr.py:509
+#: ../src/postr.py:501
 msgid "<b>Photos to be uploaded</b>"
 msgstr "<b>Fotografije za prenos</b>"
 
-#: ../src/postr.py:510
+#: ../src/postr.py:502
 msgid ""
 "There are photos pending to be uploaded. Are you sure you want to quit? You "
 "can also save your pending upload set for later."
@@ -211,26 +215,26 @@ msgstr ""
 "Pripravljene so slike za prenos. Ali zares želite program končati? "
 "Pripravljene slike je mogoče tudi shraniti za kasnejše pošiljanje."
 
-#: ../src/postr.py:781
+#: ../src/postr.py:792
 #, python-format
 msgid "Image %s is too large, images must be no larger than %dMB in size."
 msgstr "Slika %s je prevelika; velikost slike je omejena na velikost %dMB."
 
-#: ../src/postr.py:949
+#: ../src/postr.py:968
 #, python-format
 msgid "Uploading %(index)d of %(count)d"
 msgstr "Prenašanje predmeta %(index)d od %(count)d"
 
-#: ../src/postr.py:952
+#: ../src/postr.py:971
 #, python-format
 msgid "Flickr Uploader (%(index)d/%(count)d)"
 msgstr "Program za prenos datotek na Flickr (%(index)d/%(count)d)"
 
-#: ../src/postr.py:999
+#: ../src/postr.py:1018
 msgid "Some Files does not exist or are currently inaccessible."
 msgstr "Nekatere datoteke ne obstajajo ali pa trenutno niso na dostopne."
 
-#: ../src/postr.py:1356
+#: ../src/postr.py:1379
 #, python-format
 msgid ""
 "You are logged in as %s but loading\n"
@@ -239,14 +243,14 @@ msgstr ""
 "Vzpostavljena je prijava %s, pošiljanje pa je\n"
 "pripravljeno za %s"
 
-#: ../src/postr.py:1360 ../src/postr.py:1377
+#: ../src/postr.py:1383 ../src/postr.py:1400
 msgid ""
 "Do you want to continue with the load?  You will not import photoset "
 "information."
 msgstr ""
 "Ali želite nadaljevati z nalaganjem? Podatki o fotografijah ne bodo uvoženi."
 
-#: ../src/postr.py:1373
+#: ../src/postr.py:1396
 #, python-format
 msgid ""
 "You are not logged in but loading\n"
@@ -255,48 +259,45 @@ msgstr ""
 "Prijava ni vzpostavljena, pošiljanje pa je\n"
 "pripravljeno za %s"
 
-#: ../src/ProgressDialog.py:56
+#: ../src/ProgressDialog.py:59
 msgid "Uploading"
 msgstr "Prenašanje"
 
-#: ../src/SetCombo.py:23
+#: ../src/SetCombo.py:26
 msgid "None"
 msgstr "Brez"
 
-#: ../src/SetCombo.py:24
+#: ../src/SetCombo.py:27
 #, python-format
 msgid "Create Photoset \"%s\""
 msgstr "Ustvari zbirko fotografi \"%s\""
 
-#: ../src/SetCombo.py:26
+#: ../src/SetCombo.py:29
 msgid "new photoset (%m-%d-%y)"
 msgstr "nova zbirka fotografij (%d.%m.%y)"
 
-#: ../src/SetCombo.py:132
+#: ../src/SetCombo.py:144
 msgid "Name for the new photoset:"
 msgstr "Ime za novo fotosejo:"
 
-#: ../src/StatusBar.py:38
+#: ../src/StatusBar.py:41
 #, python-format
 msgid "Logged in as <b>%s</b>.  "
 msgstr "Dejavna je prijava <b>%s</b>.  "
 
-#: ../src/StatusBar.py:41
+#: ../src/StatusBar.py:44
 #, python-format
 msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
 msgstr ""
 "Ta mesec je mogoče poslati %(quota)s, za prenos pa je pripravljeno "
 "%(to_upload)s."
 
-#: ../src/StatusBar.py:43
+#: ../src/StatusBar.py:46
 #, python-format
 msgid "You can upload %(quota)s this month."
 msgstr "Ta mesec je mogoče prenesti %(quota)s."
 
-#: ../src/StatusBar.py:45
+#: ../src/StatusBar.py:48
 #, python-format
 msgid "%(to_upload)s to upload."
 msgstr "%(to_upload)s za prenos."
-
-#~ msgid "_Contents"
-#~ msgstr "_Vsebina"
