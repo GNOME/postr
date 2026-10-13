@@ -1,0 +1,300 @@
+# Norwegian Nynorsk translation for postr.
+# Copyright (C) 2026 postr's COPYRIGHT HOLDER
+# This file is distributed under the same license as the postr package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: postr master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/postr/issues/\n"
+"POT-Creation-Date: 2026-10-10 18:21+0000\n"
+"PO-Revision-Date: 2026-10-12 12:00+0200\n"
+"Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/postr.desktop.in.in.h:1 ../src/AboutDialog.py:27
+#: ../src/AuthenticationDialog.py:40 ../src/postr.glade.h:1
+#: ../src/postr.py:1002
+msgid "Flickr Uploader"
+msgstr "Flickr-opplastar"
+
+#: ../data/postr.desktop.in.in.h:2
+msgid "Upload photos to Flickr"
+msgstr "Last opp bilete til Flickr"
+
+#: ../data/postr.desktop.in.in.h:3
+msgid "Flickr;Image;Picture;Photo;Uploader;"
+msgstr "Flickr;Bilete;Foto;Opplastar;"
+
+#: ../nautilus/postrExtension.py:81
+msgid "Upload to Flickr..."
+msgstr "Last opp til Flickr …"
+
+#: ../nautilus/postrExtension.py:82
+msgid "Upload the selected files into Flickr"
+msgstr "Last opp dei valde filene til Flickr"
+
+#: ../src/AuthenticationDialog.py:42
+msgid "Continue"
+msgstr "Hald fram"
+
+#: ../src/AuthenticationDialog.py:47
+msgid ""
+"Postr needs to login to Flickr to upload your photos. Please click on the "
+"link below to login to Flickr."
+msgstr ""
+"Postr må logge inn på Flickr for å laste opp bileta dine. Klikk på lenkja "
+"under for å logge inn på Flickr."
+
+#: ../src/AuthenticationDialog.py:55 ../src/AuthenticationDialog.py:57
+msgid "Login to Flickr"
+msgstr "Logg inn på Flickr"
+
+#: ../src/ErrorDialog.py:27
+msgid "An error occurred"
+msgstr "Det oppstod ein feil"
+
+#: ../src/ErrorDialog.py:49
+msgid "Details"
+msgstr "Detaljar"
+
+#: ../src/ImageList.py:79
+msgid "No title"
+msgstr "Ingen tittel"
+
+#: ../src/LicenseCombo.py:29
+msgid "Default"
+msgstr "Standard"
+
+#: ../src/postr.glade.h:2
+msgid "_File"
+msgstr "_Fil"
+
+#: ../src/postr.glade.h:3
+msgid "_Add Photos..."
+msgstr "_Legg til bilete …"
+
+#: ../src/postr.glade.h:4
+msgid "_Remove Photos"
+msgstr "_Fjern bilete"
+
+#: ../src/postr.glade.h:5
+msgid "_Save session"
+msgstr "_Lagre økt"
+
+#: ../src/postr.glade.h:6
+msgid "_Load session"
+msgstr "_Last inn økt"
+
+#: ../src/postr.glade.h:7
+msgid "_Switch user..."
+msgstr "_Byt brukar …"
+
+#: ../src/postr.glade.h:8
+msgid "_Upload"
+msgstr "_Last opp"
+
+#: ../src/postr.glade.h:9
+msgid "Select"
+msgstr "Vel"
+
+#: ../src/postr.glade.h:10
+msgid "Dese_lect All"
+msgstr "Opphev va_l av alle"
+
+#: ../src/postr.glade.h:11
+msgid "_Invert Selection"
+msgstr "_Inverter valet"
+
+#: ../src/postr.glade.h:12
+msgid "_Help"
+msgstr "_Hjelp"
+
+#: ../src/postr.glade.h:13
+msgid "_Contents"
+msgstr "_Innhald"
+
+#: ../src/postr.glade.h:14
+msgid "Add Photos..."
+msgstr "Legg til bilete …"
+
+#: ../src/postr.glade.h:15
+msgid "Remove Photos"
+msgstr "Fjern bilete"
+
+#: ../src/postr.glade.h:16
+msgid "Rename"
+msgstr "Byt namn"
+
+#: ../src/postr.glade.h:17
+msgid "_Title:"
+msgstr "_Tittel:"
+
+#: ../src/postr.glade.h:18
+msgid "_Description:"
+msgstr "_Skildring:"
+
+#: ../src/postr.glade.h:19
+msgid "Ta_gs:"
+msgstr "Ta_ggar:"
+
+#: ../src/postr.glade.h:20
+msgid "Add to _Set:"
+msgstr "Legg til i _sett:"
+
+#: ../src/postr.glade.h:21
+msgid "Send to Groups"
+msgstr "Send til grupper"
+
+#: ../src/postr.glade.h:22
+msgid "_Visible in search results"
+msgstr "_Synleg i søkjeresultat"
+
+#: ../src/postr.glade.h:23
+msgid "_Privacy:"
+msgstr "_Personvern:"
+
+#: ../src/postr.glade.h:24
+msgid "_Safety:"
+msgstr "_Tryggleik:"
+
+#: ../src/postr.glade.h:25
+msgid "_Content type:"
+msgstr "_Innhaldstype:"
+
+#: ../src/postr.glade.h:26
+msgid "_License:"
+msgstr "_Lisens:"
+
+#: ../src/postr.glade.h:27
+msgid "Privacy, Safety, Type and License"
+msgstr "Personvern, tryggleik, type og lisens"
+
+#: ../src/postr.py:397
+msgid "Add Photos"
+msgstr "Legg til bilete"
+
+#: ../src/postr.py:409
+msgid "Images"
+msgstr "Bilete"
+
+#: ../src/postr.py:414
+msgid "All Files"
+msgstr "Alle filer"
+
+#: ../src/postr.py:485
+msgid "<b>Currently Uploading</b>"
+msgstr "<b>Lastar opp no</b>"
+
+#: ../src/postr.py:486
+msgid ""
+"Photos are still being uploaded. Are you sure you want to quit? You can also "
+"save your pending upload set for later."
+msgstr ""
+"Bilete vert framleis lasta opp. Er du sikker på at du vil avslutte? Du kan "
+"òg lagre opplastingssettet til seinare."
+
+#: ../src/postr.py:501
+msgid "<b>Photos to be uploaded</b>"
+msgstr "<b>Bilete som skal lastast opp</b>"
+
+#: ../src/postr.py:502
+msgid ""
+"There are photos pending to be uploaded. Are you sure you want to quit? You "
+"can also save your pending upload set for later."
+msgstr ""
+"Det er bilete som ventar på å verte lasta opp. Er du sikker på at du vil "
+"avslutte? Du kan òg lagre opplastingssettet som ventar, til seinare."
+
+#: ../src/postr.py:792
+#, python-format
+msgid "Image %s is too large, images must be no larger than %dMB in size."
+msgstr "Biletet %s er for stort. Bilete kan ikkje vere større enn %d MB."
+
+#: ../src/postr.py:968
+#, python-format
+msgid "Uploading %(index)d of %(count)d"
+msgstr "Lastar opp %(index)d av %(count)d"
+
+#: ../src/postr.py:971
+#, python-format
+msgid "Flickr Uploader (%(index)d/%(count)d)"
+msgstr "Flickr-opplastar (%(index)d/%(count)d)"
+
+#: ../src/postr.py:1018
+msgid "Some Files does not exist or are currently inaccessible."
+msgstr "Nokre filer finst ikkje eller kan ikkje opnast for augneblinken."
+
+#: ../src/postr.py:1379
+#, python-format
+msgid ""
+"You are logged in as %s but loading\n"
+"an upload set for %s"
+msgstr ""
+"Du er logga inn som %s, men lastar\n"
+"inn eit opplastingssett for %s"
+
+#: ../src/postr.py:1383 ../src/postr.py:1400
+msgid ""
+"Do you want to continue with the load?  You will not import photoset "
+"information."
+msgstr ""
+"Vil du halde fram med innlastinga? Du importerer ikkje opplysningar om "
+"fotosett."
+
+#: ../src/postr.py:1396
+#, python-format
+msgid ""
+"You are not logged in but loading\n"
+"an upload set for %s"
+msgstr ""
+"Du er ikkje logga inn, men lastar\n"
+"inn eit opplastingssett for %s"
+
+#: ../src/ProgressDialog.py:59
+msgid "Uploading"
+msgstr "Lastar opp"
+
+#: ../src/SetCombo.py:26
+msgid "None"
+msgstr "Ingen"
+
+#: ../src/SetCombo.py:27
+#, python-format
+msgid "Create Photoset \"%s\""
+msgstr "Opprett fotosett «%s»"
+
+#: ../src/SetCombo.py:29
+msgid "new photoset (%m-%d-%y)"
+msgstr "nytt fotosett (%m-%d-%y)"
+
+#: ../src/SetCombo.py:144
+msgid "Name for the new photoset:"
+msgstr "Namn på det nye fotosettet:"
+
+#: ../src/StatusBar.py:41
+#, python-format
+msgid "Logged in as <b>%s</b>.  "
+msgstr "Logga inn som <b>%s</b>.  "
+
+#: ../src/StatusBar.py:44
+#, python-format
+msgid "You can upload %(quota)s this month, and have %(to_upload)s to upload."
+msgstr ""
+"Du kan laste opp %(quota)s denne månaden, og har %(to_upload)s att å laste "
+"opp."
+
+#: ../src/StatusBar.py:46
+#, python-format
+msgid "You can upload %(quota)s this month."
+msgstr "Du kan laste opp %(quota)s denne månaden."
+
+#: ../src/StatusBar.py:48
+#, python-format
+msgid "%(to_upload)s to upload."
+msgstr "%(to_upload)s å laste opp."
